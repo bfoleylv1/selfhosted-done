@@ -1,0 +1,35 @@
+# librechat - docker compose (single host)
+# image verified to exist at generation time: librechat/librechat:latest
+
+services:
+  librechat:
+    image: librechat/librechat:latest
+    container_name: librechat
+    restart: unless-stopped
+    ports:
+      - "20465:20465"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20465 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=librechat"
+    #   - "homepage.description=librechat self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=librechat.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20465"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: librechat_net
