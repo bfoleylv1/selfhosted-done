@@ -1,0 +1,35 @@
+# static-web-server - docker compose (single host)
+# image verified to exist at generation time: joseluisq/static-web-server:latest
+
+services:
+  static-web-server:
+    image: joseluisq/static-web-server:latest
+    container_name: static-web-server
+    restart: unless-stopped
+    ports:
+      - "20512:20512"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20512 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=static-web-server"
+    #   - "homepage.description=static-web-server self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=static-web-server.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20512"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: static-web-server_net
