@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=pyload"
-    #   - "homepage.description=pyload self-hosted service."
+    #   - "homepage.description=pyLoad: lightweight, open-source download manager with a web interface (supports many one-click hosters)."
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=pyload.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20497"

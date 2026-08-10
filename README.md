@@ -1,12 +1,12 @@
 # selfhosted-done
 
-A library of **548** Docker Compose + Docker Swarm stacks for self-hosted services. Each folder contains a working `docker-compose.yml` (single host) and `swarm/docker-stack.yml` (cluster), with healthchecks, Homepage labels, and config/data volume mounts.
+A library of **549** Docker Compose + Docker Swarm stacks for self-hosted services. Each folder contains a working `docker-compose.yml` (single host) and `swarm/docker-stack.yml` (cluster), with healthchecks, Homepage labels, and config/data volume mounts.
 
 Every stack was generated from the project's real upstream image and tagged with its actual category and host port. Descriptions come from each project's official catalog/repo where available, and a clean short summary for every service.
 
 ## At a glance
 
-- **Services:** 548
+- **Services:** 549
 - **With GPU / hardware-acceleration blocks:** 50 (commented out — uncomment to enable)
 - **Categories:** 34
 - **Layout per service:** `docker-compose.yml`, `swarm/docker-stack.yml`, `config/`, `data/`
@@ -31,7 +31,7 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 
 ## Services by category
 
-### Self Hosting Solutions (220)
+### Self Hosting Solutions (221)
 
 | Service | Image | Port | GPU | Description |
 |---|---|---|:--:|---|
@@ -170,6 +170,7 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Poste Io](./poste-io) | `analogic/poste.io:latest` | `20215` | — | Self-hosted mail server suite (SMTP/IMAP/POP) |
 | [Proxmox](./proxmox) | `ubuntu:24.04` | `20222` | ✅ | Open-source server virtualization platform (Proxmox VE) |
 | [Pushbits](./pushbits) | `ghcr.io/pushbits/server:latest` | `20225` | — | Self-hosted push notification relay for Android/iOS |
+| [Pyload](./pyload) | `linuxserver/pyload:latest` | `20497` | — | pyLoad: lightweight, open-source download manager with a web interface (supports many one-click hosters). |
 | [R2](./r2) | `minio/minio:latest` | `20229` | — | Self-hosted proxy for Cloudflare R2 object storage |
 | [Radicale](./radicale) | `tomsquest/docker-radicale:latest` | `5232` | — | Simple CalDAV and CardDAV server |
 | [Redirect](./redirect) | `alpine:3.20` | `20238` | — | Simple HTTP redirect / URL-forwarding service |
@@ -1105,6 +1106,7 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Puppet](./puppet) | Automation | `20224` |
 | [Pushbits](./pushbits) | Self Hosting Solutions | `20225` |
 | [Pydio Cells](./pydio-cells) | File | `20226` |
+| [Pyload](./pyload) | Self Hosting Solutions | `20497` |
 | [Qdrant](./qdrant) | Search Engines | `20227` |
 | [Qemu](./qemu) | Virtualization | `20228` |
 | [R2](./r2) | Self Hosting Solutions | `20229` |

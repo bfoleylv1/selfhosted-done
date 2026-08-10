@@ -1,13 +1,13 @@
-# pyload - docker swarm stack
-# deploy: docker stack deploy -c docker-stack.yml pyload
-# image verified to exist at generation time: linuxserver/pyload:latest
+# rocketchat - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml rocketchat
+# image verified to exist at generation time: rocket.chat:latest
 
 services:
-  pyload:
-    image: linuxserver/pyload:latest
+  rocketchat:
+    image: rocket.chat:latest
     ports:
-      - target: 20497
-        published: 20497
+      - target: 3000
+        published: 20503
         protocol: tcp
         mode: ingress
     environment:
@@ -15,10 +15,10 @@ services:
       - PUID=${PUID:-1000}
       - PGID=${PGID:-1000}
     volumes:
-      - pyload_config:/config
-      - pyload_data:/data
+      - rocketchat_config:/config
+      - rocketchat_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 20497 || exit 1"]
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:3000/api/v1/health || wget -qO- http://127.0.0.1:3000/api/v1/health || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -41,19 +41,19 @@ services:
           memory: 2G
     # labels:
     #   - "homepage.group=Self Hosted"
-    #   - "homepage.name=pyload"
-    #   - "homepage.description=pyLoad: lightweight, open-source download manager with a web interface (supports many one-click hosters)."
+    #   - "homepage.name=rocketchat"
+    #   - "homepage.description=rocketchat self-hosted service."
     #   - "homepage.tags=Self Hosting Solutions"
-    #   - "homepage.icon=pyload.png"
-    #   - "homepage.href=http://${HOST_IP:-localhost}:20497"
+    #   - "homepage.icon=rocketchat.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20503"
     #   - "homepage.server=localhost"
 
 volumes:
-  pyload_config:
-  pyload_data:
+  rocketchat_config:
+  rocketchat_data:
 
 networks:
   default:
-    name: pyload_net
+    name: rocketchat_net
     driver: overlay
     attachable: true
