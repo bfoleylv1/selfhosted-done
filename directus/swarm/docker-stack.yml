@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=directus"
-    #   - "homepage.description=directus self-hosted service."
+    #   - "homepage.description=Open-source Data Platform; turn any SQL database into a CMS.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=directus.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8055"

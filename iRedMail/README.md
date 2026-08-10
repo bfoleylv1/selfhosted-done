@@ -1,6 +1,6 @@
 # Iredmail
 
-Complete mail server solution; quick and easy setup.
+Complete mail server solution; quick and easy setup
 
 | | |
 |---|---|

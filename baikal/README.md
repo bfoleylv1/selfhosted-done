@@ -1,6 +1,6 @@
 # Baikal
 
-baikal self-hosted service.
+Lightweight CalDAV and CardDAV server
 
 | | |
 |---|---|

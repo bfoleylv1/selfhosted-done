@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=redirect"
-    #   - "homepage.description=redirect self-hosted service."
+    #   - "homepage.description=Simple HTTP redirect / URL-forwarding service.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=redirect.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20238"

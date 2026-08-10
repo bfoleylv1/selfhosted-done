@@ -1,6 +1,6 @@
 # Para
 
-para self-hosted service.
+Flexible open-source backend framework / object storage
 
 | | |
 |---|---|

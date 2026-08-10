@@ -1,6 +1,6 @@
 # Garagehq
 
-garagehq self-hosted service.
+Lightweight S3-compatible distributed object storage
 
 | | |
 |---|---|

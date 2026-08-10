@@ -1,6 +1,6 @@
 # Magento
 
-Open-source e-commerce platform; Adobe Commerce predecessor.
+Open-source e-commerce platform; Adobe Commerce predecessor
 
 | | |
 |---|---|

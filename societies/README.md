@@ -1,6 +1,6 @@
 # Societies
 
-Social login provider; bridges social accounts with local accounts.
+Social login provider; bridges social accounts with local accounts
 
 | | |
 |---|---|

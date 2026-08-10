@@ -1,6 +1,6 @@
 # Pleroma
 
-Lightweight federated social network; alternative to Mastodon.
+Lightweight federated social network; alternative to Mastodon
 
 | | |
 |---|---|

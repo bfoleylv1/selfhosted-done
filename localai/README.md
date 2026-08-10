@@ -1,6 +1,6 @@
 # LocalAI
 
-Open-source AI engine for local LLMs, vision, voice, image, and video models.
+Open-source AI engine for local LLMs, vision, voice, image, and video models
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Redirect
 
-redirect self-hosted service.
+Simple HTTP redirect / URL-forwarding service
 
 | | |
 |---|---|

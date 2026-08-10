@@ -1,6 +1,6 @@
 # Elasticsearch
 
-Distributed search and analytics engine; scalable data store and vector database for production workloads.
+Distributed search and analytics engine; scalable data store and vector database for production workloads
 
 | | |
 |---|---|

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=b1gMail"
-    #   - "homepage.description=b1gMail self-hosted service."
+    #   - "homepage.description=Self-hosted webmail and mail server suite.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=b1gMail.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20006"

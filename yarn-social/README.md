@@ -1,6 +1,6 @@
 # Yarn Social
 
-yarn-social self-hosted service.
+Self-hosted microblog (Yarn.social, Gemtext-based)
 
 | | |
 |---|---|

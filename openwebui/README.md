@@ -1,6 +1,6 @@
 # OpenWebUI
 
-Self-hosted OpenAI-powered web UI; chat with AI models locally.
+Self-hosted OpenAI-powered web UI; chat with AI models locally
 
 | | |
 |---|---|

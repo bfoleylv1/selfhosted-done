@@ -1,6 +1,6 @@
 # GPT4All
 
-Software and models for running LLMs on consumer devices.
+Software and models for running LLMs on consumer devices
 
 | | |
 |---|---|

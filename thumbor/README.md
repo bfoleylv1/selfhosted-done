@@ -1,6 +1,6 @@
 # Thumbor
 
-thumbor self-hosted service.
+On-the-fly image thumbnail and resize service
 
 | | |
 |---|---|

@@ -51,7 +51,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=funkwhale"
-    #   - "homepage.description=funkwhale self-hosted service."
+    #   - "homepage.description=Peer-to-peer music sharing; listen and share music in a friendly way.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=funkwhale.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20084"

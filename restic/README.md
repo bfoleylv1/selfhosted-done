@@ -1,6 +1,6 @@
 # Restic
 
-Fast backup program; easy to use with encryption and compression.
+Fast backup program; easy to use with encryption and compression
 
 | | |
 |---|---|

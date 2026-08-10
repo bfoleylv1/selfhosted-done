@@ -1,6 +1,6 @@
 # Logstash
 
-Data processing pipeline; collect, transform, and forward data.
+Data processing pipeline; collect, transform, and forward data
 
 | | |
 |---|---|

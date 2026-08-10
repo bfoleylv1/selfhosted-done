@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=pocket"
-    #   - "homepage.description=pocket self-hosted service."
+    #   - "homepage.description=Save articles for later reading; privacy-focused alternative.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=pocket.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20212"

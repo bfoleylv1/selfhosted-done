@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=akkoma"
-    #   - "homepage.description=akkoma self-hosted service."
+    #   - "homepage.description=Lightweight federated microblogging server (ActivityPub, Mastodon-compatible).""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=akkoma.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20400"

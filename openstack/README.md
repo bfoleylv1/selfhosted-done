@@ -1,6 +1,6 @@
 # OpenStack
 
-Cloud operating system; build public and private clouds.
+Cloud operating system; build public and private clouds
 
 | | |
 |---|---|

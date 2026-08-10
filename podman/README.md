@@ -1,6 +1,6 @@
 # Podman
 
-Daemonless container engine; drop-in replacement for Docker.
+Daemonless container engine; drop-in replacement for Docker
 
 | | |
 |---|---|

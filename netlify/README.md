@@ -1,6 +1,6 @@
 # Netlify
 
-netlify self-hosted service.
+Platform for deploying static / Jamstack sites (open-core)
 
 | | |
 |---|---|

@@ -29,7 +29,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=kubernetes"
-    #   - "homepage.description=kubernetes self-hosted service."
+    #   - "homepage.description=System for automating deployment, scaling, and management.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=kubernetes.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20135"

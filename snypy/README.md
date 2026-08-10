@@ -1,6 +1,6 @@
 # Snypy
 
-snypy self-hosted service.
+Self-hosted code snippet manager
 
 | | |
 |---|---|

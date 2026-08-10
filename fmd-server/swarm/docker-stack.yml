@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=fmd-server"
-    #   - "homepage.description=fmd-server self-hosted service."
+    #   - "homepage.description=Self-hosted service.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=fmd-server.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20071"

@@ -1,6 +1,6 @@
 # Lychee
 
-Photo management web application; organizes and displays photos with user auth.
+Photo management web application; organizes and displays photos with user auth
 
 | | |
 |---|---|

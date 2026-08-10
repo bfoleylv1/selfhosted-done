@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=amanda"
-    #   - "homepage.description=amanda self-hosted service."
+    #   - "homepage.description=Advanced Maryland Automatic Network Disk Archiver.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=amanda.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20402"

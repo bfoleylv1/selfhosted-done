@@ -1,6 +1,6 @@
 # Globaleaks
 
-globaleaks self-hosted service.
+Open-source whistleblowing / secure submission platform
 
 | | |
 |---|---|

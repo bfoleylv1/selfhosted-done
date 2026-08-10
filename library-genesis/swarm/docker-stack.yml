@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=library-genesis"
-    #   - "homepage.description=library-genesis self-hosted service."
+    #   - "homepage.description=Digital library of books, articles, and academic papers.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=library-genesis.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20140"

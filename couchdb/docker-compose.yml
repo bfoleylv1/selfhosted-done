@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=couchdb"
-    #   - "homepage.description=couchdb self-hosted service."
+    #   - "homepage.description=ouchdb-style JSON document database with MVCC and multi-master replication.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=couchdb.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:5984"

@@ -1,6 +1,6 @@
 # DBeaver
 
-Universal database tool; supports all major databases.
+Universal database tool; supports all major databases
 
 | | |
 |---|---|

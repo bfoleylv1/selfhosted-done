@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=owncloud"
-    #   - "homepage.description=owncloud self-hosted service."
+    #   - "homepage.description=Open source alternative for file sharing; server and clients.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=owncloud.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20188"

@@ -1,6 +1,6 @@
 # Mattermost
 
-Open source Slack alternative; self-hosted team chat platform.
+Open source Slack alternative; self-hosted team chat platform
 
 | | |
 |---|---|

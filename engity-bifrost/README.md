@@ -1,6 +1,6 @@
 # Engity Bifrost
 
-engity-bifrost self-hosted service.
+Engity Bifrost - identity and SSO gateway
 
 | | |
 |---|---|

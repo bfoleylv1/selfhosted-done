@@ -1,6 +1,6 @@
 # ZZA
 
-Self-hosted link reader; read and save links for later.
+Self-hosted link reader; read and save links for later
 
 | | |
 |---|---|

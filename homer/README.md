@@ -1,6 +1,6 @@
 # Homer
 
-homer self-hosted service.
+Static dashboard / startpage for your homelab
 
 | | |
 |---|---|

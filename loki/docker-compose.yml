@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=loki"
-    #   - "homepage.description=loki self-hosted service."
+    #   - "homepage.description=Log aggregation system; designed to be cost-effective and easily run.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=loki.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:3100"

@@ -1,6 +1,6 @@
 # Smederee
 
-smederee self-hosted service.
+Smederee: a frugal platform for building software together, leveraging the Darcs version control system (AGPL-3.0)
 
 | | |
 |---|---|

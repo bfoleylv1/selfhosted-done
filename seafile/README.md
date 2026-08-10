@@ -1,6 +1,6 @@
 # Seafile
 
-Professional file sync and share solution; focuses on efficiency and privacy.
+Professional file sync and share solution; focuses on efficiency and privacy
 
 | | |
 |---|---|

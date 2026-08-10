@@ -1,6 +1,6 @@
 # Paperless-ngx
 
-Document management system; scan, index, archive.
+Document management system; scan, index, archive
 
 | | |
 |---|---|

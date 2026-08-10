@@ -1,6 +1,6 @@
 # Teikei
 
-teikei self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

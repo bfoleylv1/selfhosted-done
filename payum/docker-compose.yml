@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=payum"
-    #   - "homepage.description=payum self-hosted service."
+    #   - "homepage.description=PHP Payment Management Library; comprehensive payment processing.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=payum.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20197"

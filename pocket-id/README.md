@@ -1,6 +1,6 @@
 # Pocket Id
 
-pocket-id self-hosted service.
+Simple SSO identity provider with passkey support
 
 | | |
 |---|---|

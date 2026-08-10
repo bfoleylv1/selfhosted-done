@@ -1,6 +1,6 @@
 # Payum
 
-PHP Payment Management Library; comprehensive payment processing.
+PHP Payment Management Library; comprehensive payment processing
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Odoo
 
-All-in-one business management suite; CRM, ERP, CMS, and more.
+All-in-one business management suite; CRM, ERP, CMS, and more
 
 | | |
 |---|---|

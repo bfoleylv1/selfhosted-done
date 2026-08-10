@@ -1,6 +1,6 @@
 # Portainer
 
-portainer self-hosted service.
+Lightweight web UI for managing Docker, Swarm and Kubernetes
 
 | | |
 |---|---|

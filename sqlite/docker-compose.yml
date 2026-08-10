@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=sqlite"
-    #   - "homepage.description=sqlite self-hosted service."
+    #   - "homepage.description=Lightweight, file-based relational database; embedded database for most applications.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=sqlite.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20295"

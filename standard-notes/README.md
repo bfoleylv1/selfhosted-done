@@ -1,6 +1,6 @@
 # Standard Notes
 
-Encrypted notes app; focus on privacy and security.
+Encrypted notes app; focus on privacy and security
 
 | | |
 |---|---|

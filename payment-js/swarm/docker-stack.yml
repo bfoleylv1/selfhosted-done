@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=payment-js"
-    #   - "homepage.description=payment-js self-hosted service."
+    #   - "homepage.description=Simple payment processing; handle credit cards and payments.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=payment-js.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20195"

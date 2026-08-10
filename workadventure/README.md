@@ -1,6 +1,6 @@
 # Workadventure
 
-workadventure self-hosted service.
+Collaborative virtual office / worlds (MMORPG-style)
 
 | | |
 |---|---|

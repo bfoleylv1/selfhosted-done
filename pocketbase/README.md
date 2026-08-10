@@ -1,6 +1,6 @@
 # Pocketbase
 
-pocketbase self-hosted service.
+Open-source backend (SQLite + realtime + auth) in a single file
 
 | | |
 |---|---|

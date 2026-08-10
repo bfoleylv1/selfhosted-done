@@ -1,6 +1,6 @@
 # Online Invoicing
 
-online-invoicing self-hosted service.
+Self-hosted invoicing / billing tool
 
 | | |
 |---|---|

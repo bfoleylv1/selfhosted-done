@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=yt-dlp-web-ui"
-    #   - "homepage.description=yt-dlp-web-ui self-hosted service."
+    #   - "homepage.description=Web UI for yt-dlp video downloads.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=yt-dlp-web-ui.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:3033"

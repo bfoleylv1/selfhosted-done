@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=snypy"
-    #   - "homepage.description=snypy self-hosted service."
+    #   - "homepage.description=Self-hosted code snippet manager.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=snypy.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20288"

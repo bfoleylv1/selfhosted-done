@@ -1,6 +1,6 @@
 # Glance
 
-glance self-hosted service.
+Self-hosted dashboard for your homelab and services
 
 | | |
 |---|---|

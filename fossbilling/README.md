@@ -1,6 +1,6 @@
 # FOSSBilling
 
-Open source billing and invoicing; replacement for WHMCS.
+Open source billing and invoicing; replacement for WHMCS
 
 | | |
 |---|---|

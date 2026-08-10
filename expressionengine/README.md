@@ -1,6 +1,6 @@
 # ExpressionEngine
 
-Flexible CMS; simple yet powerful content management.
+Flexible CMS; simple yet powerful content management
 
 | | |
 |---|---|

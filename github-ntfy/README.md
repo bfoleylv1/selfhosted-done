@@ -1,6 +1,6 @@
 # Github Ntfy
 
-github-ntfy self-hosted service.
+ntfy push notifications for GitHub events
 
 | | |
 |---|---|

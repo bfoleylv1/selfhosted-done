@@ -1,6 +1,6 @@
 # Streamlink
 
-Command-line utility to extract streams from various services.
+Command-line utility to extract streams from various services
 
 | | |
 |---|---|

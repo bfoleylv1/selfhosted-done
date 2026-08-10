@@ -1,6 +1,6 @@
 # Sama
 
-sama self-hosted service.
+SAMA: next-gen self-hosted chat server and clients (GPL-3.0, Node.js/Docker)
 
 | | |
 |---|---|

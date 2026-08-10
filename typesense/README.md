@@ -1,6 +1,6 @@
 # Typesense
 
-Typo-tolerant search engine with fast, relevant results; developer-friendly API.
+Typo-tolerant search engine with fast, relevant results; developer-friendly API
 
 | | |
 |---|---|

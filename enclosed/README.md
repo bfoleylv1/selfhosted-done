@@ -1,6 +1,6 @@
 # Enclosed
 
-enclosed self-hosted service.
+Self-hosted tool for sharing secrets and files securely
 
 | | |
 |---|---|

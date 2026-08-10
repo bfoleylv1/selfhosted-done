@@ -1,6 +1,6 @@
 # Modoboa
 
-Mail hosting application; complete mail server suite.
+Mail hosting application; complete mail server suite
 
 | | |
 |---|---|

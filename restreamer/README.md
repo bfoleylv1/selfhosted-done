@@ -1,6 +1,6 @@
 # Restreamer
 
-restreamer self-hosted service.
+Live video streaming server (RTSP/RTMP restreaming)
 
 | | |
 |---|---|

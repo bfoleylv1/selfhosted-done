@@ -1,6 +1,6 @@
 # Ekso
 
-ekso self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

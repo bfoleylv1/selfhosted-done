@@ -1,6 +1,6 @@
 # FileBrowser
 
-Web-based file manager with authentication; manages files and folders via browser.
+Web-based file manager with authentication; manages files and folders via browser
 
 | | |
 |---|---|

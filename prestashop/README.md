@@ -1,6 +1,6 @@
 # PrestaShop
 
-Free open-source e-commerce solution; customizable online store.
+Free open-source e-commerce solution; customizable online store
 
 | | |
 |---|---|

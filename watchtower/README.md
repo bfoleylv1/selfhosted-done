@@ -1,6 +1,6 @@
 # Watchtower
 
-watchtower self-hosted service.
+Automatically update Docker containers to the latest images
 
 | | |
 |---|---|

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=pinecone"
-    #   - "homepage.description=pinecone self-hosted service."
+    #   - "homepage.description=Fully managed vector database alternative; private cloud deployment available.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=pinecone.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:6333"

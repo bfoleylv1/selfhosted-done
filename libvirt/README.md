@@ -1,6 +1,6 @@
 # Libvirt
 
-Open source virtualization API; manage VMs and containers.
+Open source virtualization API; manage VMs and containers
 
 | | |
 |---|---|

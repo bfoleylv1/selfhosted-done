@@ -1,6 +1,6 @@
 # SFTP Server
 
-SSH File Transfer Protocol; secure file transfer.
+SSH File Transfer Protocol; secure file transfer
 
 | | |
 |---|---|

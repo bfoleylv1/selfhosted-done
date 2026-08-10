@@ -1,6 +1,6 @@
 # Plunker
 
-plunker self-hosted service.
+Online code editor / playground for web development
 
 | | |
 |---|---|

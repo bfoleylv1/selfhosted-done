@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=ambassador"
-    #   - "homepage.description=ambassador self-hosted service."
+    #   - "homepage.description=L7 load balancer; Kubernetes-native application delivery controller.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=ambassador.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20403"

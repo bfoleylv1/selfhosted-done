@@ -1,6 +1,6 @@
 # Sabre Dav
 
-sabre-dav self-hosted service.
+WebDAV, CalDAV and CardDAV server library/framework
 
 | | |
 |---|---|

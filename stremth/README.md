@@ -1,6 +1,6 @@
 # Stremth
 
-Stream management and organization tool; acts as a media hub.
+Stream management and organization tool; acts as a media hub
 
 | | |
 |---|---|

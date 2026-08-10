@@ -1,6 +1,6 @@
 # The Old Reader
 
-Social RSS reader; sharing and discovery of RSS feeds.
+Social RSS reader; sharing and discovery of RSS feeds
 
 | | |
 |---|---|

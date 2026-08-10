@@ -1,6 +1,6 @@
 # Keycloak
 
-Open-source Identity and Access Management; OAuth2, OIDC, SAML provider.
+Open-source Identity and Access Management; OAuth2, OIDC, SAML provider
 
 | | |
 |---|---|

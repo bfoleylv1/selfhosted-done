@@ -1,6 +1,6 @@
 # Pgdog
 
-pgdog self-hosted service.
+PostgreSQL connection pooler and proxy
 
 | | |
 |---|---|

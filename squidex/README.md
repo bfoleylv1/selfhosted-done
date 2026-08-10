@@ -1,6 +1,6 @@
 # Squidex
 
-squidex self-hosted service.
+Open-source headless CMS
 
 | | |
 |---|---|

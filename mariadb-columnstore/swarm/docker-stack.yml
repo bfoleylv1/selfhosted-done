@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=mariadb-columnstore"
-    #   - "homepage.description=mariadb-columnstore self-hosted service."
+    #   - "homepage.description=Columnar storage engine for MariaDB; optimized for analytics workloads.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=mariadb-columnstore.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20150"

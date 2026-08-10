@@ -1,6 +1,6 @@
 # Umbraco
 
-Open-source CMS; built on .NET and ASP.NET.
+Open-source CMS; built on .NET and ASP.NET
 
 | | |
 |---|---|

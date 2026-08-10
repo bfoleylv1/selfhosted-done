@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=matrix-synapse"
-    #   - "homepage.description=matrix-synapse self-hosted service."
+    #   - "homepage.description=Decentralized communication protocol server; bridges to other services.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=matrix-synapse.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8008"

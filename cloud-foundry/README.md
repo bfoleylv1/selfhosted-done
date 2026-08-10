@@ -1,6 +1,6 @@
 # Cloud Foundry
 
-Cloud-native platform; PaaS for app deployment.
+Cloud-native platform; PaaS for app deployment
 
 | | |
 |---|---|

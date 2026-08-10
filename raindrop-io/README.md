@@ -1,6 +1,6 @@
 # Raindrop.io (Self-Hosted Clone)
 
-Bookmarking service; save and organize bookmarks.
+Bookmarking service; save and organize bookmarks
 
 | | |
 |---|---|

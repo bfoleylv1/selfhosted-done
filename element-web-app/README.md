@@ -1,6 +1,6 @@
 # Element Web App
 
-element-web-app self-hosted service.
+Matrix client for secure decentralized communication
 
 | | |
 |---|---|

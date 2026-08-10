@@ -1,6 +1,6 @@
 # OpenSearch
 
-Fork of Elasticsearch; community-supported search and analytics suite.
+Fork of Elasticsearch; community-supported search and analytics suite
 
 | | |
 |---|---|

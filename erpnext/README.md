@@ -1,6 +1,6 @@
 # ERPNext
 
-Open source ERP; built on Frappe framework for business management.
+Open source ERP; built on Frappe framework for business management
 
 | | |
 |---|---|

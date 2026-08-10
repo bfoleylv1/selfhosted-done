@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=phorge"
-    #   - "homepage.description=phorge self-hosted service."
+    #   - "homepage.description=Open-source project management and collaboration platform (Phabricator fork).""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=phorge.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20202"

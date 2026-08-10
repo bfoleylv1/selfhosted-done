@@ -33,7 +33,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=frigate"
-    #   - "homepage.description=frigate self-hosted service."
+    #   - "homepage.description=AI-powered network video recorder (NVR) for camera streams.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=frigate.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20081"

@@ -1,6 +1,6 @@
 # Browserstack Turboscale
 
-browserstack-turboscale self-hosted service.
+BrowserStack TurboScale - self-hosted device testing infrastructure (commercial)
 
 | | |
 |---|---|

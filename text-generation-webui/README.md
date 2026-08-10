@@ -1,6 +1,6 @@
 # Text Generation WebUI
 
-User interface for running LLMs locally; extensive model support.
+User interface for running LLMs locally; extensive model support
 
 | | |
 |---|---|

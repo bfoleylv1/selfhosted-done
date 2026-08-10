@@ -1,6 +1,6 @@
 # Sitecore
 
-Enterprise CMS; .NET-based content management system.
+Enterprise CMS; .NET-based content management system
 
 | | |
 |---|---|

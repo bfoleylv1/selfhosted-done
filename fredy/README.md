@@ -1,6 +1,6 @@
 # Fredy
 
-fredy self-hosted service.
+Self-hosted price comparison and shopping tool
 
 | | |
 |---|---|

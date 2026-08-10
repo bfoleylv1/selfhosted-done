@@ -1,6 +1,6 @@
 # Ambassador
 
-L7 load balancer; Kubernetes-native application delivery controller.
+L7 load balancer; Kubernetes-native application delivery controller
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # FTP Server
 
-File Transfer Protocol server; traditional file access.
+File Transfer Protocol server; traditional file access
 
 | | |
 |---|---|

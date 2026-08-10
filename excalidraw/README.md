@@ -1,6 +1,6 @@
 # Excalidraw
 
-excalidraw self-hosted service.
+Virtual whiteboard for hand-drawn diagrams
 
 | | |
 |---|---|

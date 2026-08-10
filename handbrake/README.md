@@ -1,6 +1,6 @@
 # HandBrake
 
-Video transcoder; convert videos to optimized formats.
+Video transcoder; convert videos to optimized formats
 
 | | |
 |---|---|

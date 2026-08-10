@@ -1,6 +1,6 @@
 # AppFlowy
 
-Open source Notion alternative; collaborative workspace builder.
+Open source Notion alternative; collaborative workspace builder
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Saleor
 
-E-commerce platform; GraphQL-first headless commerce solution.
+E-commerce platform; GraphQL-first headless commerce solution
 
 | | |
 |---|---|

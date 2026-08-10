@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=socks5-proxy-server"
-    #   - "homepage.description=socks5-proxy-server self-hosted service."
+    #   - "homepage.description=Self-hosted SOCKS5 proxy server.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=socks5-proxy-server.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:1080"

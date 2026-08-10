@@ -1,6 +1,6 @@
 # Vault
 
-Secrets management platform; secure storage for sensitive data.
+Secrets management platform; secure storage for sensitive data
 
 | | |
 |---|---|

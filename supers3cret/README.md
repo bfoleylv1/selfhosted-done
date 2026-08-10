@@ -1,6 +1,6 @@
 # Supers3Cret
 
-supers3cret self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

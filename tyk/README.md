@@ -1,6 +1,6 @@
 # Tyk
 
-Open source API gateway; full lifecycle API management.
+Open source API gateway; full lifecycle API management
 
 | | |
 |---|---|

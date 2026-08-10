@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=openvpn"
-    #   - "homepage.description=openvpn self-hosted service."
+    #   - "homepage.description=SSL VPN solution; secure networking and remote access.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=openvpn.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:1194"

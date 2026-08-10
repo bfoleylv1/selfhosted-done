@@ -1,6 +1,6 @@
 # Fusio
 
-fusio self-hosted service.
+Open-source API management platform
 
 | | |
 |---|---|

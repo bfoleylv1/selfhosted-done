@@ -1,6 +1,6 @@
 # GitLab
 
-Git platform with CI/CD; open-source DevOps platform.
+Git platform with CI/CD; open-source DevOps platform
 
 | | |
 |---|---|

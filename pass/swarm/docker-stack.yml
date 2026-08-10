@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=pass"
-    #   - "homepage.description=pass self-hosted service."
+    #   - "homepage.description=Simple password management; command-line password store.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=pass.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20192"

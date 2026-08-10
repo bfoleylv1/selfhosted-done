@@ -1,6 +1,6 @@
 # TimescaleDB
 
-PostgreSQL extension for time-series data; SQL for time-series.
+PostgreSQL extension for time-series data; SQL for time-series
 
 | | |
 |---|---|

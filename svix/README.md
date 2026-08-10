@@ -1,6 +1,6 @@
 # Svix
 
-svix self-hosted service.
+Open-source webhook service and infrastructure
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # NGINX Proxy Manager
 
-Web interface for managing Nginx proxies; simple reverse proxy.
+Web interface for managing Nginx proxies; simple reverse proxy
 
 | | |
 |---|---|

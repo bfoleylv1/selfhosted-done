@@ -1,6 +1,6 @@
 # Paypal Proxy
 
-paypal-proxy self-hosted service.
+Proxy for the PayPal payment API
 
 | | |
 |---|---|

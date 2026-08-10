@@ -1,6 +1,6 @@
 # Health Checker
 
-Simple monitoring tool; check service availability.
+Simple monitoring tool; check service availability
 
 | | |
 |---|---|

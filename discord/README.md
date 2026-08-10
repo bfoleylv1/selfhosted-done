@@ -1,6 +1,6 @@
 # Discord (Self-Hosted Proxy)
 
-Self-hosted Discord alternative; open source communication platform.
+Self-hosted Discord alternative; open source communication platform
 
 | | |
 |---|---|

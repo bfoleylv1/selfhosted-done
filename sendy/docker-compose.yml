@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=sendy"
-    #   - "homepage.description=sendy self-hosted service."
+    #   - "homepage.description=Self-hosted email marketing platform (Amazon SES based).""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=sendy.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20271"

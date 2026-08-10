@@ -1,6 +1,6 @@
 # Rclone
 
-Command-line program for syncing files and directories to cloud storage.
+Command-line program for syncing files and directories to cloud storage
 
 | | |
 |---|---|

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=davis"
-    #   - "homepage.description=davis self-hosted service."
+    #   - "homepage.description=Self-hosted CalDAV/CardDAV server (PHP).""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=davis.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20042"

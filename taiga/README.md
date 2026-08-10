@@ -1,6 +1,6 @@
 # Taiga
 
-Project management tool for Agile development; issue tracking and kanban.
+Project management tool for Agile development; issue tracking and kanban
 
 | | |
 |---|---|

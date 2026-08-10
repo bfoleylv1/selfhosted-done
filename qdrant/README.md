@@ -1,6 +1,6 @@
 # Qdrant
 
-Fast and privacy-friendly vector search engine with an easy-to-use gRPC API.
+Fast and privacy-friendly vector search engine with an easy-to-use gRPC API
 
 | | |
 |---|---|

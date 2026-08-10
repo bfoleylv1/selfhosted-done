@@ -1,6 +1,6 @@
 # Redis
 
-In-memory key-value store; used as database, cache, and message broker.
+In-memory key-value store; used as database, cache, and message broker
 
 | | |
 |---|---|

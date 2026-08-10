@@ -1,6 +1,6 @@
 # Organizr
 
-organizr self-hosted service.
+Organize your homelab tabs into a single login dashboard
 
 | | |
 |---|---|

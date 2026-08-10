@@ -1,6 +1,6 @@
 # PartKeepSystem
 
-PHP/MySQL web application; organize and manage parts inventory.
+PHP/MySQL web application; organize and manage parts inventory
 
 | | |
 |---|---|

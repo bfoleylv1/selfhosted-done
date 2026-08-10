@@ -1,6 +1,6 @@
 # 92Five
 
-92five self-hosted service.
+Self-hosted project management and collaboration tool
 
 | | |
 |---|---|

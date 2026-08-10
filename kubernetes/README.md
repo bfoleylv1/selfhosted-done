@@ -1,6 +1,6 @@
 # Kubernetes
 
-System for automating deployment, scaling, and management.
+System for automating deployment, scaling, and management
 
 | | |
 |---|---|

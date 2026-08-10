@@ -1,6 +1,6 @@
 # GitLab CI
 
-Built-in CI/CD for GitLab; automated testing and deployment.
+Built-in CI/CD for GitLab; automated testing and deployment
 
 | | |
 |---|---|

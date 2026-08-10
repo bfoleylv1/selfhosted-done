@@ -1,6 +1,6 @@
 # Forward Email
 
-forward-email self-hosted service.
+Open-source email forwarding and alias service
 
 | | |
 |---|---|

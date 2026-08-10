@@ -1,6 +1,6 @@
 # Stripe Self Hosted
 
-stripe-self-hosted self-hosted service.
+Self-hosted Stripe integration / API proxy
 
 | | |
 |---|---|

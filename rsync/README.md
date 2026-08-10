@@ -1,6 +1,6 @@
 # Rsync
 
-Fast and versatile file copying tool; delta sync and backup.
+Fast and versatile file copying tool; delta sync and backup
 
 | | |
 |---|---|

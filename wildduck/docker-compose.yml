@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=wildduck"
-    #   - "homepage.description=wildduck self-hosted service."
+    #   - "homepage.description=IMAP/POP3 mail server written in Node.js.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=wildduck.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20365"

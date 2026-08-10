@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=exim"
-    #   - "homepage.description=exim self-hosted service."
+    #   - "homepage.description=Mail transfer agent; configurable message transfer agent.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=exim.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20065"

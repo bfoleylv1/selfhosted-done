@@ -1,6 +1,6 @@
 # Sonarr
 
-PVR for TV shows; manages and automatically downloads series episodes.
+PVR for TV shows; manages and automatically downloads series episodes
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Pushbits
 
-pushbits self-hosted service.
+Self-hosted push notification relay for Android/iOS
 
 | | |
 |---|---|

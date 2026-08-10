@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=collabora-online"
-    #   - "homepage.description=collabora-online self-hosted service."
+    #   - "homepage.description=Self-hosted LibreOffice-based online office suite.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=collabora-online.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9980"

@@ -1,6 +1,6 @@
 # WebDAV
 
-HTTP-based file management protocol; file sharing over HTTP.
+HTTP-based file management protocol; file sharing over HTTP
 
 | | |
 |---|---|

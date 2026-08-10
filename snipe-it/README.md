@@ -1,6 +1,6 @@
 # Snipe-IT
 
-Asset management solution; manage your IT assets and equipment.
+Asset management solution; manage your IT assets and equipment
 
 | | |
 |---|---|

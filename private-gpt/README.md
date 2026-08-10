@@ -1,6 +1,6 @@
 # PrivateGPT
 
-Open-source API layer turning local models into production AI apps.
+Open-source API layer turning local models into production AI apps
 
 | | |
 |---|---|

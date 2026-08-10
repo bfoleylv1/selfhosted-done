@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=focalboard"
-    #   - "homepage.description=focalboard self-hosted service."
+    #   - "homepage.description=Open source Notion alternative; kanban and project management.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=focalboard.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20072"

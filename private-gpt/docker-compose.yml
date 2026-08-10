@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=private-gpt"
-    #   - "homepage.description=private-gpt self-hosted service."
+    #   - "homepage.description=Open-source API layer turning local models into production AI apps.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=private-gpt.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20220"

@@ -1,6 +1,6 @@
 # Notejot
 
-Simple and elegant notes app; lightweight note-taking solution.
+Simple and elegant notes app; lightweight note-taking solution
 
 | | |
 |---|---|

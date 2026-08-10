@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=yacy"
-    #   - "homepage.description=yacy self-hosted service."
+    #   - "homepage.description=Decentralized search engine; peer-to-peer indexing and search network.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=yacy.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20374"

@@ -1,6 +1,6 @@
 # Zimbra
 
-Collaboration software; email, calendar, contacts.
+Collaboration software; email, calendar, contacts
 
 | | |
 |---|---|

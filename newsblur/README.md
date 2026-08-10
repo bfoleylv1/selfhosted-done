@@ -1,6 +1,6 @@
 # NewsBlur
 
-News reader with smart filtering; self-hosted version for news aggregation.
+News reader with smart filtering; self-hosted version for news aggregation
 
 | | |
 |---|---|

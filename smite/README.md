@@ -1,6 +1,6 @@
 # Smite
 
-smite self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

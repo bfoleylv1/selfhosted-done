@@ -1,6 +1,6 @@
 # Kiwix
 
-Offline Wikipedia reader; hosts ZIM file format for offline browsing.
+Offline Wikipedia reader; hosts ZIM file format for offline browsing
 
 | | |
 |---|---|

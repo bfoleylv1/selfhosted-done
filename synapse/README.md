@@ -1,6 +1,6 @@
 # Synapse
 
-synapse self-hosted service.
+Reference Matrix homeserver for federated chat
 
 | | |
 |---|---|

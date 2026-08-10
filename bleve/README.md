@@ -1,6 +1,6 @@
 # Bleve
 
-Modern text search and analytics; Go full-text search library.
+Modern text search and analytics; Go full-text search library
 
 | | |
 |---|---|

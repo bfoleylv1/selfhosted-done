@@ -1,6 +1,6 @@
 # Ghost
 
-Publishing platform; focused on publishing and journalism.
+Publishing platform; focused on publishing and journalism
 
 | | |
 |---|---|

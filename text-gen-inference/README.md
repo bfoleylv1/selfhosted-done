@@ -1,6 +1,6 @@
 # Text Gen Inference
 
-text-gen-inference self-hosted service.
+Text generation inference server for LLMs (HuggingFace TGI)
 
 | | |
 |---|---|

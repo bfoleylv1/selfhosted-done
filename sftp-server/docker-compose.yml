@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=sftp-server"
-    #   - "homepage.description=sftp-server self-hosted service."
+    #   - "homepage.description=SSH File Transfer Protocol; secure file transfer.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=sftp-server.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20275"

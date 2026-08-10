@@ -1,6 +1,6 @@
 # Github Runner
 
-github-runner self-hosted service.
+Self-hosted GitHub Actions runner
 
 | | |
 |---|---|

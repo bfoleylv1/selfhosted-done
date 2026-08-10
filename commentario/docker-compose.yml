@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=commentario"
-    #   - "homepage.description=commentario self-hosted service."
+    #   - "homepage.description=Self-hosted comment system for static sites.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=commentario.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20036"

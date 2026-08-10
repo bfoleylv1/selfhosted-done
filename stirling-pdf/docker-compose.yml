@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=stirling-pdf"
-    #   - "homepage.description=stirling-pdf self-hosted service."
+    #   - "homepage.description=Local PDF manipulation toolkit (merge, split, convert).""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=stirling-pdf.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20302"

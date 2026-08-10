@@ -1,6 +1,6 @@
 # Cap
 
-cap self-hosted service.
+Open-source screen recording and sharing tool
 
 | | |
 |---|---|

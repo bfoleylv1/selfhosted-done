@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=gomodel"
-    #   - "homepage.description=gomodel self-hosted service."
+    #   - "homepage.description=GoModel: open-source AI gateway / control plane proxy with an OpenAI- and Anthropic-compatible API (a LiteLLM alternative).""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=gomodel.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20099"

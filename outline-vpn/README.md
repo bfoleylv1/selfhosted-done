@@ -1,6 +1,6 @@
 # Outline VPN
 
-Secure team network access; Shadowsocks-based proxy.
+Secure team network access; Shadowsocks-based proxy
 
 | | |
 |---|---|

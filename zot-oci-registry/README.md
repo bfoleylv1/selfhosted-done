@@ -1,6 +1,6 @@
 # Zot Oci Registry
 
-zot-oci-registry self-hosted service.
+OCI container image registry (Zot)
 
 | | |
 |---|---|

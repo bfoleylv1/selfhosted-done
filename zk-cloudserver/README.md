@@ -1,6 +1,6 @@
 # Zk Cloudserver
 
-zk-cloudserver self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

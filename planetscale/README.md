@@ -1,6 +1,6 @@
 # PlanetScale
 
-Serverless MySQL platform; branchable databases.
+Serverless MySQL platform; branchable databases
 
 | | |
 |---|---|

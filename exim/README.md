@@ -1,6 +1,6 @@
 # Exim
 
-Mail transfer agent; configurable message transfer agent.
+Mail transfer agent; configurable message transfer agent
 
 | | |
 |---|---|

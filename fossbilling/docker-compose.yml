@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=fossbilling"
-    #   - "homepage.description=fossbilling self-hosted service."
+    #   - "homepage.description=Open source billing and invoicing; replacement for WHMCS.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=fossbilling.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20075"

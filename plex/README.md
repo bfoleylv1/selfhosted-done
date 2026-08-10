@@ -1,6 +1,6 @@
 # Plex
 
-Media server for organizing and streaming your media library.
+Media server for organizing and streaming your media library
 
 | | |
 |---|---|

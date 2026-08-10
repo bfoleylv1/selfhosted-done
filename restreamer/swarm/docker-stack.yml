@@ -51,7 +51,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=restreamer"
-    #   - "homepage.description=restreamer self-hosted service."
+    #   - "homepage.description=Live video streaming server (RTSP/RTMP restreaming).""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=restreamer.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20244"

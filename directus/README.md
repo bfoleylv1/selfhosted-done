@@ -1,6 +1,6 @@
 # Directus
 
-Open-source Data Platform; turn any SQL database into a CMS.
+Open-source Data Platform; turn any SQL database into a CMS
 
 | | |
 |---|---|

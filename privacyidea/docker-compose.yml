@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=privacyidea"
-    #   - "homepage.description=privacyidea self-hosted service."
+    #   - "homepage.description=Multi-factor authentication server supporting TOTP, HOTP, and WebAuthn.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=privacyidea.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20219"

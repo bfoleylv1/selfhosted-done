@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=citus"
-    #   - "homepage.description=citus self-hosted service."
+    #   - "homepage.description=Extension to PostgreSQL; real-time analytics and scaling.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=citus.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20029"

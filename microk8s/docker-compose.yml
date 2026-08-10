@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=microk8s"
-    #   - "homepage.description=microk8s self-hosted service."
+    #   - "homepage.description=Lightweight Kubernetes distribution; edge and IoT deployment.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=microk8s.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20154"

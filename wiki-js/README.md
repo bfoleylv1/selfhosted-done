@@ -1,6 +1,6 @@
 # Wiki.js
 
-Modern and powerful wiki app; built on Node.js with Vue.js frontend.
+Modern and powerful wiki app; built on Node.js with Vue.js frontend
 
 | | |
 |---|---|

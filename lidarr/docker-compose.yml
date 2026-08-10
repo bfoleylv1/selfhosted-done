@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=lidarr"
-    #   - "homepage.description=lidarr self-hosted service."
+    #   - "homepage.description=PVR for music; automatically downloads and organizes music albums.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=lidarr.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8686"

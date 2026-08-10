@@ -1,6 +1,6 @@
 # WooCommerce
 
-WordPress plugin for e-commerce; highly customizable storefront.
+WordPress plugin for e-commerce; highly customizable storefront
 
 | | |
 |---|---|

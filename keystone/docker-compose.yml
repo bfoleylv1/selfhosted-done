@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=keystone"
-    #   - "homepage.description=keystone self-hosted service."
+    #   - "homepage.description=Node.js GraphQL CMS; flexible and extensible.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=keystone.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20127"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=yetishare"
-    #   - "homepage.description=yetishare self-hosted service."
+    #   - "homepage.description=Self-hosted file hosting and sharing script.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=yetishare.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20378"

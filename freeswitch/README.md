@@ -1,6 +1,6 @@
 # Freeswitch
 
-freeswitch self-hosted service.
+Open-source telephony platform / softswitch (VoIP)
 
 | | |
 |---|---|

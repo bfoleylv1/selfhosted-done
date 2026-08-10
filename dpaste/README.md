@@ -1,6 +1,6 @@
 # Dpaste
 
-dpaste self-hosted service.
+Self-hosted pastebin / code snippet service
 
 | | |
 |---|---|

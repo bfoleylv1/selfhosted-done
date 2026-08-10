@@ -1,6 +1,6 @@
 # Rgit
 
-rgit self-hosted service.
+Self-hosted Git repository manager / viewer
 
 | | |
 |---|---|

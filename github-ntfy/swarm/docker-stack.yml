@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=github-ntfy"
-    #   - "homepage.description=github-ntfy self-hosted service."
+    #   - "homepage.description=ntfy push notifications for GitHub events.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=github-ntfy.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20091"

@@ -1,6 +1,6 @@
 # Jellyfin
 
-Free and open source media system; fork of Emby with complete privacy focus.
+Free and open source media system; fork of Emby with complete privacy focus
 
 | | |
 |---|---|

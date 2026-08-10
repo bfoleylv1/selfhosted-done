@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=zot-oci-registry"
-    #   - "homepage.description=zot-oci-registry self-hosted service."
+    #   - "homepage.description=OCI container image registry (Zot).""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=zot-oci-registry.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20390"

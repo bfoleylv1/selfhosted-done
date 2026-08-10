@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=swifty"
-    #   - "homepage.description=swifty self-hosted service."
+    #   - "homepage.description=Simple and fast music server; lightweight alternative to Airsonic.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=swifty.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20316"

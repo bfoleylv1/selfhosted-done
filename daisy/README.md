@@ -1,6 +1,6 @@
 # Daisy
 
-daisy self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

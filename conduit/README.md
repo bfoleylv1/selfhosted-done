@@ -1,6 +1,6 @@
 # Conduit
 
-conduit self-hosted service.
+Lightweight Matrix homeserver written in Rust
 
 | | |
 |---|---|

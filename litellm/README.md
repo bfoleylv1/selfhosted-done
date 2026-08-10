@@ -1,6 +1,6 @@
 # Litellm
 
-litellm self-hosted service.
+Proxy gateway for 100+ LLM providers with load balancing and fallbacks
 
 | | |
 |---|---|

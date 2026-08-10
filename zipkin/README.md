@@ -1,6 +1,6 @@
 # Zipkin
 
-Distributed tracing system; gather timing information.
+Distributed tracing system; gather timing information
 
 | | |
 |---|---|

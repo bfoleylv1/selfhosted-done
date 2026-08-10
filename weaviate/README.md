@@ -1,6 +1,6 @@
 # Weaviate
 
-GraphQL-native vector database with class-based object storage and search capabilities.
+GraphQL-native vector database with class-based object storage and search capabilities
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Jenkins
 
-Open source automation server; CI/CD for builds and tests.
+Open source automation server; CI/CD for builds and tests
 
 | | |
 |---|---|

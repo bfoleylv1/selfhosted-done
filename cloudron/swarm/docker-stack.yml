@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cloudron"
-    #   - "homepage.description=cloudron self-hosted service."
+    #   - "homepage.description=Self-hosted PaaS for installing and managing web apps.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=cloudron.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20033"

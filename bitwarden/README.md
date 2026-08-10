@@ -1,6 +1,6 @@
 # Bitwarden
 
-Open source password manager; secure storage for passwords and notes.
+Open source password manager; secure storage for passwords and notes
 
 | | |
 |---|---|

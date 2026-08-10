@@ -37,7 +37,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=qdrant"
-    #   - "homepage.description=qdrant self-hosted service."
+    #   - "homepage.description=Fast and privacy-friendly vector search engine with an easy-to-use gRPC API.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=qdrant.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20227"

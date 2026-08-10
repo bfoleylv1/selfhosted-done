@@ -1,6 +1,6 @@
 # Thelia
 
-thelia self-hosted service.
+Open-source e-commerce platform (PHP)
 
 | | |
 |---|---|

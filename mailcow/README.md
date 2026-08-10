@@ -1,6 +1,6 @@
 # Mailcow
 
-Email solution; complete mail server suite.
+Email solution; complete mail server suite
 
 | | |
 |---|---|

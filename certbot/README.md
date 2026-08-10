@@ -1,6 +1,6 @@
 # Certbot
 
-Let's Encrypt client; automatic certificate management.
+Let's Encrypt client; automatic certificate management
 
 | | |
 |---|---|

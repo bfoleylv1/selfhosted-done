@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=shkeeper"
-    #   - "homepage.description=shkeeper self-hosted service."
+    #   - "homepage.description=Self-hosted crypto payment gateway.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=shkeeper.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20277"

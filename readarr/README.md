@@ -1,6 +1,6 @@
 # Readarr
 
-Book/PDF/EPUB/MOBI/AZW3 article librarian; manages book torrents and Usenet.
+Book/PDF/EPUB/MOBI/AZW3 article librarian; manages book torrents and Usenet
 
 | | |
 |---|---|

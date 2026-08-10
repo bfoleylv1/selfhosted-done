@@ -1,6 +1,6 @@
 # OSSEC
 
-Host-based intrusion detection system; log analysis and monitoring.
+Host-based intrusion detection system; log analysis and monitoring
 
 | | |
 |---|---|

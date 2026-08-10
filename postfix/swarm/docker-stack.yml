@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=postfix"
-    #   - "homepage.description=postfix self-hosted service."
+    #   - "homepage.description=Mail transfer agent; send and receive email.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=postfix.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20216"

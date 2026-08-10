@@ -1,6 +1,6 @@
 # Envoy
 
-High-performance proxy; service mesh and edge proxy solution.
+High-performance proxy; service mesh and edge proxy solution
 
 | | |
 |---|---|

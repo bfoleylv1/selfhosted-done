@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=restic"
-    #   - "homepage.description=restic self-hosted service."
+    #   - "homepage.description=Fast backup program; easy to use with encryption and compression.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=restic.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20243"

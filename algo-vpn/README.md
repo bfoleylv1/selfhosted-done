@@ -1,6 +1,6 @@
 # Algo VPN
 
-VPN servers; deploy IPsec VPN on popular cloud providers.
+VPN servers; deploy IPsec VPN on popular cloud providers
 
 | | |
 |---|---|

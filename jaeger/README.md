@@ -1,6 +1,6 @@
 # Jaeger
 
-Distributed tracing; monitoring microservices performance.
+Distributed tracing; monitoring microservices performance
 
 | | |
 |---|---|

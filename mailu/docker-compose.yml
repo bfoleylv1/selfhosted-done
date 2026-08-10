@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=mailu"
-    #   - "homepage.description=mailu self-hosted service."
+    #   - "homepage.description=Open source email suite; complete mail server stack.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=mailu.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20148"

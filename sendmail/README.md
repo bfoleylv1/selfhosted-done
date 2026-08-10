@@ -1,6 +1,6 @@
 # Sendmail
 
-Most widely used Unix mail transfer agent.
+Most widely used Unix mail transfer agent
 
 | | |
 |---|---|

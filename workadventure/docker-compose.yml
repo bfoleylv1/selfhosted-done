@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=workadventure"
-    #   - "homepage.description=workadventure self-hosted service."
+    #   - "homepage.description=Collaborative virtual office / worlds (MMORPG-style).""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=workadventure.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20370"

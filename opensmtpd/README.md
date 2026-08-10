@@ -1,6 +1,6 @@
 # OpenSMTPD
 
-SMTP server; OpenBSD's mail server.
+SMTP server; OpenBSD's mail server
 
 | | |
 |---|---|

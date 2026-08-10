@@ -1,6 +1,6 @@
 # Commentario
 
-commentario self-hosted service.
+Self-hosted comment system for static sites
 
 | | |
 |---|---|

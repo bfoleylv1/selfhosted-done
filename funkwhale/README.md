@@ -1,6 +1,6 @@
 # Funkwhale
 
-Peer-to-peer music sharing; listen and share music in a friendly way.
+Peer-to-peer music sharing; listen and share music in a friendly way
 
 | | |
 |---|---|

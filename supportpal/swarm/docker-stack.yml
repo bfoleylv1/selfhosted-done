@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=supportpal"
-    #   - "homepage.description=supportpal self-hosted service."
+    #   - "homepage.description=Self-hosted helpdesk / support desk software (commercial).""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=supportpal.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20312"

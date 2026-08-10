@@ -1,6 +1,6 @@
 # Nomad
 
-Workload orchestrator; schedule and run containers and VMs.
+Workload orchestrator; schedule and run containers and VMs
 
 | | |
 |---|---|

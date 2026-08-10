@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=r2"
-    #   - "homepage.description=r2 self-hosted service."
+    #   - "homepage.description=Self-hosted proxy for Cloudflare R2 object storage.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=r2.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20229"

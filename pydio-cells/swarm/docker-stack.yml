@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=pydio-cells"
-    #   - "homepage.description=pydio-cells self-hosted service."
+    #   - "homepage.description=Enterprise file sharing and sync platform; modern alternative to Nextcloud.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=pydio-cells.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20226"

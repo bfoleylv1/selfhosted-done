@@ -1,6 +1,6 @@
 # Tuleap
 
-tuleap self-hosted service.
+Open-source ALM and project management (Agile + DevOps)
 
 | | |
 |---|---|

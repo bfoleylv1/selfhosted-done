@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=odoo"
-    #   - "homepage.description=odoo self-hosted service."
+    #   - "homepage.description=All-in-one business management suite; CRM, ERP, CMS, and more.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=odoo.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8069"

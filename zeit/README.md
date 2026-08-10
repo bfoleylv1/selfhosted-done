@@ -1,6 +1,6 @@
 # Zeit
 
-zeit self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

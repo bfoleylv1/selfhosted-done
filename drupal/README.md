@@ -1,6 +1,6 @@
 # Drupal
 
-Open-source CMS; flexible and extensible content management.
+Open-source CMS; flexible and extensible content management
 
 | | |
 |---|---|

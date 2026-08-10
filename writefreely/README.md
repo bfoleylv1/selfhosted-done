@@ -1,6 +1,6 @@
 # WriteFreely
 
-Federated publishing platform; write and share articles.
+Federated publishing platform; write and share articles
 
 | | |
 |---|---|

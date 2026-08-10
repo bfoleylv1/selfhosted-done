@@ -1,6 +1,6 @@
 # Prisma
 
-Database toolkit; type-safe ORM with migrations.
+Database toolkit; type-safe ORM with migrations
 
 | | |
 |---|---|

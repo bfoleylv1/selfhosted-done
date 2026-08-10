@@ -1,6 +1,6 @@
 # Sentry (Self-Hosted)
 
-Open-source error tracking tool; monitor and improve software.
+Open-source error tracking tool; monitor and improve software
 
 | | |
 |---|---|

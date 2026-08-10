@@ -1,6 +1,6 @@
 # Freepbx
 
-freepbx self-hosted service.
+Web-based open-source PBX built on Asterisk
 
 | | |
 |---|---|

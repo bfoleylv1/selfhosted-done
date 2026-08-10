@@ -1,6 +1,6 @@
 # Emby
 
-Media system for organizing and streaming video, music, and photos.
+Media system for organizing and streaming video, music, and photos
 
 | | |
 |---|---|

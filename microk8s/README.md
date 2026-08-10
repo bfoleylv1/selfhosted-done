@@ -1,6 +1,6 @@
 # MicroK8s
 
-Lightweight Kubernetes distribution; edge and IoT deployment.
+Lightweight Kubernetes distribution; edge and IoT deployment
 
 | | |
 |---|---|

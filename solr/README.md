@@ -1,6 +1,6 @@
 # Solr
 
-Enterprise search platform built on Apache Lucene; powerful full-text search capabilities.
+Enterprise search platform built on Apache Lucene; powerful full-text search capabilities
 
 | | |
 |---|---|

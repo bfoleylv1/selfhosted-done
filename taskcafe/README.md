@@ -1,6 +1,6 @@
 # Taskcafe
 
-Self-hosted task management; simple and easy to use.
+Self-hosted task management; simple and easy to use
 
 | | |
 |---|---|

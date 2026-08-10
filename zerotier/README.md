@@ -1,6 +1,6 @@
 # ZeroTier
 
-Smart networking platform; SD-WAN and SDN capabilities.
+Smart networking platform; SD-WAN and SDN capabilities
 
 | | |
 |---|---|

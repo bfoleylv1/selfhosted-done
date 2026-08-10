@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=revert"
-    #   - "homepage.description=revert self-hosted service."
+    #   - "homepage.description=Self-hosted service.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=revert.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20247"

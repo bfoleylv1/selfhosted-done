@@ -1,6 +1,6 @@
 # Plausible Analytics
 
-Simple, privacy-focused web analytics alternative to Google Analytics.
+Simple, privacy-focused web analytics alternative to Google Analytics
 
 | | |
 |---|---|

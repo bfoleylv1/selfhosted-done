@@ -1,6 +1,6 @@
 # Woodpecker CI
 
-Lightweight CI/CD system; fork of Drone.
+Lightweight CI/CD system; fork of Drone
 
 | | |
 |---|---|

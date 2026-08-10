@@ -1,6 +1,6 @@
 # FoundationDB
 
-Ordered key-value database; transactions and scalability.
+Ordered key-value database; transactions and scalability
 
 | | |
 |---|---|

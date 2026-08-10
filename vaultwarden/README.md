@@ -1,6 +1,6 @@
 # Vaultwarden (Bitwarden RS)
 
-Lightweight password manager server; Open Source Bitwarden implementation.
+Unofficial Bitwarden server implementation; lightweight and fast
 
 | | |
 |---|---|

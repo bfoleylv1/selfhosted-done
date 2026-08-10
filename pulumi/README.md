@@ -1,6 +1,6 @@
 # Pulumi
 
-Modern infrastructure as code; use real programming languages.
+Modern infrastructure as code; use real programming languages
 
 | | |
 |---|---|

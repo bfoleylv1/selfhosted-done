@@ -1,6 +1,6 @@
 # Yourls
 
-yourls self-hosted service.
+Self-hosted URL shortener
 
 | | |
 |---|---|

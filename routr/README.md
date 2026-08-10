@@ -1,6 +1,6 @@
 # Routr
 
-routr self-hosted service.
+SIP server for VoIP and telephony routing
 
 | | |
 |---|---|

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=oidc-proxy"
-    #   - "homepage.description=oidc-proxy self-hosted service."
+    #   - "homepage.description=Single sign-on solution for legacy applications using OAuth2/OIDC.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=oidc-proxy.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:4180"

@@ -1,6 +1,6 @@
 # Opencode
 
-opencode self-hosted service.
+Open-source AI coding agent / assistant
 
 | | |
 |---|---|

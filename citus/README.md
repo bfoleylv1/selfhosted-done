@@ -1,6 +1,6 @@
 # Citus
 
-Extension to PostgreSQL; real-time analytics and scaling.
+Extension to PostgreSQL; real-time analytics and scaling
 
 | | |
 |---|---|

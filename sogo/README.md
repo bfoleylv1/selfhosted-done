@@ -1,6 +1,6 @@
 # Sogo
 
-Web access to IMAP and CalDAV; groupware solution.
+Web access to IMAP and CalDAV; groupware solution
 
 | | |
 |---|---|

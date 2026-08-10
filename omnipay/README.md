@@ -1,6 +1,6 @@
 # Omnipay
 
-Multi-gateway payment processing library for PHP.
+Multi-gateway payment processing library for PHP
 
 | | |
 |---|---|

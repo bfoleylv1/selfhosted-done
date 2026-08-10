@@ -1,6 +1,6 @@
 # Piefed
 
-piefed self-hosted service.
+Federated feed aggregator (ActivityPub)
 
 | | |
 |---|---|

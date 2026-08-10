@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=rsnapshot"
-    #   - "homepage.description=rsnapshot self-hosted service."
+    #   - "homepage.description=Filesystem snapshot utility; rsync-based backup tool.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=rsnapshot.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20255"

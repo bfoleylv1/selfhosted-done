@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=client-management"
-    #   - "homepage.description=client-management self-hosted service."
+    #   - "homepage.description=Invoice, quotes, and client management for freelancers and agencies.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=client-management.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20030"

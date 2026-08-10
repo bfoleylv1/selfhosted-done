@@ -1,6 +1,6 @@
 # Axigen
 
-Mail server; enterprise email and collaboration.
+Mail server; enterprise email and collaboration
 
 | | |
 |---|---|

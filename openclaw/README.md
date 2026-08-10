@@ -1,6 +1,6 @@
 # Openclaw
 
-openclaw self-hosted service.
+OpenClaw: self-hosted personal AI assistant (cross-platform)
 
 | | |
 |---|---|

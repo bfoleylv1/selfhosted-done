@@ -1,6 +1,6 @@
 # HashiCorp Vault
 
-Secrets management and encryption; secure key storage.
+Secrets management and encryption; secure key storage
 
 | | |
 |---|---|

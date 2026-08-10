@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=omnipay"
-    #   - "homepage.description=omnipay self-hosted service."
+    #   - "homepage.description=Multi-gateway payment processing library for PHP.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=omnipay.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20172"

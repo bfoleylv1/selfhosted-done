@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=tuwunel"
-    #   - "homepage.description=tuwunel self-hosted service."
+    #   - "homepage.description=Matrix homeserver written in Rust.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=tuwunel.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20338"

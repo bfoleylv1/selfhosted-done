@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=taiga"
-    #   - "homepage.description=taiga self-hosted service."
+    #   - "homepage.description=Project management tool for Agile development; issue tracking and kanban.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=taiga.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20319"

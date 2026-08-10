@@ -1,6 +1,6 @@
 # Yt Dlp Web Ui
 
-yt-dlp-web-ui self-hosted service.
+Web UI for yt-dlp video downloads
 
 | | |
 |---|---|

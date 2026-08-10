@@ -1,6 +1,6 @@
 # Snort
 
-Network intrusion detection and prevention system.
+Network intrusion detection and prevention system
 
 | | |
 |---|---|

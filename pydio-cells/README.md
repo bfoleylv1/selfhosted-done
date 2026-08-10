@@ -1,6 +1,6 @@
 # Pydio Cells
 
-Enterprise file sharing and sync platform; modern alternative to Nextcloud.
+Enterprise file sharing and sync platform; modern alternative to Nextcloud
 
 | | |
 |---|---|

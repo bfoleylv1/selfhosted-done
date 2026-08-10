@@ -1,6 +1,6 @@
 # Prowlarr
 
-Indexing manager for Sonarr, Radarr, Lidarr, and Readarr; manages indexers.
+Indexing manager for Sonarr, Radarr, Lidarr, and Readarr; manages indexers
 
 | | |
 |---|---|

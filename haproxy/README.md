@@ -1,6 +1,6 @@
 # Haproxy
 
-Reliable, high-performance TCP/HTTP load balancer.
+Reliable, high-performance TCP/HTTP load balancer
 
 | | |
 |---|---|

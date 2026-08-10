@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=forgejo"
-    #   - "homepage.description=forgejo self-hosted service."
+    #   - "homepage.description=Fork of Gitea; community-driven Git service.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=forgejo.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20073"

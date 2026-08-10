@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=nextcloud"
-    #   - "homepage.description=nextcloud self-hosted service."
+    #   - "homepage.description=Suite of client-server software for file syncing, collaboration, and video conferencing.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=nextcloud.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20165"

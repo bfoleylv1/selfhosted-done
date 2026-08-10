@@ -1,6 +1,6 @@
 # Wazuh
 
-Open source security platform; XDR and SIEM capabilities.
+Open source security platform; XDR and SIEM capabilities
 
 | | |
 |---|---|

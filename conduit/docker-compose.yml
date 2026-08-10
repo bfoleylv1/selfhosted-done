@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=conduit"
-    #   - "homepage.description=conduit self-hosted service."
+    #   - "homepage.description=Lightweight Matrix homeserver written in Rust.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=conduit.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:6167"

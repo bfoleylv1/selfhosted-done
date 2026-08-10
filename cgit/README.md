@@ -1,6 +1,6 @@
 # Cgit
 
-cgit self-hosted service.
+Lightweight web frontend for Git repositories
 
 | | |
 |---|---|

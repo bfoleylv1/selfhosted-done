@@ -1,6 +1,6 @@
 # VLC Frontend
 
-Web interface for managing and watching VLC content.
+Web interface for managing and watching VLC content
 
 | | |
 |---|---|

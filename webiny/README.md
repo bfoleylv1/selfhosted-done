@@ -1,6 +1,6 @@
 # Webiny
 
-webiny self-hosted service.
+Open-source serverless CMS and application framework
 
 | | |
 |---|---|

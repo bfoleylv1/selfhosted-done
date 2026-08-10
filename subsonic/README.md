@@ -1,6 +1,6 @@
 # Subsonic
 
-Web media streaming platform; the progenitor for many forks.
+Web media streaming platform; the progenitor for many forks
 
 | | |
 |---|---|

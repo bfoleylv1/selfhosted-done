@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=tiny-tiny-rss"
-    #   - "homepage.description=tiny-tiny-rss self-hosted service."
+    #   - "homepage.description=Web-based news reader; customizable and extensible RSS aggregator.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=tiny-tiny-rss.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20331"

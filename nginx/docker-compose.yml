@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=nginx"
-    #   - "homepage.description=nginx self-hosted service."
+    #   - "homepage.description=Web server and reverse proxy; high-performance HTTP server.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=nginx.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20166"

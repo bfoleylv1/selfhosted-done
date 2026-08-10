@@ -1,6 +1,6 @@
 # Supportpal
 
-supportpal self-hosted service.
+Self-hosted helpdesk / support desk software (commercial)
 
 | | |
 |---|---|

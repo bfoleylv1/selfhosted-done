@@ -1,6 +1,6 @@
 # OwnCloud
 
-Open source alternative for file sharing; server and clients.
+Open source alternative for file sharing; server and clients
 
 | | |
 |---|---|

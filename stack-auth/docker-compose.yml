@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=stack-auth"
-    #   - "homepage.description=stack-auth self-hosted service."
+    #   - "homepage.description=Open-source authentication and user management.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=stack-auth.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20298"

@@ -1,6 +1,6 @@
 # CFSSL
 
-CloudFlare's PKI toolkit; certificate authority and tools.
+CloudFlare's PKI toolkit; certificate authority and tools
 
 | | |
 |---|---|

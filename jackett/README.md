@@ -1,6 +1,6 @@
 # Jackett
 
-API for torrent indexers; acts as a bridge between downloaders and indexers.
+API for torrent indexers; acts as a bridge between downloaders and indexers
 
 | | |
 |---|---|

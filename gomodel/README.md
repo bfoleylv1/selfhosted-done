@@ -1,6 +1,6 @@
 # Gomodel
 
-gomodel self-hosted service.
+GoModel: open-source AI gateway / control plane proxy with an OpenAI- and Anthropic-compatible API (a LiteLLM alternative)
 
 | | |
 |---|---|

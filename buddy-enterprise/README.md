@@ -1,6 +1,6 @@
 # Buddy Enterprise
 
-buddy-enterprise self-hosted service.
+Buddy Enterprise - self-hosted CI/CD automation server (commercial)
 
 | | |
 |---|---|

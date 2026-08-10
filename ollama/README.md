@@ -1,6 +1,6 @@
 # Ollama
 
-Get started with Llama, Gemma, and other language models locally.
+Get started with Llama, Gemma, and other language models locally
 
 | | |
 |---|---|

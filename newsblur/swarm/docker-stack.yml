@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=newsblur"
-    #   - "homepage.description=newsblur self-hosted service."
+    #   - "homepage.description=News reader with smart filtering; self-hosted version for news aggregation.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=newsblur.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20163"

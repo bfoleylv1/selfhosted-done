@@ -1,6 +1,6 @@
 # MySQL / MariaDB
 
-Popular relational database; MariaDB is a drop-in MySQL compatible alternative.
+Popular relational database; MariaDB is a drop-in MySQL compatible alternative
 
 | | |
 |---|---|

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=fredy"
-    #   - "homepage.description=fredy self-hosted service."
+    #   - "homepage.description=Self-hosted price comparison and shopping tool.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=fredy.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9998"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=health-checker"
-    #   - "homepage.description=health-checker self-hosted service."
+    #   - "homepage.description=Simple monitoring tool; check service availability.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=health-checker.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20110"

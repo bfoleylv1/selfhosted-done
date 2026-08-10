@@ -1,6 +1,6 @@
 # Loki
 
-Log aggregation system; designed to be cost-effective and easily run.
+Log aggregation system; designed to be cost-effective and easily run
 
 | | |
 |---|---|

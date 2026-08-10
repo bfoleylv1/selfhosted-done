@@ -1,6 +1,6 @@
 # Speed Test
 
-speed-test self-hosted service.
+Self-hosted network speed-test server
 
 | | |
 |---|---|

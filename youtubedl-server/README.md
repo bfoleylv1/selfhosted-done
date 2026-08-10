@@ -1,6 +1,6 @@
 # Youtubedl Server
 
-youtubedl-server self-hosted service.
+Web UI for youtube-dl downloads
 
 | | |
 |---|---|

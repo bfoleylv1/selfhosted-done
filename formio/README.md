@@ -1,6 +1,6 @@
 # Formio
 
-formio self-hosted service.
+Form and API platform for building data-driven forms and apps
 
 | | |
 |---|---|

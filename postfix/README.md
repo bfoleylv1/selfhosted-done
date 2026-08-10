@@ -1,6 +1,6 @@
 # Postfix
 
-Mail transfer agent; send and receive email.
+Mail transfer agent; send and receive email
 
 | | |
 |---|---|

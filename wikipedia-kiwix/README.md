@@ -1,6 +1,6 @@
 # Wikipedia Kiwix
 
-wikipedia-kiwix self-hosted service.
+Offline Wikipedia mirror; search Wikimedia projects without internet
 
 | | |
 |---|---|

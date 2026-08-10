@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=joomla"
-    #   - "homepage.description=joomla self-hosted service."
+    #   - "homepage.description=Open-source CMS; easy to use with extensions.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=joomla.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20120"

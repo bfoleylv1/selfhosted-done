@@ -1,6 +1,6 @@
 # Feedbin
 
-Web-based feed reader; social features and excellent filtering capabilities.
+Web-based feed reader; social features and excellent filtering capabilities
 
 | | |
 |---|---|

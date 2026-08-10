@@ -1,6 +1,6 @@
 # Google Cse Proxy
 
-google-cse-proxy self-hosted service.
+Proxy for the Google Custom Search Engine API
 
 | | |
 |---|---|

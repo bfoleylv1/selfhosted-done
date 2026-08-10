@@ -1,6 +1,6 @@
 # Trigger Dev
 
-trigger-dev self-hosted service.
+Open-source background jobs and workflow engine
 
 | | |
 |---|---|

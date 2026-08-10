@@ -1,6 +1,6 @@
 # Koel
 
-Simple web-based audio file management; personal cloud for music.
+Simple web-based audio file management; personal cloud for music
 
 | | |
 |---|---|

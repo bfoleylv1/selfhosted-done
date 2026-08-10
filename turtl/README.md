@@ -1,6 +1,6 @@
 # Turtl
 
-Open source Evernote alternative; encrypted note-sync platform.
+Open source Evernote alternative; encrypted note-sync platform
 
 | | |
 |---|---|

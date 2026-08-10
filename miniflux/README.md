@@ -1,6 +1,6 @@
 # Miniflux
 
-Simple and fast RSS reader; minimalist UI with excellent readability.
+Simple and fast RSS reader; minimalist UI with excellent readability
 
 | | |
 |---|---|

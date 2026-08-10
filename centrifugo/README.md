@@ -1,6 +1,6 @@
 # Centrifugo
 
-centrifugo self-hosted service.
+Real-time messaging server (WebSocket/SSE) for live updates
 
 | | |
 |---|---|

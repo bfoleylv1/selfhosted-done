@@ -1,6 +1,6 @@
 # Appwrite
 
-appwrite self-hosted service.
+Open-source backend-as-a-service (BaaS) for web and mobile apps
 
 | | |
 |---|---|

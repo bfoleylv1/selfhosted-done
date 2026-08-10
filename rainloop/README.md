@@ -1,6 +1,6 @@
 # RainLoop
 
-Webmail client; simple and responsive webmail.
+Webmail client; simple and responsive webmail
 
 | | |
 |---|---|

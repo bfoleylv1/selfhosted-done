@@ -1,6 +1,6 @@
 # Docker
 
-Platform for creating and running containers; application virtualization.
+Platform for creating and running containers; application virtualization
 
 | | |
 |---|---|

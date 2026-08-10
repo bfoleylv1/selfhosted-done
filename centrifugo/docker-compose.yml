@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=centrifugo"
-    #   - "homepage.description=centrifugo self-hosted service."
+    #   - "homepage.description=Real-time messaging server (WebSocket/SSE) for live updates.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=centrifugo.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20025"

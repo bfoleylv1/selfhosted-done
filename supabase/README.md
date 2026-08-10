@@ -1,6 +1,6 @@
 # Supabase
 
-Firebase alternative; open-source backend for web apps.
+Firebase alternative; open-source backend for web apps
 
 | | |
 |---|---|

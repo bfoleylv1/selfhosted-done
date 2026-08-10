@@ -1,6 +1,6 @@
 # Tailscale
 
-WireGuard-based mesh VPN; zero-config networking.
+WireGuard-based mesh VPN; zero-config networking
 
 | | |
 |---|---|

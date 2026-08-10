@@ -1,6 +1,6 @@
 # Datasette
 
-datasette self-hosted service.
+Explore and publish SQLite databases as JSON APIs and dashboards
 
 | | |
 |---|---|

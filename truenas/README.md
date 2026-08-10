@@ -1,6 +1,6 @@
 # TrueNAS
 
-Storage platform; FreeNAS successor for NAS and file sharing.
+Storage platform; FreeNAS successor for NAS and file sharing
 
 | | |
 |---|---|

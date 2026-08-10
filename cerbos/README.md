@@ -1,6 +1,6 @@
 # Cerbos
 
-cerbos self-hosted service.
+Open-source fine-grained authorization / access-control engine
 
 | | |
 |---|---|

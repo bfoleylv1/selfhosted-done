@@ -1,6 +1,6 @@
 # Gamevault
 
-gamevault self-hosted service.
+Self-hosted video game library manager
 
 | | |
 |---|---|

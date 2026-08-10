@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=graphite"
-    #   - "homepage.description=graphite self-hosted service."
+    #   - "homepage.description=Enterprise monitoring and time-series database; monitoring graphs.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=graphite.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20105"

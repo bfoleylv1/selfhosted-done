@@ -1,6 +1,6 @@
 # Bacula
 
-Enterprise backup solution; network backup management.
+Enterprise backup solution; network backup management
 
 | | |
 |---|---|

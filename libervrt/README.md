@@ -1,6 +1,6 @@
 # Libervrt
 
-libervrt self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

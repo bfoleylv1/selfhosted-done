@@ -1,6 +1,6 @@
 # Pixelfed
 
-Free and open source photo sharing platform; Instagram alternative.
+Federated photo sharing; Instagram alternative
 
 | | |
 |---|---|

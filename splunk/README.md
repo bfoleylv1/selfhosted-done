@@ -1,6 +1,6 @@
 # Splunk (Self-Hosted)
 
-Enterprise SIEM platform; log analysis and monitoring.
+Enterprise SIEM platform; log analysis and monitoring
 
 | | |
 |---|---|

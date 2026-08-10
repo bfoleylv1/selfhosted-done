@@ -1,6 +1,6 @@
 # Pocket (Self-Hosted Clone)
 
-Save articles for later reading; privacy-focused alternative.
+Save articles for later reading; privacy-focused alternative
 
 | | |
 |---|---|

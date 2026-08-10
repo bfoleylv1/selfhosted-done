@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=rowshub"
-    #   - "homepage.description=rowshub self-hosted service."
+    #   - "homepage.description=Collaborative spreadsheet platform; Airtable alternative.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=rowshub.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20253"

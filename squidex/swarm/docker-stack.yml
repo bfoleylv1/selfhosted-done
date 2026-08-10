@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=squidex"
-    #   - "homepage.description=squidex self-hosted service."
+    #   - "homepage.description=Open-source headless CMS.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=squidex.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20296"

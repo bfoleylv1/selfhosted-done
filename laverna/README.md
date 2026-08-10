@@ -1,6 +1,6 @@
 # Laverna
 
-Open source alternative to Evernote; JavaScript-based note app.
+Open source alternative to Evernote; JavaScript-based note app
 
 | | |
 |---|---|

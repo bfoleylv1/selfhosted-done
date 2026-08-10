@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=dreamfactory"
-    #   - "homepage.description=dreamfactory self-hosted service."
+    #   - "homepage.description=Auto-generated REST API backend for databases.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=dreamfactory.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20051"

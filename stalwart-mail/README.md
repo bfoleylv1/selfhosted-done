@@ -1,6 +1,6 @@
 # Stalwart Mail
 
-stalwart-mail self-hosted service.
+All-in-one mail server (SMTP/IMAP/JMAP) written in Rust
 
 | | |
 |---|---|

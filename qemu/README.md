@@ -1,6 +1,6 @@
 # QEMU
 
-Open source emulator and virtualization; hardware emulation.
+Open source emulator and virtualization; hardware emulation
 
 | | |
 |---|---|

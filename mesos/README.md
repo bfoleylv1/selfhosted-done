@@ -1,6 +1,6 @@
 # Mesos
 
-Distributed systems kernel; orchestrate containers and apps.
+Distributed systems kernel; orchestrate containers and apps
 
 | | |
 |---|---|

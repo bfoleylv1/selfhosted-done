@@ -1,6 +1,6 @@
 # Element Web
 
-element-web self-hosted service.
+Web client for the Matrix decentralized chat protocol
 
 | | |
 |---|---|

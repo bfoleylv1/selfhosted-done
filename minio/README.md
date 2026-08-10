@@ -1,6 +1,6 @@
 # minIO
 
-High-performance, distributed object storage; S3-compatible API.
+High-performance object storage; S3-compatible
 
 | | |
 |---|---|

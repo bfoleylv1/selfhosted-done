@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=plausible"
-    #   - "homepage.description=plausible self-hosted service."
+    #   - "homepage.description=Privacy-friendly, open-source web analytics.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=plausible.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20208"

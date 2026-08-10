@@ -1,6 +1,6 @@
 # Zulip
 
-Groups chat app that’s designed to feel like email, with conversation threads.
+Groups chat app that’s designed to feel like email, with conversation threads
 
 | | |
 |---|---|

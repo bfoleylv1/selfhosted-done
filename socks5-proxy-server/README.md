@@ -1,6 +1,6 @@
 # Socks5 Proxy Server
 
-socks5-proxy-server self-hosted service.
+Self-hosted SOCKS5 proxy server
 
 | | |
 |---|---|

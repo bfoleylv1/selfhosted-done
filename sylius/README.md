@@ -1,6 +1,6 @@
 # Sylius
 
-Symfony-based e-commerce solution; highly customizable.
+Symfony-based e-commerce solution; highly customizable
 
 | | |
 |---|---|

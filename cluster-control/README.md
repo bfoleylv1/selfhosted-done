@@ -1,6 +1,6 @@
 # Cluster Control
 
-cluster-control self-hosted service.
+Severalnines ClusterControl - database cluster management and monitoring
 
 | | |
 |---|---|

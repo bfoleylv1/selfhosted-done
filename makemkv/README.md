@@ -1,6 +1,6 @@
 # MakeMKV
 
-DVD/Blu-ray copying tool; extract video from optical discs.
+DVD/Blu-ray copying tool; extract video from optical discs
 
 | | |
 |---|---|

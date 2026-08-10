@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=reader-rise"
-    #   - "homepage.description=reader-rise self-hosted service."
+    #   - "homepage.description=Self-hosted Feedbin alternative; clean UI with OPML import/export.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=reader-rise.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20236"

@@ -1,6 +1,6 @@
 # Sia
 
-Decentralized cloud storage; cryptocurrency-based storage.
+Decentralized cloud storage; cryptocurrency-based storage
 
 | | |
 |---|---|

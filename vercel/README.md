@@ -1,6 +1,6 @@
 # Vercel
 
-vercel self-hosted service.
+Platform for frontend deployment (open-core)
 
 | | |
 |---|---|

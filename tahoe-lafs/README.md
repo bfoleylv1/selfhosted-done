@@ -1,6 +1,6 @@
 # Tahoe-LAFS
 
-Decentralized, fault-tolerant, encrypted file storage grid.
+Decentralized, fault-tolerant, encrypted file storage grid
 
 | | |
 |---|---|

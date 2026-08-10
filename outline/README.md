@@ -1,6 +1,6 @@
 # Outline
 
-Team knowledge base and documentation; clean and fast wiki.
+Team knowledge base and documentation; clean and fast wiki
 
 | | |
 |---|---|

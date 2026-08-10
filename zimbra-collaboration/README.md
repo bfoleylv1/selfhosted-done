@@ -1,6 +1,6 @@
 # Zimbra Collaboration
 
-zimbra-collaboration self-hosted service.
+Open-source email and collaboration suite
 
 | | |
 |---|---|

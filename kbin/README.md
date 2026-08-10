@@ -1,6 +1,6 @@
 # Kbin
 
-Another ActivityPub aggregator; alternative to Lemmy.
+Another ActivityPub aggregator; alternative to Lemmy
 
 | | |
 |---|---|

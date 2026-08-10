@@ -1,6 +1,6 @@
 # Caddy
 
-Easy to run HTTP web server; automatic HTTPS and simple configuration.
+Easy to run HTTP web server; automatic HTTPS and simple configuration
 
 | | |
 |---|---|

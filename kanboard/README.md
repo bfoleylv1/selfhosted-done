@@ -1,6 +1,6 @@
 # Kanboard
 
-kanboard self-hosted service.
+Simple kanban board for project management
 
 | | |
 |---|---|

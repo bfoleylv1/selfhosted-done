@@ -1,6 +1,6 @@
 # KeePassXC
 
-Password manager; store your passwords safely and access everywhere.
+Password manager; store your passwords safely and access everywhere
 
 | | |
 |---|---|

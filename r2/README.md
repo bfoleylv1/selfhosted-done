@@ -1,6 +1,6 @@
 # R2
 
-r2 self-hosted service.
+Self-hosted proxy for Cloudflare R2 object storage
 
 | | |
 |---|---|

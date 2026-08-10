@@ -1,6 +1,6 @@
 # Plume
 
-Federation-friendly blogging platform; ActivityPub enabled.
+Federation-friendly blogging platform; ActivityPub enabled
 
 | | |
 |---|---|

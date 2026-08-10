@@ -1,6 +1,6 @@
 # vLLM
 
-Fast library for LLM inference and serving; high-throughput inference engine.
+Fast library for LLM inference and serving; high-throughput inference engine
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Surge
 
-surge self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

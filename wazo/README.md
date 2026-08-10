@@ -1,6 +1,6 @@
 # Wazo
 
-wazo self-hosted service.
+Open-source IP-PBX telephony platform
 
 | | |
 |---|---|

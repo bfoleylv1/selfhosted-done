@@ -1,6 +1,6 @@
 # Stack Auth
 
-stack-auth self-hosted service.
+Open-source authentication and user management
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Telebugs
 
-telebugs self-hosted service.
+Self-hosted bug and error tracking service
 
 | | |
 |---|---|

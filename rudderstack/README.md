@@ -1,6 +1,6 @@
 # Rudderstack
 
-rudderstack self-hosted service.
+Open-source customer data platform (CDP)
 
 | | |
 |---|---|

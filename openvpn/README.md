@@ -1,6 +1,6 @@
 # OpenVPN
 
-SSL VPN solution; secure networking and remote access.
+SSL VPN solution; secure networking and remote access
 
 | | |
 |---|---|

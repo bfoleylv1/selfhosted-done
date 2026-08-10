@@ -1,6 +1,6 @@
 # Dovecot
 
-IMAP and POP3 server; mail delivery and retrieval.
+IMAP and POP3 server; mail delivery and retrieval
 
 | | |
 |---|---|

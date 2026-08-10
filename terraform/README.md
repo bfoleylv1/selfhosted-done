@@ -1,6 +1,6 @@
 # Terraform
 
-Infrastructure as code tool; provision and manage cloud resources.
+Infrastructure as code tool; provision and manage cloud resources
 
 | | |
 |---|---|

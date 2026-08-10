@@ -1,6 +1,6 @@
 # Traefik
 
-Modern reverse proxy; automatic service discovery and routing.
+Modern reverse proxy; automatic service discovery and routing
 
 | | |
 |---|---|

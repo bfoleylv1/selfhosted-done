@@ -1,6 +1,6 @@
 # Rs Short
 
-rs-short self-hosted service.
+Self-hosted URL shortener
 
 | | |
 |---|---|

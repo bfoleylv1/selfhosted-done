@@ -1,6 +1,6 @@
 # LinkAce
 
-Link shortener and bookmark manager; save and share URLs.
+Link shortener and bookmark manager; save and share URLs
 
 | | |
 |---|---|

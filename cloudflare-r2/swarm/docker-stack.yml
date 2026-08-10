@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cloudflare-r2"
-    #   - "homepage.description=cloudflare-r2 self-hosted service."
+    #   - "homepage.description=S3-compatible object storage alternative to S3 with no egress fees.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=cloudflare-r2.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9000"

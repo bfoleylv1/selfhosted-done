@@ -1,6 +1,6 @@
 # Ghostery
 
-ghostery self-hosted service.
+Privacy / tracker-blocking browser extension (commercial)
 
 | | |
 |---|---|

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=neo4j"
-    #   - "homepage.description=neo4j self-hosted service."
+    #   - "homepage.description=Graph database optimized for storing and querying relationships between data.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=neo4j.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:7474"

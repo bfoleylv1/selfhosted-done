@@ -1,6 +1,6 @@
 # Subtitle Converter
 
-subtitle-converter self-hosted service.
+Convert and translate subtitle file formats
 
 | | |
 |---|---|

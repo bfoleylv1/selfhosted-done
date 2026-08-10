@@ -1,6 +1,6 @@
 # HedgeDoc
 
-Web-based markdown editor for collaborative note-taking.
+Web-based markdown editor for collaborative note-taking
 
 | | |
 |---|---|

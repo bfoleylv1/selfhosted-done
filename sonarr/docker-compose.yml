@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=sonarr"
-    #   - "homepage.description=sonarr self-hosted service."
+    #   - "homepage.description=PVR for TV shows; manages and automatically downloads series episodes.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=sonarr.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8989"

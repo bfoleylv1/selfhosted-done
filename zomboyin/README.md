@@ -1,6 +1,6 @@
 # Zomboyin
 
-Full-text search engine; JavaScript-based search.
+Full-text search engine; JavaScript-based search
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # ClickHouse
 
-Column-oriented database management system for OLAP and analytical workloads.
+Column-oriented database management system for OLAP and analytical workloads
 
 | | |
 |---|---|

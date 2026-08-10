@@ -1,6 +1,6 @@
 # Syncthing
 
-Continuous file synchronization; peer-to-peer sync without central server.
+Continuous file synchronization; peer-to-peer sync without central server
 
 | | |
 |---|---|

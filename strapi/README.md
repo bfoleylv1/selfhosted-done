@@ -1,6 +1,6 @@
 # Strapi
 
-Headless CMS; customizable and API-first.
+Headless CMS; customizable and API-first
 
 | | |
 |---|---|

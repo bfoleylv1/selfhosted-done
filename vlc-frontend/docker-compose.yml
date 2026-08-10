@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=vlc-frontend"
-    #   - "homepage.description=vlc-frontend self-hosted service."
+    #   - "homepage.description=Web interface for managing and watching VLC content.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=vlc-frontend.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20350"

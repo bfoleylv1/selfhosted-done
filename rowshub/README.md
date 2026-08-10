@@ -1,6 +1,6 @@
 # RowsHub
 
-Collaborative spreadsheet platform; Airtable alternative.
+Collaborative spreadsheet platform; Airtable alternative
 
 | | |
 |---|---|

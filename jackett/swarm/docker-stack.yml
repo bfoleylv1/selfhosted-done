@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=jackett"
-    #   - "homepage.description=jackett self-hosted service."
+    #   - "homepage.description=API for torrent indexers; acts as a bridge between downloaders and indexers.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=jackett.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9117"

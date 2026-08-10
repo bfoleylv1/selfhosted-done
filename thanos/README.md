@@ -1,6 +1,6 @@
 # Thanos
 
-Highly available Prometheus; long-term storage solution.
+Highly available Prometheus; long-term storage solution
 
 | | |
 |---|---|

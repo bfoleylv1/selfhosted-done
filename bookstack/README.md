@@ -1,6 +1,6 @@
 # BookStack
 
-Wiki platform to organize and maintain documentation.
+Wiki platform to organize and maintain documentation
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Geo2Tz
 
-geo2tz self-hosted service.
+Convert geographic coordinates to a timezone
 
 | | |
 |---|---|

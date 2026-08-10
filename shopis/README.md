@@ -1,6 +1,6 @@
 # ShopIs
 
-Admin dashboard for Shopify stores; order and inventory management.
+Admin dashboard for Shopify stores; order and inventory management
 
 | | |
 |---|---|

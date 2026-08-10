@@ -1,6 +1,6 @@
 # Bitwarden_RS
 
-Lightweight Bitwarden server; Rust implementation of Bitwarden API.
+Lightweight Bitwarden server; Rust implementation of Bitwarden API
 
 | | |
 |---|---|

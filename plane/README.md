@@ -1,6 +1,6 @@
 # Plane
 
-Open source alternative to Notion and Linear; team project management.
+Open source alternative to Notion and Linear; team project management
 
 | | |
 |---|---|

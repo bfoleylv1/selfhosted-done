@@ -1,6 +1,6 @@
 # OpenConnect
 
-SSL VPN solution; Cisco AnyConnect compatible.
+SSL VPN solution; Cisco AnyConnect compatible
 
 | | |
 |---|---|

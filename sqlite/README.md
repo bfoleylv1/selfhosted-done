@@ -1,6 +1,6 @@
 # SQLite
 
-Lightweight, file-based relational database; embedded database for most applications.
+Lightweight, file-based relational database; embedded database for most applications
 
 | | |
 |---|---|

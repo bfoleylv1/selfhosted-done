@@ -1,6 +1,6 @@
 # Wekan
 
-Open source Trello alternative; Kanban-style task management.
+Open source Trello alternative; Kanban-style task management
 
 | | |
 |---|---|

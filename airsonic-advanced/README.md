@@ -1,6 +1,6 @@
 # Airsonic-Advanced
 
-Music server with multi-user support; stream your music anywhere.
+Music server with multi-user support; stream your music anywhere
 
 | | |
 |---|---|

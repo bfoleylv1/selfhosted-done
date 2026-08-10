@@ -1,6 +1,6 @@
 # Bamboo
 
-bamboo self-hosted service.
+Atlassian continuous integration and deployment server (commercial)
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Url To Png
 
-url-to-png self-hosted service.
+Render URLs to PNG screenshots
 
 | | |
 |---|---|

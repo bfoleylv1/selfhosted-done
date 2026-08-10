@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=engity-bifrost"
-    #   - "homepage.description=engity-bifrost self-hosted service."
+    #   - "homepage.description=Engity Bifrost - identity and SSO gateway.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=engity-bifrost.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20061"

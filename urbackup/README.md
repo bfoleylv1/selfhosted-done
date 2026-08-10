@@ -1,6 +1,6 @@
 # UrBackup
 
-Client/server backup solution; efficient backup and recovery.
+Client/server backup solution; efficient backup and recovery
 
 | | |
 |---|---|

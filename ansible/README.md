@@ -1,6 +1,6 @@
 # Ansible
 
-Open source automation engine; IT automation and configuration management.
+Open source automation engine; IT automation and configuration management
 
 | | |
 |---|---|

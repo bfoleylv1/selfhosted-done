@@ -1,6 +1,6 @@
 # Keypass
 
-Simple password generator; create secure random passwords.
+Simple password generator; create secure random passwords
 
 | | |
 |---|---|

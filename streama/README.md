@@ -1,6 +1,6 @@
 # Streama
 
-Self-hosted Netflix clone; organize and stream your media collection.
+Self-hosted Netflix clone; organize and stream your media collection
 
 | | |
 |---|---|

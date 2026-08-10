@@ -1,6 +1,6 @@
 # Comfyui
 
-comfyui self-hosted service.
+Node-based graphical UI for Stable Diffusion / generative AI
 
 | | |
 |---|---|

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=openshift"
-    #   - "homepage.description=openshift self-hosted service."
+    #   - "homepage.description=Kubernetes platform; enterprise container application platform.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=openshift.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20181"

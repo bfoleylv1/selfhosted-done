@@ -1,6 +1,6 @@
 # Resourcespace
 
-resourcespace self-hosted service.
+Open-source digital asset management (DAM)
 
 | | |
 |---|---|

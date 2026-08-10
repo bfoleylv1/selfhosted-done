@@ -1,6 +1,6 @@
 # MeiliSearch
 
-Lightning-fast search engine optimized for apps, websites, and workflows with relevant search experiences.
+Lightning-fast search engine optimized for apps, websites, and workflows with relevant search experiences
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Wagmios
 
-wagmios self-hosted service.
+Wagmios: give your AI agent a homelab (self-hosted agent tooling)
 
 | | |
 |---|---|

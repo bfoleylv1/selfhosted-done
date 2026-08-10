@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=payloadcms"
-    #   - "homepage.description=payloadcms self-hosted service."
+    #   - "homepage.description=React-powered Node.js CMS; modern and customizable.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=payloadcms.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20194"

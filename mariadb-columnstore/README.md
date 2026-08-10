@@ -1,6 +1,6 @@
 # MariaDB ColumnStore
 
-Columnar storage engine for MariaDB; optimized for analytics workloads.
+Columnar storage engine for MariaDB; optimized for analytics workloads
 
 | | |
 |---|---|

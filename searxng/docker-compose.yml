@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=searxng"
-    #   - "homepage.description=searxng self-hosted service."
+    #   - "homepage.description=Free and open-source metasearch engine; aggregates results without tracking.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=searxng.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20267"

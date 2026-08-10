@@ -1,6 +1,6 @@
 # Cockpit
 
-cockpit self-hosted service.
+Web-based Linux server administration dashboard
 
 | | |
 |---|---|

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=easypanel"
-    #   - "homepage.description=easypanel self-hosted service."
+    #   - "homepage.description=Modern self-hosted PaaS control panel for Docker apps.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=easypanel.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20056"

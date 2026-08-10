@@ -1,6 +1,6 @@
 # Tautulli
 
-Plex media server monitoring; track usage and analytics.
+Plex media server monitoring; track usage and analytics
 
 | | |
 |---|---|

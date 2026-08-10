@@ -1,6 +1,6 @@
 # InfluxDB
 
-Time-series database optimized for metrics, events, and real-time analytics.
+Time-series database optimized for metrics, events, and real-time analytics
 
 | | |
 |---|---|

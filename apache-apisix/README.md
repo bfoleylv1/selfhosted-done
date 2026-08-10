@@ -1,6 +1,6 @@
 # Apache APISIX
 
-Real-time API gateway; built on etcd and Lua.
+Real-time API gateway; built on etcd and Lua
 
 | | |
 |---|---|

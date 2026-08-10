@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=kiwix"
-    #   - "homepage.description=kiwix self-hosted service."
+    #   - "homepage.description=Offline Wikipedia reader; hosts ZIM file format for offline browsing.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=kiwix.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20129"

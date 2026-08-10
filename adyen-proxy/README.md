@@ -1,6 +1,6 @@
 # Adyen Proxy
 
-adyen-proxy self-hosted service.
+Reverse proxy / bridge for the Adyen payment API
 
 | | |
 |---|---|

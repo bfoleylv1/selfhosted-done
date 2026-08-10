@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=excalidraw"
-    #   - "homepage.description=excalidraw self-hosted service."
+    #   - "homepage.description=Virtual whiteboard for hand-drawn diagrams.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=excalidraw.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20064"

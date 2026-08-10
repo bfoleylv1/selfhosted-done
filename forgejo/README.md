@@ -1,6 +1,6 @@
 # Forgejo
 
-Fork of Gitea; community-driven Git service.
+Fork of Gitea; community-driven Git service
 
 | | |
 |---|---|

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=taskcafe"
-    #   - "homepage.description=taskcafe self-hosted service."
+    #   - "homepage.description=Self-hosted task management; simple and easy to use.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=taskcafe.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:3333"

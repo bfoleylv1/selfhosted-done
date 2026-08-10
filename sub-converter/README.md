@@ -1,6 +1,6 @@
 # Sub Converter
 
-Subtitle file converter; convert between different subtitle formats.
+Subtitle file converter; convert between different subtitle formats
 
 | | |
 |---|---|

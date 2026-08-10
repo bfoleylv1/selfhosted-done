@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=postal"
-    #   - "homepage.description=postal self-hosted service."
+    #   - "homepage.description=Full-featured open-source mail server.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=postal.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20214"

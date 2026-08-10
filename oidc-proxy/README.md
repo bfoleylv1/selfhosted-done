@@ -1,6 +1,6 @@
 # OIDC Proxy
 
-Single sign-on solution for legacy applications using OAuth2/OIDC.
+Single sign-on solution for legacy applications using OAuth2/OIDC
 
 | | |
 |---|---|

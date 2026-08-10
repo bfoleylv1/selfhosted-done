@@ -1,6 +1,6 @@
 # Akkoma
 
-akkoma self-hosted service.
+Lightweight federated microblogging server (ActivityPub, Mastodon-compatible)
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # OpenCart
 
-Responsive e-commerce solution; ready-to-use online store platform.
+Responsive e-commerce solution; ready-to-use online store platform
 
 | | |
 |---|---|

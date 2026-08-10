@@ -1,6 +1,6 @@
 # Poste Io
 
-poste-io self-hosted service.
+Self-hosted mail server suite (SMTP/IMAP/POP)
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Ydl Api Ng
 
-ydl-api-ng self-hosted service.
+REST API wrapper for youtube-dl / yt-dlp downloads
 
 | | |
 |---|---|

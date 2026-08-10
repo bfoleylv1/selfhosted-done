@@ -1,6 +1,6 @@
 # Flameborn
 
-Open source media server; modern interface with advanced features.
+Open source media server; modern interface with advanced features
 
 | | |
 |---|---|

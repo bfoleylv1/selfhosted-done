@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=mollie-proxy"
-    #   - "homepage.description=mollie-proxy self-hosted service."
+    #   - "homepage.description=Proxy for the Mollie payment API.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=mollie-proxy.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20160"

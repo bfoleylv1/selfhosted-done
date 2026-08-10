@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=zulip"
-    #   - "homepage.description=zulip self-hosted service."
+    #   - "homepage.description=Groups chat app that’s designed to feel like email, with conversation threads.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=zulip.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20391"

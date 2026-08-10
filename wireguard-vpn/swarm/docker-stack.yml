@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=wireguard-vpn"
-    #   - "homepage.description=wireguard-vpn self-hosted service."
+    #   - "homepage.description=Fast modern VPN using the WireGuard protocol.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=wireguard-vpn.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20366"

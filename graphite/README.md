@@ -1,6 +1,6 @@
 # Graphite
 
-Enterprise monitoring and time-series database; monitoring graphs.
+Enterprise monitoring and time-series database; monitoring graphs
 
 | | |
 |---|---|

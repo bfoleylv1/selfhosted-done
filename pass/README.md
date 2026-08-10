@@ -1,6 +1,6 @@
 # Pass
 
-Simple password management; command-line password store.
+Simple password management; command-line password store
 
 | | |
 |---|---|

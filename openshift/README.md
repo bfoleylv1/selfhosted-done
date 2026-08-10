@@ -1,6 +1,6 @@
 # OpenShift
 
-Kubernetes platform; enterprise container application platform.
+Kubernetes platform; enterprise container application platform
 
 | | |
 |---|---|

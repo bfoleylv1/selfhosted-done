@@ -1,6 +1,6 @@
 # SquirrelMail
 
-Web-based email client; traditional webmail interface.
+Web-based email client; traditional webmail interface
 
 | | |
 |---|---|

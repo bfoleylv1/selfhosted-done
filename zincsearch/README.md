@@ -1,6 +1,6 @@
 # Zincsearch
 
-zincsearch self-hosted service.
+Lightweight search engine (Elasticsearch alternative)
 
 | | |
 |---|---|

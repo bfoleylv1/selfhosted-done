@@ -1,6 +1,6 @@
 # Collabora Online
 
-collabora-online self-hosted service.
+Self-hosted LibreOffice-based online office suite
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Gitea
 
-Lightweight Git service; alternative to GitHub/GitLab.
+Lightweight Git service; alternative to GitHub/GitLab
 
 | | |
 |---|---|

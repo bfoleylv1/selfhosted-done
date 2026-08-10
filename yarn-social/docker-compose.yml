@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=yarn-social"
-    #   - "homepage.description=yarn-social self-hosted service."
+    #   - "homepage.description=Self-hosted microblog (Yarn.social, Gemtext-based).""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=yarn-social.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20375"

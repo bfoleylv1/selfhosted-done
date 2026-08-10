@@ -1,6 +1,6 @@
 # Bar Assistant
 
-bar-assistant self-hosted service.
+Self-hosted cocktail and drink recipe manager
 
 | | |
 |---|---|

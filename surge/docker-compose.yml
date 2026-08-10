@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=surge"
-    #   - "homepage.description=surge self-hosted service."
+    #   - "homepage.description=Self-hosted service.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=surge.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20314"

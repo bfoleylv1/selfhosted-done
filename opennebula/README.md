@@ -1,6 +1,6 @@
 # OpenNebula
 
-Open source cloud management platform; IaaS solution.
+Open source cloud management platform; IaaS solution
 
 | | |
 |---|---|

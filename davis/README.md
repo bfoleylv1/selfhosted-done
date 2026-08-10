@@ -1,6 +1,6 @@
 # Davis
 
-davis self-hosted service.
+Self-hosted CalDAV/CardDAV server (PHP)
 
 | | |
 |---|---|

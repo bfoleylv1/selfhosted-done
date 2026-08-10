@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=openclaw"
-    #   - "homepage.description=openclaw self-hosted service."
+    #   - "homepage.description=OpenClaw: self-hosted personal AI assistant (cross-platform).""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=openclaw.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20175"

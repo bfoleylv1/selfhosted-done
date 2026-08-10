@@ -1,6 +1,6 @@
 # Puppet
 
-Configuration management tool; declarative infrastructure automation.
+Configuration management tool; declarative infrastructure automation
 
 | | |
 |---|---|

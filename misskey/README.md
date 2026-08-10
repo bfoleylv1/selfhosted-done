@@ -1,6 +1,6 @@
 # Misskey
 
-Microblogging platform forActivityPub; Japanese-originated.
+Microblogging platform forActivityPub; Japanese-originated
 
 | | |
 |---|---|

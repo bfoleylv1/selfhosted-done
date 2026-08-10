@@ -1,6 +1,6 @@
 # Alertmanager
 
-Alert handler for Prometheus; route and silencing alerts.
+Alert handler for Prometheus; route and silencing alerts
 
 | | |
 |---|---|

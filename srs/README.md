@@ -1,6 +1,6 @@
 # Srs
 
-srs self-hosted service.
+Simple, high-performance RTMP/WebRTC streaming server
 
 | | |
 |---|---|

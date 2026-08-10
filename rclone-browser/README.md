@@ -1,6 +1,6 @@
 # Rclone Browser
 
-GUI for Rclone; manage cloud storage with local file browser interface.
+GUI for Rclone; manage cloud storage with local file browser interface
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Proxmox
 
-proxmox self-hosted service.
+Open-source server virtualization platform (Proxmox VE)
 
 | | |
 |---|---|

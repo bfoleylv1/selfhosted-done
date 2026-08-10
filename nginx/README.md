@@ -1,6 +1,6 @@
 # NGINX
 
-Web server and reverse proxy; high-performance HTTP server.
+Web server and reverse proxy; high-performance HTTP server
 
 | | |
 |---|---|

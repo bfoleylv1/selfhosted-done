@@ -1,6 +1,6 @@
 # Kapacitor
 
-Data process and monitoring application; TICK stack component.
+Data process and monitoring application; TICK stack component
 
 | | |
 |---|---|

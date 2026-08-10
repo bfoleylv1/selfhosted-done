@@ -1,6 +1,6 @@
 # Gaseous Server
 
-gaseous-server self-hosted service.
+Self-hosted video game collection / ROM manager
 
 | | |
 |---|---|

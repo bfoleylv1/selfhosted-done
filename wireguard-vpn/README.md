@@ -1,6 +1,6 @@
 # Wireguard Vpn
 
-wireguard-vpn self-hosted service.
+Fast modern VPN using the WireGuard protocol
 
 | | |
 |---|---|

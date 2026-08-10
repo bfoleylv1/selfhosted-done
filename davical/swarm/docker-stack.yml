@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=davical"
-    #   - "homepage.description=davical self-hosted service."
+    #   - "homepage.description=CalDAV server for calendar sharing.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=davical.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20041"

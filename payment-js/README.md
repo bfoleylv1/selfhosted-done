@@ -1,6 +1,6 @@
 # Payment.js
 
-Simple payment processing; handle credit cards and payments.
+Simple payment processing; handle credit cards and payments
 
 | | |
 |---|---|

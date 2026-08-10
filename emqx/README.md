@@ -1,6 +1,6 @@
 # Emqx
 
-emqx self-hosted service.
+Scalable open-source MQTT broker for IoT
 
 | | |
 |---|---|

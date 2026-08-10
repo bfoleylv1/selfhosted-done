@@ -1,6 +1,6 @@
 # Bazarr
 
-Subtitle manager for Sonarr and Radarr; automatic download and management.
+Subtitle manager for Sonarr and Radarr; automatic download and management
 
 | | |
 |---|---|

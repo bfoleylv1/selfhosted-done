@@ -1,6 +1,6 @@
 # Plausible
 
-plausible self-hosted service.
+Privacy-friendly, open-source web analytics
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Surfer
 
-surfer self-hosted service.
+Static file hosting and web publishing tool (Cloudron Surfer)
 
 | | |
 |---|---|

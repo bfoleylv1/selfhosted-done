@@ -1,6 +1,6 @@
 # WireGuard
 
-Next-generation VPN protocol; fast and modern VPN solution.
+Next-generation VPN protocol; fast and modern VPN solution
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # ReaderRise
 
-Self-hosted Feedbin alternative; clean UI with OPML import/export.
+Self-hosted Feedbin alternative; clean UI with OPML import/export
 
 | | |
 |---|---|

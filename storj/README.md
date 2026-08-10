@@ -1,6 +1,6 @@
 # Storj
 
-Decentralized cloud storage; peer-to-peer storage network.
+Decentralized cloud storage; peer-to-peer storage network
 
 | | |
 |---|---|

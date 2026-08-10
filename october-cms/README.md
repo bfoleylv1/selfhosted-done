@@ -1,6 +1,6 @@
 # October CMS
 
-Content management system; simple and extensible.
+Content management system; simple and extensible
 
 | | |
 |---|---|

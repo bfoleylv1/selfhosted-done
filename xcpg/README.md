@@ -1,6 +1,6 @@
 # Xcpg
 
-xcpg self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

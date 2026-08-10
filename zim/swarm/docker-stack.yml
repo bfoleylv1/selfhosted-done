@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=zim"
-    #   - "homepage.description=zim self-hosted service."
+    #   - "homepage.description=File format for offline Wikipedia and other Wikimedia content.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=zim.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20385"

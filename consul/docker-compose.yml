@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=consul"
-    #   - "homepage.description=consul self-hosted service."
+    #   - "homepage.description=Service mesh solution; service discovery and configuration.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=consul.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8500"

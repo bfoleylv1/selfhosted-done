@@ -1,6 +1,6 @@
 # Zeronet
 
-Decentralized websites using Bitcoin crypto and BitTorrent swarm.
+Decentralized websites using Bitcoin crypto and BitTorrent swarm
 
 | | |
 |---|---|

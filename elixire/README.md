@@ -1,6 +1,6 @@
 # Elixire
 
-elixire self-hosted service.
+Self-hosted file hosting service
 
 | | |
 |---|---|

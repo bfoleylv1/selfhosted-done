@@ -1,6 +1,6 @@
 # Tuwunel
 
-tuwunel self-hosted service.
+Matrix homeserver written in Rust
 
 | | |
 |---|---|

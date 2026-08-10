@@ -1,6 +1,6 @@
 # Payload CMS
 
-React-powered Node.js CMS; modern and customizable.
+React-powered Node.js CMS; modern and customizable
 
 | | |
 |---|---|

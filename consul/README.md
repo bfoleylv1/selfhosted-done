@@ -1,6 +1,6 @@
 # Consul
 
-Service mesh solution; service discovery and configuration.
+Service mesh solution; service discovery and configuration
 
 | | |
 |---|---|

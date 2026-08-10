@@ -1,6 +1,6 @@
 # Adminer
 
-Tool for managing MySQL, PostgreSQL, SQLite, and other databases.
+Tool for managing MySQL, PostgreSQL, SQLite, and other databases
 
 | | |
 |---|---|

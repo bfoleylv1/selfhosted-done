@@ -1,6 +1,6 @@
 # B1Gmail
 
-b1gMail self-hosted service.
+Self-hosted webmail and mail server suite
 
 | | |
 |---|---|

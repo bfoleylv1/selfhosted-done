@@ -1,6 +1,6 @@
 # Fmd Server
 
-fmd-server self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

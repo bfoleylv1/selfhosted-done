@@ -1,6 +1,6 @@
 # Mimir
 
-Grafana's long-term storage for Prometheus; scalable metrics.
+Grafana's long-term storage for Prometheus; scalable metrics
 
 | | |
 |---|---|

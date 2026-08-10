@@ -1,6 +1,6 @@
 # Cloudflare R2 (Self-Hosted)
 
-S3-compatible object storage alternative to S3 with no egress fees.
+S3-compatible object storage alternative to S3 with no egress fees
 
 | | |
 |---|---|

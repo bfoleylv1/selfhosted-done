@@ -1,6 +1,6 @@
 # Instapaper (Self-Hosted Proxy)
 
-Web article saver; read later and save content.
+Web article saver; read later and save content
 
 | | |
 |---|---|

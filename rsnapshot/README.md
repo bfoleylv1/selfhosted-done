@@ -1,6 +1,6 @@
 # Rsnapshot
 
-Filesystem snapshot utility; rsync-based backup tool.
+Filesystem snapshot utility; rsync-based backup tool
 
 | | |
 |---|---|

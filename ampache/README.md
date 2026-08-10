@@ -1,6 +1,6 @@
 # Ampache
 
-Web-based audio file manager; provides streaming and management interface.
+Web-based audio file manager; provides streaming and management interface
 
 | | |
 |---|---|

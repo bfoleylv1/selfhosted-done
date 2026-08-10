@@ -1,6 +1,6 @@
 # Xandikos
 
-xandikos self-hosted service.
+CalDAV server written in Python
 
 | | |
 |---|---|

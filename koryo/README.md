@@ -1,6 +1,6 @@
 # Koryo
 
-Simple API gateway; lightweight and fast reverse proxy.
+Simple API gateway; lightweight and fast reverse proxy
 
 | | |
 |---|---|

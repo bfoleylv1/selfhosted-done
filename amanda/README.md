@@ -1,6 +1,6 @@
 # Amanda
 
-Advanced Maryland Automatic Network Disk Archiver.
+Advanced Maryland Automatic Network Disk Archiver
 
 | | |
 |---|---|

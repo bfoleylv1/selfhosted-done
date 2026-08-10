@@ -1,6 +1,6 @@
 # Medusa
 
-Alternative to Sonarr; PVR for TV shows with extensive customization.
+Alternative to Sonarr; PVR for TV shows with extensive customization
 
 | | |
 |---|---|

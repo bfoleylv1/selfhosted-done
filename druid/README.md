@@ -1,6 +1,6 @@
 # Druid
 
-druid self-hosted service.
+Real-time analytics database (OLAP)
 
 | | |
 |---|---|

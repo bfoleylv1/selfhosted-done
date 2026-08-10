@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=partkeep-system"
-    #   - "homepage.description=partkeep-system self-hosted service."
+    #   - "homepage.description=PHP/MySQL web application; organize and manage parts inventory.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=partkeep-system.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20191"

@@ -1,6 +1,6 @@
 # KoboldAI
 
-UI for running language models; originally for GPT novels.
+UI for running language models; originally for GPT novels
 
 | | |
 |---|---|

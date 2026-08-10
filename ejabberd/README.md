@@ -1,6 +1,6 @@
 # Ejabberd
 
-ejabberd self-hosted service.
+Robust XMPP / Jabber messaging server
 
 | | |
 |---|---|

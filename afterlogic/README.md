@@ -1,6 +1,6 @@
 # AfterLogic
 
-Webmail program; modern webmail with calendar.
+Webmail program; modern webmail with calendar
 
 | | |
 |---|---|

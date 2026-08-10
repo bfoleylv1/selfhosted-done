@@ -1,6 +1,6 @@
 # Notion Clone
 
-notion-clone self-hosted service.
+Open-source Notion alternative for note-taking
 
 | | |
 |---|---|

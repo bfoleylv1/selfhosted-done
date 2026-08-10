@@ -1,6 +1,6 @@
 # Focalboard
 
-Open source Notion alternative; kanban and project management.
+Open source Notion alternative; kanban and project management
 
 | | |
 |---|---|

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=duckdb"
-    #   - "homepage.description=duckdb self-hosted service."
+    #   - "homepage.description=In-process SQL OLAP database similar to SQLite but for analytics.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=duckdb.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20055"

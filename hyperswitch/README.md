@@ -1,6 +1,6 @@
 # HyperSwitch
 
-Open-source payments infrastructure; routing, retries, and reconciliation.
+Open-source payments infrastructure; routing, retries, and reconciliation
 
 | | |
 |---|---|

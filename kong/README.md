@@ -1,6 +1,6 @@
 # Kong
 
-Kong Gateway; cloud-native API, LLM, and MCP gateway solution.
+Kong Gateway; cloud-native API, LLM, and MCP gateway solution
 
 | | |
 |---|---|

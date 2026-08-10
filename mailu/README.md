@@ -1,6 +1,6 @@
 # Mailu
 
-Open source email suite; complete mail server stack.
+Open source email suite; complete mail server stack
 
 | | |
 |---|---|

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=miniflux"
-    #   - "homepage.description=miniflux self-hosted service."
+    #   - "homepage.description=Simple and fast RSS reader; minimalist UI with excellent readability.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=miniflux.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20156"

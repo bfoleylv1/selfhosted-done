@@ -1,6 +1,6 @@
 # Revert
 
-revert self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

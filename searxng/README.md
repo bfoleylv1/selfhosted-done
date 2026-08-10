@@ -1,6 +1,6 @@
 # SearXNG
 
-Free and open-source metasearch engine; aggregates results without tracking.
+Free and open-source metasearch engine; aggregates results without tracking
 
 | | |
 |---|---|

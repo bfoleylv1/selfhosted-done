@@ -1,6 +1,6 @@
 # Chronograf
 
-Admin UI for InfluxDB; manage databases and monitoring.
+Admin UI for InfluxDB; manage databases and monitoring
 
 | | |
 |---|---|

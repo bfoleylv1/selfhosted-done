@@ -1,6 +1,6 @@
 # LessPass
 
-Generate passwords from master password; deterministic password generator.
+Generate passwords from master password; deterministic password generator
 
 | | |
 |---|---|

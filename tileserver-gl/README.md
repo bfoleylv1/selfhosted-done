@@ -1,6 +1,6 @@
 # Tileserver Gl
 
-tileserver-gl self-hosted service.
+Serve vector and raster map tiles (Mapbox GL)
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # RSSHub
 
-Everything is an RSS feed; aggregates content from various sources to RSS.
+Everything is an RSS feed; aggregates content from various sources to RSS
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Sendy
 
-sendy self-hosted service.
+Self-hosted email marketing platform (Amazon SES based)
 
 | | |
 |---|---|

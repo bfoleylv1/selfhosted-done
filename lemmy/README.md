@@ -1,6 +1,6 @@
 # Lemmy
 
-Decentralised link aggregation; Reddit-like topic browsing.
+Decentralised link aggregation; Reddit-like topic browsing
 
 | | |
 |---|---|

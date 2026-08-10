@@ -1,6 +1,6 @@
 # Lxd
 
-lxd self-hosted service.
+System container and virtual machine manager (LXC)
 
 | | |
 |---|---|

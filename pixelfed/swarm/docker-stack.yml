@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=pixelfed"
-    #   - "homepage.description=pixelfed self-hosted service."
+    #   - "homepage.description=Federated photo sharing; Instagram alternative.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=pixelfed.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20206"

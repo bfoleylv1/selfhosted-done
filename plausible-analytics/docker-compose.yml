@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=plausible-analytics"
-    #   - "homepage.description=plausible-analytics self-hosted service."
+    #   - "homepage.description=Simple, privacy-focused web analytics alternative to Google Analytics.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=plausible-analytics.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20209"

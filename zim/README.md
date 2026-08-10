@@ -1,6 +1,6 @@
 # ZIM
 
-File format for offline Wikipedia and other Wikimedia content.
+File format for offline Wikipedia and other Wikimedia content
 
 | | |
 |---|---|

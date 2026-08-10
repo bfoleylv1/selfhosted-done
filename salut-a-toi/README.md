@@ -1,6 +1,6 @@
 # Salut A Toi
 
-salut-a-toi self-hosted service.
+Multipurpose XMPP/Jabber client and ecosystem
 
 | | |
 |---|---|

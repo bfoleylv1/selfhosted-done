@@ -1,6 +1,6 @@
 # Glitchtip
 
-glitchtip self-hosted service.
+Open-source error tracking (Sentry alternative)
 
 | | |
 |---|---|

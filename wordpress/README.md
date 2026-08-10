@@ -1,6 +1,6 @@
 # WordPress
 
-Web publishing platform; blogging and CMS with massive plugin ecosystem.
+Web publishing platform; blogging and CMS with massive plugin ecosystem
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Spree Commerce
 
-Complete online store platform; Ruby on Rails based.
+Complete online store platform; Ruby on Rails based
 
 | | |
 |---|---|

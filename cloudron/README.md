@@ -1,6 +1,6 @@
 # Cloudron
 
-cloudron self-hosted service.
+Self-hosted PaaS for installing and managing web apps
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Rancher
 
-Container management platform; multi-cluster Kubernetes management.
+Container management platform; multi-cluster Kubernetes management
 
 | | |
 |---|---|

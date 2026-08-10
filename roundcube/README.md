@@ -1,6 +1,6 @@
 # Roundcube
 
-Web-based email client; webmail with plugins.
+Web-based email client; webmail with plugins
 
 | | |
 |---|---|

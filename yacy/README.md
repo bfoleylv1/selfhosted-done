@@ -1,6 +1,6 @@
 # YaCy
 
-Decentralized search engine; peer-to-peer indexing and search network.
+Decentralized search engine; peer-to-peer indexing and search network
 
 | | |
 |---|---|

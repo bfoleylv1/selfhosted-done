@@ -1,6 +1,6 @@
 # Stripe Proxy
 
-stripe-proxy self-hosted service.
+Proxy for the Stripe payment API
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Radicale
 
-radicale self-hosted service.
+Simple CalDAV and CardDAV server
 
 | | |
 |---|---|

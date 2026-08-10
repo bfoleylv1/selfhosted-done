@@ -1,6 +1,6 @@
 # Recast
 
-Media server with transcoding; organize and watch your TV shows/movies.
+Media server with transcoding; organize and watch your TV shows/movies
 
 | | |
 |---|---|

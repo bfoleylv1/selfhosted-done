@@ -1,6 +1,6 @@
 # Nextchat
 
-nextchat self-hosted service.
+Next-generation web UI for ChatGPT and other LLMs
 
 | | |
 |---|---|

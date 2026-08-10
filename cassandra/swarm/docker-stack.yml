@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cassandra"
-    #   - "homepage.description=cassandra self-hosted service."
+    #   - "homepage.description=Highly scalable NoSQL database; column-family store designed for large datasets.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=cassandra.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9042"

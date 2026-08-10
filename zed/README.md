@@ -1,6 +1,6 @@
 # Zed
 
-zed self-hosted service.
+High-performance multiplayer code editor (server component)
 
 | | |
 |---|---|

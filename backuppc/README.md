@@ -1,6 +1,6 @@
 # BackupPC
 
-High-performance clientless backup system; server and desktop backup.
+High-performance clientless backup system; server and desktop backup
 
 | | |
 |---|---|

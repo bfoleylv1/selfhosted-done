@@ -1,6 +1,6 @@
 # Nextcloud
 
-Suite of client-server software for file syncing, collaboration, and video conferencing.
+Suite of client-server software for file syncing, collaboration, and video conferencing
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Shkeeper
 
-shkeeper self-hosted service.
+Self-hosted crypto payment gateway
 
 | | |
 |---|---|

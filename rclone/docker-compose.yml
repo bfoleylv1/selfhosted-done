@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=rclone"
-    #   - "homepage.description=rclone self-hosted service."
+    #   - "homepage.description=Command-line program for syncing files and directories to cloud storage.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=rclone.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:5572"

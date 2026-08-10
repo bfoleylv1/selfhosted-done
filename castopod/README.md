@@ -1,6 +1,6 @@
 # Castopod
 
-castopod self-hosted service.
+Self-hosted podcast hosting platform with ActivityPub federation
 
 | | |
 |---|---|

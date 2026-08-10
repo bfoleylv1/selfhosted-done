@@ -1,6 +1,6 @@
 # Passbolt
 
-Open Source password manager for teams; designed for business use.
+Open Source password manager for teams; designed for business use
 
 | | |
 |---|---|

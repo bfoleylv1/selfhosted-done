@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=stripe-self-hosted"
-    #   - "homepage.description=stripe-self-hosted self-hosted service."
+    #   - "homepage.description=Self-hosted Stripe integration / API proxy.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=stripe-self-hosted.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20308"

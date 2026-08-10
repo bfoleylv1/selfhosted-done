@@ -1,6 +1,6 @@
 # Library Genesis (Sci-Hub Mirror)
 
-Digital library of books, articles, and academic papers.
+Digital library of books, articles, and academic papers
 
 | | |
 |---|---|

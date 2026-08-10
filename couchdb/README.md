@@ -1,6 +1,6 @@
 # CouchDB
 
-ouchdb-style JSON document database with MVCC and multi-master replication.
+ouchdb-style JSON document database with MVCC and multi-master replication
 
 | | |
 |---|---|

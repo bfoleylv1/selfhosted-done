@@ -1,6 +1,6 @@
 # Jan
 
-Desktop app for running open-source models locally with GPU acceleration.
+Desktop app for running open-source models locally with GPU acceleration
 
 | | |
 |---|---|

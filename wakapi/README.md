@@ -1,6 +1,6 @@
 # Wakapi
 
-wakapi self-hosted service.
+Self-hosted coding time and activity tracker (WakaTime compatible)
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # AFS
 
-Andrew File System; distributed file system.
+Andrew File System; distributed file system
 
 | | |
 |---|---|

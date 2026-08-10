@@ -1,6 +1,6 @@
 # Pinboard (Self-Hosted Proxy)
 
-Social bookmarking service; save and share links.
+Social bookmarking service; save and share links
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Txtdot
 
-txtdot self-hosted service.
+txtdot: HTTP proxy that strips pages down to text, links and images to save bandwidth and block ads/scripts
 
 | | |
 |---|---|

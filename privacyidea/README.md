@@ -1,6 +1,6 @@
 # PrivacyIDEA
 
-Multi-factor authentication server supporting TOTP, HOTP, and WebAuthn.
+Multi-factor authentication server supporting TOTP, HOTP, and WebAuthn
 
 | | |
 |---|---|

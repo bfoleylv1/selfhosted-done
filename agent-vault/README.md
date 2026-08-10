@@ -1,6 +1,6 @@
 # Agent Vault
 
-agent-vault self-hosted service.
+Open-source HTTP credential proxy and vault that brokers API credentials for AI agents without exposing the secrets
 
 | | |
 |---|---|

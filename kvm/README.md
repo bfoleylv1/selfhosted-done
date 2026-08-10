@@ -1,6 +1,6 @@
 # KVM
 
-Full virtualization for Linux; kernel-based virtual machine.
+Full virtualization for Linux; kernel-based virtual machine
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Go Feature Flag
 
-go-feature-flag self-hosted service.
+Feature flag management system (Go)
 
 | | |
 |---|---|

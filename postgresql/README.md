@@ -1,6 +1,6 @@
 # PostgreSQL
 
-Powerful open-source relational database; extensible, ACID-compliant with JSONB support.
+Powerful open-source relational database; extensible, ACID-compliant with JSONB support
 
 | | |
 |---|---|

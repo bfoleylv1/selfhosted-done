@@ -1,6 +1,6 @@
 # phpMyAdmin
 
-Web interface for MySQL database management.
+Web interface for MySQL database management
 
 | | |
 |---|---|

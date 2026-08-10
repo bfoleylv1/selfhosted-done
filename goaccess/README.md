@@ -1,6 +1,6 @@
 # GoAccess
 
-Real-time web log analyzer; interactive HTML reports.
+Real-time web log analyzer; interactive HTML reports
 
 | | |
 |---|---|

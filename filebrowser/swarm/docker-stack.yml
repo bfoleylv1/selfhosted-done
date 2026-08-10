@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=filebrowser"
-    #   - "homepage.description=filebrowser self-hosted service."
+    #   - "homepage.description=Web-based file manager with authentication; manages files and folders via browser.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=filebrowser.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20069"

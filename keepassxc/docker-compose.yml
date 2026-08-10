@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=keepassxc"
-    #   - "homepage.description=keepassxc self-hosted service."
+    #   - "homepage.description=Password manager; store your passwords safely and access everywhere.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=keepassxc.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20123"

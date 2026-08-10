@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=svix"
-    #   - "homepage.description=svix self-hosted service."
+    #   - "homepage.description=Open-source webhook service and infrastructure.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=svix.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8071"

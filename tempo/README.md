@@ -1,6 +1,6 @@
 # Tempo
 
-Distributed tracing platform; end-to-end telemetry collection.
+Distributed tracing platform; end-to-end telemetry collection
 
 | | |
 |---|---|

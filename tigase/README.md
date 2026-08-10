@@ -1,6 +1,6 @@
 # Tigase
 
-tigase self-hosted service.
+High-performance XMPP / Jabber server
 
 | | |
 |---|---|

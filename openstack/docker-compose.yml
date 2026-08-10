@@ -29,7 +29,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=openstack"
-    #   - "homepage.description=openstack self-hosted service."
+    #   - "homepage.description=Cloud operating system; build public and private clouds.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=openstack.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20183"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=dovecot"
-    #   - "homepage.description=dovecot self-hosted service."
+    #   - "homepage.description=IMAP and POP3 server; mail delivery and retrieval.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=dovecot.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20049"

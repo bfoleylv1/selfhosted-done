@@ -1,6 +1,6 @@
 # Authelia
 
-Identity and Access Proxy providing 2FA, SSO, and access controls for services.
+Identity and Access Proxy providing 2FA, SSO, and access controls for services
 
 | | |
 |---|---|

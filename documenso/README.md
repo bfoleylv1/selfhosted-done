@@ -1,6 +1,6 @@
 # Documenso
 
-documenso self-hosted service.
+Open-source DocuSign alternative for electronic signatures
 
 | | |
 |---|---|

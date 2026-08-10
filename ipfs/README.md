@@ -1,6 +1,6 @@
 # IPFS
 
-Protocol for decentralized file sharing; distributed content addressing.
+Protocol for decentralized file sharing; distributed content addressing
 
 | | |
 |---|---|

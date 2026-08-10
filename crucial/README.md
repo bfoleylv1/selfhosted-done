@@ -1,6 +1,6 @@
 # Crucial
 
-crucial self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

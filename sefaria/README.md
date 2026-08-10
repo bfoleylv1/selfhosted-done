@@ -1,6 +1,6 @@
 # Sefaria
 
-Digital library of texts; Jewish texts with search and cross-references.
+Digital library of texts; Jewish texts with search and cross-references
 
 | | |
 |---|---|

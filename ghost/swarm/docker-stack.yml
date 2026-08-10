@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=ghost"
-    #   - "homepage.description=ghost self-hosted service."
+    #   - "homepage.description=Publishing platform; focused on publishing and journalism.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=ghost.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:2368"

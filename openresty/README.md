@@ -1,6 +1,6 @@
 # OpenResty
 
-NGINX with Lua; high-performance web platform.
+NGINX with Lua; high-performance web platform
 
 | | |
 |---|---|

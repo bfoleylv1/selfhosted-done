@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=enclosed"
-    #   - "homepage.description=enclosed self-hosted service."
+    #   - "homepage.description=Self-hosted tool for sharing secrets and files securely.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=enclosed.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8787"

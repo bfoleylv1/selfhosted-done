@@ -1,6 +1,6 @@
 # Reservo
 
-reservo self-hosted service.
+Self-hosted image hosting and sharing script
 
 | | |
 |---|---|

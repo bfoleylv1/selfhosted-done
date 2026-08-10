@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=puppet"
-    #   - "homepage.description=puppet self-hosted service."
+    #   - "homepage.description=Configuration management tool; declarative infrastructure automation.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=puppet.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20224"

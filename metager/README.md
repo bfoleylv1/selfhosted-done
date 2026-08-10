@@ -1,6 +1,6 @@
 # MetaGer
 
-German metasearch engine; privacy-focused search results.
+German metasearch engine; privacy-focused search results
 
 | | |
 |---|---|

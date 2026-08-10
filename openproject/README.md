@@ -1,6 +1,6 @@
 # OpenProject
 
-Project management web application; issue tracking and agile tools.
+Project management web application; issue tracking and agile tools
 
 | | |
 |---|---|

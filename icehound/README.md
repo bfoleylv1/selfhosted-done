@@ -1,6 +1,6 @@
 # IceHound
 
-AI-powered tool for incident response and system monitoring.
+AI-powered tool for incident response and system monitoring
 
 | | |
 |---|---|

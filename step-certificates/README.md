@@ -1,6 +1,6 @@
 # Step-Certificates
 
-Private CA; X.509 PKI and ACME server.
+Private CA; X.509 PKI and ACME server
 
 | | |
 |---|---|

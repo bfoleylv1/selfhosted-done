@@ -1,6 +1,6 @@
 # Lidarr
 
-PVR for music; automatically downloads and organizes music albums.
+PVR for music; automatically downloads and organizes music albums
 
 | | |
 |---|---|

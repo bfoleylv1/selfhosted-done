@@ -1,6 +1,6 @@
 # Dreamfactory
 
-dreamfactory self-hosted service.
+Auto-generated REST API backend for databases
 
 | | |
 |---|---|

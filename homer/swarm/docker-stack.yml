@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=homer"
-    #   - "homepage.description=homer self-hosted service."
+    #   - "homepage.description=Static dashboard / startpage for your homelab.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=homer.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20112"

@@ -52,7 +52,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=koboldai"
-    #   - "homepage.description=koboldai self-hosted service."
+    #   - "homepage.description=UI for running language models; originally for GPT novels.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=koboldai.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20130"

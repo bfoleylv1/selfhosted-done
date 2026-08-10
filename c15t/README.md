@@ -1,6 +1,6 @@
 # C15T
 
-c15t self-hosted service.
+Open-source consent and privacy management platform
 
 | | |
 |---|---|

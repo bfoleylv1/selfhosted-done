@@ -1,6 +1,6 @@
 # Swifty
 
-Simple and fast music server; lightweight alternative to Airsonic.
+Simple and fast music server; lightweight alternative to Airsonic
 
 | | |
 |---|---|

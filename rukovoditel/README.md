@@ -1,6 +1,6 @@
 # Rukovoditel
 
-rukovoditel self-hosted service.
+Free web-based project management and CRM
 
 | | |
 |---|---|

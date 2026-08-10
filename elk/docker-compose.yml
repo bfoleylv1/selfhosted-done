@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=elk"
-    #   - "homepage.description=elk self-hosted service."
+    #   - "homepage.description=Elasticsearch, Logstash, Kibana; log analysis stack.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=elk.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:5601"

@@ -1,6 +1,6 @@
 # Booklore
 
-booklore self-hosted service.
+Self-hosted book library and reading tracker
 
 | | |
 |---|---|

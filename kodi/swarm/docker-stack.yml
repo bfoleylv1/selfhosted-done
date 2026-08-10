@@ -51,7 +51,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=kodi"
-    #   - "homepage.description=kodi self-hosted service."
+    #   - "homepage.description=Free and open source media center; entertainment system hub.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=kodi.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20131"

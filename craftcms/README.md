@@ -1,6 +1,6 @@
 # Craft CMS
 
-Flexible content management; developer-friendly CMS.
+Flexible content management; developer-friendly CMS
 
 | | |
 |---|---|

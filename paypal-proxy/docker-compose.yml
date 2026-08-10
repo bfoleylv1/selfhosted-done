@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=paypal-proxy"
-    #   - "homepage.description=paypal-proxy self-hosted service."
+    #   - "homepage.description=Proxy for the PayPal payment API.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=paypal-proxy.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20196"

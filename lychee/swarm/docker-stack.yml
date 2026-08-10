@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=lychee"
-    #   - "homepage.description=lychee self-hosted service."
+    #   - "homepage.description=Photo management web application; organizes and displays photos with user auth.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=lychee.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20145"

@@ -1,6 +1,6 @@
 # Typo3
 
-Open-source CMS; enterprise-grade content management.
+Open-source CMS; enterprise-grade content management
 
 | | |
 |---|---|

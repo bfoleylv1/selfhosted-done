@@ -1,6 +1,6 @@
 # Grafana
 
-Analytics and monitoring visualization platform; Grafana dashboards.
+Analytics and monitoring visualization platform; Grafana dashboards
 
 | | |
 |---|---|

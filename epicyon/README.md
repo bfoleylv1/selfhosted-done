@@ -1,6 +1,6 @@
 # Epicyon
 
-epicyon self-hosted service.
+Self-hosted ActivityPub federated social server
 
 | | |
 |---|---|

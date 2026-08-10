@@ -1,6 +1,6 @@
 # Kill Bill
 
-Open source payment system; subscriptions and billing platform.
+Open source payment system; subscriptions and billing platform
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # FreshRSS
 
-Free and open-source web RSS reader; multi-user self-hosted feed reader.
+Free and open-source web RSS reader; multi-user self-hosted feed reader
 
 | | |
 |---|---|

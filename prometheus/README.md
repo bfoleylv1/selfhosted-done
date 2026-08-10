@@ -1,6 +1,6 @@
 # Prometheus
 
-Monitoring and alerting toolkit; systems and services monitoring.
+Monitoring and alerting toolkit; systems and services monitoring
 
 | | |
 |---|---|

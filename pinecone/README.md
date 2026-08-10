@@ -1,6 +1,6 @@
 # Pinecone (Self-Hosted)
 
-Fully managed vector database alternative; private cloud deployment available.
+Fully managed vector database alternative; private cloud deployment available
 
 | | |
 |---|---|

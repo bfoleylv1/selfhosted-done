@@ -1,6 +1,6 @@
 # Cloudflared
 
-Cloudflare Tunnel; connect services without public IP.
+Cloudflare Tunnel; connect services without public IP
 
 | | |
 |---|---|

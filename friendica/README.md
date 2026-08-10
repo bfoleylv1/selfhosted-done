@@ -1,6 +1,6 @@
 # Friendica
 
-Decentralized social network; connects to other networks.
+Decentralized social network; connects to other networks
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Matomo
 
-Open-source web analytics platform; full control over your data.
+Open-source web analytics platform; full control over your data
 
 | | |
 |---|---|

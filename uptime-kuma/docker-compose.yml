@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=uptime-kuma"
-    #   - "homepage.description=uptime-kuma self-hosted service."
+    #   - "homepage.description=Self-hosting status page; monitor websites and services.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=uptime-kuma.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20344"

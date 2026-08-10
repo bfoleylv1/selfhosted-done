@@ -1,6 +1,6 @@
 # Cassandra
 
-Highly scalable NoSQL database; column-family store designed for large datasets.
+Highly scalable NoSQL database; column-family store designed for large datasets
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Joomla
 
-Open-source CMS; easy to use with extensions.
+Open-source CMS; easy to use with extensions
 
 | | |
 |---|---|

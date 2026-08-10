@@ -1,6 +1,6 @@
 # PeerTube
 
-Decentralised video hosting platform; ActivityPub federated videos.
+Decentralised video hosting platform; ActivityPub federated videos
 
 | | |
 |---|---|

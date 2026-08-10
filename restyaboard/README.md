@@ -1,6 +1,6 @@
 # Restyaboard
 
-Open source Trello alternative; project management and task board.
+Open source Trello alternative; project management and task board
 
 | | |
 |---|---|

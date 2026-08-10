@@ -1,6 +1,6 @@
 # Mopidy
 
-Extendable music server; Python-based with plugin architecture.
+Extendable music server; Python-based with plugin architecture
 
 | | |
 |---|---|

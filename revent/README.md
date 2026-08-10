@@ -1,6 +1,6 @@
 # Revent
 
-revent self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

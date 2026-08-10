@@ -1,6 +1,6 @@
 # Whoogle
 
-Google search proxy; minimal Google search in your own server.
+Google search proxy; minimal Google search in your own server
 
 | | |
 |---|---|

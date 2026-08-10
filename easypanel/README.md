@@ -1,6 +1,6 @@
 # Easypanel
 
-easypanel self-hosted service.
+Modern self-hosted PaaS control panel for Docker apps
 
 | | |
 |---|---|

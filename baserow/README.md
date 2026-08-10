@@ -1,6 +1,6 @@
 # Baserow
 
-Open source Notion alternative; database and form builder.
+Open source Notion alternative; database and form builder
 
 | | |
 |---|---|

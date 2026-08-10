@@ -1,6 +1,6 @@
 # Chef
 
-Automation platform for the most demanding environments.
+Automation platform for the most demanding environments
 
 | | |
 |---|---|

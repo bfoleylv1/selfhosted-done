@@ -1,6 +1,6 @@
 # NFS
 
-Network File System; share file systems on Unix/Linux.
+Network File System; share file systems on Unix/Linux
 
 | | |
 |---|---|

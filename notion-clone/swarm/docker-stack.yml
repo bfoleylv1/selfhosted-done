@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=notion-clone"
-    #   - "homepage.description=notion-clone self-hosted service."
+    #   - "homepage.description=Open-source Notion alternative for note-taking.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=notion-clone.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20170"

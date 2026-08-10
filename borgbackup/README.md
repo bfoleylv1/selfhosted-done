@@ -1,6 +1,6 @@
 # BorgBackup
 
-Deduplicating backup program; efficient storage for backups.
+Deduplicating backup program; efficient storage for backups
 
 | | |
 |---|---|

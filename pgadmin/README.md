@@ -1,6 +1,6 @@
 # pgAdmin
 
-Web-based PostgreSQL database management tool; GUI for PostgreSQL.
+Web-based PostgreSQL database management tool; GUI for PostgreSQL
 
 | | |
 |---|---|

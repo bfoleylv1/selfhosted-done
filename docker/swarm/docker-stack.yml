@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=docker"
-    #   - "homepage.description=docker self-hosted service."
+    #   - "homepage.description=Platform for creating and running containers; application virtualization.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=docker.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20045"

@@ -1,6 +1,6 @@
 # Rhode Code
 
-rhode-code self-hosted service.
+Source code management platform (Git/Mercurial/SVN)
 
 | | |
 |---|---|

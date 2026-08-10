@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=noco-db"
-    #   - "homepage.description=noco-db self-hosted service."
+    #   - "homepage.description=Open-source Airtable alternative; turn databases into smart tables.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=noco-db.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20168"

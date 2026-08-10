@@ -1,6 +1,6 @@
 # Wildduck
 
-wildduck self-hosted service.
+IMAP/POP3 mail server written in Node.js
 
 | | |
 |---|---|

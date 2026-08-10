@@ -1,6 +1,6 @@
 # Suricata
 
-Network threat detection engine; IDS/IPS/NSM.
+Network threat detection engine; IDS/IPS/NSM
 
 | | |
 |---|---|

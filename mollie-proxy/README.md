@@ -1,6 +1,6 @@
 # Mollie Proxy
 
-mollie-proxy self-hosted service.
+Proxy for the Mollie payment API
 
 | | |
 |---|---|

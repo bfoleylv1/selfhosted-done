@@ -1,6 +1,6 @@
 # Shopware
 
-E-commerce platform; open source and enterprise editions available.
+E-commerce platform; open source and enterprise editions available
 
 | | |
 |---|---|

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=zomboyin"
-    #   - "homepage.description=zomboyin self-hosted service."
+    #   - "homepage.description=Full-text search engine; JavaScript-based search.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=zomboyin.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20389"

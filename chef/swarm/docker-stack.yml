@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=chef"
-    #   - "homepage.description=chef self-hosted service."
+    #   - "homepage.description=Automation platform for the most demanding environments.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=chef.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20405"

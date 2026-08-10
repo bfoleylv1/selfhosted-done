@@ -1,6 +1,6 @@
 # Drone
 
-Continuous integration system; container-based CI/CD.
+Continuous integration system; container-based CI/CD
 
 | | |
 |---|---|

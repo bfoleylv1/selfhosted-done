@@ -1,6 +1,6 @@
 # NocoDB
 
-Open-source Airtable alternative; turn databases into smart tables.
+Open-source Airtable alternative; turn databases into smart tables
 
 | | |
 |---|---|

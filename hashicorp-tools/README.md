@@ -1,6 +1,6 @@
 # HashiCorp Tools
 
-Suite of infrastructure tools: Terraform, Vault, Consul, Nomad.
+Suite of infrastructure tools: Terraform, Vault, Consul, Nomad
 
 | | |
 |---|---|

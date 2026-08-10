@@ -1,6 +1,6 @@
 # Samba
 
-SMB/CIFS file sharing; access from Windows and Linux.
+SMB/CIFS file sharing; access from Windows and Linux
 
 | | |
 |---|---|

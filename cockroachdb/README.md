@@ -1,6 +1,6 @@
 # CockroachDB
 
-Cloud-native relational database; distributed SQL database.
+Cloud-native relational database; distributed SQL database
 
 | | |
 |---|---|

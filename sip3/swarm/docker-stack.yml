@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=sip3"
-    #   - "homepage.description=sip3 self-hosted service."
+    #   - "homepage.description=VoIP / SIP monitoring and analysis.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=sip3.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20282"

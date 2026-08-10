@@ -1,6 +1,6 @@
 # Bifrost
 
-Media server with Jellyfin-like features; open source and self-hosted.
+Media server with Jellyfin-like features; open source and self-hosted
 
 | | |
 |---|---|

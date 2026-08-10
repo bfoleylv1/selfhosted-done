@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=woocommerce"
-    #   - "homepage.description=woocommerce self-hosted service."
+    #   - "homepage.description=WordPress plugin for e-commerce; highly customizable storefront.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=woocommerce.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20367"

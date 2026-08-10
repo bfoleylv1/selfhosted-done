@@ -1,6 +1,6 @@
 # Frigate
 
-frigate self-hosted service.
+AI-powered network video recorder (NVR) for camera streams
 
 | | |
 |---|---|

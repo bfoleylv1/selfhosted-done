@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=wikipedia-kiwix"
-    #   - "homepage.description=wikipedia-kiwix self-hosted service."
+    #   - "homepage.description=Offline Wikipedia mirror; search Wikimedia projects without internet.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=wikipedia-kiwix.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20364"

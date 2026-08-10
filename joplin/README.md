@@ -1,6 +1,6 @@
 # Joplin
 
-Note-taking and to-do application; Markdown support with encryption.
+Note-taking and to-do application; Markdown support with encryption
 
 | | |
 |---|---|

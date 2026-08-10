@@ -1,6 +1,6 @@
 # Gordian
 
-gordian self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Postal
 
-postal self-hosted service.
+Full-featured open-source mail server
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Yetishare
 
-yetishare self-hosted service.
+Self-hosted file hosting and sharing script
 
 | | |
 |---|---|

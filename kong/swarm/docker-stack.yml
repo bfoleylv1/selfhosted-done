@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=kong"
-    #   - "homepage.description=kong self-hosted service."
+    #   - "homepage.description=Kong Gateway; cloud-native API, LLM, and MCP gateway solution.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=kong.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20133"

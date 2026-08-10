@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=txtdot"
-    #   - "homepage.description=txtdot self-hosted service."
+    #   - "homepage.description=txtdot: HTTP proxy that strips pages down to text, links and images to save bandwidth and block ads/scripts.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=txtdot.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20339"

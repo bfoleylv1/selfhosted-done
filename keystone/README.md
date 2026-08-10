@@ -1,6 +1,6 @@
 # Keystone
 
-Node.js GraphQL CMS; flexible and extensible.
+Node.js GraphQL CMS; flexible and extensible
 
 | | |
 |---|---|

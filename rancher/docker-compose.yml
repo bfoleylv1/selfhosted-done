@@ -29,7 +29,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=rancher"
-    #   - "homepage.description=rancher self-hosted service."
+    #   - "homepage.description=Container management platform; multi-cluster Kubernetes management.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=rancher.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20233"

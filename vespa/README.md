@@ -1,6 +1,6 @@
 # Vespa
 
-Feature-rich search and ML engine; big data serving platform.
+Feature-rich search and ML engine; big data serving platform
 
 | | |
 |---|---|

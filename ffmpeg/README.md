@@ -1,6 +1,6 @@
 # FFmpeg
 
-Command-line video/audio processing; convert and edit media files.
+Command-line video/audio processing; convert and edit media files
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Gathio
 
-gathio self-hosted service.
+Self-hosted event page and RSVP host
 
 | | |
 |---|---|

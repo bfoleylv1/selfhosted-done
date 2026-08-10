@@ -1,6 +1,6 @@
 # VictoriaMetrics
 
-Ultra-high performing time series database; Prometheus compatible.
+Ultra-high performing time series database; Prometheus compatible
 
 | | |
 |---|---|

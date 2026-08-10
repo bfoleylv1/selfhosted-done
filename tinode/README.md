@@ -1,6 +1,6 @@
 # Tinode
 
-tinode self-hosted service.
+Instant messaging server with REST and websocket APIs
 
 | | |
 |---|---|

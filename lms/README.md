@@ -1,6 +1,6 @@
 # Lms
 
-lms self-hosted service.
+Frappe LMS: 100% open-source learning management system
 
 | | |
 |---|---|

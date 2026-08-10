@@ -1,6 +1,6 @@
 # Full Help
 
-full-help self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

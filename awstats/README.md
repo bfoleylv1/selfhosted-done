@@ -1,6 +1,6 @@
 # AWStats
 
-Advanced web statistics; detailed reporting and log analysis.
+Advanced web statistics; detailed reporting and log analysis
 
 | | |
 |---|---|

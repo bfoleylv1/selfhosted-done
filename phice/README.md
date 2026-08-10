@@ -1,6 +1,6 @@
 # Phice
 
-phice self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

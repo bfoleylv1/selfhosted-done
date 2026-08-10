@@ -1,6 +1,6 @@
 # Matrix Synapse
 
-Decentralized communication protocol server; bridges to other services.
+Decentralized communication protocol server; bridges to other services
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Duplicati
 
-Backup tool; encrypt, compress and schedule backups.
+Backup tool; encrypt, compress and schedule backups
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Davical
 
-davical self-hosted service.
+CalDAV server for calendar sharing
 
 | | |
 |---|---|

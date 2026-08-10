@@ -1,6 +1,6 @@
 # Gogs
 
-Simple Git service; lightweight and easy to install.
+Simple Git service; lightweight and easy to install
 
 | | |
 |---|---|

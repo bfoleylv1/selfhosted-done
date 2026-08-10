@@ -1,6 +1,6 @@
 # Framadate
 
-framadate self-hosted service.
+Self-hosted poll and meeting-scheduling tool
 
 | | |
 |---|---|

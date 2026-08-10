@@ -1,6 +1,6 @@
 # Navidrome
 
-Modern and lightweight Go/NodeJS music server; compatible with Subsonic API.
+Modern and lightweight Go/NodeJS music server; compatible with Subsonic API
 
 | | |
 |---|---|

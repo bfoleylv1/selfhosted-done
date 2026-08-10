@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=freeswitch"
-    #   - "homepage.description=freeswitch self-hosted service."
+    #   - "homepage.description=Open-source telephony platform / softswitch (VoIP).""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=freeswitch.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20078"

@@ -1,6 +1,6 @@
 # Watchcode
 
-watchcode self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

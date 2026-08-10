@@ -1,6 +1,6 @@
 # Dolibarr
 
-Web app to manage business activities; ERP/CRM for small companies.
+Web app to manage business activities; ERP/CRM for small companies
 
 | | |
 |---|---|

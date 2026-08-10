@@ -1,6 +1,6 @@
 # BookWyrm
 
-Federated book social network; discover and discuss books.
+Federated book social network; discover and discuss books
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # 42Links
 
-42links self-hosted service.
+Self-hosted bookmark and link dashboard
 
 | | |
 |---|---|

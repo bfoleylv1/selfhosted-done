@@ -1,6 +1,6 @@
 # Duckduckgo Proxy
 
-duckduckgo-proxy self-hosted service.
+Self-hosted proxy for the DuckDuckGo search API
 
 | | |
 |---|---|

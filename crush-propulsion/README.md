@@ -1,6 +1,6 @@
 # Crush Propulsion
 
-Social platform for sharing thoughts and ideas.
+Social platform for sharing thoughts and ideas
 
 | | |
 |---|---|

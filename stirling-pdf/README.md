@@ -1,6 +1,6 @@
 # Stirling Pdf
 
-stirling-pdf self-hosted service.
+Local PDF manipulation toolkit (merge, split, convert)
 
 | | |
 |---|---|

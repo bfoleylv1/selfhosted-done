@@ -1,6 +1,6 @@
 # Ackee
 
-Lightweight anonymised web analytics; self-hosted solution.
+Lightweight anonymised web analytics; self-hosted solution
 
 | | |
 |---|---|

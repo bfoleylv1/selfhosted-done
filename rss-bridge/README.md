@@ -1,6 +1,6 @@
 # Rss Bridge
 
-rss-bridge self-hosted service.
+Generate RSS feeds for websites that don't provide them
 
 | | |
 |---|---|

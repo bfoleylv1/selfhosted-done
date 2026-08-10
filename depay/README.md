@@ -1,6 +1,6 @@
 # Depay
 
-depay self-hosted service.
+Self-hosted crypto payment processor
 
 | | |
 |---|---|

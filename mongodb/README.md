@@ -1,6 +1,6 @@
 # MongoDB
 
-Document-oriented NoSQL database; stores JSON-like documents with flexible schemas.
+Document-oriented NoSQL database; stores JSON-like documents with flexible schemas
 
 | | |
 |---|---|

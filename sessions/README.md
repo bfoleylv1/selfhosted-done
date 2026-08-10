@@ -1,6 +1,6 @@
 # Sessions
 
-Encrypted messaging app; decentralized and privacy-focused.
+Encrypted messaging app; decentralized and privacy-focused
 
 | | |
 |---|---|

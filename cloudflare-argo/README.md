@@ -1,6 +1,6 @@
 # Cloudflare Argo
 
-Cloudflare's smart routing; secure and fast connections.
+Cloudflare's smart routing; secure and fast connections
 
 | | |
 |---|---|

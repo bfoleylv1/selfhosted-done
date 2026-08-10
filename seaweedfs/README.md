@@ -1,6 +1,6 @@
 # Seaweedfs
 
-seaweedfs self-hosted service.
+Distributed object, block and file storage system
 
 | | |
 |---|---|

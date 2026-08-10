@@ -1,6 +1,6 @@
 # Briar
 
-Peer-to-peer messaging app; works over Tor and Bluetooth.
+Peer-to-peer messaging app; works over Tor and Bluetooth
 
 | | |
 |---|---|

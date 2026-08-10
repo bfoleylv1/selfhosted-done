@@ -1,6 +1,6 @@
 # Zeek
 
-Network security monitoring; powerful traffic analysis.
+Network security monitoring; powerful traffic analysis
 
 | | |
 |---|---|

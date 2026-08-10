@@ -1,6 +1,6 @@
 # Canvas Lms
 
-canvas-lms self-hosted service.
+Open-source learning management system (LMS)
 
 | | |
 |---|---|

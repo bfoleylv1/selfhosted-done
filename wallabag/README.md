@@ -1,6 +1,6 @@
 # Wallabag
 
-Read it later; web article scraper and read-later application.
+Read it later; web article scraper and read-later application
 
 | | |
 |---|---|

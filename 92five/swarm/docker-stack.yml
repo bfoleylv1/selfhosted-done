@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=92five"
-    #   - "homepage.description=92five self-hosted service."
+    #   - "homepage.description=Self-hosted project management and collaboration tool.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=92five.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20393"

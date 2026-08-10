@@ -1,6 +1,6 @@
 # Elk
 
-Elasticsearch, Logstash, Kibana; log analysis stack.
+Elasticsearch, Logstash, Kibana; log analysis stack
 
 | | |
 |---|---|

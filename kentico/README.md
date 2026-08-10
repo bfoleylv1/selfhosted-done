@@ -1,6 +1,6 @@
 # Kentico
 
-All-in-one CMS; e-commerce and online marketing platform.
+All-in-one CMS; e-commerce and online marketing platform
 
 | | |
 |---|---|

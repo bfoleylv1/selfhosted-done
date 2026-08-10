@@ -1,6 +1,6 @@
 # Client Management
 
-Invoice, quotes, and client management for freelancers and agencies.
+Invoice, quotes, and client management for freelancers and agencies
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Graylog
 
-Open source log management platform; centralized log management.
+Open source log management platform; centralized log management
 
 | | |
 |---|---|

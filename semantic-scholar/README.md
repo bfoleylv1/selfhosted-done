@@ -1,6 +1,6 @@
 # Semantic Scholar (Self-Hosted)
 
-AI-powered research tool; academic paper search.
+AI-powered research tool; academic paper search
 
 | | |
 |---|---|

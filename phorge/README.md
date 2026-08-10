@@ -1,6 +1,6 @@
 # Phorge
 
-phorge self-hosted service.
+Open-source project management and collaboration platform (Phabricator fork)
 
 | | |
 |---|---|

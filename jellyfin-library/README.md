@@ -1,6 +1,6 @@
 # Jellyfin Library
 
-jellyfin-library self-hosted service.
+Tool for managing Jellyfin media libraries
 
 | | |
 |---|---|

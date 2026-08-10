@@ -1,6 +1,6 @@
 # GPT Engineer
 
-AI-powered code generation tool; create projects from descriptions.
+AI-powered code generation tool; create projects from descriptions
 
 | | |
 |---|---|

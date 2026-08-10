@@ -1,6 +1,6 @@
 # Signoz
 
-signoz self-hosted service.
+Open-source observability platform (traces, metrics, logs)
 
 | | |
 |---|---|

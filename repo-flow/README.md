@@ -1,6 +1,6 @@
 # Repo Flow
 
-repo-flow self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

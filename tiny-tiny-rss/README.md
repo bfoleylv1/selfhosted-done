@@ -1,6 +1,6 @@
 # Tiny Tiny RSS
 
-Web-based news reader; customizable and extensible RSS aggregator.
+Web-based news reader; customizable and extensible RSS aggregator
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Trailbase
 
-trailbase self-hosted service.
+Open-source backend (auth + DB + API) written in Rust
 
 | | |
 |---|---|

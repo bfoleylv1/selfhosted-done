@@ -1,6 +1,6 @@
 # Umami
 
-Open-source alternative to Google Analytics; privacy-focused.
+Open-source alternative to Google Analytics; privacy-focused
 
 | | |
 |---|---|

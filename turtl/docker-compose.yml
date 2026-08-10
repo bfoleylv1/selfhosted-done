@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=turtl"
-    #   - "homepage.description=turtl self-hosted service."
+    #   - "homepage.description=Open source Evernote alternative; encrypted note-sync platform.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=turtl.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20337"

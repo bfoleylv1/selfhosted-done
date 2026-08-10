@@ -1,6 +1,6 @@
 # Gnuseed
 
-Distributed social network based on ActivityPub protocol.
+Distributed social network based on ActivityPub protocol
 
 | | |
 |---|---|

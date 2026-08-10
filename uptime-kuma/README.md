@@ -1,6 +1,6 @@
 # Uptime Kuma
 
-Self-hosting status page; monitor websites and services.
+Self-hosting status page; monitor websites and services
 
 | | |
 |---|---|

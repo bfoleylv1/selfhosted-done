@@ -1,6 +1,6 @@
 # Radarr
 
-PVR for movie fans; manages and automatically downloads films.
+PVR for movie fans; manages and automatically downloads films
 
 | | |
 |---|---|

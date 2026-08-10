@@ -1,6 +1,6 @@
 # SourceHut
 
-Hosting service for open source projects; git hosting and CI.
+Hosting service for open source projects; git hosting and CI
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Mastodon
 
-Server for Twitter-like microblogging; federated social network.
+Server for Twitter-like microblogging; federated social network
 
 | | |
 |---|---|

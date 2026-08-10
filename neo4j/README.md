@@ -1,6 +1,6 @@
 # Neo4j
 
-Graph database optimized for storing and querying relationships between data.
+Graph database optimized for storing and querying relationships between data
 
 | | |
 |---|---|

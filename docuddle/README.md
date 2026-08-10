@@ -1,6 +1,6 @@
 # Docuddle
 
-docuddle self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|

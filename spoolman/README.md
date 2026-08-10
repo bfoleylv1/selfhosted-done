@@ -1,6 +1,6 @@
 # Spoolman
 
-spoolman self-hosted service.
+Filament and spool inventory manager for 3D printing
 
 | | |
 |---|---|

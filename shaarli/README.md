@@ -1,6 +1,6 @@
 # Shaarli
 
-Minimalist bookmarking service; personal and lightweight.
+Minimalist bookmarking service; personal and lightweight
 
 | | |
 |---|---|

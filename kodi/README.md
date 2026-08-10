@@ -1,6 +1,6 @@
 # Kodi
 
-Free and open source media center; entertainment system hub.
+Free and open source media center; entertainment system hub
 
 | | |
 |---|---|

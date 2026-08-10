@@ -1,6 +1,6 @@
 # Yeti Switch
 
-yeti-switch self-hosted service.
+Yeti Switch - softswitch / SBC for VoIP
 
 | | |
 |---|---|

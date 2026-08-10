@@ -51,7 +51,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=tautulli"
-    #   - "homepage.description=tautulli self-hosted service."
+    #   - "homepage.description=Plex media server monitoring; track usage and analytics.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=tautulli.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8181"

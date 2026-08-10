@@ -1,6 +1,6 @@
 # Rocket.Chat
 
-Web chat platform for teams; built with Meteor.js framework.
+Web chat platform for teams; built with Meteor.js framework
 
 | | |
 |---|---|

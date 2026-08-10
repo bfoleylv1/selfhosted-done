@@ -1,6 +1,6 @@
 # DuckDB
 
-In-process SQL OLAP database similar to SQLite but for analytics.
+In-process SQL OLAP database similar to SQLite but for analytics
 
 | | |
 |---|---|

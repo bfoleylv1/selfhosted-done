@@ -1,6 +1,6 @@
 # SaltStack
 
-Event-driven automation engine; configuration management and orchestration.
+Event-driven automation engine; configuration management and orchestration
 
 | | |
 |---|---|

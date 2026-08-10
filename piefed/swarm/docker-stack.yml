@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=piefed"
-    #   - "homepage.description=piefed self-hosted service."
+    #   - "homepage.description=Federated feed aggregator (ActivityPub).""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=piefed.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20204"

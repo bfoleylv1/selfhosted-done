@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=standard-notes"
-    #   - "homepage.description=standard-notes self-hosted service."
+    #   - "homepage.description=Encrypted notes app; focus on privacy and security.""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=standard-notes.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20300"

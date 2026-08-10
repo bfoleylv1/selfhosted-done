@@ -1,6 +1,6 @@
 # Seppo
 
-seppo self-hosted service.
+Self-hosted service
 
 | | |
 |---|---|
