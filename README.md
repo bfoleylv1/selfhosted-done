@@ -4,7 +4,7 @@ Docker Compose and Docker Swarm files for self-hosted services that have been
 **started and verified working**. A service lands here only after it actually
 comes up.
 
-Currently **19 services**.
+Currently **20 services**.
 
 Every service folder has the same shape:
 
@@ -37,6 +37,7 @@ Every service folder has the same shape:
 | [Ampache](./ampache) | `ampache/ampache:latest` | `20404` → `80` | ✅ | Web-based audio file manager; provides streaming and management interface. |
 | [Ansible](./ansible) | `alpine/ansible:latest` | `20001` → `8080` | — | Open source automation engine; IT automation and configuration management. |
 | [Apache Apisix](./apache-apisix) | `apache/apisix:latest` | `9080` → `9080` | — | Real-time API gateway; built on etcd and Lua. |
+| [Appflowy](./appflowy) | `appflowyinc/appflowy_cloud:latest` | `20002` → `8080` | — | Open source Notion alternative; collaborative workspace builder. |
 | [Bamboo](./bamboo) | `atlassian/bamboo:latest` | `8085` → `8085` | — | Atlassian Bamboo - CI/CD build and deployment server. |
 | [Chef](./chef) | `chef/chef:latest` | `20405` → `443` | — | Automation platform for the most demanding environments. |
 
