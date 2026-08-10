@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=shaarli"
-    #   - "homepage.description=Minimalist bookmarking service; personal and lightweight.""
+    #   - "homepage.description=Minimalist bookmarking service; personal and lightweight."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=shaarli.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20276"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=alertmanager"
-    #   - "homepage.description=Alert handler for Prometheus; route and silencing alerts.""
+    #   - "homepage.description=Alert handler for Prometheus; route and silencing alerts."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=alertmanager.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9093"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cloud-foundry"
-    #   - "homepage.description=Cloud-native platform; PaaS for app deployment.""
+    #   - "homepage.description=Cloud-native platform; PaaS for app deployment."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=cloud-foundry.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20031"

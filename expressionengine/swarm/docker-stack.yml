@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=expressionengine"
-    #   - "homepage.description=Flexible CMS; simple yet powerful content management.""
+    #   - "homepage.description=Flexible CMS; simple yet powerful content management."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=expressionengine.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20066"

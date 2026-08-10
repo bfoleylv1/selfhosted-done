@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=zerotier"
-    #   - "homepage.description=Smart networking platform; SD-WAN and SDN capabilities.""
+    #   - "homepage.description=Smart networking platform; SD-WAN and SDN capabilities."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=zerotier.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9993"

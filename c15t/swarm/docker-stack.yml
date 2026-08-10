@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=c15t"
-    #   - "homepage.description=Open-source consent and privacy management platform.""
+    #   - "homepage.description=Open-source consent and privacy management platform."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=c15t.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20021"

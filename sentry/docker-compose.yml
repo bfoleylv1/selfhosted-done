@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=sentry"
-    #   - "homepage.description=Open-source error tracking tool; monitor and improve software.""
+    #   - "homepage.description=Open-source error tracking tool; monitor and improve software."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=sentry.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20272"

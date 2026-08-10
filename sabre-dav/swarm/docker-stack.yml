@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=sabre-dav"
-    #   - "homepage.description=WebDAV, CalDAV and CardDAV server library/framework.""
+    #   - "homepage.description=WebDAV, CalDAV and CardDAV server library/framework."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=sabre-dav.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20260"

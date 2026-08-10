@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=wallabag"
-    #   - "homepage.description=Read it later; web article scraper and read-later application.""
+    #   - "homepage.description=Read it later; web article scraper and read-later application."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=wallabag.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20354"

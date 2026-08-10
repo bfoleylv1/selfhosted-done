@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=online-invoicing"
-    #   - "homepage.description=Self-hosted invoicing / billing tool.""
+    #   - "homepage.description=Self-hosted invoicing / billing tool."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=online-invoicing.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20173"

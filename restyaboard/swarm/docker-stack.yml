@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=restyaboard"
-    #   - "homepage.description=Open source Trello alternative; project management and task board.""
+    #   - "homepage.description=Open source Trello alternative; project management and task board."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=restyaboard.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20245"

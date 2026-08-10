@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=sitecore"
-    #   - "homepage.description=Enterprise CMS; .NET-based content management system.""
+    #   - "homepage.description=Enterprise CMS; .NET-based content management system."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=sitecore.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20283"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=telebugs"
-    #   - "homepage.description=Self-hosted bug and error tracking service.""
+    #   - "homepage.description=Self-hosted bug and error tracking service."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=telebugs.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20321"

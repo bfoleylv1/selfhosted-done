@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=sub-converter"
-    #   - "homepage.description=Subtitle file converter; convert between different subtitle formats.""
+    #   - "homepage.description=Subtitle file converter; convert between different subtitle formats."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=sub-converter.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:25500"

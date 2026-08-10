@@ -52,7 +52,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=typesense"
-    #   - "homepage.description=Typo-tolerant search engine with fast, relevant results; developer-friendly API.""
+    #   - "homepage.description=Typo-tolerant search engine with fast, relevant results; developer-friendly API."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=typesense.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8108"

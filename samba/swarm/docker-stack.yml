@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=samba"
-    #   - "homepage.description=SMB/CIFS file sharing; access from Windows and Linux.""
+    #   - "homepage.description=SMB/CIFS file sharing; access from Windows and Linux."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=samba.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20265"

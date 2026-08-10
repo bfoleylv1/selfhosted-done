@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=metager"
-    #   - "homepage.description=German metasearch engine; privacy-focused search results.""
+    #   - "homepage.description=German metasearch engine; privacy-focused search results."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=metager.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20153"

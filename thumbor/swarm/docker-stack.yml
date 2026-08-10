@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=thumbor"
-    #   - "homepage.description=On-the-fly image thumbnail and resize service.""
+    #   - "homepage.description=On-the-fly image thumbnail and resize service."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=thumbor.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20326"

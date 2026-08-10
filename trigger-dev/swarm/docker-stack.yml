@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=trigger-dev"
-    #   - "homepage.description=Open-source background jobs and workflow engine.""
+    #   - "homepage.description=Open-source background jobs and workflow engine."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=trigger-dev.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20334"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=routr"
-    #   - "homepage.description=SIP server for VoIP and telephony routing.""
+    #   - "homepage.description=SIP server for VoIP and telephony routing."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=routr.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20252"

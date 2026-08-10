@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=rudderstack"
-    #   - "homepage.description=Open-source customer data platform (CDP).""
+    #   - "homepage.description=Open-source customer data platform (CDP)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=rudderstack.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20258"

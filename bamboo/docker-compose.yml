@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=bamboo"
-    #   - "homepage.description=Atlassian continuous integration and deployment server (commercial).""
+    #   - "homepage.description=Atlassian continuous integration and deployment server (commercial)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=bamboo.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8085"

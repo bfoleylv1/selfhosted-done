@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=fusio"
-    #   - "homepage.description=Open-source API management platform.""
+    #   - "homepage.description=Open-source API management platform."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=fusio.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20085"

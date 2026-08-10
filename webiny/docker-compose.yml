@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=webiny"
-    #   - "homepage.description=Open-source serverless CMS and application framework.""
+    #   - "homepage.description=Open-source serverless CMS and application framework."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=webiny.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20360"

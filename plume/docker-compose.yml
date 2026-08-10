@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=plume"
-    #   - "homepage.description=Federation-friendly blogging platform; ActivityPub enabled.""
+    #   - "homepage.description=Federation-friendly blogging platform; ActivityPub enabled."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=plume.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:7878"

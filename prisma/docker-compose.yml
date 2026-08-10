@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=prisma"
-    #   - "homepage.description=Database toolkit; type-safe ORM with migrations.""
+    #   - "homepage.description=Database toolkit; type-safe ORM with migrations."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=prisma.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:5555"

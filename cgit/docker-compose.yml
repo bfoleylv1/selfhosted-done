@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cgit"
-    #   - "homepage.description=Lightweight web frontend for Git repositories.""
+    #   - "homepage.description=Lightweight web frontend for Git repositories."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=cgit.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20027"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=globaleaks"
-    #   - "homepage.description=Open-source whistleblowing / secure submission platform.""
+    #   - "homepage.description=Open-source whistleblowing / secure submission platform."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=globaleaks.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20096"

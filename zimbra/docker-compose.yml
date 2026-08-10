@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=zimbra"
-    #   - "homepage.description=Collaboration software; email, calendar, contacts.""
+    #   - "homepage.description=Collaboration software; email, calendar, contacts."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=zimbra.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20386"

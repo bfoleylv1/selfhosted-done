@@ -50,7 +50,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=terraform"
-    #   - "homepage.description=Infrastructure as code tool; provision and manage cloud resources.""
+    #   - "homepage.description=Infrastructure as code tool; provision and manage cloud resources."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=terraform.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20322"

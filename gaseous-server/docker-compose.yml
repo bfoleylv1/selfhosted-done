@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=gaseous-server"
-    #   - "homepage.description=Self-hosted video game collection / ROM manager.""
+    #   - "homepage.description=Self-hosted video game collection / ROM manager."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=gaseous-server.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:5198"

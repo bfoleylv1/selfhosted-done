@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=apache-apisix"
-    #   - "homepage.description=Real-time API gateway; built on etcd and Lua.""
+    #   - "homepage.description=Real-time API gateway; built on etcd and Lua."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=apache-apisix.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9080"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=semantic-scholar"
-    #   - "homepage.description=AI-powered research tool; academic paper search.""
+    #   - "homepage.description=AI-powered research tool; academic paper search."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=semantic-scholar.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20269"

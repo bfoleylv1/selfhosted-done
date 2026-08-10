@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=bifrost"
-    #   - "homepage.description=Media server with Jellyfin-like features; open source and self-hosted.""
+    #   - "homepage.description=Media server with Jellyfin-like features; open source and self-hosted."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=bifrost.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20012"

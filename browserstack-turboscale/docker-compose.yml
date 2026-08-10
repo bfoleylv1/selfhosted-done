@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=browserstack-turboscale"
-    #   - "homepage.description=BrowserStack TurboScale - self-hosted device testing infrastructure (commercial).""
+    #   - "homepage.description=BrowserStack TurboScale - self-hosted device testing infrastructure (commercial)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=browserstack-turboscale.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20019"

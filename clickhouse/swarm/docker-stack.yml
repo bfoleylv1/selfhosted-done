@@ -52,7 +52,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=clickhouse"
-    #   - "homepage.description=Column-oriented database management system for OLAP and analytical workloads.""
+    #   - "homepage.description=Column-oriented database management system for OLAP and analytical workloads."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=clickhouse.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8123"

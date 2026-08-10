@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=algo-vpn"
-    #   - "homepage.description=VPN servers; deploy IPsec VPN on popular cloud providers.""
+    #   - "homepage.description=VPN servers; deploy IPsec VPN on popular cloud providers."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=algo-vpn.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20401"

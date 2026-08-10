@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=duplicati"
-    #   - "homepage.description=Backup tool; encrypt, compress and schedule backups.""
+    #   - "homepage.description=Backup tool; encrypt, compress and schedule backups."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=duplicati.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8200"

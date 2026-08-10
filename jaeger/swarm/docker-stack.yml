@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=jaeger"
-    #   - "homepage.description=Distributed tracing; monitoring microservices performance.""
+    #   - "homepage.description=Distributed tracing; monitoring microservices performance."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=jaeger.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:16686"

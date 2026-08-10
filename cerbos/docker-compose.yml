@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cerbos"
-    #   - "homepage.description=Open-source fine-grained authorization / access-control engine.""
+    #   - "homepage.description=Open-source fine-grained authorization / access-control engine."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=cerbos.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:3592"

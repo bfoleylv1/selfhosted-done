@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=misskey"
-    #   - "homepage.description=Microblogging platform forActivityPub; Japanese-originated.""
+    #   - "homepage.description=Microblogging platform forActivityPub; Japanese-originated."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=misskey.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20158"

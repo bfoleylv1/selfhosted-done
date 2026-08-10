@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=woodpecker-ci"
-    #   - "homepage.description=Lightweight CI/CD system; fork of Drone.""
+    #   - "homepage.description=Lightweight CI/CD system; fork of Drone."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=woodpecker-ci.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20368"

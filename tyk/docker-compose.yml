@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=tyk"
-    #   - "homepage.description=Open source API gateway; full lifecycle API management.""
+    #   - "homepage.description=Open source API gateway; full lifecycle API management."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=tyk.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20340"

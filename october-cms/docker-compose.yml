@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=october-cms"
-    #   - "homepage.description=Content management system; simple and extensible.""
+    #   - "homepage.description=Content management system; simple and extensible."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=october-cms.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20171"

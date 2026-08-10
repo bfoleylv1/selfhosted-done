@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=hashicorp-vault"
-    #   - "homepage.description=Secrets management and encryption; secure key storage.""
+    #   - "homepage.description=Secrets management and encryption; secure key storage."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=hashicorp-vault.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20109"

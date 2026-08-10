@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=wazuh"
-    #   - "homepage.description=Open source security platform; XDR and SIEM capabilities.""
+    #   - "homepage.description=Open source security platform; XDR and SIEM capabilities."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=wazuh.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:55000"

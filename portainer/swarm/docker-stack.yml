@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=portainer"
-    #   - "homepage.description=Lightweight web UI for managing Docker, Swarm and Kubernetes.""
+    #   - "homepage.description=Lightweight web UI for managing Docker, Swarm and Kubernetes."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=portainer.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9443"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=zipkin"
-    #   - "homepage.description=Distributed tracing system; gather timing information.""
+    #   - "homepage.description=Distributed tracing system; gather timing information."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=zipkin.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9411"

@@ -33,7 +33,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=koel"
-    #   - "homepage.description=Simple web-based audio file management; personal cloud for music.""
+    #   - "homepage.description=Simple web-based audio file management; personal cloud for music."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=koel.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20132"

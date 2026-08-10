@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=gitlab"
-    #   - "homepage.description=Git platform with CI/CD; open-source DevOps platform.""
+    #   - "homepage.description=Git platform with CI/CD; open-source DevOps platform."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=gitlab.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20093"

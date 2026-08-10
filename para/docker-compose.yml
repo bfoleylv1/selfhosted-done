@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=para"
-    #   - "homepage.description=Flexible open-source backend framework / object storage.""
+    #   - "homepage.description=Flexible open-source backend framework / object storage."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=para.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20190"

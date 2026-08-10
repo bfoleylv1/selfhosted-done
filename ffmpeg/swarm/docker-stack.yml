@@ -51,7 +51,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=ffmpeg"
-    #   - "homepage.description=Command-line video/audio processing; convert and edit media files.""
+    #   - "homepage.description=Command-line video/audio processing; convert and edit media files."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=ffmpeg.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20068"

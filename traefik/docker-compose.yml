@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=traefik"
-    #   - "homepage.description=Modern reverse proxy; automatic service discovery and routing.""
+    #   - "homepage.description=Modern reverse proxy; automatic service discovery and routing."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=traefik.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20332"

@@ -51,7 +51,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=plex"
-    #   - "homepage.description=Media server for organizing and streaming your media library.""
+    #   - "homepage.description=Media server for organizing and streaming your media library."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=plex.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:32400"

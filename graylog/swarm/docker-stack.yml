@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=graylog"
-    #   - "homepage.description=Open source log management platform; centralized log management.""
+    #   - "homepage.description=Open source log management platform; centralized log management."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=graylog.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20106"

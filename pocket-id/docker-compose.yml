@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=pocket-id"
-    #   - "homepage.description=Simple SSO identity provider with passkey support.""
+    #   - "homepage.description=Simple SSO identity provider with passkey support."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=pocket-id.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:1411"

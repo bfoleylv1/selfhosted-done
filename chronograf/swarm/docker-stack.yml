@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=chronograf"
-    #   - "homepage.description=Admin UI for InfluxDB; manage databases and monitoring.""
+    #   - "homepage.description=Admin UI for InfluxDB; manage databases and monitoring."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=chronograf.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20028"

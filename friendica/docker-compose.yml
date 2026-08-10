@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=friendica"
-    #   - "homepage.description=Decentralized social network; connects to other networks.""
+    #   - "homepage.description=Decentralized social network; connects to other networks."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=friendica.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20080"

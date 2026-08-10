@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cloudflared"
-    #   - "homepage.description=Cloudflare Tunnel; connect services without public IP.""
+    #   - "homepage.description=Cloudflare Tunnel; connect services without public IP."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=cloudflared.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20032"

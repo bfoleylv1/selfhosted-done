@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=solr"
-    #   - "homepage.description=Enterprise search platform built on Apache Lucene; powerful full-text search capabilities.""
+    #   - "homepage.description=Enterprise search platform built on Apache Lucene; powerful full-text search capabilities."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=solr.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8983"

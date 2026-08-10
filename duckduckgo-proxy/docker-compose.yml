@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=duckduckgo-proxy"
-    #   - "homepage.description=Self-hosted proxy for the DuckDuckGo search API.""
+    #   - "homepage.description=Self-hosted proxy for the DuckDuckGo search API."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=duckduckgo-proxy.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:5000"

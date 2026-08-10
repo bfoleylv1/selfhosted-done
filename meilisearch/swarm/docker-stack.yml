@@ -52,7 +52,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=meilisearch"
-    #   - "homepage.description=Lightning-fast search engine optimized for apps, websites, and workflows with relevant search experiences.""
+    #   - "homepage.description=Lightning-fast search engine optimized for apps, websites, and workflows with relevant search experiences."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=meilisearch.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:7700"

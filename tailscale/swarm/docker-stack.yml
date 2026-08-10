@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=tailscale"
-    #   - "homepage.description=WireGuard-based mesh VPN; zero-config networking.""
+    #   - "homepage.description=WireGuard-based mesh VPN; zero-config networking."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=tailscale.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:41641"

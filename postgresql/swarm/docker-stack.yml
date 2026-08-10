@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=postgresql"
-    #   - "homepage.description=Powerful open-source relational database; extensible, ACID-compliant with JSONB support.""
+    #   - "homepage.description=Powerful open-source relational database; extensible, ACID-compliant with JSONB support."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=postgresql.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20217"

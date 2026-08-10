@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=koryo"
-    #   - "homepage.description=Simple API gateway; lightweight and fast reverse proxy.""
+    #   - "homepage.description=Simple API gateway; lightweight and fast reverse proxy."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=koryo.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20134"

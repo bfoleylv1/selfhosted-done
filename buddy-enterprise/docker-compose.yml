@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=buddy-enterprise"
-    #   - "homepage.description=Buddy Enterprise - self-hosted CI/CD automation server (commercial).""
+    #   - "homepage.description=Buddy Enterprise - self-hosted CI/CD automation server (commercial)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=buddy-enterprise.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20020"

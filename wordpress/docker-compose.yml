@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=wordpress"
-    #   - "homepage.description=Web publishing platform; blogging and CMS with massive plugin ecosystem.""
+    #   - "homepage.description=Web publishing platform; blogging and CMS with massive plugin ecosystem."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=wordpress.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20369"

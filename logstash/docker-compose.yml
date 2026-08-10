@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=logstash"
-    #   - "homepage.description=Data processing pipeline; collect, transform, and forward data.""
+    #   - "homepage.description=Data processing pipeline; collect, transform, and forward data."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=logstash.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9600"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=lms"
-    #   - "homepage.description=Frappe LMS: 100% open-source learning management system.""
+    #   - "homepage.description=Frappe LMS: 100% open-source learning management system."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=lms.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20142"

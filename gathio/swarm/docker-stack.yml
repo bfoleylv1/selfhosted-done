@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=gathio"
-    #   - "homepage.description=Self-hosted event page and RSVP host.""
+    #   - "homepage.description=Self-hosted event page and RSVP host."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=gathio.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20087"

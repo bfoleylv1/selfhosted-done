@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=axigen"
-    #   - "homepage.description=Mail server; enterprise email and collaboration.""
+    #   - "homepage.description=Mail server; enterprise email and collaboration."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=axigen.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20005"

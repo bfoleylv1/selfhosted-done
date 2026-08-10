@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=passbolt"
-    #   - "homepage.description=Open Source password manager for teams; designed for business use.""
+    #   - "homepage.description=Open Source password manager for teams; designed for business use."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=passbolt.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20193"

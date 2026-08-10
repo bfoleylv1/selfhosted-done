@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=mattermost"
-    #   - "homepage.description=Open source Slack alternative; self-hosted team chat platform.""
+    #   - "homepage.description=Open source Slack alternative; self-hosted team chat platform."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=mattermost.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8065"

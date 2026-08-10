@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=influxdb"
-    #   - "homepage.description=Time-series database optimized for metrics, events, and real-time analytics.""
+    #   - "homepage.description=Time-series database optimized for metrics, events, and real-time analytics."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=influxdb.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8086"

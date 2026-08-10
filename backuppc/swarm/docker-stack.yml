@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=backuppc"
-    #   - "homepage.description=High-performance clientless backup system; server and desktop backup.""
+    #   - "homepage.description=High-performance clientless backup system; server and desktop backup."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=backuppc.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20007"

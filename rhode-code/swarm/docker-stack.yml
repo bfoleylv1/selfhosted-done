@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=rhode-code"
-    #   - "homepage.description=Source code management platform (Git/Mercurial/SVN).""
+    #   - "homepage.description=Source code management platform (Git/Mercurial/SVN)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=rhode-code.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20249"

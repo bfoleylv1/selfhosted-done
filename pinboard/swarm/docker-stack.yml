@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=pinboard"
-    #   - "homepage.description=Social bookmarking service; save and share links.""
+    #   - "homepage.description=Social bookmarking service; save and share links."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=pinboard.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20205"

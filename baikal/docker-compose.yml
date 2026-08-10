@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=baikal"
-    #   - "homepage.description=Lightweight CalDAV and CardDAV server.""
+    #   - "homepage.description=Lightweight CalDAV and CardDAV server."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=baikal.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20009"

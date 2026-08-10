@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=daisy"
-    #   - "homepage.description=Self-hosted service.""
+    #   - "homepage.description=Self-hosted service."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=daisy.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20040"

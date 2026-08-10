@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=pulumi"
-    #   - "homepage.description=Modern infrastructure as code; use real programming languages.""
+    #   - "homepage.description=Modern infrastructure as code; use real programming languages."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=pulumi.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20223"

@@ -52,7 +52,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=ollama"
-    #   - "homepage.description=Get started with Llama, Gemma, and other language models locally.""
+    #   - "homepage.description=Get started with Llama, Gemma, and other language models locally."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=ollama.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:11434"

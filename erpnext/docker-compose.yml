@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=erpnext"
-    #   - "homepage.description=Open source ERP; built on Frappe framework for business management.""
+    #   - "homepage.description=Open source ERP; built on Frappe framework for business management."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=erpnext.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20063"

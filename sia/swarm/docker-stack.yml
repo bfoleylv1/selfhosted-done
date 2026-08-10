@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=sia"
-    #   - "homepage.description=Decentralized cloud storage; cryptocurrency-based storage.""
+    #   - "homepage.description=Decentralized cloud storage; cryptocurrency-based storage."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=sia.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20280"

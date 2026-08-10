@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cockroachdb"
-    #   - "homepage.description=Cloud-native relational database; distributed SQL database.""
+    #   - "homepage.description=Cloud-native relational database; distributed SQL database."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=cockroachdb.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20035"

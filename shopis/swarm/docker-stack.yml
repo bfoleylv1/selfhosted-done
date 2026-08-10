@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=shopis"
-    #   - "homepage.description=Admin dashboard for Shopify stores; order and inventory management.""
+    #   - "homepage.description=Admin dashboard for Shopify stores; order and inventory management."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=shopis.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20278"

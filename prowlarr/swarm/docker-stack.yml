@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=prowlarr"
-    #   - "homepage.description=Indexing manager for Sonarr, Radarr, Lidarr, and Readarr; manages indexers.""
+    #   - "homepage.description=Indexing manager for Sonarr, Radarr, Lidarr, and Readarr; manages indexers."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=prowlarr.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9696"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=roundcube"
-    #   - "homepage.description=Web-based email client; webmail with plugins.""
+    #   - "homepage.description=Web-based email client; webmail with plugins."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=roundcube.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20251"

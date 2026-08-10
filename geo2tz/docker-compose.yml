@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=geo2tz"
-    #   - "homepage.description=Convert geographic coordinates to a timezone.""
+    #   - "homepage.description=Convert geographic coordinates to a timezone."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=geo2tz.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20088"

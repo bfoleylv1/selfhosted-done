@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=streamlink"
-    #   - "homepage.description=Command-line utility to extract streams from various services.""
+    #   - "homepage.description=Command-line utility to extract streams from various services."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=streamlink.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20305"

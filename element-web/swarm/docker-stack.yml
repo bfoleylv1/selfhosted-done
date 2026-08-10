@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=element-web"
-    #   - "homepage.description=Web client for the Matrix decentralized chat protocol.""
+    #   - "homepage.description=Web client for the Matrix decentralized chat protocol."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=element-web.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20058"

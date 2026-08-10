@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cfssl"
-    #   - "homepage.description=CloudFlare's PKI toolkit; certificate authority and tools.""
+    #   - "homepage.description=CloudFlare's PKI toolkit; certificate authority and tools."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=cfssl.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8888"

@@ -37,7 +37,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=gpt4all"
-    #   - "homepage.description=Software and models for running LLMs on consumer devices.""
+    #   - "homepage.description=Software and models for running LLMs on consumer devices."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=gpt4all.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20103"

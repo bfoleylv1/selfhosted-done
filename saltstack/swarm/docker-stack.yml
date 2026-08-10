@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=saltstack"
-    #   - "homepage.description=Event-driven automation engine; configuration management and orchestration.""
+    #   - "homepage.description=Event-driven automation engine; configuration management and orchestration."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=saltstack.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20262"

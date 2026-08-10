@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=rss-bridge"
-    #   - "homepage.description=Generate RSS feeds for websites that don't provide them.""
+    #   - "homepage.description=Generate RSS feeds for websites that don't provide them."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=rss-bridge.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20256"

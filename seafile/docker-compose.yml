@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=seafile"
-    #   - "homepage.description=Professional file sync and share solution; focuses on efficiency and privacy.""
+    #   - "homepage.description=Professional file sync and share solution; focuses on efficiency and privacy."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=seafile.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20266"

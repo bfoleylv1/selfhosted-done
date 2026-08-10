@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=reservo"
-    #   - "homepage.description=Self-hosted image hosting and sharing script.""
+    #   - "homepage.description=Self-hosted image hosting and sharing script."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=reservo.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20241"

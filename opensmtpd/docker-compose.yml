@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=opensmtpd"
-    #   - "homepage.description=SMTP server; OpenBSD's mail server.""
+    #   - "homepage.description=SMTP server; OpenBSD's mail server."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=opensmtpd.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20182"

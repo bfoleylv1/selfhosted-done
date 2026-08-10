@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=pleroma"
-    #   - "homepage.description=Lightweight federated social network; alternative to Mastodon.""
+    #   - "homepage.description=Lightweight federated social network; alternative to Mastodon."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=pleroma.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20210"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=jenkins"
-    #   - "homepage.description=Open source automation server; CI/CD for builds and tests.""
+    #   - "homepage.description=Open source automation server; CI/CD for builds and tests."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=jenkins.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20119"

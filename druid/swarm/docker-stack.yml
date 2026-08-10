@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=druid"
-    #   - "homepage.description=Real-time analytics database (OLAP).""
+    #   - "homepage.description=Real-time analytics database (OLAP)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=druid.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20053"

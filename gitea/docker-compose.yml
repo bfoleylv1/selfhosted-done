@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=gitea"
-    #   - "homepage.description=Lightweight Git service; alternative to GitHub/GitLab.""
+    #   - "homepage.description=Lightweight Git service; alternative to GitHub/GitLab."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=gitea.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20090"

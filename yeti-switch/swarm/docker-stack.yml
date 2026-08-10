@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=yeti-switch"
-    #   - "homepage.description=Yeti Switch - softswitch / SBC for VoIP.""
+    #   - "homepage.description=Yeti Switch - softswitch / SBC for VoIP."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=yeti-switch.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20377"

@@ -37,7 +37,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=openwebui"
-    #   - "homepage.description=Self-hosted OpenAI-powered web UI; chat with AI models locally.""
+    #   - "homepage.description=Self-hosted OpenAI-powered web UI; chat with AI models locally."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=openwebui.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20184"

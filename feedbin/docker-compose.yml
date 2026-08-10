@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=feedbin"
-    #   - "homepage.description=Web-based feed reader; social features and excellent filtering capabilities.""
+    #   - "homepage.description=Web-based feed reader; social features and excellent filtering capabilities."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=feedbin.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20067"

@@ -33,7 +33,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=streama"
-    #   - "homepage.description=Self-hosted Netflix clone; organize and stream your media collection.""
+    #   - "homepage.description=Self-hosted Netflix clone; organize and stream your media collection."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=streama.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20304"

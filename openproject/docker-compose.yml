@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=openproject"
-    #   - "homepage.description=Project management web application; issue tracking and agile tools.""
+    #   - "homepage.description=Project management web application; issue tracking and agile tools."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=openproject.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20178"

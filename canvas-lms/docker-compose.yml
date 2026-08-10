@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=canvas-lms"
-    #   - "homepage.description=Open-source learning management system (LMS).""
+    #   - "homepage.description=Open-source learning management system (LMS)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=canvas-lms.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:3000"

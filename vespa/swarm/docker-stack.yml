@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=vespa"
-    #   - "homepage.description=Feature-rich search and ML engine; big data serving platform.""
+    #   - "homepage.description=Feature-rich search and ML engine; big data serving platform."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=vespa.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20349"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=smederee"
-    #   - "homepage.description=Smederee: a frugal platform for building software together, leveraging the Darcs version control system (AGPL-3.0).""
+    #   - "homepage.description=Smederee: a frugal platform for building software together, leveraging the Darcs version control system (AGPL-3.0)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=smederee.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20284"

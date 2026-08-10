@@ -33,7 +33,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=castopod"
-    #   - "homepage.description=Self-hosted podcast hosting platform with ActivityPub federation.""
+    #   - "homepage.description=Self-hosted podcast hosting platform with ActivityPub federation."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=castopod.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20024"

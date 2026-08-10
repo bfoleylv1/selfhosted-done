@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=documenso"
-    #   - "homepage.description=Open-source DocuSign alternative for electronic signatures.""
+    #   - "homepage.description=Open-source DocuSign alternative for electronic signatures."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=documenso.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20047"

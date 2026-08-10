@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=thelia"
-    #   - "homepage.description=Open-source e-commerce platform (PHP).""
+    #   - "homepage.description=Open-source e-commerce platform (PHP)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=thelia.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20325"

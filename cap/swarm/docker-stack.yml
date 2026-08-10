@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cap"
-    #   - "homepage.description=Open-source screen recording and sharing tool.""
+    #   - "homepage.description=Open-source screen recording and sharing tool."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=cap.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20023"

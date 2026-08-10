@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=jellyfin-library"
-    #   - "homepage.description=Tool for managing Jellyfin media libraries.""
+    #   - "homepage.description=Tool for managing Jellyfin media libraries."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=jellyfin-library.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20118"

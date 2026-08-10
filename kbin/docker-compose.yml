@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=kbin"
-    #   - "homepage.description=Another ActivityPub aggregator; alternative to Lemmy.""
+    #   - "homepage.description=Another ActivityPub aggregator; alternative to Lemmy."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=kbin.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20122"

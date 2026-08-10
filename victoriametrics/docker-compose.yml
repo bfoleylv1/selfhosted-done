@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=victoriametrics"
-    #   - "homepage.description=Ultra-high performing time series database; Prometheus compatible.""
+    #   - "homepage.description=Ultra-high performing time series database; Prometheus compatible."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=victoriametrics.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8428"

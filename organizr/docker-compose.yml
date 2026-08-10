@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=organizr"
-    #   - "homepage.description=Organize your homelab tabs into a single login dashboard.""
+    #   - "homepage.description=Organize your homelab tabs into a single login dashboard."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=organizr.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20185"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=bitwarden"
-    #   - "homepage.description=Open source password manager; secure storage for passwords and notes.""
+    #   - "homepage.description=Open source password manager; secure storage for passwords and notes."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=bitwarden.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20013"

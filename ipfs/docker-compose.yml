@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=ipfs"
-    #   - "homepage.description=Protocol for decentralized file sharing; distributed content addressing.""
+    #   - "homepage.description=Protocol for decentralized file sharing; distributed content addressing."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=ipfs.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:5001"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=afs"
-    #   - "homepage.description=Andrew File System; distributed file system.""
+    #   - "homepage.description=Andrew File System; distributed file system."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=afs.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:7000"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=goaccess"
-    #   - "homepage.description=Real-time web log analyzer; interactive HTML reports.""
+    #   - "homepage.description=Real-time web log analyzer; interactive HTML reports."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=goaccess.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:7890"

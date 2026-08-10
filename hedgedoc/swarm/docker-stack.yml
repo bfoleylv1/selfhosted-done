@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=hedgedoc"
-    #   - "homepage.description=Web-based markdown editor for collaborative note-taking.""
+    #   - "homepage.description=Web-based markdown editor for collaborative note-taking."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=hedgedoc.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20111"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=pocketbase"
-    #   - "homepage.description=Open-source backend (SQLite + realtime + auth) in a single file.""
+    #   - "homepage.description=Open-source backend (SQLite + realtime + auth) in a single file."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=pocketbase.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8090"

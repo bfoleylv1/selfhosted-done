@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=wekan"
-    #   - "homepage.description=Open source Trello alternative; Kanban-style task management.""
+    #   - "homepage.description=Open source Trello alternative; Kanban-style task management."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=wekan.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20361"

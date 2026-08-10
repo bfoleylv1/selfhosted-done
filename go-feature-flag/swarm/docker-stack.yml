@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=go-feature-flag"
-    #   - "homepage.description=Feature flag management system (Go).""
+    #   - "homepage.description=Feature flag management system (Go)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=go-feature-flag.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:1031"

@@ -29,7 +29,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=opennebula"
-    #   - "homepage.description=Open source cloud management platform; IaaS solution.""
+    #   - "homepage.description=Open source cloud management platform; IaaS solution."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=opennebula.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9869"

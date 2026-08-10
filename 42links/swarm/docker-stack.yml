@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=42links"
-    #   - "homepage.description=Self-hosted bookmark and link dashboard.""
+    #   - "homepage.description=Self-hosted bookmark and link dashboard."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=42links.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8080"

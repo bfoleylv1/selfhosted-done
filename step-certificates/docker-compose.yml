@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=step-certificates"
-    #   - "homepage.description=Private CA; X.509 PKI and ACME server.""
+    #   - "homepage.description=Private CA; X.509 PKI and ACME server."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=step-certificates.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20301"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=bitwarden-rs"
-    #   - "homepage.description=Lightweight Bitwarden server; Rust implementation of Bitwarden API.""
+    #   - "homepage.description=Lightweight Bitwarden server; Rust implementation of Bitwarden API."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=bitwarden-rs.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20014"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=storj"
-    #   - "homepage.description=Decentralized cloud storage; peer-to-peer storage network.""
+    #   - "homepage.description=Decentralized cloud storage; peer-to-peer storage network."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=storj.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:14002"

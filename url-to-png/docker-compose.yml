@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=url-to-png"
-    #   - "homepage.description=Render URLs to PNG screenshots.""
+    #   - "homepage.description=Render URLs to PNG screenshots."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=url-to-png.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20345"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=drone"
-    #   - "homepage.description=Continuous integration system; container-based CI/CD.""
+    #   - "homepage.description=Continuous integration system; container-based CI/CD."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=drone.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20052"

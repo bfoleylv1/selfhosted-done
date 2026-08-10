@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=stremth"
-    #   - "homepage.description=Stream management and organization tool; acts as a media hub.""
+    #   - "homepage.description=Stream management and organization tool; acts as a media hub."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=stremth.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20306"

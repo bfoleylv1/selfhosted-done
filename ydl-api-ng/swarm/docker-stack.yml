@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=ydl-api-ng"
-    #   - "homepage.description=REST API wrapper for youtube-dl / yt-dlp downloads.""
+    #   - "homepage.description=REST API wrapper for youtube-dl / yt-dlp downloads."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=ydl-api-ng.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20376"

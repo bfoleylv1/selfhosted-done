@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=rs-short"
-    #   - "homepage.description=Self-hosted URL shortener.""
+    #   - "homepage.description=Self-hosted URL shortener."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=rs-short.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20254"

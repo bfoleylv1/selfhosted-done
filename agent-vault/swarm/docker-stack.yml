@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=agent-vault"
-    #   - "homepage.description=Open-source HTTP credential proxy and vault that brokers API credentials for AI agents without exposing the secrets.""
+    #   - "homepage.description=Open-source HTTP credential proxy and vault that brokers API credentials for AI agents without exposing the secrets."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=agent-vault.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20398"

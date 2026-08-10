@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=modoboa"
-    #   - "homepage.description=Mail hosting application; complete mail server suite.""
+    #   - "homepage.description=Mail hosting application; complete mail server suite."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=modoboa.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20159"

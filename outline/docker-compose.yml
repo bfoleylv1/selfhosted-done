@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=outline"
-    #   - "homepage.description=Team knowledge base and documentation; clean and fast wiki.""
+    #   - "homepage.description=Team knowledge base and documentation; clean and fast wiki."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=outline.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20186"

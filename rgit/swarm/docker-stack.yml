@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=rgit"
-    #   - "homepage.description=Self-hosted Git repository manager / viewer.""
+    #   - "homepage.description=Self-hosted Git repository manager / viewer."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=rgit.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20248"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=matomo"
-    #   - "homepage.description=Open-source web analytics platform; full control over your data.""
+    #   - "homepage.description=Open-source web analytics platform; full control over your data."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=matomo.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20152"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=raindrop-io"
-    #   - "homepage.description=Bookmarking service; save and organize bookmarks.""
+    #   - "homepage.description=Bookmarking service; save and organize bookmarks."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=raindrop-io.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20231"

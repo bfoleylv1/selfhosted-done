@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=adyen-proxy"
-    #   - "homepage.description=Reverse proxy / bridge for the Adyen payment API.""
+    #   - "homepage.description=Reverse proxy / bridge for the Adyen payment API."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=adyen-proxy.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20396"

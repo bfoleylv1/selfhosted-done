@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=thanos"
-    #   - "homepage.description=Highly available Prometheus; long-term storage solution.""
+    #   - "homepage.description=Highly available Prometheus; long-term storage solution."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=thanos.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:10902"

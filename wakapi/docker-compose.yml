@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=wakapi"
-    #   - "homepage.description=Self-hosted coding time and activity tracker (WakaTime compatible).""
+    #   - "homepage.description=Self-hosted coding time and activity tracker (WakaTime compatible)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=wakapi.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20353"

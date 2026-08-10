@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=depay"
-    #   - "homepage.description=Self-hosted crypto payment processor.""
+    #   - "homepage.description=Self-hosted crypto payment processor."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=depay.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20043"

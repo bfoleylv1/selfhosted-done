@@ -52,7 +52,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=vllm"
-    #   - "homepage.description=Fast library for LLM inference and serving; high-throughput inference engine.""
+    #   - "homepage.description=Fast library for LLM inference and serving; high-throughput inference engine."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=vllm.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20351"

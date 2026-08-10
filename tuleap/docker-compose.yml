@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=tuleap"
-    #   - "homepage.description=Open-source ALM and project management (Agile + DevOps).""
+    #   - "homepage.description=Open-source ALM and project management (Agile + DevOps)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=tuleap.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20336"

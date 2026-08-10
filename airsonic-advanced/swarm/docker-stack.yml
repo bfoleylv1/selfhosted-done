@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=airsonic-advanced"
-    #   - "homepage.description=Music server with multi-user support; stream your music anywhere.""
+    #   - "homepage.description=Music server with multi-user support; stream your music anywhere."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=airsonic-advanced.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20399"
