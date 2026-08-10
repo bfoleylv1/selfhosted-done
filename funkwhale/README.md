@@ -4,7 +4,7 @@ Peer-to-peer music sharing; listen and share music in a friendly way
 
 | | |
 |---|---|
-| **Image** | `funkwhale/funkwhale:latest` |
+| **Image** | `funkwhale/all-in-one:latest` |
 | **Host port** | `20084` |
 | **Container port** | `80` |
 | **Category** | Music |
