@@ -1,33 +1,33 @@
 ========================================================================
 SELF-HOSTED LIBRARY - INTEGRITY AUDIT
-2026-08-10 03:12
+2026-08-10 04:56
 ========================================================================
 
-Services audited : 1036
-  main library   : 1036
+Services audited : 1114
+  main library   : 1114
   'done' folder  : 0
-Files            : 2072 compose+swarm
+Files            : 2228 compose+swarm
 
 ------------------------------------------------------------------------
 PER-CHECK RESULTS
 ------------------------------------------------------------------------
-  [PASS] docker-compose.yml present             1036/1036
-  [PASS] swarm/docker-stack.yml present         1036/1036
-  [PASS] README.md present                      1036/1036
-  [PASS] healthcheck (compose + swarm)          1036/1036
-  [PASS] homepage labels (compose + swarm)      1036/1036
-  [PASS] image field present                    1036/1036
-  [PASS] no empty config/ or data/ placeholders 1036/1036
-  [PASS] swarm uses named volumes               1036/1036
-  [PASS] swarm has no container_name            1036/1036
-  [PASS] swarm deploy/replicas block            1036/1036
-  [PASS] published port defined                 1036/1036
+  [PASS] docker-compose.yml present             1114/1114
+  [PASS] swarm/docker-stack.yml present         1114/1114
+  [PASS] README.md present                      1114/1114
+  [PASS] healthcheck (compose + swarm)          1114/1114
+  [PASS] homepage labels (compose + swarm)      1114/1114
+  [PASS] image field present                    1114/1114
+  [PASS] no empty config/ or data/ placeholders 1114/1114
+  [PASS] swarm uses named volumes               1114/1114
+  [PASS] swarm has no container_name            1114/1114
+  [PASS] swarm deploy/replicas block            1114/1114
+  [PASS] published port defined                 1114/1114
 
 ------------------------------------------------------------------------
 PORTS
 ------------------------------------------------------------------------
-  unique published ports : 518
-  collisions             : 518
+  unique published ports : 557
+  collisions             : 557
     8080: 42links, 42links
     20393: 92five, 92five
     20394: ackee, ackee
@@ -42,10 +42,10 @@ PORTS
 ------------------------------------------------------------------------
 HARDWARE ACCELERATION
 ------------------------------------------------------------------------
-  services with GPU blocks : 168
-    transcode     94  airsonic-advanced, airsonic-advanced, ampache, ampache, bazarr, bazarr, castopod, castopod, emby, emby ...
-    compute       56  comfyui, comfyui, elasticsearch, elasticsearch, gpt-engineer, gpt-engineer, gpt4all, gpt4all, jan, jan ...
-    passthrough   18  kvm, kvm, libvirt, libvirt, lxd, lxd, opennebula, opennebula, openstack, openstack ...
+  services with GPU blocks : 0
+    transcode      0  
+    compute        0  
+    passthrough    0  
 
   Blocks are commented out. '#' = real config (remove to enable),
   '##' = human comment. Uncomment-tested for validity via test_gpu.
@@ -62,5 +62,5 @@ KNOWN LIMITATIONS
      behind a login wall return 302 rather than 200.
 
 ========================================================================
-STRUCTURAL CHECKS: 11396/11396 passed  - ALL PASS
+STRUCTURAL CHECKS: 12254/12254 passed  - ALL PASS
 ========================================================================
