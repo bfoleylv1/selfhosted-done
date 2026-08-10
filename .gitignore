@@ -14,3 +14,7 @@ Thumbs.db
 .env
 *.local.yml
 docker-compose.override.yml
+
+# python bytecode
+__pycache__/
+*.pyc
