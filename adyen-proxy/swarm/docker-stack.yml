@@ -7,7 +7,7 @@ services:
     image: node:20-alpine
     ports:
       - target: 3000
-        published: 3000
+        published: 20403
         protocol: tcp
         mode: ingress
     environment:
@@ -45,7 +45,7 @@ services:
     #   - "homepage.description=adyen-proxy self-hosted service."
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=adyen-proxy.png"
-    #   - "homepage.href=http://${HOST_IP:-localhost}:3000"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20403"
     #   - "homepage.server=localhost"
 
 volumes:

@@ -7,7 +7,7 @@ services:
     container_name: adyen-proxy
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "20403:3000"
     environment:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
@@ -27,7 +27,7 @@ services:
     #   - "homepage.description=adyen-proxy self-hosted service."
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=adyen-proxy.png"
-    #   - "homepage.href=http://${HOST_IP:-localhost}:3000"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20403"
     #   - "homepage.server=localhost"
 
 networks:

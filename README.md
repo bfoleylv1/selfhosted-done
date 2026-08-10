@@ -1,10 +1,12 @@
 # selfhosted-done
 
 Docker Compose and Docker Swarm files for self-hosted services that have been
-**started and verified working**. Each service moves into this repo only after it
-actually comes up.
+**started and verified working**. A service lands here only after it actually
+comes up.
 
-Every service folder is self-contained and has the same shape:
+Currently **8 services**.
+
+Every service folder has the same shape:
 
 ```
 <service>/
@@ -16,14 +18,16 @@ Every service folder is self-contained and has the same shape:
 
 ## Services
 
-| Service | Image | Port | Description |
-|---|---|---|---|
-| [92five](./92five) | `php:8.2-apache` | `20401` → `80` | Self-hosted project management application. |
-| [Ackee](./ackee) | `electerious/ackee:latest` | `20402` → `3000` | Lightweight anonymised web analytics; self-hosted solution. |
-| [Adminer](./adminer) | `adminer:latest` | `20403` → `8080` | Tool for managing MySQL, PostgreSQL, SQLite, and other databases. |
-| [Agent Vault](./agent-vault) | `hashicorp/vault:latest` | `20404` → `8200` | HashiCorp Vault - secrets management and encryption as a service. |
-| [Bamboo](./bamboo) | `atlassian/bamboo:latest` | `8085` → `8085` | Atlassian Bamboo - CI/CD build and deployment server. |
-| [Chef](./chef) | `chef/chef:latest` | `20405` → `443` | Automation platform for the most demanding environments. |
+| Service | Image | Port | GPU | Description |
+|---|---|---|:--:|---|
+| [92five](./92five) | `php:8.2-apache` | `20400` → `80` | — | Self-hosted project management application. |
+| [Ackee](./ackee) | `electerious/ackee:latest` | `20401` → `3000` | — | Lightweight anonymised web analytics; self-hosted solution. |
+| [Adminer](./adminer) | `adminer:latest` | `20402` → `8080` | — | Tool for managing MySQL, PostgreSQL, SQLite, and other databases. |
+| [Adyen Proxy](./adyen-proxy) | `node:20-alpine` | `20403` → `3000` | — | Proxy service for the Adyen payments API. |
+| [OpenAFS](./afs) | `alpine:3.20` | `7000` → `7000` | — | OpenAFS distributed network filesystem. |
+| [Agent Vault](./agent-vault) | `hashicorp/vault:latest` | `20404` → `8200` | — | HashiCorp Vault - secrets management and encryption as a service. |
+| [Bamboo](./bamboo) | `atlassian/bamboo:latest` | `8085` → `8085` | — | Atlassian Bamboo - CI/CD build and deployment server. |
+| [Chef](./chef) | `chef/chef:latest` | `20405` → `443` | — | Automation platform for the most demanding environments. |
 
 ## Usage
 
@@ -43,28 +47,28 @@ docker stack deploy -c docker-stack.yml <service>
 
 ## Conventions
 
-**Images** — every image reference is verified to exist and be anonymously
-pullable from its registry. No invented `name/name:latest` placeholders.
+**Images** — every image reference was checked against its registry and is
+anonymously pullable. No invented `name/name:latest` placeholders.
 
-**Ports** — each service publishes a unique host port so the whole library can
-run side by side without collisions. The container port is the real upstream
-default.
+**Ports** — each service gets a unique host port so the whole library can run
+side by side without collisions. The container port is the real upstream default.
 
-**Healthchecks** — every service has one. HTTP services probe a real endpoint
-that the image actually serves; services without an HTTP surface use a TCP
-port probe.
+**Healthchecks** — every service has one. HTTP services probe an endpoint the
+image actually serves; services with no HTTP surface use a TCP port probe.
 
-**Homepage labels** — included on every service but commented out, ready for
-[gethomepage](https://github.com/gethomepage/homepage) autodiscovery. Uncomment
-the `labels:` block to enable.
+**Homepage labels** — present on every service, commented out, ready for
+[gethomepage](https://github.com/gethomepage/homepage). Uncomment the `labels:`
+block to enable autodiscovery.
 
-**Hardware acceleration** — services that can use a GPU ship commented-out
-blocks for Intel QSV/VAAPI, AMD VAAPI/ROCm, and NVIDIA. The convention is:
+## Hardware acceleration
 
-- `#` single hash = real config — delete the hash to enable it
-- `##` double hash = a human comment — leave it alone
+Services that can use a GPU ship commented-out blocks for Intel QSV/VAAPI,
+AMD VAAPI/ROCm, and NVIDIA. The comment convention is:
 
-Uncomment only the block matching your hardware. Example for Intel Quick Sync:
+- `#` single hash = real config → delete the hash to enable
+- `##` double hash = human comment → leave it alone
+
+Uncomment only the block matching your hardware. Intel Quick Sync example:
 
 ```yaml
     devices:
@@ -76,16 +80,16 @@ Uncomment only the block matching your hardware. Example for Intel Quick Sync:
       - LIBVA_DRIVER_NAME=iHD
 ```
 
-NVIDIA additionally needs the
+NVIDIA also needs the
 [nvidia-container-toolkit](https://github.com/NVIDIA/nvidia-container-toolkit)
 on the host.
 
-Under Swarm, `devices:` and `runtime:` are ignored — GPUs are requested through
-`generic_resources`, and the node must advertise the GPU in
+Under Swarm, `devices:` and `runtime:` are ignored — GPUs are requested via
+`generic_resources` and the node must advertise the GPU in
 `/etc/docker/daemon.json`. Each swarm file documents this inline.
 
 ## Notes
 
 Services that need a companion database (PostgreSQL, MySQL, Redis) ship as a
-single container here. Add the database service to the compose file, or point
-the service at an existing one, before expecting it to report healthy.
+single container. Add the database to the compose file, or point the service at
+an existing one, before expecting a healthy status.

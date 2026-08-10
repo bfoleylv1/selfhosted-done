@@ -7,7 +7,7 @@ services:
     image: electerious/ackee:latest
     ports:
       - target: 3000
-        published: 20402
+        published: 20401
         protocol: tcp
         mode: ingress
     environment:
@@ -45,7 +45,7 @@ services:
     #   - "homepage.description=Lightweight anonymised web analytics; self-hosted solution."
     #   - "homepage.tags=Analytics,Monitoring"
     #   - "homepage.icon=ackee.png"
-    #   - "homepage.href=http://${HOST_IP:-localhost}:20402"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20401"
     #   - "homepage.server=localhost"
 
 volumes:
