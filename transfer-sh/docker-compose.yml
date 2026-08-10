@@ -1,0 +1,35 @@
+# transfer-sh - docker compose (single host)
+# image verified to exist at generation time: dutchcoders/transfer.sh:latest
+
+services:
+  transfer-sh:
+    image: dutchcoders/transfer.sh:latest
+    container_name: transfer-sh
+    restart: unless-stopped
+    ports:
+      - "20516:20516"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20516 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=transfer-sh"
+    #   - "homepage.description=transfer-sh self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=transfer-sh.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20516"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: transfer-sh_net
