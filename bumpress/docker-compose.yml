@@ -1,0 +1,35 @@
+# bumpress - docker compose (single host)
+# image verified to exist at generation time: wordpress:latest
+
+services:
+  bumpress:
+    image: wordpress:latest
+    container_name: bumpress
+    restart: unless-stopped
+    ports:
+      - "20419:20419"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20419 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=bumpress"
+    #   - "homepage.description=bumpress self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=bumpress.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20419"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: bumpress_net

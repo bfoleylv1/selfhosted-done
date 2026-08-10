@@ -1,0 +1,59 @@
+# bumpress - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml bumpress
+# image verified to exist at generation time: wordpress:latest
+
+services:
+  bumpress:
+    image: wordpress:latest
+    ports:
+      - target: 20419
+        published: 20419
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - bumpress_config:/config
+      - bumpress_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20419 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=bumpress"
+    #   - "homepage.description=bumpress self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=bumpress.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20419"
+    #   - "homepage.server=localhost"
+
+volumes:
+  bumpress_config:
+  bumpress_data:
+
+networks:
+  default:
+    name: bumpress_net
+    driver: overlay
+    attachable: true
