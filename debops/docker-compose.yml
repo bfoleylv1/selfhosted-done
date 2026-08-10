@@ -1,0 +1,35 @@
+# debops - docker compose (single host)
+# image verified to exist at generation time: debops/debops:latest
+
+services:
+  debops:
+    image: debops/debops:latest
+    container_name: debops
+    restart: unless-stopped
+    ports:
+      - "20434:20434"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20434 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=debops"
+    #   - "homepage.description=debops self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=debops.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20434"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: debops_net
