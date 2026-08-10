@@ -1,0 +1,35 @@
+# bitwarden - docker compose (single host)
+# image verified to exist at generation time: vaultwarden/server:latest
+
+services:
+  bitwarden:
+    image: vaultwarden/server:latest
+    container_name: bitwarden
+    restart: unless-stopped
+    ports:
+      - "20013:80"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:80/alive || wget -qO- http://127.0.0.1:80/alive || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Password Management"
+    #   - "homepage.name=bitwarden"
+    #   - "homepage.description=Open source password manager; secure storage for passwords and notes."
+    #   - "homepage.tags=Password Management,Security"
+    #   - "homepage.icon=bitwarden.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20013"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: bitwarden_net

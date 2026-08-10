@@ -1,0 +1,59 @@
+# bitwarden - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml bitwarden
+# image verified to exist at generation time: vaultwarden/server:latest
+
+services:
+  bitwarden:
+    image: vaultwarden/server:latest
+    ports:
+      - target: 80
+        published: 20013
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - bitwarden_config:/config
+      - bitwarden_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:80/alive || wget -qO- http://127.0.0.1:80/alive || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Password Management"
+    #   - "homepage.name=bitwarden"
+    #   - "homepage.description=Open source password manager; secure storage for passwords and notes."
+    #   - "homepage.tags=Password Management,Security"
+    #   - "homepage.icon=bitwarden.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20013"
+    #   - "homepage.server=localhost"
+
+volumes:
+  bitwarden_config:
+  bitwarden_data:
+
+networks:
+  default:
+    name: bitwarden_net
+    driver: overlay
+    attachable: true

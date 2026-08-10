@@ -1,0 +1,35 @@
+# bookstack - docker compose (single host)
+# image verified to exist at generation time: lscr.io/linuxserver/bookstack:latest
+
+services:
+  bookstack:
+    image: lscr.io/linuxserver/bookstack:latest
+    container_name: bookstack
+    restart: unless-stopped
+    ports:
+      - "20016:80"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:80/ || wget -qO- http://127.0.0.1:80/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Productivity"
+    #   - "homepage.name=bookstack"
+    #   - "homepage.description=Wiki platform to organize and maintain documentation."
+    #   - "homepage.tags=Productivity,Project Management"
+    #   - "homepage.icon=bookstack.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20016"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: bookstack_net

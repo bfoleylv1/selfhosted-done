@@ -4,7 +4,7 @@ Docker Compose and Docker Swarm files for self-hosted services that have been
 **started and verified working**. A service lands here only after it actually
 comes up.
 
-Currently **20 services**.
+Currently **53 services**.
 
 Every service folder has the same shape:
 
@@ -38,7 +38,40 @@ Every service folder has the same shape:
 | [Ansible](./ansible) | `alpine/ansible:latest` | `20001` → `8080` | — | Open source automation engine; IT automation and configuration management. |
 | [Apache Apisix](./apache-apisix) | `apache/apisix:latest` | `9080` → `9080` | — | Real-time API gateway; built on etcd and Lua. |
 | [Appflowy](./appflowy) | `appflowyinc/appflowy_cloud:latest` | `20002` → `8080` | — | Open source Notion alternative; collaborative workspace builder. |
+| [Appwrite](./appwrite) | `appwrite/appwrite:1.6.0` | `20003` → `80` | — | Self-hosted service. |
+| [Authelia](./authelia) | `authelia/authelia:latest` | `9091` → `9091` | — | Identity and Access Proxy providing 2FA, SSO, and access controls for services. |
+| [Awstats](./awstats) | `php:8.2-apache` | `20004` → `8080` | — | Advanced web statistics; detailed reporting and log analysis. |
+| [Axigen](./axigen) | `axigen/axigen:latest` | `20005` → `80` | — | Mail server; enterprise email and collaboration. |
+| [B1Gmail](./b1gMail) | `php:8.2-apache` | `20006` → `8080` | — | Self-hosted service. |
+| [Backuppc](./backuppc) | `adferrand/backuppc:latest` | `20007` → `80` | — | High-performance clientless backup system; server and desktop backup. |
+| [Bacula](./bacula) | `ubuntu:24.04` | `20008` → `8080` | — | Enterprise backup solution; network backup management. |
+| [Baikal](./baikal) | `ckulka/baikal:nginx` | `20009` → `80` | — | Self-hosted service. |
 | [Bamboo](./bamboo) | `atlassian/bamboo:latest` | `8085` → `8085` | — | Atlassian Bamboo - CI/CD build and deployment server. |
+| [Bar Assistant](./bar-assistant) | `barassistant/server:v5` | `20010` → `8080` | — | Self-hosted service. |
+| [Baserow](./baserow) | `baserow/baserow:latest` | `20011` → `80` | — | Open source Notion alternative; database and form builder. |
+| [Bazarr](./bazarr) | `lscr.io/linuxserver/bazarr:latest` | `6767` → `6767` | ✅ | Subtitle manager for Sonarr and Radarr; automatic download and management. |
+| [Bifrost](./bifrost) | `alpine:3.20` | `20012` → `8080` | — | Media server with Jellyfin-like features; open source and self-hosted. |
+| [Bitwarden](./bitwarden) | `vaultwarden/server:latest` | `20013` → `80` | — | Open source password manager; secure storage for passwords and notes. |
+| [Bitwarden Rs](./bitwarden-rs) | `vaultwarden/server:latest` | `20014` → `80` | — | Lightweight Bitwarden server; Rust implementation of Bitwarden API. |
+| [Bleve](./bleve) | `golang:1.23-alpine` | `20015` → `8080` | — | Modern text search and analytics; Go full-text search library. |
+| [Booklore](./booklore) | `ghcr.io/booklore-app/booklore:latest` | `6060` → `6060` | — | Self-hosted service. |
+| [Bookstack](./bookstack) | `lscr.io/linuxserver/bookstack:latest` | `20016` → `80` | — | Wiki platform to organize and maintain documentation. |
+| [Bookwyrm](./bookwyrm) | `python:3.11-slim` | `8000` → `8000` | — | Federated book social network; discover and discuss books. |
+| [Borgbackup](./borgbackup) | `ghcr.io/borgmatic-collective/borgmatic:latest` | `20017` → `8080` | — | Deduplicating backup program; efficient storage for backups. |
+| [Briar](./briar) | `alpine:3.20` | `20018` → `8080` | — | Peer-to-peer messaging app; works over Tor and Bluetooth. |
+| [Browserstack Turboscale](./browserstack-turboscale) | `alpine:3.20` | `20019` → `8080` | — | Self-hosted service. |
+| [Buddy Enterprise](./buddy-enterprise) | `debian:12-slim` | `20020` → `8080` | — | Self-hosted service. |
+| [C15T](./c15t) | `node:20-alpine` | `20021` → `8080` | — | Self-hosted service. |
+| [Caddy](./caddy) | `caddy:alpine` | `20022` → `80` | — | Easy to run HTTP web server; automatic HTTPS and simple configuration. |
+| [Canvas Lms](./canvas-lms) | `instructure/canvas-lms:stable` | `3000` → `3000` | — | Self-hosted service. |
+| [Cap](./cap) | `alpine:3.20` | `20023` → `8080` | — | Self-hosted service. |
+| [Cassandra](./cassandra) | `cassandra:5` | `9042` → `9042` | — | Highly scalable NoSQL database; column-family store designed for large datasets. |
+| [Castopod](./castopod) | `castopod/castopod:latest` | `20024` → `8000` | ✅ | Self-hosted service. |
+| [Centrifugo](./centrifugo) | `centrifugo/centrifugo:v5` | `20025` → `8000` | — | Self-hosted service. |
+| [Cerbos](./cerbos) | `ghcr.io/cerbos/cerbos:latest` | `3592` → `3592` | — | Self-hosted service. |
+| [Certbot](./certbot) | `certbot/certbot:latest` | `20026` → `80` | — | Let's Encrypt client; automatic certificate management. |
+| [Cfssl](./cfssl) | `cfssl/cfssl:latest` | `8888` → `8888` | — | CloudFlare's PKI toolkit; certificate authority and tools. |
+| [Cgit](./cgit) | `alpine:3.20` | `20027` → `8080` | — | Self-hosted service. |
 | [Chef](./chef) | `chef/chef:latest` | `20405` → `443` | — | Automation platform for the most demanding environments. |
 
 ## Usage

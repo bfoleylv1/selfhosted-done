@@ -1,0 +1,59 @@
+# cloudflared - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml cloudflared
+# image verified to exist at generation time: cloudflare/cloudflared:latest
+
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    ports:
+      - target: 2000
+        published: 20032
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - cloudflared_config:/config
+      - cloudflared_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:2000/ready || wget -qO- http://127.0.0.1:2000/ready || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Additional Services"
+    #   - "homepage.name=cloudflared"
+    #   - "homepage.description=Cloudflare Tunnel; connect services without public IP."
+    #   - "homepage.tags=Additional Services"
+    #   - "homepage.icon=cloudflared.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20032"
+    #   - "homepage.server=localhost"
+
+volumes:
+  cloudflared_config:
+  cloudflared_data:
+
+networks:
+  default:
+    name: cloudflared_net
+    driver: overlay
+    attachable: true

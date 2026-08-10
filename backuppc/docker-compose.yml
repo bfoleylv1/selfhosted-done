@@ -1,0 +1,35 @@
+# backuppc - docker compose (single host)
+# image verified to exist at generation time: adferrand/backuppc:latest
+
+services:
+  backuppc:
+    image: adferrand/backuppc:latest
+    container_name: backuppc
+    restart: unless-stopped
+    ports:
+      - "20007:80"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:80/ || wget -qO- http://127.0.0.1:80/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Backup"
+    #   - "homepage.name=backuppc"
+    #   - "homepage.description=High-performance clientless backup system; server and desktop backup."
+    #   - "homepage.tags=Backup,Archiving"
+    #   - "homepage.icon=backuppc.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20007"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: backuppc_net

@@ -1,0 +1,35 @@
+# appwrite - docker compose (single host)
+# image verified to exist at generation time: appwrite/appwrite:1.6.0
+
+services:
+  appwrite:
+    image: appwrite/appwrite:1.6.0
+    container_name: appwrite
+    restart: unless-stopped
+    ports:
+      - "20003:80"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:80/v1/health || wget -qO- http://127.0.0.1:80/v1/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosting Solutions"
+    #   - "homepage.name=appwrite"
+    #   - "homepage.description=appwrite self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=appwrite.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20003"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: appwrite_net

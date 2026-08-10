@@ -1,0 +1,35 @@
+# cockroachdb - docker compose (single host)
+# image verified to exist at generation time: cockroachdb/cockroach:latest
+
+services:
+  cockroachdb:
+    image: cockroachdb/cockroach:latest
+    container_name: cockroachdb
+    restart: unless-stopped
+    ports:
+      - "20035:8080"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8080/health || wget -qO- http://127.0.0.1:8080/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Database Tools"
+    #   - "homepage.name=cockroachdb"
+    #   - "homepage.description=Cloud-native relational database; distributed SQL database."
+    #   - "homepage.tags=Database Tools"
+    #   - "homepage.icon=cockroachdb.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20035"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: cockroachdb_net

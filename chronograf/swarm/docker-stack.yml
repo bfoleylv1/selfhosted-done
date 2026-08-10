@@ -1,0 +1,59 @@
+# chronograf - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml chronograf
+# image verified to exist at generation time: chronograf:latest
+
+services:
+  chronograf:
+    image: chronograf:latest
+    ports:
+      - target: 8888
+        published: 20028
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - chronograf_config:/config
+      - chronograf_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8888/ping || wget -qO- http://127.0.0.1:8888/ping || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Analytics"
+    #   - "homepage.name=chronograf"
+    #   - "homepage.description=Admin UI for InfluxDB; manage databases and monitoring."
+    #   - "homepage.tags=Analytics,Monitoring"
+    #   - "homepage.icon=chronograf.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20028"
+    #   - "homepage.server=localhost"
+
+volumes:
+  chronograf_config:
+  chronograf_data:
+
+networks:
+  default:
+    name: chronograf_net
+    driver: overlay
+    attachable: true

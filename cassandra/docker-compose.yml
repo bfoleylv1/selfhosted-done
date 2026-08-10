@@ -1,0 +1,35 @@
+# cassandra - docker compose (single host)
+# image verified to exist at generation time: cassandra:5
+
+services:
+  cassandra:
+    image: cassandra:5
+    container_name: cassandra
+    restart: unless-stopped
+    ports:
+      - "9042:9042"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 9042 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Database Management"
+    #   - "homepage.name=cassandra"
+    #   - "homepage.description=Highly scalable NoSQL database; column-family store designed for large datasets."
+    #   - "homepage.tags=Database Management"
+    #   - "homepage.icon=cassandra.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:9042"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: cassandra_net

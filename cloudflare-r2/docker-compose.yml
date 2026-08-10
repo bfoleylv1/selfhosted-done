@@ -1,0 +1,35 @@
+# cloudflare-r2 - docker compose (single host)
+# image verified to exist at generation time: minio/minio:latest
+
+services:
+  cloudflare-r2:
+    image: minio/minio:latest
+    container_name: cloudflare-r2
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:9000/minio/health/live || wget -qO- http://127.0.0.1:9000/minio/health/live || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=File"
+    #   - "homepage.name=cloudflare-r2"
+    #   - "homepage.description=S3-compatible object storage alternative to S3 with no egress fees."
+    #   - "homepage.tags=File,Content Management"
+    #   - "homepage.icon=cloudflare-r2.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:9000"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: cloudflare-r2_net

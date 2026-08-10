@@ -1,0 +1,59 @@
+# b1gMail - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml b1gMail
+# image verified to exist at generation time: php:8.2-apache
+
+services:
+  b1gMail:
+    image: php:8.2-apache
+    ports:
+      - target: 8080
+        published: 20006
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - b1gMail_config:/config
+      - b1gMail_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosting Solutions"
+    #   - "homepage.name=b1gMail"
+    #   - "homepage.description=b1gMail self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=b1gMail.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20006"
+    #   - "homepage.server=localhost"
+
+volumes:
+  b1gMail_config:
+  b1gMail_data:
+
+networks:
+  default:
+    name: b1gMail_net
+    driver: overlay
+    attachable: true

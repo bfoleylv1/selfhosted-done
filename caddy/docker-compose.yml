@@ -1,0 +1,35 @@
+# caddy - docker compose (single host)
+# image verified to exist at generation time: caddy:alpine
+
+services:
+  caddy:
+    image: caddy:alpine
+    container_name: caddy
+    restart: unless-stopped
+    ports:
+      - "20022:80"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:80/ || wget -qO- http://127.0.0.1:80/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Api Management"
+    #   - "homepage.name=caddy"
+    #   - "homepage.description=Easy to run HTTP web server; automatic HTTPS and simple configuration."
+    #   - "homepage.tags=Api Management,Gateways"
+    #   - "homepage.icon=caddy.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20022"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: caddy_net

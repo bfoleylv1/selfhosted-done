@@ -1,0 +1,35 @@
+# cluster-control - docker compose (single host)
+# image verified to exist at generation time: severalnines/clustercontrol:latest
+
+services:
+  cluster-control:
+    image: severalnines/clustercontrol:latest
+    container_name: cluster-control
+    restart: unless-stopped
+    ports:
+      - "20034:8080"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosting Solutions"
+    #   - "homepage.name=cluster-control"
+    #   - "homepage.description=cluster-control self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=cluster-control.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20034"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: cluster-control_net

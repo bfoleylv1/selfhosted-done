@@ -1,0 +1,59 @@
+# booklore - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml booklore
+# image verified to exist at generation time: ghcr.io/booklore-app/booklore:latest
+
+services:
+  booklore:
+    image: ghcr.io/booklore-app/booklore:latest
+    ports:
+      - target: 6060
+        published: 6060
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - booklore_config:/config
+      - booklore_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:6060/ || wget -qO- http://127.0.0.1:6060/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosting Solutions"
+    #   - "homepage.name=booklore"
+    #   - "homepage.description=booklore self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=booklore.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:6060"
+    #   - "homepage.server=localhost"
+
+volumes:
+  booklore_config:
+  booklore_data:
+
+networks:
+  default:
+    name: booklore_net
+    driver: overlay
+    attachable: true

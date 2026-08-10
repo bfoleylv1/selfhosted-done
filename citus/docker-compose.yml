@@ -1,0 +1,35 @@
+# citus - docker compose (single host)
+# image verified to exist at generation time: citusdata/citus:12
+
+services:
+  citus:
+    image: citusdata/citus:12
+    container_name: citus
+    restart: unless-stopped
+    ports:
+      - "20029:5432"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 5432 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Database Tools"
+    #   - "homepage.name=citus"
+    #   - "homepage.description=Extension to PostgreSQL; real-time analytics and scaling."
+    #   - "homepage.tags=Database Tools"
+    #   - "homepage.icon=citus.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20029"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: citus_net

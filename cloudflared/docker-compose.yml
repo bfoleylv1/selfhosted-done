@@ -1,0 +1,35 @@
+# cloudflared - docker compose (single host)
+# image verified to exist at generation time: cloudflare/cloudflared:latest
+
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    restart: unless-stopped
+    ports:
+      - "20032:2000"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:2000/ready || wget -qO- http://127.0.0.1:2000/ready || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Additional Services"
+    #   - "homepage.name=cloudflared"
+    #   - "homepage.description=Cloudflare Tunnel; connect services without public IP."
+    #   - "homepage.tags=Additional Services"
+    #   - "homepage.icon=cloudflared.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20032"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: cloudflared_net

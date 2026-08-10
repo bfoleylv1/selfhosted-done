@@ -1,0 +1,35 @@
+# consul - docker compose (single host)
+# image verified to exist at generation time: hashicorp/consul:latest
+
+services:
+  consul:
+    image: hashicorp/consul:latest
+    container_name: consul
+    restart: unless-stopped
+    ports:
+      - "8500:8500"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8500/v1/status/leader || wget -qO- http://127.0.0.1:8500/v1/status/leader || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Automation"
+    #   - "homepage.name=consul"
+    #   - "homepage.description=Service mesh solution; service discovery and configuration."
+    #   - "homepage.tags=Automation,Infrastructure"
+    #   - "homepage.icon=consul.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:8500"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: consul_net
