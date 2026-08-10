@@ -1,0 +1,63 @@
+# airsonic-advanced - docker compose (single host)
+# image verified to exist at generation time: airsonicadvanced/airsonic-advanced:latest
+
+services:
+  airsonic-advanced:
+    image: airsonicadvanced/airsonic-advanced:latest
+    container_name: airsonic-advanced
+    restart: unless-stopped
+    ports:
+      - "4040:4040"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+      ## -- GPU env: remove the '#' on the lines for your hardware --
+      ## Intel Quick Sync / VAAPI:
+      # - LIBVA_DRIVER_NAME=iHD          # 'i965' for pre-Gen8 Intel
+      ## AMD VAAPI (amdgpu):
+      # - LIBVA_DRIVER_NAME=radeonsi
+      ## NVIDIA NVENC/NVDEC:
+      # - NVIDIA_VISIBLE_DEVICES=all
+      # - NVIDIA_DRIVER_CAPABILITIES=video,compute,utility
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:4040/ || wget -qO- http://127.0.0.1:4040/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    ## -------------------------------------------------------------
+    ## HARDWARE ACCELERATION (video transcode) - uncomment ONE variant
+    ## (single '#' = real config, remove it to enable)
+    ## -------------------------------------------------------------
+    ## --- Intel Quick Sync / VAAPI  OR  AMD VAAPI ---
+    # devices:
+    #   - /dev/dri:/dev/dri
+    # group_add:
+    #   - "video"
+    #   - "render"
+    ##
+    ## --- NVIDIA NVENC/NVDEC (needs nvidia-container-toolkit) ---
+    # runtime: nvidia
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu, video]
+    # labels:
+    #   - "homepage.group=Music"
+    #   - "homepage.name=airsonic-advanced"
+    #   - "homepage.description=Music server with multi-user support; stream your music anywhere."
+    #   - "homepage.tags=Music,Audio"
+    #   - "homepage.icon=airsonic-advanced.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:4040"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: airsonic-advanced_net

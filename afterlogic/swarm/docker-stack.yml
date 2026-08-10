@@ -1,0 +1,59 @@
+# afterlogic - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml afterlogic
+# image verified to exist at generation time: php:8.2-apache
+
+services:
+  afterlogic:
+    image: php:8.2-apache
+    ports:
+      - target: 80
+        published: 20001
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - afterlogic_config:/config
+      - afterlogic_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:80/ || wget -qO- http://127.0.0.1:80/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Email"
+    #   - "homepage.name=afterlogic"
+    #   - "homepage.description=Webmail program; modern webmail with calendar."
+    #   - "homepage.tags=Email,Communication"
+    #   - "homepage.icon=afterlogic.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20001"
+    #   - "homepage.server=localhost"
+
+volumes:
+  afterlogic_config:
+  afterlogic_data:
+
+networks:
+  default:
+    name: afterlogic_net
+    driver: overlay
+    attachable: true
