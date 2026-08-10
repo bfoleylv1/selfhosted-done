@@ -5,7 +5,7 @@ adyen-proxy self-hosted service.
 | | |
 |---|---|
 | **Image** | `node:20-alpine` |
-| **Host port** | `20400` |
+| **Host port** | `20396` |
 | **Container port** | `3000` |
 | **Category** | Self Hosting Solutions |
 | **Healthcheck** | TCP port probe |
@@ -18,7 +18,7 @@ Single host:
 docker compose up -d
 ```
 
-Then open <http://localhost:20400>.
+Then open <http://localhost:20396>.
 
 Swarm:
 

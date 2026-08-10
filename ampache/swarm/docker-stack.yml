@@ -1,0 +1,79 @@
+# ampache - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml ampache
+# image verified to exist at generation time: ampache/ampache:latest
+
+services:
+  ampache:
+    image: ampache/ampache:latest
+    ports:
+      - target: 80
+        published: 20404
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+      ## -- GPU env: remove the '#' on the lines for your hardware --
+      ## Intel Quick Sync / VAAPI:
+      # - LIBVA_DRIVER_NAME=iHD          # 'i965' for pre-Gen8 Intel
+      ## AMD VAAPI (amdgpu):
+      # - LIBVA_DRIVER_NAME=radeonsi
+      ## NVIDIA NVENC/NVDEC:
+      # - NVIDIA_VISIBLE_DEVICES=all
+      # - NVIDIA_DRIVER_CAPABILITIES=video,compute,utility
+    volumes:
+      - ampache_config:/config
+      - ampache_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:80/ || wget -qO- http://127.0.0.1:80/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+          # - node.labels.gpu == true   ## docker node update --label-add gpu=true <node>
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+      ## -------------------------------------------------------------
+      ## GPU under Swarm: `devices:`/`runtime:` are IGNORED. Advertise
+      ## the GPU on the node in /etc/docker/daemon.json:
+      ##   {"node-generic-resources": ["NVIDIA-GPU=GPU-<uuid>"]}
+      ## then uncomment below + the node.labels.gpu constraint above.
+      ## -------------------------------------------------------------
+      # reservations:
+      #   generic_resources:
+      #     - discrete_resource_spec:
+      #         kind: 'NVIDIA-GPU'
+      #         value: 1
+    # labels:
+    #   - "homepage.group=Music"
+    #   - "homepage.name=ampache"
+    #   - "homepage.description=Web-based audio file manager; provides streaming and management interface."
+    #   - "homepage.tags=Music,Audio"
+    #   - "homepage.icon=ampache.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20404"
+    #   - "homepage.server=localhost"
+
+volumes:
+  ampache_config:
+  ampache_data:
+
+networks:
+  default:
+    name: ampache_net
+    driver: overlay
+    attachable: true

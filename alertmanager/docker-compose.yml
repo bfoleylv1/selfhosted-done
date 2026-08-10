@@ -1,0 +1,35 @@
+# alertmanager - docker compose (single host)
+# image verified to exist at generation time: prom/alertmanager:latest
+
+services:
+  alertmanager:
+    image: prom/alertmanager:latest
+    container_name: alertmanager
+    restart: unless-stopped
+    ports:
+      - "9093:9093"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:9093/-/healthy || wget -qO- http://127.0.0.1:9093/-/healthy || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Monitoring"
+    #   - "homepage.name=alertmanager"
+    #   - "homepage.description=Alert handler for Prometheus; route and silencing alerts."
+    #   - "homepage.tags=Monitoring,Observability"
+    #   - "homepage.icon=alertmanager.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:9093"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: alertmanager_net

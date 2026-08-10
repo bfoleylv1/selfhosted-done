@@ -5,7 +5,7 @@ agent-vault self-hosted service.
 | | |
 |---|---|
 | **Image** | `hashicorp/vault:latest` |
-| **Host port** | `20402` |
+| **Host port** | `20398` |
 | **Container port** | `8200` |
 | **Category** | Self Hosting Solutions |
 | **Healthcheck** | HTTP `/v1/sys/health` |
@@ -18,7 +18,7 @@ Single host:
 docker compose up -d
 ```
 
-Then open <http://localhost:20402>.
+Then open <http://localhost:20398>.
 
 Swarm:
 

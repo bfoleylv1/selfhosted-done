@@ -5,7 +5,7 @@ Tool for managing MySQL, PostgreSQL, SQLite, and other databases.
 | | |
 |---|---|
 | **Image** | `adminer:latest` |
-| **Host port** | `20399` |
+| **Host port** | `20395` |
 | **Container port** | `8080` |
 | **Category** | Database Tools |
 | **Healthcheck** | HTTP `/` |
@@ -18,7 +18,7 @@ Single host:
 docker compose up -d
 ```
 
-Then open <http://localhost:20399>.
+Then open <http://localhost:20395>.
 
 Swarm:
 

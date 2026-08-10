@@ -1,0 +1,59 @@
+# ambassador - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml ambassador
+# image verified to exist at generation time: docker.io/emissaryingress/emissary:3.9.1
+
+services:
+  ambassador:
+    image: docker.io/emissaryingress/emissary:3.9.1
+    ports:
+      - target: 8080
+        published: 20403
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ambassador_config:/config
+      - ambassador_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Api Management"
+    #   - "homepage.name=ambassador"
+    #   - "homepage.description=L7 load balancer; Kubernetes-native application delivery controller."
+    #   - "homepage.tags=Api Management,Gateways"
+    #   - "homepage.icon=ambassador.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20403"
+    #   - "homepage.server=localhost"
+
+volumes:
+  ambassador_config:
+  ambassador_data:
+
+networks:
+  default:
+    name: ambassador_net
+    driver: overlay
+    attachable: true

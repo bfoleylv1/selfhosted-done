@@ -4,7 +4,7 @@ Docker Compose and Docker Swarm files for self-hosted services that have been
 **started and verified working**. A service lands here only after it actually
 comes up.
 
-Currently **11 services**.
+Currently **19 services**.
 
 Every service folder has the same shape:
 
@@ -20,15 +20,23 @@ Every service folder has the same shape:
 
 | Service | Image | Port | GPU | Description |
 |---|---|---|:--:|---|
-| [92five](./92five) | `php:8.2-apache` | `20397` → `80` | — | Self-hosted project management application. |
-| [Ackee](./ackee) | `electerious/ackee:latest` | `20398` → `3000` | — | Lightweight anonymised web analytics; self-hosted solution. |
-| [Adminer](./adminer) | `adminer:latest` | `20399` → `8080` | — | Tool for managing MySQL, PostgreSQL, SQLite, and other databases. |
-| [Adyen Proxy](./adyen-proxy) | `node:20-alpine` | `20400` → `3000` | — | Proxy service for the Adyen payments API. |
+| [42Links](./42links) | `node:20-alpine` | `8080` → `8080` | — | Self-hosted service. |
+| [92five](./92five) | `php:8.2-apache` | `20393` → `80` | — | Self-hosted project management application. |
+| [Ackee](./ackee) | `electerious/ackee:latest` | `20394` → `3000` | — | Lightweight anonymised web analytics; self-hosted solution. |
+| [Adminer](./adminer) | `adminer:latest` | `20395` → `8080` | — | Tool for managing MySQL, PostgreSQL, SQLite, and other databases. |
+| [Adyen Proxy](./adyen-proxy) | `node:20-alpine` | `20396` → `3000` | — | Proxy service for the Adyen payments API. |
 | [OpenAFS](./afs) | `alpine:3.20` | `7000` → `7000` | — | OpenAFS distributed network filesystem. |
-| [Afterlogic](./afterlogic) | `php:8.2-apache` | `20401` → `80` | — | Webmail program; modern webmail with calendar. |
-| [Agent Vault](./agent-vault) | `hashicorp/vault:latest` | `20402` → `8200` | — | HashiCorp Vault - secrets management and encryption as a service. |
-| [Airsonic Advanced](./airsonic-advanced) | `airsonicadvanced/airsonic-advanced:latest` | `20403` → `4040` | ✅ | Music server with multi-user support; stream your music anywhere. |
-| [Akkoma](./akkoma) | `akkoma/akkoma:latest` | `20404` → `4000` | — | Self-hosted service. |
+| [Afterlogic](./afterlogic) | `php:8.2-apache` | `20397` → `80` | — | Webmail program; modern webmail with calendar. |
+| [Agent Vault](./agent-vault) | `hashicorp/vault:latest` | `20398` → `8200` | — | HashiCorp Vault - secrets management and encryption as a service. |
+| [Airsonic Advanced](./airsonic-advanced) | `airsonicadvanced/airsonic-advanced:latest` | `20399` → `4040` | ✅ | Music server with multi-user support; stream your music anywhere. |
+| [Akkoma](./akkoma) | `akkoma/akkoma:latest` | `20400` → `4000` | — | Self-hosted service. |
+| [Alertmanager](./alertmanager) | `prom/alertmanager:latest` | `9093` → `9093` | — | Alert handler for Prometheus; route and silencing alerts. |
+| [Algo Vpn](./algo-vpn) | `ubuntu:24.04` | `20401` → `8080` | — | VPN servers; deploy IPsec VPN on popular cloud providers. |
+| [Amanda](./amanda) | `ubuntu:24.04` | `20402` → `8080` | — | Advanced Maryland Automatic Network Disk Archiver. |
+| [Ambassador](./ambassador) | `docker.io/emissaryingress/emissary:3.9.1` | `20403` → `8080` | — | L7 load balancer; Kubernetes-native application delivery controller. |
+| [Ampache](./ampache) | `ampache/ampache:latest` | `20404` → `80` | ✅ | Web-based audio file manager; provides streaming and management interface. |
+| [Ansible](./ansible) | `alpine/ansible:latest` | `20001` → `8080` | — | Open source automation engine; IT automation and configuration management. |
+| [Apache Apisix](./apache-apisix) | `apache/apisix:latest` | `9080` → `9080` | — | Real-time API gateway; built on etcd and Lua. |
 | [Bamboo](./bamboo) | `atlassian/bamboo:latest` | `8085` → `8085` | — | Atlassian Bamboo - CI/CD build and deployment server. |
 | [Chef](./chef) | `chef/chef:latest` | `20405` → `443` | — | Automation platform for the most demanding environments. |
 

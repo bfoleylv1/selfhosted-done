@@ -7,7 +7,7 @@ services:
     image: hashicorp/vault:latest
     ports:
       - target: 8200
-        published: 20402
+        published: 20398
         protocol: tcp
         mode: ingress
     environment:
@@ -45,7 +45,7 @@ services:
     #   - "homepage.description=agent-vault self-hosted service."
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=agent-vault.png"
-    #   - "homepage.href=http://${HOST_IP:-localhost}:20402"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20398"
     #   - "homepage.server=localhost"
 
 volumes:

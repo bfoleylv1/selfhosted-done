@@ -1,0 +1,35 @@
+# apache-apisix - docker compose (single host)
+# image verified to exist at generation time: apache/apisix:latest
+
+services:
+  apache-apisix:
+    image: apache/apisix:latest
+    container_name: apache-apisix
+    restart: unless-stopped
+    ports:
+      - "9080:9080"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 9080 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Api Management"
+    #   - "homepage.name=apache-apisix"
+    #   - "homepage.description=Real-time API gateway; built on etcd and Lua."
+    #   - "homepage.tags=Api Management,Gateways"
+    #   - "homepage.icon=apache-apisix.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:9080"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: apache-apisix_net

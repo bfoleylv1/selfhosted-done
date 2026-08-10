@@ -5,7 +5,7 @@ akkoma self-hosted service.
 | | |
 |---|---|
 | **Image** | `akkoma/akkoma:latest` |
-| **Host port** | `20404` |
+| **Host port** | `20400` |
 | **Container port** | `4000` |
 | **Category** | Self Hosting Solutions |
 | **Healthcheck** | HTTP `/` |
@@ -18,7 +18,7 @@ Single host:
 docker compose up -d
 ```
 
-Then open <http://localhost:20404>.
+Then open <http://localhost:20400>.
 
 Swarm:
 

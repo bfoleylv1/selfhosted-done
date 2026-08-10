@@ -7,7 +7,7 @@ services:
     image: php:8.2-apache
     ports:
       - target: 80
-        published: 20397
+        published: 20393
         protocol: tcp
         mode: ingress
     environment:
@@ -45,7 +45,7 @@ services:
     #   - "homepage.description=92five self-hosted service."
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=92five.png"
-    #   - "homepage.href=http://${HOST_IP:-localhost}:20397"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20393"
     #   - "homepage.server=localhost"
 
 volumes:

@@ -7,7 +7,7 @@ services:
     container_name: akkoma
     restart: unless-stopped
     ports:
-      - "20404:4000"
+      - "20400:4000"
     environment:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
@@ -27,7 +27,7 @@ services:
     #   - "homepage.description=akkoma self-hosted service."
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=akkoma.png"
-    #   - "homepage.href=http://${HOST_IP:-localhost}:20404"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20400"
     #   - "homepage.server=localhost"
 
 networks:

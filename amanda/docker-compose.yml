@@ -1,0 +1,35 @@
+# amanda - docker compose (single host)
+# image verified to exist at generation time: ubuntu:24.04
+
+services:
+  amanda:
+    image: ubuntu:24.04
+    container_name: amanda
+    restart: unless-stopped
+    ports:
+      - "20402:8080"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Backup"
+    #   - "homepage.name=amanda"
+    #   - "homepage.description=Advanced Maryland Automatic Network Disk Archiver."
+    #   - "homepage.tags=Backup,Archiving"
+    #   - "homepage.icon=amanda.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20402"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: amanda_net
