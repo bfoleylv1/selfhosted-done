@@ -7,7 +7,7 @@ services:
     container_name: airsonic-advanced
     restart: unless-stopped
     ports:
-      - "4040:4040"
+      - "20403:4040"
     environment:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
@@ -55,7 +55,7 @@ services:
     #   - "homepage.description=Music server with multi-user support; stream your music anywhere."
     #   - "homepage.tags=Music,Audio"
     #   - "homepage.icon=airsonic-advanced.png"
-    #   - "homepage.href=http://${HOST_IP:-localhost}:4040"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20403"
     #   - "homepage.server=localhost"
 
 networks:

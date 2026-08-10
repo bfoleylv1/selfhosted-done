@@ -7,7 +7,7 @@ services:
     container_name: ackee
     restart: unless-stopped
     ports:
-      - "20401:3000"
+      - "20398:3000"
     environment:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
@@ -27,7 +27,7 @@ services:
     #   - "homepage.description=Lightweight anonymised web analytics; self-hosted solution."
     #   - "homepage.tags=Analytics,Monitoring"
     #   - "homepage.icon=ackee.png"
-    #   - "homepage.href=http://${HOST_IP:-localhost}:20401"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20398"
     #   - "homepage.server=localhost"
 
 networks:

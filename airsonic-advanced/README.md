@@ -5,7 +5,7 @@ Music server with multi-user support; stream your music anywhere.
 | | |
 |---|---|
 | **Image** | `airsonicadvanced/airsonic-advanced:latest` |
-| **Host port** | `4040` |
+| **Host port** | `20403` |
 | **Container port** | `4040` |
 | **Category** | Music |
 | **Healthcheck** | HTTP `/` |
@@ -19,7 +19,7 @@ Single host:
 docker compose up -d
 ```
 
-Then open <http://localhost:4040>.
+Then open <http://localhost:20403>.
 
 Swarm:
 

@@ -1,13 +1,13 @@
-# ackee - docker swarm stack
-# deploy: docker stack deploy -c docker-stack.yml ackee
-# image verified to exist at generation time: electerious/ackee:latest
+# akkoma - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml akkoma
+# image verified to exist at generation time: akkoma/akkoma:latest
 
 services:
-  ackee:
-    image: electerious/ackee:latest
+  akkoma:
+    image: akkoma/akkoma:latest
     ports:
-      - target: 3000
-        published: 20398
+      - target: 4000
+        published: 20404
         protocol: tcp
         mode: ingress
     environment:
@@ -15,10 +15,10 @@ services:
       - PUID=${PUID:-1000}
       - PGID=${PGID:-1000}
     volumes:
-      - ackee_config:/config
-      - ackee_data:/data
+      - akkoma_config:/config
+      - akkoma_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:3000/ || wget -qO- http://127.0.0.1:3000/ || exit 1"]
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:4000/ || wget -qO- http://127.0.0.1:4000/ || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,20 +40,20 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Analytics"
-    #   - "homepage.name=ackee"
-    #   - "homepage.description=Lightweight anonymised web analytics; self-hosted solution."
-    #   - "homepage.tags=Analytics,Monitoring"
-    #   - "homepage.icon=ackee.png"
-    #   - "homepage.href=http://${HOST_IP:-localhost}:20398"
+    #   - "homepage.group=Self Hosting Solutions"
+    #   - "homepage.name=akkoma"
+    #   - "homepage.description=akkoma self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=akkoma.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20404"
     #   - "homepage.server=localhost"
 
 volumes:
-  ackee_config:
-  ackee_data:
+  akkoma_config:
+  akkoma_data:
 
 networks:
   default:
-    name: ackee_net
+    name: akkoma_net
     driver: overlay
     attachable: true

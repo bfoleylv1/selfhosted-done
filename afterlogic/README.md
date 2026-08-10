@@ -5,7 +5,7 @@ Webmail program; modern webmail with calendar.
 | | |
 |---|---|
 | **Image** | `php:8.2-apache` |
-| **Host port** | `20001` |
+| **Host port** | `20401` |
 | **Container port** | `80` |
 | **Category** | Email |
 | **Healthcheck** | HTTP `/` |
@@ -18,7 +18,7 @@ Single host:
 docker compose up -d
 ```
 
-Then open <http://localhost:20001>.
+Then open <http://localhost:20401>.
 
 Swarm:
 

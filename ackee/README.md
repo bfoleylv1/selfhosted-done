@@ -5,7 +5,7 @@ Lightweight anonymised web analytics; self-hosted solution.
 | | |
 |---|---|
 | **Image** | `electerious/ackee:latest` |
-| **Host port** | `20401` |
+| **Host port** | `20398` |
 | **Container port** | `3000` |
 | **Category** | Analytics |
 | **Healthcheck** | HTTP `/` |
@@ -18,7 +18,7 @@ Single host:
 docker compose up -d
 ```
 
-Then open <http://localhost:20401>.
+Then open <http://localhost:20398>.
 
 Swarm:
 

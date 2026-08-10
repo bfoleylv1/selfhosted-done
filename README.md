@@ -4,7 +4,7 @@ Docker Compose and Docker Swarm files for self-hosted services that have been
 **started and verified working**. A service lands here only after it actually
 comes up.
 
-Currently **10 services**.
+Currently **11 services**.
 
 Every service folder has the same shape:
 
@@ -20,14 +20,15 @@ Every service folder has the same shape:
 
 | Service | Image | Port | GPU | Description |
 |---|---|---|:--:|---|
-| [92five](./92five) | `php:8.2-apache` | `20400` → `80` | — | Self-hosted project management application. |
-| [Ackee](./ackee) | `electerious/ackee:latest` | `20401` → `3000` | — | Lightweight anonymised web analytics; self-hosted solution. |
-| [Adminer](./adminer) | `adminer:latest` | `20402` → `8080` | — | Tool for managing MySQL, PostgreSQL, SQLite, and other databases. |
-| [Adyen Proxy](./adyen-proxy) | `node:20-alpine` | `20403` → `3000` | — | Proxy service for the Adyen payments API. |
+| [92five](./92five) | `php:8.2-apache` | `20397` → `80` | — | Self-hosted project management application. |
+| [Ackee](./ackee) | `electerious/ackee:latest` | `20398` → `3000` | — | Lightweight anonymised web analytics; self-hosted solution. |
+| [Adminer](./adminer) | `adminer:latest` | `20399` → `8080` | — | Tool for managing MySQL, PostgreSQL, SQLite, and other databases. |
+| [Adyen Proxy](./adyen-proxy) | `node:20-alpine` | `20400` → `3000` | — | Proxy service for the Adyen payments API. |
 | [OpenAFS](./afs) | `alpine:3.20` | `7000` → `7000` | — | OpenAFS distributed network filesystem. |
-| [Afterlogic](./afterlogic) | `php:8.2-apache` | `20001` → `80` | — | Webmail program; modern webmail with calendar. |
-| [Agent Vault](./agent-vault) | `hashicorp/vault:latest` | `20404` → `8200` | — | HashiCorp Vault - secrets management and encryption as a service. |
-| [Airsonic Advanced](./airsonic-advanced) | `airsonicadvanced/airsonic-advanced:latest` | `4040` → `4040` | ✅ | Music server with multi-user support; stream your music anywhere. |
+| [Afterlogic](./afterlogic) | `php:8.2-apache` | `20401` → `80` | — | Webmail program; modern webmail with calendar. |
+| [Agent Vault](./agent-vault) | `hashicorp/vault:latest` | `20402` → `8200` | — | HashiCorp Vault - secrets management and encryption as a service. |
+| [Airsonic Advanced](./airsonic-advanced) | `airsonicadvanced/airsonic-advanced:latest` | `20403` → `4040` | ✅ | Music server with multi-user support; stream your music anywhere. |
+| [Akkoma](./akkoma) | `akkoma/akkoma:latest` | `20404` → `4000` | — | Self-hosted service. |
 | [Bamboo](./bamboo) | `atlassian/bamboo:latest` | `8085` → `8085` | — | Atlassian Bamboo - CI/CD build and deployment server. |
 | [Chef](./chef) | `chef/chef:latest` | `20405` → `443` | — | Automation platform for the most demanding environments. |
 

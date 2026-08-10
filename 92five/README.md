@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Image** | `php:8.2-apache` |
-| **Host port** | `20400` |
+| **Host port** | `20397` |
 | **Container port** | `80` |
 | **Category** | Self Hosting Solutions |
 | **Healthcheck** | HTTP `/` |
@@ -18,7 +18,7 @@ Single host:
 docker compose up -d
 ```
 
-Then open <http://localhost:20400>.
+Then open <http://localhost:20397>.
 
 Swarm:
 

@@ -1,14 +1,14 @@
-# Agent Vault
+# Akkoma
 
-agent-vault self-hosted service.
+akkoma self-hosted service.
 
 | | |
 |---|---|
-| **Image** | `hashicorp/vault:latest` |
-| **Host port** | `20402` |
-| **Container port** | `8200` |
+| **Image** | `akkoma/akkoma:latest` |
+| **Host port** | `20404` |
+| **Container port** | `4000` |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | HTTP `/v1/sys/health` |
+| **Healthcheck** | HTTP `/` |
 
 ## Run it
 
@@ -18,12 +18,12 @@ Single host:
 docker compose up -d
 ```
 
-Then open <http://localhost:20402>.
+Then open <http://localhost:20404>.
 
 Swarm:
 
 ```bash
-docker stack deploy -c swarm/docker-stack.yml agent-vault
+docker stack deploy -c swarm/docker-stack.yml akkoma
 ```
 
 ## Layout
@@ -38,7 +38,7 @@ data/                     # mounted to /data
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' agent-vault
+docker inspect --format '{{.State.Health.Status}}' akkoma
 ```
 
 ## Homepage

@@ -7,7 +7,7 @@ services:
     container_name: afterlogic
     restart: unless-stopped
     ports:
-      - "20001:80"
+      - "20401:80"
     environment:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
@@ -27,7 +27,7 @@ services:
     #   - "homepage.description=Webmail program; modern webmail with calendar."
     #   - "homepage.tags=Email,Communication"
     #   - "homepage.icon=afterlogic.png"
-    #   - "homepage.href=http://${HOST_IP:-localhost}:20001"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20401"
     #   - "homepage.server=localhost"
 
 networks:

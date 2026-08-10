@@ -7,7 +7,7 @@ services:
     image: php:8.2-apache
     ports:
       - target: 80
-        published: 20001
+        published: 20401
         protocol: tcp
         mode: ingress
     environment:
@@ -45,7 +45,7 @@ services:
     #   - "homepage.description=Webmail program; modern webmail with calendar."
     #   - "homepage.tags=Email,Communication"
     #   - "homepage.icon=afterlogic.png"
-    #   - "homepage.href=http://${HOST_IP:-localhost}:20001"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20401"
     #   - "homepage.server=localhost"
 
 volumes:

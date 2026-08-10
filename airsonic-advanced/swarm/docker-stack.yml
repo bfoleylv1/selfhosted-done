@@ -7,7 +7,7 @@ services:
     image: airsonicadvanced/airsonic-advanced:latest
     ports:
       - target: 4040
-        published: 4040
+        published: 20403
         protocol: tcp
         mode: ingress
     environment:
@@ -65,7 +65,7 @@ services:
     #   - "homepage.description=Music server with multi-user support; stream your music anywhere."
     #   - "homepage.tags=Music,Audio"
     #   - "homepage.icon=airsonic-advanced.png"
-    #   - "homepage.href=http://${HOST_IP:-localhost}:4040"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20403"
     #   - "homepage.server=localhost"
 
 volumes:
