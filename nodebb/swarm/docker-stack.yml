@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=nodebb"
-    #   - "homepage.description=nodebb self-hosted service."
+    #   - "homepage.description=NodeBB: open-source Node.js based forum software."
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=nodebb.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20482"

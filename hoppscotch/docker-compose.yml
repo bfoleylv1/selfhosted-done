@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=hoppscotch"
-    #   - "homepage.description=Hoppscotch self-hosted service."""
+    #   - "homepage.description=Hoppscotch Community Edition: open-source API development ecosystem (requests, testing, collaboration)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=hoppscotch.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20456"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=claude-code"
-    #   - "homepage.description=Claude Code self-hosted service."""
+    #   - "homepage.description=Claude Code: Anthropic's agentic CLI for coding tasks (self-hosted wrapper)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=claude-code.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20530"

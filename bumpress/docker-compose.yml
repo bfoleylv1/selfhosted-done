@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=bumpress"
-    #   - "homepage.description=Bumpress self-hosted service."""
+    #   - "homepage.description=Bumpress: self-hosted service for publishing and syndicating content."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=bumpress.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20419"

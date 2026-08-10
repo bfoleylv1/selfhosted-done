@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=librechat"
-    #   - "homepage.description=Librechat self-hosted service."""
+    #   - "homepage.description=LibreChat: open-source ChatGPT-compatible frontend with multi-model support and agents."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=librechat.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20465"

@@ -37,7 +37,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=langflow"
-    #   - "homepage.description=Langflow self-hosted service."""
+    #   - "homepage.description=Langflow: visual builder for LangChain and LLM workflows."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=langflow.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20463"

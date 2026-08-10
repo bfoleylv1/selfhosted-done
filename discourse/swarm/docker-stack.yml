@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=discourse"
-    #   - "homepage.description=Discourse self-hosted service."""
+    #   - "homepage.description=Discourse: open-source modern forum and community discussion platform."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=discourse.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20436"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=calibre"
-    #   - "homepage.description=Calibre self-hosted service."""
+    #   - "homepage.description=Calibre: open-source e-book management and conversion server (Calibre-Web companion)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=calibre.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8083"

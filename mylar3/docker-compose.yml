@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=mylar3"
-    #   - "homepage.description=Mylar3 self-hosted service."""
+    #   - "homepage.description=Mylar3: automated Comic Book (CBZ/CBR) downloader and manager."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=mylar3.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20539"

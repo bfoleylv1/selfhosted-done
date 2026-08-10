@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=lobechat"
-    #   - "homepage.description=Lobechat self-hosted service."""
+    #   - "homepage.description=LobeChat: open-source chatbot platform with multi-model support and plugin ecosystem."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=lobechat.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20469"

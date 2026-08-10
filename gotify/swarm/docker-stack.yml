@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=gotify"
-    #   - "homepage.description=Gotify self-hosted service."""
+    #   - "homepage.description=Gotify: simple self-hosted push notification server (Android/iOS/desktop)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=gotify.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20448"

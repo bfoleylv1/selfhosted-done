@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=debops"
-    #   - "homepage.description=Debops self-hosted service."""
+    #   - "homepage.description=DebOps: collection of Ansible playbooks for deploying and managing Debian-based infrastructure."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=debops.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20434"

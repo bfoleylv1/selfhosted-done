@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=mindsdb"
-    #   - "homepage.description=Mindsdb self-hosted service."""
+    #   - "homepage.description=MindsDB: open-source machine learning platform that brings ML to your database."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=mindsdb.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20476"

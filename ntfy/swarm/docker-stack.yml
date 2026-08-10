@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=ntfy"
-    #   - "homepage.description=ntfy self-hosted service."
+    #   - "homepage.description=ntfy: simple self-hosted push notification service over HTTP/UnifiedPush."
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=ntfy.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20483"

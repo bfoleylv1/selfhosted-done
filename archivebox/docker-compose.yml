@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=archivebox"
-    #   - "homepage.description=Archivebox self-hosted service."""
+    #   - "homepage.description=ArchiveBox: open-source self-hosted internet archive (saves snapshots of websites)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=archivebox.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20413"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=alfresco"
-    #   - "homepage.description=Alfresco self-hosted service."""
+    #   - "homepage.description=Alfresco Community Edition: open-source enterprise content management (ECM) platform."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=alfresco.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20408"

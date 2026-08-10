@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=n8n"
-    #   - "homepage.description=n8n self-hosted service."
+    #   - "homepage.description=n8n: open-source workflow automation tool with 400+ integrations."
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=n8n.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:5678"

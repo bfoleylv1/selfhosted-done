@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=metube"
-    #   - "homepage.description=Metube self-hosted service."""
+    #   - "homepage.description=MeTube: self-hosted YouTube-dl / yt-dlp web UI for downloading media."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=metube.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20475"

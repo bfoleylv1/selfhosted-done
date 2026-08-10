@@ -1,12 +1,12 @@
 # selfhosted-done
 
-A library of **545** Docker Compose + Docker Swarm stacks for self-hosted services. Each folder contains a working `docker-compose.yml` (single host) and `swarm/docker-stack.yml` (cluster), with healthchecks, Homepage labels, and config/data volume mounts.
+A library of **548** Docker Compose + Docker Swarm stacks for self-hosted services. Each folder contains a working `docker-compose.yml` (single host) and `swarm/docker-stack.yml` (cluster), with healthchecks, Homepage labels, and config/data volume mounts.
 
 Every stack was generated from the project's real upstream image and tagged with its actual category and host port. Descriptions come from each project's official catalog/repo where available, and a clean short summary for every service.
 
 ## At a glance
 
-- **Services:** 545
+- **Services:** 548
 - **With GPU / hardware-acceleration blocks:** 50 (commented out — uncomment to enable)
 - **Categories:** 34
 - **Layout per service:** `docker-compose.yml`, `swarm/docker-stack.yml`, `config/`, `data/`
@@ -31,7 +31,7 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 
 ## Services by category
 
-### Self Hosting Solutions (217)
+### Self Hosting Solutions (220)
 
 | Service | Image | Port | GPU | Description |
 |---|---|---|:--:|---|
@@ -40,12 +40,12 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Adyen Proxy](./adyen-proxy) | `node:20-alpine` | `20396` | — | Reverse proxy / bridge for the Adyen payment API |
 | [Agent Vault](./agent-vault) | `hashicorp/vault:latest` | `20398` | — | Open-source HTTP credential proxy and vault that brokers API credentials for AI agents without exposing the secrets |
 | [Akkoma](./akkoma) | `akkoma/akkoma:latest` | `20400` | — | Lightweight federated microblogging server (ActivityPub, Mastodon-compatible) |
-| [Alfresco](./alfresco) | `alfresco/alfresco-content-repository-community:latest` | `20408` | — | Alfresco self-hosted service. |
-| [Aliasvault](./aliasvault) | `ghcr.io/aliasvault/aliasvault:latest` | `20409` | — | Aliasvault self-hosted service. |
-| [Answer](./answer) | `answerdev/answer:latest` | `20411` | — | Answer self-hosted service. |
-| [Anythingllm](./anythingllm) | `mintplexlabs/anythingllm:latest` | `20412` | ✅ | Anythingllm self-hosted service. |
+| [Alfresco](./alfresco) | `alfresco/alfresco-content-repository-community:latest` | `20408` | — | Alfresco Community Edition: open-source enterprise content management (ECM) platform. |
+| [Aliasvault](./aliasvault) | `ghcr.io/aliasvault/aliasvault:latest` | `20409` | — | AliasVault: open-source password and alias manager with end-to-end encryption. |
+| [Answer](./answer) | `answerdev/answer:latest` | `20411` | — | Answer: open-source knowledge management and Q&A platform (Stack Overflow alternative). |
+| [Anythingllm](./anythingllm) | `mintplexlabs/anythingllm:latest` | `20412` | ✅ | AnythingLLM: all-in-one desktop and self-hosted app for chatting with documents using LLMs. |
 | [Appwrite](./appwrite) | `appwrite/appwrite:1.6.0` | `20003` | — | Open-source backend-as-a-service (BaaS) for web and mobile apps |
-| [Archivebox](./archivebox) | `ghcr.io/archivebox/archivebox:latest` | `20413` | — | Archivebox self-hosted service. |
+| [Archivebox](./archivebox) | `ghcr.io/archivebox/archivebox:latest` | `20413` | — | ArchiveBox: open-source self-hosted internet archive (saves snapshots of websites). |
 | [B1Gmail](./b1gMail) | `php:8.2-apache` | `20006` | — | Self-hosted webmail and mail server suite |
 | [Baikal](./baikal) | `ckulka/baikal:nginx` | `20009` | — | Lightweight CalDAV and CardDAV server |
 | [Bamboo](./bamboo) | `atlassian/bamboo:latest` | `8085` | — | Atlassian continuous integration and deployment server (commercial) |
@@ -53,17 +53,17 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Booklore](./booklore) | `ghcr.io/booklore-app/booklore:latest` | `6060` | — | Self-hosted book library and reading tracker |
 | [Browserstack Turboscale](./browserstack-turboscale) | `alpine:3.20` | `20019` | — | BrowserStack TurboScale - self-hosted device testing infrastructure (commercial) |
 | [Buddy Enterprise](./buddy-enterprise) | `debian:12-slim` | `20020` | — | Buddy Enterprise - self-hosted CI/CD automation server (commercial) |
-| [Bumpress](./bumpress) | `wordpress:latest` | `20419` | — | Bumpress self-hosted service. |
+| [Bumpress](./bumpress) | `wordpress:latest` | `20419` | — | Bumpress: self-hosted service for publishing and syndicating content. |
 | [C15T](./c15t) | `node:20-alpine` | `20021` | — | Open-source consent and privacy management platform |
-| [Calibre](./calibre) | `linuxserver/calibre:latest` | `8083` | — | Calibre self-hosted service. |
+| [Calibre](./calibre) | `linuxserver/calibre:latest` | `8083` | — | Calibre: open-source e-book management and conversion server (Calibre-Web companion). |
 | [Canvas Lms](./canvas-lms) | `instructure/canvas-lms:stable` | `3000` | — | Open-source learning management system (LMS) |
 | [Cap](./cap) | `alpine:3.20` | `20023` | — | Open-source screen recording and sharing tool |
 | [Castopod](./castopod) | `castopod/castopod:latest` | `20024` | ✅ | Self-hosted podcast hosting platform with ActivityPub federation |
 | [Centrifugo](./centrifugo) | `centrifugo/centrifugo:v5` | `20025` | — | Real-time messaging server (WebSocket/SSE) for live updates |
 | [Cerbos](./cerbos) | `ghcr.io/cerbos/cerbos:latest` | `3592` | — | Open-source fine-grained authorization / access-control engine |
 | [Cgit](./cgit) | `alpine:3.20` | `20027` | — | Lightweight web frontend for Git repositories |
-| [Changedetection](./changedetection) | `dgtlmoon/changedetection.io:latest` | `20422` | — | Changedetection self-hosted service. |
-| [Claude Code](./claude-code) | `anthropics/claude-code:latest` | `20530` | — | Claude Code self-hosted service. |
+| [Changedetection](./changedetection) | `dgtlmoon/changedetection.io:latest` | `20422` | — | changedetection.io: self-hosted website change monitoring and notification service. |
+| [Claude Code](./claude-code) | `anthropics/claude-code:latest` | `20530` | — | Claude Code: Anthropic's agentic CLI for coding tasks (self-hosted wrapper). |
 | [Cloudron](./cloudron) | `ubuntu:24.04` | `20033` | — | Self-hosted PaaS for installing and managing web apps |
 | [Cluster Control](./cluster-control) | `severalnines/clustercontrol:latest` | `20034` | — | Severalnines ClusterControl - database cluster management and monitoring |
 | [Cockpit](./cockpit) | `quay.io/cockpit/ws:latest` | `9090` | — | Web-based Linux server administration dashboard |
@@ -76,10 +76,10 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Datasette](./datasette) | `datasetteproject/datasette:latest` | `8001` | — | Explore and publish SQLite databases as JSON APIs and dashboards |
 | [Davical](./davical) | `php:8.2-apache` | `20041` | — | CalDAV server for calendar sharing |
 | [Davis](./davis) | `ghcr.io/tchapi/davis:latest` | `20042` | — | Self-hosted CalDAV/CardDAV server (PHP) |
-| [Debops](./debops) | `debops/debops:latest` | `20434` | — | Debops self-hosted service. |
+| [Debops](./debops) | `debops/debops:latest` | `20434` | — | DebOps: collection of Ansible playbooks for deploying and managing Debian-based infrastructure. |
 | [Depay](./depay) | `node:20-alpine` | `20043` | — | Self-hosted crypto payment processor |
-| [Dify](./dify) | `langgenius/dify-api:latest` | `20531` | ✅ | Dify self-hosted service. |
-| [Discourse](./discourse) | `discourse/discourse:latest` | `20436` | — | Discourse self-hosted service. |
+| [Dify](./dify) | `langgenius/dify-api:latest` | `20531` | ✅ | Dify: open-source LLM app development platform (agents, RAG, workflows). |
+| [Discourse](./discourse) | `discourse/discourse:latest` | `20436` | — | Discourse: open-source modern forum and community discussion platform. |
 | [Docuddle](./docuddle) | `alpine:3.20` | `20046` | — | Self-hosted service. |
 | [Documenso](./documenso) | `documenso/documenso:latest` | `20047` | — | Open-source DocuSign alternative for electronic signatures |
 | [Dpaste](./dpaste) | `python:3.11-slim` | `20050` | — | Self-hosted pastebin / code snippet service |
@@ -89,7 +89,7 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Easypanel](./easypanel) | `easypanel/easypanel:latest` | `20056` | — | Modern self-hosted PaaS control panel for Docker apps |
 | [Ejabberd](./ejabberd) | `ejabberd/ecs:latest` | `5280` | — | Robust XMPP / Jabber messaging server |
 | [Ekso](./ekso) | `alpine:3.20` | `20057` | — | Self-hosted service. |
-| [Element](./element) | `vectorim/element-web:latest` | `20438` | — | Element self-hosted service. |
+| [Element](./element) | `vectorim/element-web:latest` | `20438` | — | Element: feature-rich web client for the Matrix decentralized chat protocol. |
 | [Element Web](./element-web) | `vectorim/element-web:latest` | `20058` | — | Web client for the Matrix decentralized chat protocol |
 | [Element Web App](./element-web-app) | `vectorim/element-web:latest` | `20059` | — | Matrix client for secure decentralized communication. |
 | [Elixire](./elixire) | `alpine:3.20` | `20060` | — | Self-hosted file hosting service |
@@ -97,7 +97,7 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Enclosed](./enclosed) | `ghcr.io/corentinth/enclosed:latest` | `8787` | — | Self-hosted tool for sharing secrets and files securely |
 | [Engity Bifrost](./engity-bifrost) | `alpine:3.20` | `20061` | — | Engity Bifrost - identity and SSO gateway |
 | [Epicyon](./epicyon) | `python:3.11-slim` | `20062` | — | Self-hosted ActivityPub federated social server |
-| [Ergo](./ergo) | `ergochat/ergo:latest` | `20441` | — | Ergo self-hosted service. |
+| [Ergo](./ergo) | `ergochat/ergo:latest` | `20441` | — | Ergo (IRCd): modern, easy-to-run IRC server written in Go. |
 | [Excalidraw](./excalidraw) | `excalidraw/excalidraw:latest` | `20064` | — | Virtual whiteboard for hand-drawn diagrams |
 | [Fmd Server](./fmd-server) | `golang:1.23-alpine` | `20071` | — | Self-hosted service. |
 | [Formio](./formio) | `formio/formio:latest` | `3001` | — | Form and API platform for building data-driven forms and apps |
@@ -124,30 +124,33 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Gomodel](./gomodel) | `golang:1.23-alpine` | `20099` | — | GoModel: open-source AI gateway / control plane proxy with an OpenAI- and Anthropic-compatible API (a LiteLLM alternative). — [site](https://github.com/ENTERPILOT/GoModel) |
 | [Google Cse Proxy](./google-cse-proxy) | `node:20-alpine` | `20100` | — | Proxy for the Google Custom Search Engine API |
 | [Gordian](./gordian) | `alpine:3.20` | `20101` | — | Self-hosted service. |
-| [Gotify](./gotify) | `gotify/server:latest` | `20448` | — | Gotify self-hosted service. |
-| [Habitica](./habitica) | `habitica/habitica:latest` | `20451` | — | Habitica self-hosted service. |
-| [Halo](./halo) | `halohub/halo:latest` | `20452` | — | Halo self-hosted service. |
-| [Homeassistant](./homeassistant) | `ghcr.io/home-assistant/home-assistant:stable` | `20455` | — | Homeassistant self-hosted service. |
+| [Gotify](./gotify) | `gotify/server:latest` | `20448` | — | Gotify: simple self-hosted push notification server (Android/iOS/desktop). |
+| [Habitica](./habitica) | `habitica/habitica:latest` | `20451` | — | Habitica: open-source habit tracker and RPG-style productivity app. |
+| [Halo](./halo) | `halohub/halo:latest` | `20452` | — | Halo: open-source, extensible publish/CMS wiki platform (Java). |
+| [Homeassistant](./homeassistant) | `ghcr.io/home-assistant/home-assistant:stable` | `20455` | — | Home Assistant: open-source home automation platform. |
 | [Homer](./homer) | `b4bz/homer:latest` | `20112` | — | Static dashboard / startpage for your homelab |
-| [Hoppscotch](./hoppscotch) | `hoppscotch/hoppscotch:latest` | `20456` | — | Hoppscotch self-hosted service. |
-| [Immich](./immich) | `ghcr.io/immich-app/immich-server:release` | `2283` | ✅ | Immich self-hosted service. |
+| [Hoppscotch](./hoppscotch) | `hoppscotch/hoppscotch:latest` | `20456` | — | Hoppscotch Community Edition: open-source API development ecosystem (requests, testing, collaboration). |
+| [Immich](./immich) | `ghcr.io/immich-app/immich-server:release` | `2283` | ✅ | Immich: self-hosted photo and video backup solution with AI search. |
 | [Jellyfin Library](./jellyfin-library) | `jellyfin/jellyfin:latest` | `20118` | — | Tool for managing Jellyfin media libraries |
 | [Kanboard](./kanboard) | `kanboard/kanboard:latest` | `20121` | — | Simple kanban board for project management |
-| [Langflow](./langflow) | `langflowai/langflow:latest` | `20463` | ✅ | Langflow self-hosted service. |
+| [Langflow](./langflow) | `langflowai/langflow:latest` | `20463` | ✅ | Langflow: visual builder for LangChain and LLM workflows. |
 | [Libervrt](./libervrt) | `lscr.io/linuxserver/emby:latest` | `20139` | — | Self-hosted service. |
-| [Librechat](./librechat) | `librechat/librechat:latest` | `20465` | — | Librechat self-hosted service. |
+| [Librechat](./librechat) | `librechat/librechat:latest` | `20465` | — | LibreChat: open-source ChatGPT-compatible frontend with multi-model support and agents. |
 | [Litellm](./litellm) | `ghcr.io/berriai/litellm:main-latest` | `4000` | ✅ | Proxy gateway for 100+ LLM providers with load balancing and fallbacks |
 | [Lms](./lms) | `lmscommunity/lyrionmusicserver:latest` | `20142` | — | Frappe LMS: 100% open-source learning management system. — [site](https://github.com/frappe/lms) |
-| [Lobechat](./lobechat) | `lobehub/lobe-chat:latest` | `20469` | — | Lobechat self-hosted service. |
+| [Lobechat](./lobechat) | `lobehub/lobe-chat:latest` | `20469` | — | LobeChat: open-source chatbot platform with multi-model support and plugin ecosystem. |
 | [Lxd](./lxd) | `ubuntu:24.04` | `20144` | ✅ | System container and virtual machine manager (LXC) |
-| [Metabase](./metabase) | `metabase/metabase:latest` | `20553` | — | Metabase self-hosted service. |
-| [Metube](./metube) | `alexta69/metube:latest` | `20475` | — | Metube self-hosted service. |
-| [Mindsdb](./mindsdb) | `mindsdb/mindsdb:latest` | `20476` | — | Mindsdb self-hosted service. |
+| [Metabase](./metabase) | `metabase/metabase:latest` | `20553` | — | Metabase: open-source business intelligence and analytics dashboard tool. |
+| [Metube](./metube) | `alexta69/metube:latest` | `20475` | — | MeTube: self-hosted YouTube-dl / yt-dlp web UI for downloading media. |
+| [Mindsdb](./mindsdb) | `mindsdb/mindsdb:latest` | `20476` | — | MindsDB: open-source machine learning platform that brings ML to your database. |
 | [Mollie Proxy](./mollie-proxy) | `node:20-alpine` | `20160` | — | Proxy for the Mollie payment API |
-| [Mylar3](./mylar3) | `linuxserver/mylar3:latest` | `20539` | — | Mylar3 self-hosted service. |
+| [Mylar3](./mylar3) | `linuxserver/mylar3:latest` | `20539` | — | Mylar3: automated Comic Book (CBZ/CBR) downloader and manager. |
+| [N8N](./n8n) | `n8nio/n8n:latest` | `5678` | — | n8n: open-source workflow automation tool with 400+ integrations. |
 | [Netlify](./netlify) | `node:20-alpine` | `20162` | — | Platform for deploying static / Jamstack sites (open-core) |
 | [Nextchat](./nextchat) | `yidadaa/chatgpt-next-web:latest` | `20164` | — | Next-generation web UI for ChatGPT and other LLMs |
+| [Nodebb](./nodebb) | `ghcr.io/nodebb/nodebb:latest` | `20482` | — | NodeBB: open-source Node.js based forum software. |
 | [Notion Clone](./notion-clone) | `appflowyinc/appflowy_cloud:latest` | `20170` | — | Open-source Notion alternative for note-taking |
+| [Ntfy](./ntfy) | `binwiederhier/ntfy:latest` | `20483` | — | ntfy: simple self-hosted push notification service over HTTP/UnifiedPush. |
 | [Online Invoicing](./online-invoicing) | `php:8.2-apache` | `20173` | — | Self-hosted invoicing / billing tool |
 | [Openclaw](./openclaw) | `ghcr.io/openclaw/openclaw:latest` | `20175` | — | OpenClaw: self-hosted personal AI assistant (cross-platform). — [site](https://github.com/openclaw/openclaw) |
 | [Opencode](./opencode) | `node:20-alpine` | `20176` | — | Open-source AI coding agent / assistant |
@@ -1015,6 +1018,7 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Mopidy](./mopidy) | Music | `6680` |
 | [Mylar3](./mylar3) | Self Hosting Solutions | `20539` |
 | [MySQL / MariaDB](./mysql-mariadb) | Database Management | `20161` |
+| [N8N](./n8n) | Self Hosting Solutions | `5678` |
 | [Navidrome](./navidrome) | Music | `4533` |
 | [Neo4J](./neo4j) | Database Management | `7474` |
 | [Netlify](./netlify) | Self Hosting Solutions | `20162` |
@@ -1025,9 +1029,11 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Nginx](./nginx) | Api Management | `20166` |
 | [Nginx Proxy Manager](./nginx-proxy-manager) | Additional Services | `20167` |
 | [Noco Db](./noco-db) | Social | `20168` |
+| [Nodebb](./nodebb) | Self Hosting Solutions | `20482` |
 | [Nomad](./nomad) | Automation | `4646` |
 | [Notejot](./notejot) | Productivity | `20169` |
 | [Notion Clone](./notion-clone) | Self Hosting Solutions | `20170` |
+| [Ntfy](./ntfy) | Self Hosting Solutions | `20483` |
 | [October Cms](./october-cms) | Crm | `20171` |
 | [Odoo](./odoo) | Crm | `8069` |
 | [Oidc Proxy](./oidc-proxy) | Authentication | `4180` |

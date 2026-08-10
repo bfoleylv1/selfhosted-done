@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=homeassistant"
-    #   - "homepage.description=Homeassistant self-hosted service."""
+    #   - "homepage.description=Home Assistant: open-source home automation platform."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=homeassistant.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20455"

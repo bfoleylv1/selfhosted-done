@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=ergo"
-    #   - "homepage.description=Ergo self-hosted service."""
+    #   - "homepage.description=Ergo (IRCd): modern, easy-to-run IRC server written in Go."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=ergo.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20441"

@@ -37,7 +37,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=dify"
-    #   - "homepage.description=Dify self-hosted service."""
+    #   - "homepage.description=Dify: open-source LLM app development platform (agents, RAG, workflows)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=dify.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20531"

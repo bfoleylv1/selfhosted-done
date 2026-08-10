@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=halo"
-    #   - "homepage.description=Halo self-hosted service."""
+    #   - "homepage.description=Halo: open-source, extensible publish/CMS wiki platform (Java)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=halo.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20452"

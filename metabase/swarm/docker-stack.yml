@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=metabase"
-    #   - "homepage.description=Metabase self-hosted service."""
+    #   - "homepage.description=Metabase: open-source business intelligence and analytics dashboard tool."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=metabase.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20553"

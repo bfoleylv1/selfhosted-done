@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=answer"
-    #   - "homepage.description=Answer self-hosted service."""
+    #   - "homepage.description=Answer: open-source knowledge management and Q&A platform (Stack Overflow alternative)."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=answer.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20411"
