@@ -1,0 +1,35 @@
+# afs - docker compose (single host)
+# image verified to exist at generation time: alpine:3.20
+
+services:
+  afs:
+    image: alpine:3.20
+    container_name: afs
+    restart: unless-stopped
+    ports:
+      - "7000:7000"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 7000 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=File Sharing"
+    #   - "homepage.name=afs"
+    #   - "homepage.description=Andrew File System; distributed file system."
+    #   - "homepage.tags=File Sharing,Public Access"
+    #   - "homepage.icon=afs.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:7000"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: afs_net

@@ -1,0 +1,16 @@
+# macOS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# runtime state — config and data are mount points, not content
+*/config/*
+*/data/*
+!*/config/.gitkeep
+!*/data/.gitkeep
+
+# local env overrides
+.env
+*.local.yml
+docker-compose.override.yml

@@ -1,0 +1,59 @@
+# afs - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml afs
+# image verified to exist at generation time: alpine:3.20
+
+services:
+  afs:
+    image: alpine:3.20
+    ports:
+      - target: 7000
+        published: 7000
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - afs_config:/config
+      - afs_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 7000 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=File Sharing"
+    #   - "homepage.name=afs"
+    #   - "homepage.description=Andrew File System; distributed file system."
+    #   - "homepage.tags=File Sharing,Public Access"
+    #   - "homepage.icon=afs.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:7000"
+    #   - "homepage.server=localhost"
+
+volumes:
+  afs_config:
+  afs_data:
+
+networks:
+  default:
+    name: afs_net
+    driver: overlay
+    attachable: true
