@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=authelia"
-    #   - "homepage.description=Identity and Access Proxy providing 2FA, SSO, and access controls for services."""
+    #   - "homepage.description=Identity and Access Proxy providing 2FA, SSO, and access controls for services."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=authelia.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9091"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=subsonic"
-    #   - "homepage.description=Web media streaming platform; the progenitor for many forks."""
+    #   - "homepage.description=Web media streaming platform; the progenitor for many forks."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=subsonic.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:4040"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=redis"
-    #   - "homepage.description=In-memory key-value store; used as database, cache, and message broker."""
+    #   - "homepage.description=In-memory key-value store; used as database, cache, and message broker."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=redis.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20239"

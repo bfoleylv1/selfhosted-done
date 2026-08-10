@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=rsshub"
-    #   - "homepage.description=Everything is an RSS feed; aggregates content from various sources to RSS."""
+    #   - "homepage.description=Everything is an RSS feed; aggregates content from various sources to RSS."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=rsshub.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:1200"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=tahoe-lafs"
-    #   - "homepage.description=Decentralized, fault-tolerant, encrypted file storage grid."""
+    #   - "homepage.description=Decentralized, fault-tolerant, encrypted file storage grid."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=tahoe-lafs.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:3456"

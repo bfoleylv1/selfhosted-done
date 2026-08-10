@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=medusa"
-    #   - "homepage.description=Alternative to Sonarr; PVR for TV shows with extensive customization."""
+    #   - "homepage.description=Alternative to Sonarr; PVR for TV shows with extensive customization."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=medusa.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8081"

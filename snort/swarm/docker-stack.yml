@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=snort"
-    #   - "homepage.description=Network intrusion detection and prevention system."""
+    #   - "homepage.description=Network intrusion detection and prevention system."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=snort.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20287"

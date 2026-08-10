@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=elixire"
-    #   - "homepage.description=Self-hosted file hosting service."""
+    #   - "homepage.description=Self-hosted file hosting service."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=elixire.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20060"

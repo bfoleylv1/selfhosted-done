@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=mailcow"
-    #   - "homepage.description=Email solution; complete mail server suite."""
+    #   - "homepage.description=Email solution; complete mail server suite."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=mailcow.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20147"

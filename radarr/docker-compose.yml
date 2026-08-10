@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=radarr"
-    #   - "homepage.description=PVR for movie fans; manages and automatically downloads films."""
+    #   - "homepage.description=PVR for movie fans; manages and automatically downloads films."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=radarr.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20230"

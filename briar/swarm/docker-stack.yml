@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=briar"
-    #   - "homepage.description=Peer-to-peer messaging app; works over Tor and Bluetooth."""
+    #   - "homepage.description=Peer-to-peer messaging app; works over Tor and Bluetooth."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=briar.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20018"

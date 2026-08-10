@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=surfer"
-    #   - "homepage.description=Static file hosting and web publishing tool (Cloudron Surfer)."""
+    #   - "homepage.description=Static file hosting and web publishing tool (Cloudron Surfer)."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=surfer.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20313"

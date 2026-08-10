@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=notejot"
-    #   - "homepage.description=Simple and elegant notes app; lightweight note-taking solution."""
+    #   - "homepage.description=Simple and elegant notes app; lightweight note-taking solution."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=notejot.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20169"

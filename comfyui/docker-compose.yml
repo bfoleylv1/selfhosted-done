@@ -33,7 +33,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=comfyui"
-    #   - "homepage.description=Node-based graphical UI for Stable Diffusion / generative AI."""
+    #   - "homepage.description=Node-based graphical UI for Stable Diffusion / generative AI."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=comfyui.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8188"

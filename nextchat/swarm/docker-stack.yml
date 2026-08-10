@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=nextchat"
-    #   - "homepage.description=Next-generation web UI for ChatGPT and other LLMs."""
+    #   - "homepage.description=Next-generation web UI for ChatGPT and other LLMs."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=nextchat.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20164"

@@ -33,7 +33,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=makemkv"
-    #   - "homepage.description=DVD/Blu-ray copying tool; extract video from optical discs."""
+    #   - "homepage.description=DVD/Blu-ray copying tool; extract video from optical discs."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=makemkv.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20149"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=certbot"
-    #   - "homepage.description=Let's Encrypt client; automatic certificate management."""
+    #   - "homepage.description=Let's Encrypt client; automatic certificate management."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=certbot.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20026"

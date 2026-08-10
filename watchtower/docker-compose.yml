@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=watchtower"
-    #   - "homepage.description=Automatically update Docker containers to the latest images."""
+    #   - "homepage.description=Automatically update Docker containers to the latest images."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=watchtower.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20356"

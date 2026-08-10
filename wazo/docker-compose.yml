@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=wazo"
-    #   - "homepage.description=Open-source IP-PBX telephony platform."""
+    #   - "homepage.description=Open-source IP-PBX telephony platform."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=wazo.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20357"

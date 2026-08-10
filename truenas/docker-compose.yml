@@ -29,7 +29,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=truenas"
-    #   - "homepage.description=Storage platform; FreeNAS successor for NAS and file sharing."""
+    #   - "homepage.description=Storage platform; FreeNAS successor for NAS and file sharing."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=truenas.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20335"

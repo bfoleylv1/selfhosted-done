@@ -1,12 +1,12 @@
 # selfhosted-done
 
-A library of **541** Docker Compose + Docker Swarm stacks for self-hosted services. Each folder contains a working `docker-compose.yml` (single host) and `swarm/docker-stack.yml` (cluster), with healthchecks, Homepage labels, and config/data volume mounts.
+A library of **545** Docker Compose + Docker Swarm stacks for self-hosted services. Each folder contains a working `docker-compose.yml` (single host) and `swarm/docker-stack.yml` (cluster), with healthchecks, Homepage labels, and config/data volume mounts.
 
 Every stack was generated from the project's real upstream image and tagged with its actual category and host port. Descriptions come from each project's official catalog/repo where available, and a clean short summary for every service.
 
 ## At a glance
 
-- **Services:** 541
+- **Services:** 545
 - **With GPU / hardware-acceleration blocks:** 50 (commented out — uncomment to enable)
 - **Categories:** 34
 - **Layout per service:** `docker-compose.yml`, `swarm/docker-stack.yml`, `config/`, `data/`
@@ -31,223 +31,227 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 
 ## Services by category
 
-### Self Hosting Solutions (213)
+### Self Hosting Solutions (217)
 
 | Service | Image | Port | GPU | Description |
 |---|---|---|:--:|---|
-| [42Links](./42links) | `node:20-alpine` | `8080` | — | Self-hosted bookmark and link dashboard. |
-| [92Five](./92five) | `php:8.2-apache` | `20393` | — | Self-hosted project management and collaboration tool. |
-| [Adyen Proxy](./adyen-proxy) | `node:20-alpine` | `20396` | — | Reverse proxy / bridge for the Adyen payment API. |
-| [Agent Vault](./agent-vault) | `hashicorp/vault:latest` | `20398` | — | Open-source HTTP credential proxy and vault that brokers API credentials for AI agents without exposing the secrets. |
-| [Akkoma](./akkoma) | `akkoma/akkoma:latest` | `20400` | — | Lightweight federated microblogging server (ActivityPub, Mastodon-compatible). |
+| [42Links](./42links) | `node:20-alpine` | `8080` | — | Self-hosted bookmark and link dashboard |
+| [92Five](./92five) | `php:8.2-apache` | `20393` | — | Self-hosted project management and collaboration tool |
+| [Adyen Proxy](./adyen-proxy) | `node:20-alpine` | `20396` | — | Reverse proxy / bridge for the Adyen payment API |
+| [Agent Vault](./agent-vault) | `hashicorp/vault:latest` | `20398` | — | Open-source HTTP credential proxy and vault that brokers API credentials for AI agents without exposing the secrets |
+| [Akkoma](./akkoma) | `akkoma/akkoma:latest` | `20400` | — | Lightweight federated microblogging server (ActivityPub, Mastodon-compatible) |
 | [Alfresco](./alfresco) | `alfresco/alfresco-content-repository-community:latest` | `20408` | — | Alfresco self-hosted service. |
 | [Aliasvault](./aliasvault) | `ghcr.io/aliasvault/aliasvault:latest` | `20409` | — | Aliasvault self-hosted service. |
 | [Answer](./answer) | `answerdev/answer:latest` | `20411` | — | Answer self-hosted service. |
 | [Anythingllm](./anythingllm) | `mintplexlabs/anythingllm:latest` | `20412` | ✅ | Anythingllm self-hosted service. |
-| [Appwrite](./appwrite) | `appwrite/appwrite:1.6.0` | `20003` | — | Open-source backend-as-a-service (BaaS) for web and mobile apps. |
+| [Appwrite](./appwrite) | `appwrite/appwrite:1.6.0` | `20003` | — | Open-source backend-as-a-service (BaaS) for web and mobile apps |
 | [Archivebox](./archivebox) | `ghcr.io/archivebox/archivebox:latest` | `20413` | — | Archivebox self-hosted service. |
-| [B1Gmail](./b1gMail) | `php:8.2-apache` | `20006` | — | Self-hosted webmail and mail server suite. |
-| [Baikal](./baikal) | `ckulka/baikal:nginx` | `20009` | — | Lightweight CalDAV and CardDAV server. |
-| [Bamboo](./bamboo) | `atlassian/bamboo:latest` | `8085` | — | Atlassian continuous integration and deployment server (commercial). |
-| [Bar Assistant](./bar-assistant) | `barassistant/server:v5` | `20010` | — | Self-hosted cocktail and drink recipe manager. |
-| [Booklore](./booklore) | `ghcr.io/booklore-app/booklore:latest` | `6060` | — | Self-hosted book library and reading tracker. |
-| [Browserstack Turboscale](./browserstack-turboscale) | `alpine:3.20` | `20019` | — | BrowserStack TurboScale - self-hosted device testing infrastructure (commercial). |
-| [Buddy Enterprise](./buddy-enterprise) | `debian:12-slim` | `20020` | — | Buddy Enterprise - self-hosted CI/CD automation server (commercial). |
+| [B1Gmail](./b1gMail) | `php:8.2-apache` | `20006` | — | Self-hosted webmail and mail server suite |
+| [Baikal](./baikal) | `ckulka/baikal:nginx` | `20009` | — | Lightweight CalDAV and CardDAV server |
+| [Bamboo](./bamboo) | `atlassian/bamboo:latest` | `8085` | — | Atlassian continuous integration and deployment server (commercial) |
+| [Bar Assistant](./bar-assistant) | `barassistant/server:v5` | `20010` | — | Self-hosted cocktail and drink recipe manager |
+| [Booklore](./booklore) | `ghcr.io/booklore-app/booklore:latest` | `6060` | — | Self-hosted book library and reading tracker |
+| [Browserstack Turboscale](./browserstack-turboscale) | `alpine:3.20` | `20019` | — | BrowserStack TurboScale - self-hosted device testing infrastructure (commercial) |
+| [Buddy Enterprise](./buddy-enterprise) | `debian:12-slim` | `20020` | — | Buddy Enterprise - self-hosted CI/CD automation server (commercial) |
 | [Bumpress](./bumpress) | `wordpress:latest` | `20419` | — | Bumpress self-hosted service. |
-| [C15T](./c15t) | `node:20-alpine` | `20021` | — | Open-source consent and privacy management platform. |
+| [C15T](./c15t) | `node:20-alpine` | `20021` | — | Open-source consent and privacy management platform |
 | [Calibre](./calibre) | `linuxserver/calibre:latest` | `8083` | — | Calibre self-hosted service. |
-| [Canvas Lms](./canvas-lms) | `instructure/canvas-lms:stable` | `3000` | — | Open-source learning management system (LMS). |
-| [Cap](./cap) | `alpine:3.20` | `20023` | — | Open-source screen recording and sharing tool. |
-| [Castopod](./castopod) | `castopod/castopod:latest` | `20024` | ✅ | Self-hosted podcast hosting platform with ActivityPub federation. |
-| [Centrifugo](./centrifugo) | `centrifugo/centrifugo:v5` | `20025` | — | Real-time messaging server (WebSocket/SSE) for live updates. |
-| [Cerbos](./cerbos) | `ghcr.io/cerbos/cerbos:latest` | `3592` | — | Open-source fine-grained authorization / access-control engine. |
-| [Cgit](./cgit) | `alpine:3.20` | `20027` | — | Lightweight web frontend for Git repositories. |
+| [Canvas Lms](./canvas-lms) | `instructure/canvas-lms:stable` | `3000` | — | Open-source learning management system (LMS) |
+| [Cap](./cap) | `alpine:3.20` | `20023` | — | Open-source screen recording and sharing tool |
+| [Castopod](./castopod) | `castopod/castopod:latest` | `20024` | ✅ | Self-hosted podcast hosting platform with ActivityPub federation |
+| [Centrifugo](./centrifugo) | `centrifugo/centrifugo:v5` | `20025` | — | Real-time messaging server (WebSocket/SSE) for live updates |
+| [Cerbos](./cerbos) | `ghcr.io/cerbos/cerbos:latest` | `3592` | — | Open-source fine-grained authorization / access-control engine |
+| [Cgit](./cgit) | `alpine:3.20` | `20027` | — | Lightweight web frontend for Git repositories |
 | [Changedetection](./changedetection) | `dgtlmoon/changedetection.io:latest` | `20422` | — | Changedetection self-hosted service. |
 | [Claude Code](./claude-code) | `anthropics/claude-code:latest` | `20530` | — | Claude Code self-hosted service. |
-| [Cloudron](./cloudron) | `ubuntu:24.04` | `20033` | — | Self-hosted PaaS for installing and managing web apps. |
-| [Cluster Control](./cluster-control) | `severalnines/clustercontrol:latest` | `20034` | — | Severalnines ClusterControl - database cluster management and monitoring. |
-| [Cockpit](./cockpit) | `quay.io/cockpit/ws:latest` | `9090` | — | Web-based Linux server administration dashboard. |
-| [Collabora Online](./collabora-online) | `collabora/code:latest` | `9980` | — | Self-hosted LibreOffice-based online office suite. |
-| [Comfyui](./comfyui) | `ghcr.io/ai-dock/comfyui:latest` | `8188` | ✅ | Node-based graphical UI for Stable Diffusion / generative AI. |
-| [Commentario](./commentario) | `registry.gitlab.com/comentario/comentario:latest` | `20036` | — | Self-hosted comment system for static sites. |
-| [Conduit](./conduit) | `matrixconduit/matrix-conduit:latest` | `6167` | — | Lightweight Matrix homeserver written in Rust. |
+| [Cloudron](./cloudron) | `ubuntu:24.04` | `20033` | — | Self-hosted PaaS for installing and managing web apps |
+| [Cluster Control](./cluster-control) | `severalnines/clustercontrol:latest` | `20034` | — | Severalnines ClusterControl - database cluster management and monitoring |
+| [Cockpit](./cockpit) | `quay.io/cockpit/ws:latest` | `9090` | — | Web-based Linux server administration dashboard |
+| [Collabora Online](./collabora-online) | `collabora/code:latest` | `9980` | — | Self-hosted LibreOffice-based online office suite |
+| [Comfyui](./comfyui) | `ghcr.io/ai-dock/comfyui:latest` | `8188` | ✅ | Node-based graphical UI for Stable Diffusion / generative AI |
+| [Commentario](./commentario) | `registry.gitlab.com/comentario/comentario:latest` | `20036` | — | Self-hosted comment system for static sites |
+| [Conduit](./conduit) | `matrixconduit/matrix-conduit:latest` | `6167` | — | Lightweight Matrix homeserver written in Rust |
 | [Crucial](./crucial) | `alpine:3.20` | `20038` | — | Self-hosted service. |
 | [Daisy](./daisy) | `alpine:3.20` | `20040` | — | Self-hosted service. |
-| [Datasette](./datasette) | `datasetteproject/datasette:latest` | `8001` | — | Explore and publish SQLite databases as JSON APIs and dashboards. |
-| [Davical](./davical) | `php:8.2-apache` | `20041` | — | CalDAV server for calendar sharing. |
-| [Davis](./davis) | `ghcr.io/tchapi/davis:latest` | `20042` | — | Self-hosted CalDAV/CardDAV server (PHP). |
+| [Datasette](./datasette) | `datasetteproject/datasette:latest` | `8001` | — | Explore and publish SQLite databases as JSON APIs and dashboards |
+| [Davical](./davical) | `php:8.2-apache` | `20041` | — | CalDAV server for calendar sharing |
+| [Davis](./davis) | `ghcr.io/tchapi/davis:latest` | `20042` | — | Self-hosted CalDAV/CardDAV server (PHP) |
 | [Debops](./debops) | `debops/debops:latest` | `20434` | — | Debops self-hosted service. |
-| [Depay](./depay) | `node:20-alpine` | `20043` | — | Self-hosted crypto payment processor. |
+| [Depay](./depay) | `node:20-alpine` | `20043` | — | Self-hosted crypto payment processor |
 | [Dify](./dify) | `langgenius/dify-api:latest` | `20531` | ✅ | Dify self-hosted service. |
 | [Discourse](./discourse) | `discourse/discourse:latest` | `20436` | — | Discourse self-hosted service. |
 | [Docuddle](./docuddle) | `alpine:3.20` | `20046` | — | Self-hosted service. |
-| [Documenso](./documenso) | `documenso/documenso:latest` | `20047` | — | Open-source DocuSign alternative for electronic signatures. |
-| [Dpaste](./dpaste) | `python:3.11-slim` | `20050` | — | Self-hosted pastebin / code snippet service. |
-| [Dreamfactory](./dreamfactory) | `dreamfactorysoftware/df-docker:latest` | `20051` | — | Auto-generated REST API backend for databases. |
-| [Druid](./druid) | `apache/druid:31.0.0` | `20053` | — | Real-time analytics database (OLAP). |
-| [Duckduckgo Proxy](./duckduckgo-proxy) | `benbusby/whoogle-search:latest` | `5000` | — | Self-hosted proxy for the DuckDuckGo search API. |
-| [Easypanel](./easypanel) | `easypanel/easypanel:latest` | `20056` | — | Modern self-hosted PaaS control panel for Docker apps. |
-| [Ejabberd](./ejabberd) | `ejabberd/ecs:latest` | `5280` | — | Robust XMPP / Jabber messaging server. |
+| [Documenso](./documenso) | `documenso/documenso:latest` | `20047` | — | Open-source DocuSign alternative for electronic signatures |
+| [Dpaste](./dpaste) | `python:3.11-slim` | `20050` | — | Self-hosted pastebin / code snippet service |
+| [Dreamfactory](./dreamfactory) | `dreamfactorysoftware/df-docker:latest` | `20051` | — | Auto-generated REST API backend for databases |
+| [Druid](./druid) | `apache/druid:31.0.0` | `20053` | — | Real-time analytics database (OLAP) |
+| [Duckduckgo Proxy](./duckduckgo-proxy) | `benbusby/whoogle-search:latest` | `5000` | — | Self-hosted proxy for the DuckDuckGo search API |
+| [Easypanel](./easypanel) | `easypanel/easypanel:latest` | `20056` | — | Modern self-hosted PaaS control panel for Docker apps |
+| [Ejabberd](./ejabberd) | `ejabberd/ecs:latest` | `5280` | — | Robust XMPP / Jabber messaging server |
 | [Ekso](./ekso) | `alpine:3.20` | `20057` | — | Self-hosted service. |
 | [Element](./element) | `vectorim/element-web:latest` | `20438` | — | Element self-hosted service. |
-| [Element Web](./element-web) | `vectorim/element-web:latest` | `20058` | — | Web client for the Matrix decentralized chat protocol. |
+| [Element Web](./element-web) | `vectorim/element-web:latest` | `20058` | — | Web client for the Matrix decentralized chat protocol |
 | [Element Web App](./element-web-app) | `vectorim/element-web:latest` | `20059` | — | Matrix client for secure decentralized communication. |
-| [Elixire](./elixire) | `alpine:3.20` | `20060` | — | Self-hosted file hosting service. |
-| [Emqx](./emqx) | `emqx/emqx:latest` | `18083` | — | Scalable open-source MQTT broker for IoT. |
-| [Enclosed](./enclosed) | `ghcr.io/corentinth/enclosed:latest` | `8787` | — | Self-hosted tool for sharing secrets and files securely. |
-| [Engity Bifrost](./engity-bifrost) | `alpine:3.20` | `20061` | — | Engity Bifrost - identity and SSO gateway. |
-| [Epicyon](./epicyon) | `python:3.11-slim` | `20062` | — | Self-hosted ActivityPub federated social server. |
+| [Elixire](./elixire) | `alpine:3.20` | `20060` | — | Self-hosted file hosting service |
+| [Emqx](./emqx) | `emqx/emqx:latest` | `18083` | — | Scalable open-source MQTT broker for IoT |
+| [Enclosed](./enclosed) | `ghcr.io/corentinth/enclosed:latest` | `8787` | — | Self-hosted tool for sharing secrets and files securely |
+| [Engity Bifrost](./engity-bifrost) | `alpine:3.20` | `20061` | — | Engity Bifrost - identity and SSO gateway |
+| [Epicyon](./epicyon) | `python:3.11-slim` | `20062` | — | Self-hosted ActivityPub federated social server |
 | [Ergo](./ergo) | `ergochat/ergo:latest` | `20441` | — | Ergo self-hosted service. |
-| [Excalidraw](./excalidraw) | `excalidraw/excalidraw:latest` | `20064` | — | Virtual whiteboard for hand-drawn diagrams. |
+| [Excalidraw](./excalidraw) | `excalidraw/excalidraw:latest` | `20064` | — | Virtual whiteboard for hand-drawn diagrams |
 | [Fmd Server](./fmd-server) | `golang:1.23-alpine` | `20071` | — | Self-hosted service. |
-| [Formio](./formio) | `formio/formio:latest` | `3001` | — | Form and API platform for building data-driven forms and apps. |
-| [Forward Email](./forward-email) | `node:20-alpine` | `20074` | — | Open-source email forwarding and alias service. |
-| [Framadate](./framadate) | `php:8.2-apache` | `20076` | — | Self-hosted poll and meeting-scheduling tool. |
-| [Fredy](./fredy) | `ghcr.io/orangecoding/fredy:latest` | `9998` | — | Self-hosted price comparison and shopping tool. |
-| [Freepbx](./freepbx) | `debian:12-slim` | `20077` | — | Web-based open-source PBX built on Asterisk. |
-| [Freeswitch](./freeswitch) | `safarov/freeswitch:latest` | `20078` | — | Open-source telephony platform / softswitch (VoIP). |
-| [Frigate](./frigate) | `ghcr.io/blakeblackshear/frigate:stable` | `20081` | ✅ | AI-powered network video recorder (NVR) for camera streams. |
+| [Formio](./formio) | `formio/formio:latest` | `3001` | — | Form and API platform for building data-driven forms and apps |
+| [Forward Email](./forward-email) | `node:20-alpine` | `20074` | — | Open-source email forwarding and alias service |
+| [Framadate](./framadate) | `php:8.2-apache` | `20076` | — | Self-hosted poll and meeting-scheduling tool |
+| [Fredy](./fredy) | `ghcr.io/orangecoding/fredy:latest` | `9998` | — | Self-hosted price comparison and shopping tool |
+| [Freepbx](./freepbx) | `debian:12-slim` | `20077` | — | Web-based open-source PBX built on Asterisk |
+| [Freeswitch](./freeswitch) | `safarov/freeswitch:latest` | `20078` | — | Open-source telephony platform / softswitch (VoIP) |
+| [Frigate](./frigate) | `ghcr.io/blakeblackshear/frigate:stable` | `20081` | ✅ | AI-powered network video recorder (NVR) for camera streams |
 | [Full Help](./full-help) | `alpine:3.20` | `20083` | — | Self-hosted service. |
-| [Fusio](./fusio) | `fusio/fusio:latest` | `20085` | — | Open-source API management platform. |
-| [Gamevault](./gamevault) | `phalcode/gamevault-backend:latest` | `20086` | — | Self-hosted video game library manager. |
-| [Garagehq](./garagehq) | `dxflrs/garage:v1.0.1` | `3900` | — | Lightweight S3-compatible distributed object storage. |
-| [Gaseous Server](./gaseous-server) | `gaseousgames/gaseousserver:latest` | `5198` | — | Self-hosted video game collection / ROM manager. |
-| [Gathio](./gathio) | `ghcr.io/lowercasename/gathio:latest` | `20087` | — | Self-hosted event page and RSVP host. |
-| [Geo2Tz](./geo2tz) | `noandrea/geo2tz:latest` | `20088` | — | Convert geographic coordinates to a timezone. |
-| [Ghostery](./ghostery) | `alpine:3.20` | `20089` | — | Privacy / tracker-blocking browser extension (commercial). |
-| [Github Ntfy](./github-ntfy) | `binwiederhier/ntfy:latest` | `20091` | — | ntfy push notifications for GitHub events. |
-| [Github Runner](./github-runner) | `myoung34/github-runner:latest` | `20092` | — | Self-hosted GitHub Actions runner. |
-| [Glance](./glance) | `glanceapp/glance:latest` | `20094` | — | Self-hosted dashboard for your homelab and services. |
-| [Glitchtip](./glitchtip) | `glitchtip/glitchtip:latest` | `20095` | — | Open-source error tracking (Sentry alternative). |
-| [Globaleaks](./globaleaks) | `globaleaks/globaleaks:latest` | `20096` | — | Open-source whistleblowing / secure submission platform. |
-| [Go Feature Flag](./go-feature-flag) | `thomaspoignant/go-feature-flag:latest` | `1031` | — | Feature flag management system (Go). |
+| [Fusio](./fusio) | `fusio/fusio:latest` | `20085` | — | Open-source API management platform |
+| [Gamevault](./gamevault) | `phalcode/gamevault-backend:latest` | `20086` | — | Self-hosted video game library manager |
+| [Garagehq](./garagehq) | `dxflrs/garage:v1.0.1` | `3900` | — | Lightweight S3-compatible distributed object storage |
+| [Gaseous Server](./gaseous-server) | `gaseousgames/gaseousserver:latest` | `5198` | — | Self-hosted video game collection / ROM manager |
+| [Gathio](./gathio) | `ghcr.io/lowercasename/gathio:latest` | `20087` | — | Self-hosted event page and RSVP host |
+| [Geo2Tz](./geo2tz) | `noandrea/geo2tz:latest` | `20088` | — | Convert geographic coordinates to a timezone |
+| [Ghostery](./ghostery) | `alpine:3.20` | `20089` | — | Privacy / tracker-blocking browser extension (commercial) |
+| [Github Ntfy](./github-ntfy) | `binwiederhier/ntfy:latest` | `20091` | — | ntfy push notifications for GitHub events |
+| [Github Runner](./github-runner) | `myoung34/github-runner:latest` | `20092` | — | Self-hosted GitHub Actions runner |
+| [Glance](./glance) | `glanceapp/glance:latest` | `20094` | — | Self-hosted dashboard for your homelab and services |
+| [Glitchtip](./glitchtip) | `glitchtip/glitchtip:latest` | `20095` | — | Open-source error tracking (Sentry alternative) |
+| [Globaleaks](./globaleaks) | `globaleaks/globaleaks:latest` | `20096` | — | Open-source whistleblowing / secure submission platform |
+| [Go Feature Flag](./go-feature-flag) | `thomaspoignant/go-feature-flag:latest` | `1031` | — | Feature flag management system (Go) |
 | [Gomodel](./gomodel) | `golang:1.23-alpine` | `20099` | — | GoModel: open-source AI gateway / control plane proxy with an OpenAI- and Anthropic-compatible API (a LiteLLM alternative). — [site](https://github.com/ENTERPILOT/GoModel) |
-| [Google Cse Proxy](./google-cse-proxy) | `node:20-alpine` | `20100` | — | Proxy for the Google Custom Search Engine API. |
+| [Google Cse Proxy](./google-cse-proxy) | `node:20-alpine` | `20100` | — | Proxy for the Google Custom Search Engine API |
 | [Gordian](./gordian) | `alpine:3.20` | `20101` | — | Self-hosted service. |
 | [Gotify](./gotify) | `gotify/server:latest` | `20448` | — | Gotify self-hosted service. |
 | [Habitica](./habitica) | `habitica/habitica:latest` | `20451` | — | Habitica self-hosted service. |
 | [Halo](./halo) | `halohub/halo:latest` | `20452` | — | Halo self-hosted service. |
 | [Homeassistant](./homeassistant) | `ghcr.io/home-assistant/home-assistant:stable` | `20455` | — | Homeassistant self-hosted service. |
-| [Homer](./homer) | `b4bz/homer:latest` | `20112` | — | Static dashboard / startpage for your homelab. |
+| [Homer](./homer) | `b4bz/homer:latest` | `20112` | — | Static dashboard / startpage for your homelab |
 | [Hoppscotch](./hoppscotch) | `hoppscotch/hoppscotch:latest` | `20456` | — | Hoppscotch self-hosted service. |
 | [Immich](./immich) | `ghcr.io/immich-app/immich-server:release` | `2283` | ✅ | Immich self-hosted service. |
-| [Jellyfin Library](./jellyfin-library) | `jellyfin/jellyfin:latest` | `20118` | — | Tool for managing Jellyfin media libraries. |
-| [Kanboard](./kanboard) | `kanboard/kanboard:latest` | `20121` | — | Simple kanban board for project management. |
+| [Jellyfin Library](./jellyfin-library) | `jellyfin/jellyfin:latest` | `20118` | — | Tool for managing Jellyfin media libraries |
+| [Kanboard](./kanboard) | `kanboard/kanboard:latest` | `20121` | — | Simple kanban board for project management |
 | [Langflow](./langflow) | `langflowai/langflow:latest` | `20463` | ✅ | Langflow self-hosted service. |
 | [Libervrt](./libervrt) | `lscr.io/linuxserver/emby:latest` | `20139` | — | Self-hosted service. |
 | [Librechat](./librechat) | `librechat/librechat:latest` | `20465` | — | Librechat self-hosted service. |
-| [Litellm](./litellm) | `ghcr.io/berriai/litellm:main-latest` | `4000` | ✅ | Proxy gateway for 100+ LLM providers with load balancing and fallbacks. |
+| [Litellm](./litellm) | `ghcr.io/berriai/litellm:main-latest` | `4000` | ✅ | Proxy gateway for 100+ LLM providers with load balancing and fallbacks |
 | [Lms](./lms) | `lmscommunity/lyrionmusicserver:latest` | `20142` | — | Frappe LMS: 100% open-source learning management system. — [site](https://github.com/frappe/lms) |
 | [Lobechat](./lobechat) | `lobehub/lobe-chat:latest` | `20469` | — | Lobechat self-hosted service. |
-| [Lxd](./lxd) | `ubuntu:24.04` | `20144` | ✅ | System container and virtual machine manager (LXC). |
-| [Mollie Proxy](./mollie-proxy) | `node:20-alpine` | `20160` | — | Proxy for the Mollie payment API. |
-| [Netlify](./netlify) | `node:20-alpine` | `20162` | — | Platform for deploying static / Jamstack sites (open-core). |
-| [Nextchat](./nextchat) | `yidadaa/chatgpt-next-web:latest` | `20164` | — | Next-generation web UI for ChatGPT and other LLMs. |
-| [Notion Clone](./notion-clone) | `appflowyinc/appflowy_cloud:latest` | `20170` | — | Open-source Notion alternative for note-taking. |
-| [Online Invoicing](./online-invoicing) | `php:8.2-apache` | `20173` | — | Self-hosted invoicing / billing tool. |
+| [Lxd](./lxd) | `ubuntu:24.04` | `20144` | ✅ | System container and virtual machine manager (LXC) |
+| [Metabase](./metabase) | `metabase/metabase:latest` | `20553` | — | Metabase self-hosted service. |
+| [Metube](./metube) | `alexta69/metube:latest` | `20475` | — | Metube self-hosted service. |
+| [Mindsdb](./mindsdb) | `mindsdb/mindsdb:latest` | `20476` | — | Mindsdb self-hosted service. |
+| [Mollie Proxy](./mollie-proxy) | `node:20-alpine` | `20160` | — | Proxy for the Mollie payment API |
+| [Mylar3](./mylar3) | `linuxserver/mylar3:latest` | `20539` | — | Mylar3 self-hosted service. |
+| [Netlify](./netlify) | `node:20-alpine` | `20162` | — | Platform for deploying static / Jamstack sites (open-core) |
+| [Nextchat](./nextchat) | `yidadaa/chatgpt-next-web:latest` | `20164` | — | Next-generation web UI for ChatGPT and other LLMs |
+| [Notion Clone](./notion-clone) | `appflowyinc/appflowy_cloud:latest` | `20170` | — | Open-source Notion alternative for note-taking |
+| [Online Invoicing](./online-invoicing) | `php:8.2-apache` | `20173` | — | Self-hosted invoicing / billing tool |
 | [Openclaw](./openclaw) | `ghcr.io/openclaw/openclaw:latest` | `20175` | — | OpenClaw: self-hosted personal AI assistant (cross-platform). — [site](https://github.com/openclaw/openclaw) |
-| [Opencode](./opencode) | `node:20-alpine` | `20176` | — | Open-source AI coding agent / assistant. |
-| [Organizr](./organizr) | `organizr/organizr:latest` | `20185` | — | Organize your homelab tabs into a single login dashboard. |
-| [Para](./para) | `eclipse-temurin:17-jre` | `20190` | — | Flexible open-source backend framework / object storage. |
-| [Paypal Proxy](./paypal-proxy) | `node:20-alpine` | `20196` | — | Proxy for the PayPal payment API. |
-| [Pgdog](./pgdog) | `ghcr.io/pgdogdev/pgdog:latest` | `20200` | — | PostgreSQL connection pooler and proxy. |
+| [Opencode](./opencode) | `node:20-alpine` | `20176` | — | Open-source AI coding agent / assistant |
+| [Organizr](./organizr) | `organizr/organizr:latest` | `20185` | — | Organize your homelab tabs into a single login dashboard |
+| [Para](./para) | `eclipse-temurin:17-jre` | `20190` | — | Flexible open-source backend framework / object storage |
+| [Paypal Proxy](./paypal-proxy) | `node:20-alpine` | `20196` | — | Proxy for the PayPal payment API |
+| [Pgdog](./pgdog) | `ghcr.io/pgdogdev/pgdog:latest` | `20200` | — | PostgreSQL connection pooler and proxy |
 | [Phice](./phice) | `alpine:3.20` | `20201` | — | Self-hosted service. |
-| [Phorge](./phorge) | `php:8.2-apache` | `20202` | — | Open-source project management and collaboration platform (Phabricator fork). |
-| [Piefed](./piefed) | `python:3.11-slim` | `20204` | — | Federated feed aggregator (ActivityPub). |
-| [Plausible](./plausible) | `ghcr.io/plausible/community-edition:v2.1.4` | `20208` | — | Privacy-friendly, open-source web analytics. |
-| [Plunker](./plunker) | `node:20-alpine` | `20211` | — | Online code editor / playground for web development. |
-| [Pocket Id](./pocket-id) | `ghcr.io/pocket-id/pocket-id:latest` | `1411` | — | Simple SSO identity provider with passkey support. |
-| [Pocketbase](./pocketbase) | `ghcr.io/muchobien/pocketbase:latest` | `8090` | — | Open-source backend (SQLite + realtime + auth) in a single file. |
-| [Portainer](./portainer) | `portainer/portainer-ce:latest` | `9443` | — | Lightweight web UI for managing Docker, Swarm and Kubernetes. |
-| [Postal](./postal) | `ghcr.io/postalserver/postal:latest` | `20214` | — | Full-featured open-source mail server. |
-| [Poste Io](./poste-io) | `analogic/poste.io:latest` | `20215` | — | Self-hosted mail server suite (SMTP/IMAP/POP). |
-| [Proxmox](./proxmox) | `ubuntu:24.04` | `20222` | ✅ | Open-source server virtualization platform (Proxmox VE). |
-| [Pushbits](./pushbits) | `ghcr.io/pushbits/server:latest` | `20225` | — | Self-hosted push notification relay for Android/iOS. |
-| [R2](./r2) | `minio/minio:latest` | `20229` | — | Self-hosted proxy for Cloudflare R2 object storage. |
-| [Radicale](./radicale) | `tomsquest/docker-radicale:latest` | `5232` | — | Simple CalDAV and CardDAV server. |
-| [Redirect](./redirect) | `alpine:3.20` | `20238` | — | Simple HTTP redirect / URL-forwarding service. |
+| [Phorge](./phorge) | `php:8.2-apache` | `20202` | — | Open-source project management and collaboration platform (Phabricator fork) |
+| [Piefed](./piefed) | `python:3.11-slim` | `20204` | — | Federated feed aggregator (ActivityPub) |
+| [Plausible](./plausible) | `ghcr.io/plausible/community-edition:v2.1.4` | `20208` | — | Privacy-friendly, open-source web analytics |
+| [Plunker](./plunker) | `node:20-alpine` | `20211` | — | Online code editor / playground for web development |
+| [Pocket Id](./pocket-id) | `ghcr.io/pocket-id/pocket-id:latest` | `1411` | — | Simple SSO identity provider with passkey support |
+| [Pocketbase](./pocketbase) | `ghcr.io/muchobien/pocketbase:latest` | `8090` | — | Open-source backend (SQLite + realtime + auth) in a single file |
+| [Portainer](./portainer) | `portainer/portainer-ce:latest` | `9443` | — | Lightweight web UI for managing Docker, Swarm and Kubernetes |
+| [Postal](./postal) | `ghcr.io/postalserver/postal:latest` | `20214` | — | Full-featured open-source mail server |
+| [Poste Io](./poste-io) | `analogic/poste.io:latest` | `20215` | — | Self-hosted mail server suite (SMTP/IMAP/POP) |
+| [Proxmox](./proxmox) | `ubuntu:24.04` | `20222` | ✅ | Open-source server virtualization platform (Proxmox VE) |
+| [Pushbits](./pushbits) | `ghcr.io/pushbits/server:latest` | `20225` | — | Self-hosted push notification relay for Android/iOS |
+| [R2](./r2) | `minio/minio:latest` | `20229` | — | Self-hosted proxy for Cloudflare R2 object storage |
+| [Radicale](./radicale) | `tomsquest/docker-radicale:latest` | `5232` | — | Simple CalDAV and CardDAV server |
+| [Redirect](./redirect) | `alpine:3.20` | `20238` | — | Simple HTTP redirect / URL-forwarding service |
 | [Repo Flow](./repo-flow) | `alpine:3.20` | `20240` | — | Self-hosted service. |
-| [Reservo](./reservo) | `reservo/reservo:latest` | `20241` | — | Self-hosted image hosting and sharing script. |
-| [Resourcespace](./resourcespace) | `php:8.2-apache` | `20242` | — | Open-source digital asset management (DAM). |
-| [Restreamer](./restreamer) | `datarhei/restreamer:latest` | `20244` | ✅ | Live video streaming server (RTSP/RTMP restreaming). |
+| [Reservo](./reservo) | `reservo/reservo:latest` | `20241` | — | Self-hosted image hosting and sharing script |
+| [Resourcespace](./resourcespace) | `php:8.2-apache` | `20242` | — | Open-source digital asset management (DAM) |
+| [Restreamer](./restreamer) | `datarhei/restreamer:latest` | `20244` | ✅ | Live video streaming server (RTSP/RTMP restreaming) |
 | [Revent](./revent) | `alpine:3.20` | `20246` | — | Self-hosted service. |
 | [Revert](./revert) | `node:20-alpine` | `20247` | — | Self-hosted service. |
-| [Rgit](./rgit) | `alpine:3.20` | `20248` | — | Self-hosted Git repository manager / viewer. |
-| [Rhode Code](./rhode-code) | `python:3.11-slim` | `20249` | — | Source code management platform (Git/Mercurial/SVN). |
-| [Routr](./routr) | `fonoster/routr:latest` | `20252` | — | SIP server for VoIP and telephony routing. |
-| [Rs Short](./rs-short) | `alpine:3.20` | `20254` | — | Self-hosted URL shortener. |
-| [Rss Bridge](./rss-bridge) | `rssbridge/rss-bridge:latest` | `20256` | — | Generate RSS feeds for websites that don't provide them. |
-| [Rudderstack](./rudderstack) | `rudderlabs/rudder-server:latest` | `20258` | — | Open-source customer data platform (CDP). |
-| [Rukovoditel](./rukovoditel) | `php:8.2-apache` | `20259` | — | Free web-based project management and CRM. |
-| [Sabre Dav](./sabre-dav) | `php:8.2-apache` | `20260` | — | WebDAV, CalDAV and CardDAV server library/framework. |
-| [Salut A Toi](./salut-a-toi) | `alpine:3.20` | `20263` | — | Multipurpose XMPP/Jabber client and ecosystem. |
-| [Sama](./sama) | `alpine:3.20` | `20264` | — | SAMA: next-gen self-hosted chat server and clients (GPL-3.0, Node.js/Docker). — [site](https://github.com/SAMA-Communications/sama-server) |
-| [Seaweedfs](./seaweedfs) | `chrislusf/seaweedfs:latest` | `9333` | — | Distributed object, block and file storage system. |
-| [Sendy](./sendy) | `php:8.2-apache` | `20271` | — | Self-hosted email marketing platform (Amazon SES based). |
+| [Rgit](./rgit) | `alpine:3.20` | `20248` | — | Self-hosted Git repository manager / viewer |
+| [Rhode Code](./rhode-code) | `python:3.11-slim` | `20249` | — | Source code management platform (Git/Mercurial/SVN) |
+| [Routr](./routr) | `fonoster/routr:latest` | `20252` | — | SIP server for VoIP and telephony routing |
+| [Rs Short](./rs-short) | `alpine:3.20` | `20254` | — | Self-hosted URL shortener |
+| [Rss Bridge](./rss-bridge) | `rssbridge/rss-bridge:latest` | `20256` | — | Generate RSS feeds for websites that don't provide them |
+| [Rudderstack](./rudderstack) | `rudderlabs/rudder-server:latest` | `20258` | — | Open-source customer data platform (CDP) |
+| [Rukovoditel](./rukovoditel) | `php:8.2-apache` | `20259` | — | Free web-based project management and CRM |
+| [Sabre Dav](./sabre-dav) | `php:8.2-apache` | `20260` | — | WebDAV, CalDAV and CardDAV server library/framework |
+| [Salut A Toi](./salut-a-toi) | `alpine:3.20` | `20263` | — | Multipurpose XMPP/Jabber client and ecosystem |
+| [Sama](./sama) | `alpine:3.20` | `20264` | — | SAMA: next-gen self-hosted chat server and clients (GPL-3.0, Node.js/Docker) |
+| [Seaweedfs](./seaweedfs) | `chrislusf/seaweedfs:latest` | `9333` | — | Distributed object, block and file storage system |
+| [Sendy](./sendy) | `php:8.2-apache` | `20271` | — | Self-hosted email marketing platform (Amazon SES based) |
 | [Seppo](./seppo) | `alpine:3.20` | `20273` | — | Self-hosted service. |
-| [Shkeeper](./shkeeper) | `python:3.11-slim` | `20277` | — | Self-hosted crypto payment gateway. |
-| [Signoz](./signoz) | `signoz/query-service:latest` | `20281` | — | Open-source observability platform (traces, metrics, logs). |
-| [Sip3](./sip3) | `alpine:3.20` | `20282` | — | VoIP / SIP monitoring and analysis. |
-| [Smederee](./smederee) | `alpine:3.20` | `20284` | — | Smederee: a frugal platform for building software together, leveraging the Darcs version control system (AGPL-3.0). — [site](https://smeder.ee) |
+| [Shkeeper](./shkeeper) | `python:3.11-slim` | `20277` | — | Self-hosted crypto payment gateway |
+| [Signoz](./signoz) | `signoz/query-service:latest` | `20281` | — | Open-source observability platform (traces, metrics, logs) |
+| [Sip3](./sip3) | `alpine:3.20` | `20282` | — | VoIP / SIP monitoring and analysis |
+| [Smederee](./smederee) | `alpine:3.20` | `20284` | — | Smederee: a frugal platform for building software together, leveraging the Darcs version control system (AGPL-3.0) |
 | [Smite](./smite) | `alpine:3.20` | `20285` | — | Self-hosted service. |
-| [Snypy](./snypy) | `python:3.11-slim` | `20288` | — | Self-hosted code snippet manager. |
-| [Socks5 Proxy Server](./socks5-proxy-server) | `serjs/go-socks5-proxy:latest` | `1080` | — | Self-hosted SOCKS5 proxy server. |
-| [Speed Test](./speed-test) | `openspeedtest/latest:latest` | `20291` | — | Self-hosted network speed-test server. |
-| [Spoolman](./spoolman) | `ghcr.io/donkie/spoolman:latest` | `20293` | — | Filament and spool inventory manager for 3D printing. |
-| [Squidex](./squidex) | `squidex/squidex:latest` | `20296` | — | Open-source headless CMS. |
-| [Srs](./srs) | `ossrs/srs:5` | `1985` | ✅ | Simple, high-performance RTMP/WebRTC streaming server. |
-| [Stack Auth](./stack-auth) | `node:20-alpine` | `20298` | — | Open-source authentication and user management. |
-| [Stalwart Mail](./stalwart-mail) | `stalwartlabs/stalwart:latest` | `20299` | — | All-in-one mail server (SMTP/IMAP/JMAP) written in Rust. |
-| [Stirling Pdf](./stirling-pdf) | `ghcr.io/stirling-tools/stirling-pdf:latest` | `20302` | — | Local PDF manipulation toolkit (merge, split, convert). |
-| [Stripe Proxy](./stripe-proxy) | `node:20-alpine` | `20307` | — | Proxy for the Stripe payment API. |
-| [Stripe Self Hosted](./stripe-self-hosted) | `node:20-alpine` | `20308` | — | Self-hosted Stripe integration / API proxy. |
-| [Subtitle Converter](./subtitle-converter) | `lscr.io/linuxserver/ffmpeg:latest` | `20309` | — | Convert and translate subtitle file formats. |
+| [Snypy](./snypy) | `python:3.11-slim` | `20288` | — | Self-hosted code snippet manager |
+| [Socks5 Proxy Server](./socks5-proxy-server) | `serjs/go-socks5-proxy:latest` | `1080` | — | Self-hosted SOCKS5 proxy server |
+| [Speed Test](./speed-test) | `openspeedtest/latest:latest` | `20291` | — | Self-hosted network speed-test server |
+| [Spoolman](./spoolman) | `ghcr.io/donkie/spoolman:latest` | `20293` | — | Filament and spool inventory manager for 3D printing |
+| [Squidex](./squidex) | `squidex/squidex:latest` | `20296` | — | Open-source headless CMS |
+| [Srs](./srs) | `ossrs/srs:5` | `1985` | ✅ | Simple, high-performance RTMP/WebRTC streaming server |
+| [Stack Auth](./stack-auth) | `node:20-alpine` | `20298` | — | Open-source authentication and user management |
+| [Stalwart Mail](./stalwart-mail) | `stalwartlabs/stalwart:latest` | `20299` | — | All-in-one mail server (SMTP/IMAP/JMAP) written in Rust |
+| [Stirling Pdf](./stirling-pdf) | `ghcr.io/stirling-tools/stirling-pdf:latest` | `20302` | — | Local PDF manipulation toolkit (merge, split, convert) |
+| [Stripe Proxy](./stripe-proxy) | `node:20-alpine` | `20307` | — | Proxy for the Stripe payment API |
+| [Stripe Self Hosted](./stripe-self-hosted) | `node:20-alpine` | `20308` | — | Self-hosted Stripe integration / API proxy |
+| [Subtitle Converter](./subtitle-converter) | `lscr.io/linuxserver/ffmpeg:latest` | `20309` | — | Convert and translate subtitle file formats |
 | [Supers3Cret](./supers3cret) | `alpine:3.20` | `20311` | — | Self-hosted service. |
-| [Supportpal](./supportpal) | `php:8.2-apache` | `20312` | — | Self-hosted helpdesk / support desk software (commercial). |
-| [Surfer](./surfer) | `node:20-alpine` | `20313` | — | Static file hosting and web publishing tool (Cloudron Surfer). |
+| [Supportpal](./supportpal) | `php:8.2-apache` | `20312` | — | Self-hosted helpdesk / support desk software (commercial) |
+| [Surfer](./surfer) | `node:20-alpine` | `20313` | — | Static file hosting and web publishing tool (Cloudron Surfer) |
 | [Surge](./surge) | `node:20-alpine` | `20314` | — | Self-hosted service. |
-| [Svix](./svix) | `svix/svix-server:latest` | `8071` | — | Open-source webhook service and infrastructure. |
-| [Synapse](./synapse) | `matrixdotorg/synapse:latest` | `20318` | — | Reference Matrix homeserver for federated chat. |
+| [Svix](./svix) | `svix/svix-server:latest` | `8071` | — | Open-source webhook service and infrastructure |
+| [Synapse](./synapse) | `matrixdotorg/synapse:latest` | `20318` | — | Reference Matrix homeserver for federated chat |
 | [Teikei](./teikei) | `node:20-alpine` | `20320` | — | Self-hosted service. |
-| [Telebugs](./telebugs) | `ruby:3.3-alpine` | `20321` | — | Self-hosted bug and error tracking service. |
-| [Text Gen Inference](./text-gen-inference) | `ghcr.io/huggingface/text-generation-inference:latest` | `20323` | — | Text generation inference server for LLMs (HuggingFace TGI). |
-| [Thelia](./thelia) | `php:8.2-apache` | `20325` | — | Open-source e-commerce platform (PHP). |
-| [Thumbor](./thumbor) | `ghcr.io/thumbor/thumbor:latest` | `20326` | — | On-the-fly image thumbnail and resize service. |
-| [Tigase](./tigase) | `tigase/tigase-xmpp-server:latest` | `20327` | — | High-performance XMPP / Jabber server. |
-| [Tileserver Gl](./tileserver-gl) | `maptiler/tileserver-gl:latest` | `20328` | — | Serve vector and raster map tiles (Mapbox GL). |
-| [Tinode](./tinode) | `tinode/tinode:latest` | `20330` | — | Instant messaging server with REST and websocket APIs. |
-| [Trailbase](./trailbase) | `trailbase/trailbase:latest` | `20333` | — | Open-source backend (auth + DB + API) written in Rust. |
-| [Trigger Dev](./trigger-dev) | `ghcr.io/triggerdotdev/trigger.dev:v3` | `20334` | — | Open-source background jobs and workflow engine. |
-| [Tuleap](./tuleap) | `tuleap/tuleap-community-edition:latest` | `20336` | — | Open-source ALM and project management (Agile + DevOps). |
-| [Tuwunel](./tuwunel) | `ghcr.io/matrix-construct/tuwunel:latest` | `20338` | — | Matrix homeserver written in Rust. |
+| [Telebugs](./telebugs) | `ruby:3.3-alpine` | `20321` | — | Self-hosted bug and error tracking service |
+| [Text Gen Inference](./text-gen-inference) | `ghcr.io/huggingface/text-generation-inference:latest` | `20323` | — | Text generation inference server for LLMs (HuggingFace TGI) |
+| [Thelia](./thelia) | `php:8.2-apache` | `20325` | — | Open-source e-commerce platform (PHP) |
+| [Thumbor](./thumbor) | `ghcr.io/thumbor/thumbor:latest` | `20326` | — | On-the-fly image thumbnail and resize service |
+| [Tigase](./tigase) | `tigase/tigase-xmpp-server:latest` | `20327` | — | High-performance XMPP / Jabber server |
+| [Tileserver Gl](./tileserver-gl) | `maptiler/tileserver-gl:latest` | `20328` | — | Serve vector and raster map tiles (Mapbox GL) |
+| [Tinode](./tinode) | `tinode/tinode:latest` | `20330` | — | Instant messaging server with REST and websocket APIs |
+| [Trailbase](./trailbase) | `trailbase/trailbase:latest` | `20333` | — | Open-source backend (auth + DB + API) written in Rust |
+| [Trigger Dev](./trigger-dev) | `ghcr.io/triggerdotdev/trigger.dev:v3` | `20334` | — | Open-source background jobs and workflow engine |
+| [Tuleap](./tuleap) | `tuleap/tuleap-community-edition:latest` | `20336` | — | Open-source ALM and project management (Agile + DevOps) |
+| [Tuwunel](./tuwunel) | `ghcr.io/matrix-construct/tuwunel:latest` | `20338` | — | Matrix homeserver written in Rust |
 | [Txtdot](./txtdot) | `node:20-alpine` | `20339` | — | txtdot: HTTP proxy that strips pages down to text, links and images to save bandwidth and block ads/scripts. — [site](https://github.com/TempoWorks/txtdot) |
-| [Url To Png](./url-to-png) | `ghcr.io/browserless/chromium:latest` | `20345` | — | Render URLs to PNG screenshots. |
-| [Vercel](./vercel) | `node:20-alpine` | `20348` | — | Platform for frontend deployment (open-core). |
+| [Url To Png](./url-to-png) | `ghcr.io/browserless/chromium:latest` | `20345` | — | Render URLs to PNG screenshots |
+| [Vercel](./vercel) | `node:20-alpine` | `20348` | — | Platform for frontend deployment (open-core) |
 | [Wagmios](./wagmios) | `alpine:3.20` | `20352` | — | Wagmios: give your AI agent a homelab (self-hosted agent tooling). — [site](https://github.com/mentholmike/wagmios) |
-| [Wakapi](./wakapi) | `ghcr.io/muety/wakapi:latest` | `20353` | — | Self-hosted coding time and activity tracker (WakaTime compatible). |
+| [Wakapi](./wakapi) | `ghcr.io/muety/wakapi:latest` | `20353` | — | Self-hosted coding time and activity tracker (WakaTime compatible) |
 | [Watchcode](./watchcode) | `alpine:3.20` | `20355` | — | Self-hosted service. |
-| [Watchtower](./watchtower) | `containrrr/watchtower:latest` | `20356` | — | Automatically update Docker containers to the latest images. |
-| [Wazo](./wazo) | `debian:12-slim` | `20357` | — | Open-source IP-PBX telephony platform. |
-| [Webiny](./webiny) | `node:20-alpine` | `20360` | — | Open-source serverless CMS and application framework. |
+| [Watchtower](./watchtower) | `containrrr/watchtower:latest` | `20356` | — | Automatically update Docker containers to the latest images |
+| [Wazo](./wazo) | `debian:12-slim` | `20357` | — | Open-source IP-PBX telephony platform |
+| [Webiny](./webiny) | `node:20-alpine` | `20360` | — | Open-source serverless CMS and application framework |
 | [Wikipedia Kiwix](./wikipedia-kiwix) | `ghcr.io/kiwix/kiwix-serve:latest` | `20364` | — | Offline Wikipedia mirror; search Wikimedia projects without internet. |
-| [Wildduck](./wildduck) | `nodemailer/wildduck:latest` | `20365` | — | IMAP/POP3 mail server written in Node.js. |
-| [Wireguard Vpn](./wireguard-vpn) | `lscr.io/linuxserver/wireguard:latest` | `20366` | — | Fast modern VPN using the WireGuard protocol. |
-| [Workadventure](./workadventure) | `thecodingmachine/workadventure-play:master` | `20370` | — | Collaborative virtual office / worlds (MMORPG-style). |
-| [Xandikos](./xandikos) | `ghcr.io/jelmer/xandikos:latest` | `20372` | — | CalDAV server written in Python. |
+| [Wildduck](./wildduck) | `nodemailer/wildduck:latest` | `20365` | — | IMAP/POP3 mail server written in Node.js |
+| [Wireguard Vpn](./wireguard-vpn) | `lscr.io/linuxserver/wireguard:latest` | `20366` | — | Fast modern VPN using the WireGuard protocol |
+| [Workadventure](./workadventure) | `thecodingmachine/workadventure-play:master` | `20370` | — | Collaborative virtual office / worlds (MMORPG-style) |
+| [Xandikos](./xandikos) | `ghcr.io/jelmer/xandikos:latest` | `20372` | — | CalDAV server written in Python |
 | [Xcpg](./xcpg) | `ubuntu:24.04` | `20373` | ✅ | Self-hosted service. |
-| [Yarn Social](./yarn-social) | `prologic/yarnd:latest` | `20375` | — | Self-hosted microblog (Yarn.social, Gemtext-based). |
-| [Ydl Api Ng](./ydl-api-ng) | `python:3.11-slim` | `20376` | — | REST API wrapper for youtube-dl / yt-dlp downloads. |
-| [Yeti Switch](./yeti-switch) | `alpine:3.20` | `20377` | — | Yeti Switch - softswitch / SBC for VoIP. |
-| [Yetishare](./yetishare) | `php:8.2-apache` | `20378` | — | Self-hosted file hosting and sharing script. |
-| [Yourls](./yourls) | `yourls:latest` | `20379` | — | Self-hosted URL shortener. |
-| [Youtubedl Server](./youtubedl-server) | `nbr23/youtube-dl-server:latest` | `20380` | — | Web UI for youtube-dl downloads. |
-| [Yt Dlp Web Ui](./yt-dlp-web-ui) | `marcobaobao/yt-dlp-webui:latest` | `3033` | — | Web UI for yt-dlp video downloads. |
-| [Zed](./zed) | `alpine:3.20` | `20381` | — | High-performance multiplayer code editor (server component). |
+| [Yarn Social](./yarn-social) | `prologic/yarnd:latest` | `20375` | — | Self-hosted microblog (Yarn.social, Gemtext-based) |
+| [Ydl Api Ng](./ydl-api-ng) | `python:3.11-slim` | `20376` | — | REST API wrapper for youtube-dl / yt-dlp downloads |
+| [Yeti Switch](./yeti-switch) | `alpine:3.20` | `20377` | — | Yeti Switch - softswitch / SBC for VoIP |
+| [Yetishare](./yetishare) | `php:8.2-apache` | `20378` | — | Self-hosted file hosting and sharing script |
+| [Yourls](./yourls) | `yourls:latest` | `20379` | — | Self-hosted URL shortener |
+| [Youtubedl Server](./youtubedl-server) | `nbr23/youtube-dl-server:latest` | `20380` | — | Web UI for youtube-dl downloads |
+| [Yt Dlp Web Ui](./yt-dlp-web-ui) | `marcobaobao/yt-dlp-webui:latest` | `3033` | — | Web UI for yt-dlp video downloads |
+| [Zed](./zed) | `alpine:3.20` | `20381` | — | High-performance multiplayer code editor (server component) |
 | [Zeit](./zeit) | `node:20-alpine` | `20383` | — | Self-hosted service. |
-| [Zimbra Collaboration](./zimbra-collaboration) | `ubuntu:24.04` | `20387` | — | Open-source email and collaboration suite. |
-| [Zincsearch](./zincsearch) | `public.ecr.aws/zinclabs/zincsearch:latest` | `4080` | — | Lightweight search engine (Elasticsearch alternative). |
+| [Zimbra Collaboration](./zimbra-collaboration) | `ubuntu:24.04` | `20387` | — | Open-source email and collaboration suite |
+| [Zincsearch](./zincsearch) | `public.ecr.aws/zinclabs/zincsearch:latest` | `4080` | — | Lightweight search engine (Elasticsearch alternative) |
 | [Zk Cloudserver](./zk-cloudserver) | `alpine:3.20` | `20388` | — | Self-hosted service. |
-| [Zot Oci Registry](./zot-oci-registry) | `ghcr.io/project-zot/zot-linux-amd64:latest` | `20390` | — | OCI container image registry (Zot). |
+| [Zot Oci Registry](./zot-oci-registry) | `ghcr.io/project-zot/zot-linux-amd64:latest` | `20390` | — | OCI container image registry (Zot) |
 
 ### Analytics (17)
 
@@ -267,7 +271,7 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Openwebui](./openwebui) | `ghcr.io/open-webui/open-webui:main` | `20184` | ✅ | Self-hosted OpenAI-powered web UI; chat with AI models locally. |
 | [Plausible Analytics](./plausible-analytics) | `ghcr.io/plausible/community-edition:v2.1.4` | `20209` | — | Simple, privacy-focused web analytics alternative to Google Analytics. |
 | [Prometheus](./prometheus) | `prom/prometheus:latest` | `20221` | — | Monitoring and alerting toolkit; systems and services monitoring. |
-| [Sentry](./sentry) | `sentry:latest` | `20272` | — | Open-source error tracking tool; monitor and improve software. |
+| [Sentry](./sentry) | `sentry:latest` | `20272` | — | Open-source error tracking tool; monitor and improve software |
 | [Tempo](./tempo) | `grafana/tempo:latest` | `3200` | — | Distributed tracing platform; end-to-end telemetry collection. |
 | [Umami](./umami) | `ghcr.io/umami-software/umami:postgresql-latest` | `20342` | — | Open-source alternative to Google Analytics; privacy-focused. |
 
@@ -343,7 +347,7 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 |---|---|---|:--:|---|
 | [Elasticsearch](./elasticsearch) | `docker.elastic.co/elasticsearch/elasticsearch:8.15.0` | `9200` | ✅ | Distributed search and analytics engine; scalable data store and vector database for production workloads. |
 | [Kiwix](./kiwix) | `ghcr.io/kiwix/kiwix-serve:latest` | `20129` | — | Offline Wikipedia reader; hosts ZIM file format for offline browsing. |
-| [Library Genesis](./library-genesis) | `nginx:alpine` | `20140` | — | Digital library of books, articles, and academic papers. |
+| [Library Genesis](./library-genesis) | `nginx:alpine` | `20140` | — | Digital library of books, articles, and academic papers |
 | [Meilisearch](./meilisearch) | `getmeili/meilisearch:latest` | `7700` | ✅ | Lightning-fast search engine optimized for apps, websites, and workflows with relevant search experiences. |
 | [Metager](./metager) | `php:8.2-fpm` | `20153` | — | German metasearch engine; privacy-focused search results. |
 | [OpenSearch](./opensearch) | `opensearchproject/opensearch:latest` | `20180` | — | Fork of Elasticsearch; community-supported search and analytics suite. |
@@ -460,7 +464,7 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 |---|---|---|:--:|---|
 | [Cassandra](./cassandra) | `cassandra:5` | `9042` | — | Highly scalable NoSQL database; column-family store designed for large datasets. |
 | [Clickhouse](./clickhouse) | `clickhouse/clickhouse-server:latest` | `8123` | ✅ | Column-oriented database management system for OLAP and analytical workloads. |
-| [Couchdb](./couchdb) | `couchdb:3` | `5984` | — | ouchdb-style JSON document database with MVCC and multi-master replication. |
+| [Couchdb](./couchdb) | `couchdb:3` | `5984` | — | ouchdb-style JSON document database with MVCC and multi-master replication |
 | [Duckdb](./duckdb) | `davidgasquez/duckdb:latest` | `20055` | — | In-process SQL OLAP database similar to SQLite but for analytics. |
 | [Influxdb](./influxdb) | `influxdb:2` | `8086` | — | Time-series database optimized for metrics, events, and real-time analytics. |
 | [Mariadb Columnstore](./mariadb-columnstore) | `mariadb/columnstore:latest` | `20150` | — | Columnar storage engine for MariaDB; optimized for analytics workloads. |
@@ -482,7 +486,7 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Hashicorp Vault](./hashicorp-vault) | `hashicorp/vault:latest` | `20109` | — | Secrets management and encryption; secure key storage. |
 | [Ossec](./ossec) | `atomicorp/ossec-docker:latest` | `1514` | — | Host-based intrusion detection system; log analysis and monitoring. |
 | [Snort](./snort) | `ciscotalos/snort3:latest` | `20287` | — | Network intrusion detection and prevention system. |
-| [Splunk](./splunk) | `splunk/splunk:latest` | `20292` | — | Enterprise SIEM platform; log analysis and monitoring. |
+| [Splunk](./splunk) | `splunk/splunk:latest` | `20292` | — | Enterprise SIEM platform; log analysis and monitoring |
 | [Step Certificates](./step-certificates) | `smallstep/step-ca:latest` | `20301` | — | Private CA; X.509 PKI and ACME server. |
 | [Suricata](./suricata) | `jasonish/suricata:latest` | `20315` | — | Network threat detection engine; IDS/IPS/NSM. |
 | [Wazuh](./wazuh) | `wazuh/wazuh-manager:4.9.2` | `55000` | — | Open source security platform; XDR and SIEM capabilities. |
@@ -524,7 +528,7 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 
 | Service | Image | Port | GPU | Description |
 |---|---|---|:--:|---|
-| [Cloudflare R2](./cloudflare-r2) | `minio/minio:latest` | `9000` | — | S3-compatible object storage alternative to S3 with no egress fees. |
+| [Cloudflare R2](./cloudflare-r2) | `minio/minio:latest` | `9000` | — | S3-compatible object storage alternative to S3 with no egress fees |
 | [Filebrowser](./filebrowser) | `filebrowser/filebrowser:latest` | `20069` | — | Web-based file manager with authentication; manages files and folders via browser. |
 | [Ipfs](./ipfs) | `ipfs/kubo:latest` | `5001` | — | Protocol for decentralized file sharing; distributed content addressing. |
 | [Minio](./minio) | `quay.io/minio/minio:latest` | `20157` | — | High-performance object storage; S3-compatible. |
@@ -568,12 +572,12 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 
 | Service | Image | Port | GPU | Description |
 |---|---|---|:--:|---|
-| [Instapaper](./instapaper) | `alpine:3.20` | `20116` | — | Web article saver; read later and save content. |
+| [Instapaper](./instapaper) | `alpine:3.20` | `20116` | — | Web article saver; read later and save content |
 | [Linkace](./linkace) | `linkace/linkace:simple` | `20141` | — | Link shortener and bookmark manager; save and share URLs. |
-| [Pinboard](./pinboard) | `alpine:3.20` | `20205` | — | Social bookmarking service; save and share links. |
-| [Pocket](./pocket) | `alpine:3.20` | `20212` | — | Save articles for later reading; privacy-focused alternative. |
-| [Raindrop Io](./raindrop-io) | `alpine:3.20` | `20231` | — | Bookmarking service; save and organize bookmarks. |
-| [Semantic Scholar](./semantic-scholar) | `python:3.11-slim` | `20269` | — | AI-powered research tool; academic paper search. |
+| [Pinboard](./pinboard) | `alpine:3.20` | `20205` | — | Social bookmarking service; save and share links |
+| [Pocket](./pocket) | `alpine:3.20` | `20212` | — | Save articles for later reading; privacy-focused alternative |
+| [Raindrop Io](./raindrop-io) | `alpine:3.20` | `20231` | — | Bookmarking service; save and organize bookmarks |
+| [Semantic Scholar](./semantic-scholar) | `python:3.11-slim` | `20269` | — | AI-powered research tool; academic paper search |
 | [Shaarli](./shaarli) | `ghcr.io/shaarli/shaarli:latest` | `20276` | — | Minimalist bookmarking service; personal and lightweight. |
 | [Wallabag](./wallabag) | `wallabag/wallabag:latest` | `20354` | — | Read it later; web article scraper and read-later application. |
 | [Zza](./zza) | `alpine:3.20` | `20392` | — | Self-hosted link reader; read and save links for later. |
@@ -596,7 +600,7 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | Service | Image | Port | GPU | Description |
 |---|---|---|:--:|---|
 | [Briar](./briar) | `alpine:3.20` | `20018` | — | Peer-to-peer messaging app; works over Tor and Bluetooth. |
-| [Discord](./discord) | `alpine:3.20` | `20044` | — | Self-hosted Discord alternative; open source communication platform. |
+| [Discord](./discord) | `alpine:3.20` | `20044` | — | Self-hosted Discord alternative; open source communication platform |
 | [Matrix Synapse](./matrix-synapse) | `matrixdotorg/synapse:latest` | `8008` | — | Decentralized communication protocol server; bridges to other services. |
 | [Mattermost](./mattermost) | `mattermost/mattermost-team-edition:latest` | `8065` | — | Open source Slack alternative; self-hosted team chat platform. |
 | [Rocket Chat](./rocket-chat) | `registry.rocket.chat/rocketchat/rocket.chat:latest` | `20250` | — | Web chat platform for teams; built with Meteor.js framework. |
@@ -996,9 +1000,12 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Medusa](./medusa) | Audio | `8081` |
 | [Meilisearch](./meilisearch) | Search Engines | `7700` |
 | [Mesos](./mesos) | Monitoring | `5050` |
+| [Metabase](./metabase) | Self Hosting Solutions | `20553` |
 | [Metager](./metager) | Search Engines | `20153` |
+| [Metube](./metube) | Self Hosting Solutions | `20475` |
 | [Microk8S](./microk8s) | Api Management | `20154` |
 | [Mimir](./mimir) | Monitoring | `20155` |
+| [Mindsdb](./mindsdb) | Self Hosting Solutions | `20476` |
 | [Miniflux](./miniflux) | Rss | `20156` |
 | [Minio](./minio) | File | `20157` |
 | [Misskey](./misskey) | Social | `20158` |
@@ -1006,6 +1013,7 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Mollie Proxy](./mollie-proxy) | Self Hosting Solutions | `20160` |
 | [Mongodb](./mongodb) | Database Management | `27017` |
 | [Mopidy](./mopidy) | Music | `6680` |
+| [Mylar3](./mylar3) | Self Hosting Solutions | `20539` |
 | [MySQL / MariaDB](./mysql-mariadb) | Database Management | `20161` |
 | [Navidrome](./navidrome) | Music | `4533` |
 | [Neo4J](./neo4j) | Database Management | `7474` |

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=github-runner"
-    #   - "homepage.description=Self-hosted GitHub Actions runner."""
+    #   - "homepage.description=Self-hosted GitHub Actions runner."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=github-runner.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20092"

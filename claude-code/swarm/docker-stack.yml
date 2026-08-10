@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=claude-code"
-    #   - "homepage.description=claude-code self-hosted service."
+    #   - "homepage.description=Claude Code self-hosted service."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=claude-code.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20530"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=shkeeper"
-    #   - "homepage.description=Self-hosted crypto payment gateway."""
+    #   - "homepage.description=Self-hosted crypto payment gateway."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=shkeeper.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20277"

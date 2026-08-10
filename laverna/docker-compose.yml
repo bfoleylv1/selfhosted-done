@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=laverna"
-    #   - "homepage.description=Open source alternative to Evernote; JavaScript-based note app."""
+    #   - "homepage.description=Open source alternative to Evernote; JavaScript-based note app."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=laverna.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20137"

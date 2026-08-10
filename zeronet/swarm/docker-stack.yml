@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=zeronet"
-    #   - "homepage.description=Decentralized websites using Bitcoin crypto and BitTorrent swarm."""
+    #   - "homepage.description=Decentralized websites using Bitcoin crypto and BitTorrent swarm."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=zeronet.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20384"

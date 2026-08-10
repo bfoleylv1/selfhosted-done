@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=supers3cret"
-    #   - "homepage.description=Self-hosted service."""
+    #   - "homepage.description=Self-hosted service."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=supers3cret.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20311"

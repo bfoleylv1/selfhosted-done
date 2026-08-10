@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=shopware"
-    #   - "homepage.description=E-commerce platform; open source and enterprise editions available."""
+    #   - "homepage.description=E-commerce platform; open source and enterprise editions available."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=shopware.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20279"

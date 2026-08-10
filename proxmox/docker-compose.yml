@@ -29,7 +29,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=proxmox"
-    #   - "homepage.description=Open-source server virtualization platform (Proxmox VE)."""
+    #   - "homepage.description=Open-source server virtualization platform (Proxmox VE)."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=proxmox.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20222"

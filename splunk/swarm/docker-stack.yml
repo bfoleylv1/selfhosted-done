@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=splunk"
-    #   - "homepage.description=Enterprise SIEM platform; log analysis and monitoring."""
+    #   - "homepage.description=Enterprise SIEM platform; log analysis and monitoring."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=splunk.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20292"

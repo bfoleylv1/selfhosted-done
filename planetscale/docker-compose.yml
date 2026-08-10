@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=planetscale"
-    #   - "homepage.description=Serverless MySQL platform; branchable databases."""
+    #   - "homepage.description=Serverless MySQL platform; branchable databases."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=planetscale.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:15000"

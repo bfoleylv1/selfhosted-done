@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cockpit"
-    #   - "homepage.description=Web-based Linux server administration dashboard."""
+    #   - "homepage.description=Web-based Linux server administration dashboard."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=cockpit.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9090"

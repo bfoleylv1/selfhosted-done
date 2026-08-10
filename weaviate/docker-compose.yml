@@ -37,7 +37,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=weaviate"
-    #   - "homepage.description=GraphQL-native vector database with class-based object storage and search capabilities."""
+    #   - "homepage.description=GraphQL-native vector database with class-based object storage and search capabilities."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=weaviate.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20358"

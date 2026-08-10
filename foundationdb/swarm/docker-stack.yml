@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=foundationdb"
-    #   - "homepage.description=Ordered key-value database; transactions and scalability."""
+    #   - "homepage.description=Ordered key-value database; transactions and scalability."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=foundationdb.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:4500"

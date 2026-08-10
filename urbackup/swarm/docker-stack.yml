@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=urbackup"
-    #   - "homepage.description=Client/server backup solution; efficient backup and recovery."""
+    #   - "homepage.description=Client/server backup solution; efficient backup and recovery."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=urbackup.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:55414"

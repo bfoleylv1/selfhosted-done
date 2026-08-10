@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=grafana"
-    #   - "homepage.description=Analytics and monitoring visualization platform; Grafana dashboards."""
+    #   - "homepage.description=Analytics and monitoring visualization platform; Grafana dashboards."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=grafana.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20104"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=rainloop"
-    #   - "homepage.description=Webmail client; simple and responsive webmail."""
+    #   - "homepage.description=Webmail client; simple and responsive webmail."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=rainloop.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20232"

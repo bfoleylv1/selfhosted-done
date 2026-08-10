@@ -51,7 +51,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=srs"
-    #   - "homepage.description=Simple, high-performance RTMP/WebRTC streaming server."""
+    #   - "homepage.description=Simple, high-performance RTMP/WebRTC streaming server."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=srs.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:1985"

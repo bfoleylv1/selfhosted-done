@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=icehound"
-    #   - "homepage.description=AI-powered tool for incident response and system monitoring."""
+    #   - "homepage.description=AI-powered tool for incident response and system monitoring."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=icehound.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20115"

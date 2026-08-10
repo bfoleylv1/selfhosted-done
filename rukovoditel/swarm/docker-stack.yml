@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=rukovoditel"
-    #   - "homepage.description=Free web-based project management and CRM."""
+    #   - "homepage.description=Free web-based project management and CRM."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=rukovoditel.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20259"

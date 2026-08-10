@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=sourcehut"
-    #   - "homepage.description=Hosting service for open source projects; git hosting and CI."""
+    #   - "homepage.description=Hosting service for open source projects; git hosting and CI."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=sourcehut.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20290"

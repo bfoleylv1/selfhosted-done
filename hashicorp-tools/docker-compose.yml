@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=hashicorp-tools"
-    #   - "homepage.description=Suite of infrastructure tools: Terraform, Vault, Consul, Nomad."""
+    #   - "homepage.description=Suite of infrastructure tools: Terraform, Vault, Consul, Nomad."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=hashicorp-tools.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20108"

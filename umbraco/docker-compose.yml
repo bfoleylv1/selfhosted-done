@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=umbraco"
-    #   - "homepage.description=Open-source CMS; built on .NET and ASP.NET."""
+    #   - "homepage.description=Open-source CMS; built on .NET and ASP.NET."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=umbraco.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20343"

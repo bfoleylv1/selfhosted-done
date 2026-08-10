@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=tempo"
-    #   - "homepage.description=Distributed tracing platform; end-to-end telemetry collection."""
+    #   - "homepage.description=Distributed tracing platform; end-to-end telemetry collection."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=tempo.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:3200"

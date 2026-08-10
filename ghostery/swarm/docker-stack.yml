@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=ghostery"
-    #   - "homepage.description=Privacy / tracker-blocking browser extension (commercial)."""
+    #   - "homepage.description=Privacy / tracker-blocking browser extension (commercial)."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=ghostery.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20089"

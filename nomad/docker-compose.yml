@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=nomad"
-    #   - "homepage.description=Workload orchestrator; schedule and run containers and VMs."""
+    #   - "homepage.description=Workload orchestrator; schedule and run containers and VMs."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=nomad.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:4646"

@@ -51,7 +51,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=ampache"
-    #   - "homepage.description=Web-based audio file manager; provides streaming and management interface."""
+    #   - "homepage.description=Web-based audio file manager; provides streaming and management interface."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=ampache.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20404"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=whoogle"
-    #   - "homepage.description=Google search proxy; minimal Google search in your own server."""
+    #   - "homepage.description=Google search proxy; minimal Google search in your own server."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=whoogle.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20362"

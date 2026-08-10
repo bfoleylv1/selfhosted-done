@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=wiki-js"
-    #   - "homepage.description=Modern and powerful wiki app; built on Node.js with Vue.js frontend."""
+    #   - "homepage.description=Modern and powerful wiki app; built on Node.js with Vue.js frontend."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=wiki-js.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20363"

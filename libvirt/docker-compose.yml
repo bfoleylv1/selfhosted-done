@@ -29,7 +29,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=libvirt"
-    #   - "homepage.description=Open source virtualization API; manage VMs and containers."""
+    #   - "homepage.description=Open source virtualization API; manage VMs and containers."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=libvirt.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:16509"

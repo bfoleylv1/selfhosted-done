@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=sefaria"
-    #   - "homepage.description=Digital library of texts; Jewish texts with search and cross-references."""
+    #   - "homepage.description=Digital library of texts; Jewish texts with search and cross-references."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=sefaria.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20268"

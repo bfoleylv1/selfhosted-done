@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=speed-test"
-    #   - "homepage.description=Self-hosted network speed-test server."""
+    #   - "homepage.description=Self-hosted network speed-test server."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=speed-test.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20291"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=navidrome"
-    #   - "homepage.description=Modern and lightweight Go/NodeJS music server; compatible with Subsonic API."""
+    #   - "homepage.description=Modern and lightweight Go/NodeJS music server; compatible with Subsonic API."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=navidrome.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:4533"

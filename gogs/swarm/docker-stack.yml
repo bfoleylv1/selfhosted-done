@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=gogs"
-    #   - "homepage.description=Simple Git service; lightweight and easy to install."""
+    #   - "homepage.description=Simple Git service; lightweight and easy to install."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=gogs.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20098"

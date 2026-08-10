@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=keycloak"
-    #   - "homepage.description=Open-source Identity and Access Management; OAuth2, OIDC, SAML provider."""
+    #   - "homepage.description=Open-source Identity and Access Management; OAuth2, OIDC, SAML provider."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=keycloak.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20125"

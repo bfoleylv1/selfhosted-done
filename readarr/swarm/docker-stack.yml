@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=readarr"
-    #   - "homepage.description=Book/PDF/EPUB/MOBI/AZW3 article librarian; manages book torrents and Usenet."""
+    #   - "homepage.description=Book/PDF/EPUB/MOBI/AZW3 article librarian; manages book torrents and Usenet."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=readarr.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20235"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=spoolman"
-    #   - "homepage.description=Filament and spool inventory manager for 3D printing."""
+    #   - "homepage.description=Filament and spool inventory manager for 3D printing."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=spoolman.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20293"

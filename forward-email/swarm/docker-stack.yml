@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=forward-email"
-    #   - "homepage.description=Open-source email forwarding and alias service."""
+    #   - "homepage.description=Open-source email forwarding and alias service."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=forward-email.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20074"

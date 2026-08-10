@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=borgbackup"
-    #   - "homepage.description=Deduplicating backup program; efficient storage for backups."""
+    #   - "homepage.description=Deduplicating backup program; efficient storage for backups."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=borgbackup.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20017"

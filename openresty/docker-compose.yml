@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=openresty"
-    #   - "homepage.description=NGINX with Lua; high-performance web platform."""
+    #   - "homepage.description=NGINX with Lua; high-performance web platform."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=openresty.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20179"

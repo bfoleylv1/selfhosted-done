@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=booklore"
-    #   - "homepage.description=Self-hosted book library and reading tracker."""
+    #   - "homepage.description=Self-hosted book library and reading tracker."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=booklore.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:6060"

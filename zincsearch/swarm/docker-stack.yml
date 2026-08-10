@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=zincsearch"
-    #   - "homepage.description=Lightweight search engine (Elasticsearch alternative)."""
+    #   - "homepage.description=Lightweight search engine (Elasticsearch alternative)."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=zincsearch.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:4080"

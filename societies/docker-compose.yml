@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=societies"
-    #   - "homepage.description=Social login provider; bridges social accounts with local accounts."""
+    #   - "homepage.description=Social login provider; bridges social accounts with local accounts."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=societies.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20289"

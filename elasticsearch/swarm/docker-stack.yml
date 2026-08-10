@@ -52,7 +52,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=elasticsearch"
-    #   - "homepage.description=Distributed search and analytics engine; scalable data store and vector database for production workloads."""
+    #   - "homepage.description=Distributed search and analytics engine; scalable data store and vector database for production workloads."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=elasticsearch.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9200"

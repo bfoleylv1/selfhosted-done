@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=webdav"
-    #   - "homepage.description=HTTP-based file management protocol; file sharing over HTTP."""
+    #   - "homepage.description=HTTP-based file management protocol; file sharing over HTTP."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=webdav.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20359"

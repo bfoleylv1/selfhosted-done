@@ -33,7 +33,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=emby"
-    #   - "homepage.description=Media system for organizing and streaming video, music, and photos."""
+    #   - "homepage.description=Media system for organizing and streaming video, music, and photos."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=emby.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8096"

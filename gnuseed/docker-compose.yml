@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=gnuseed"
-    #   - "homepage.description=Distributed social network based on ActivityPub protocol."""
+    #   - "homepage.description=Distributed social network based on ActivityPub protocol."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=gnuseed.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20097"

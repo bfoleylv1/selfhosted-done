@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=teikei"
-    #   - "homepage.description=Self-hosted service."""
+    #   - "homepage.description=Self-hosted service."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=teikei.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20320"

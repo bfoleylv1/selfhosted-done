@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=pushbits"
-    #   - "homepage.description=Self-hosted push notification relay for Android/iOS."""
+    #   - "homepage.description=Self-hosted push notification relay for Android/iOS."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=pushbits.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20225"

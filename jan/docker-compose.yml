@@ -37,7 +37,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=jan"
-    #   - "homepage.description=Desktop app for running open-source models locally with GPU acceleration."""
+    #   - "homepage.description=Desktop app for running open-source models locally with GPU acceleration."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=jan.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:1337"

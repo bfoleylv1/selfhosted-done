@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=framadate"
-    #   - "homepage.description=Self-hosted poll and meeting-scheduling tool."""
+    #   - "homepage.description=Self-hosted poll and meeting-scheduling tool."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=framadate.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20076"

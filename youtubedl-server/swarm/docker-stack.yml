@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=youtubedl-server"
-    #   - "homepage.description=Web UI for youtube-dl downloads."""
+    #   - "homepage.description=Web UI for youtube-dl downloads."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=youtubedl-server.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20380"

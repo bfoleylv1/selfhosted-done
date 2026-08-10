@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=sogo"
-    #   - "homepage.description=Web access to IMAP and CalDAV; groupware solution."""
+    #   - "homepage.description=Web access to IMAP and CalDAV; groupware solution."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=sogo.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20000"

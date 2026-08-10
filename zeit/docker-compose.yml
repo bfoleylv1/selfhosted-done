@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=zeit"
-    #   - "homepage.description=Self-hosted service."""
+    #   - "homepage.description=Self-hosted service."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=zeit.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20383"

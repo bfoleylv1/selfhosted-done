@@ -33,7 +33,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=mopidy"
-    #   - "homepage.description=Extendable music server; Python-based with plugin architecture."""
+    #   - "homepage.description=Extendable music server; Python-based with plugin architecture."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=mopidy.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:6680"

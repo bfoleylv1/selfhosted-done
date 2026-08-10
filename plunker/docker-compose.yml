@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=plunker"
-    #   - "homepage.description=Online code editor / playground for web development."""
+    #   - "homepage.description=Online code editor / playground for web development."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=plunker.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20211"

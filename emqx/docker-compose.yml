@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=emqx"
-    #   - "homepage.description=Scalable open-source MQTT broker for IoT."""
+    #   - "homepage.description=Scalable open-source MQTT broker for IoT."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=emqx.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:18083"

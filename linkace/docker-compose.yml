@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=linkace"
-    #   - "homepage.description=Link shortener and bookmark manager; save and share URLs."""
+    #   - "homepage.description=Link shortener and bookmark manager; save and share URLs."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=linkace.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20141"

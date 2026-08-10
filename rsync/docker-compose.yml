@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=rsync"
-    #   - "homepage.description=Fast and versatile file copying tool; delta sync and backup."""
+    #   - "homepage.description=Fast and versatile file copying tool; delta sync and backup."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=rsync.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20257"

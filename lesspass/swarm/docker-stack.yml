@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=lesspass"
-    #   - "homepage.description=Generate passwords from master password; deterministic password generator."""
+    #   - "homepage.description=Generate passwords from master password; deterministic password generator."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=lesspass.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20138"

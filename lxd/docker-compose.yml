@@ -29,7 +29,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=lxd"
-    #   - "homepage.description=System container and virtual machine manager (LXC)."""
+    #   - "homepage.description=System container and virtual machine manager (LXC)."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=lxd.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20144"

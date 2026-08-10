@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=lobechat"
-    #   - "homepage.description=lobechat self-hosted service."
+    #   - "homepage.description=Lobechat self-hosted service."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=lobechat.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20469"

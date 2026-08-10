@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=flameborn"
-    #   - "homepage.description=Open source media server; modern interface with advanced features."""
+    #   - "homepage.description=Open source media server; modern interface with advanced features."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=flameborn.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20070"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=ejabberd"
-    #   - "homepage.description=Robust XMPP / Jabber messaging server."""
+    #   - "homepage.description=Robust XMPP / Jabber messaging server."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=ejabberd.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:5280"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=umami"
-    #   - "homepage.description=Open-source alternative to Google Analytics; privacy-focused."""
+    #   - "homepage.description=Open-source alternative to Google Analytics; privacy-focused."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=umami.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20342"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=strapi"
-    #   - "homepage.description=Headless CMS; customizable and API-first."""
+    #   - "homepage.description=Headless CMS; customizable and API-first."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=strapi.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20303"

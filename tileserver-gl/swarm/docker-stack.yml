@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=tileserver-gl"
-    #   - "homepage.description=Serve vector and raster map tiles (Mapbox GL)."""
+    #   - "homepage.description=Serve vector and raster map tiles (Mapbox GL)."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=tileserver-gl.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20328"

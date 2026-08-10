@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=freepbx"
-    #   - "homepage.description=Web-based open-source PBX built on Asterisk."""
+    #   - "homepage.description=Web-based open-source PBX built on Asterisk."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=freepbx.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20077"

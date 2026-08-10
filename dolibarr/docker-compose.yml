@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=dolibarr"
-    #   - "homepage.description=Web app to manage business activities; ERP/CRM for small companies."""
+    #   - "homepage.description=Web app to manage business activities; ERP/CRM for small companies."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=dolibarr.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20048"

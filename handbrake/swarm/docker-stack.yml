@@ -51,7 +51,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=handbrake"
-    #   - "homepage.description=Video transcoder; convert videos to optimized formats."""
+    #   - "homepage.description=Video transcoder; convert videos to optimized formats."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=handbrake.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:5800"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=caddy"
-    #   - "homepage.description=Easy to run HTTP web server; automatic HTTPS and simple configuration."""
+    #   - "homepage.description=Easy to run HTTP web server; automatic HTTPS and simple configuration."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=caddy.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20022"

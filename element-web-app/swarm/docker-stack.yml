@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=element-web-app"
-    #   - "homepage.description=Matrix client for secure decentralized communication."""
+    #   - "homepage.description=Matrix client for secure decentralized communication."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=element-web-app.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20059"

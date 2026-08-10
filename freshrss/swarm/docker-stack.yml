@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=freshrss"
-    #   - "homepage.description=Free and open-source web RSS reader; multi-user self-hosted feed reader."""
+    #   - "homepage.description=Free and open-source web RSS reader; multi-user self-hosted feed reader."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=freshrss.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20079"

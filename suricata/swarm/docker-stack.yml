@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=suricata"
-    #   - "homepage.description=Network threat detection engine; IDS/IPS/NSM."""
+    #   - "homepage.description=Network threat detection engine; IDS/IPS/NSM."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=suricata.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20315"

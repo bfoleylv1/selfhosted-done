@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=nfs"
-    #   - "homepage.description=Network File System; share file systems on Unix/Linux."""
+    #   - "homepage.description=Network File System; share file systems on Unix/Linux."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=nfs.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:2049"

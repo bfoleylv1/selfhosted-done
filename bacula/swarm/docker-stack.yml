@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=bacula"
-    #   - "homepage.description=Enterprise backup solution; network backup management."""
+    #   - "homepage.description=Enterprise backup solution; network backup management."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=bacula.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20008"

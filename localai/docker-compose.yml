@@ -37,7 +37,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=localai"
-    #   - "homepage.description=Open-source AI engine for local LLMs, vision, voice, image, and video models."""
+    #   - "homepage.description=Open-source AI engine for local LLMs, vision, voice, image, and video models."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=localai.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20143"

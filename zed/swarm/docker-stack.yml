@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=zed"
-    #   - "homepage.description=High-performance multiplayer code editor (server component)."""
+    #   - "homepage.description=High-performance multiplayer code editor (server component)."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=zed.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20381"

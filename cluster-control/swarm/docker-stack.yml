@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cluster-control"
-    #   - "homepage.description=Severalnines ClusterControl - database cluster management and monitoring."""
+    #   - "homepage.description=Severalnines ClusterControl - database cluster management and monitoring."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=cluster-control.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20034"

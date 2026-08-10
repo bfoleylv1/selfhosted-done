@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=recast"
-    #   - "homepage.description=Media server with transcoding; organize and watch your TV shows/movies."""
+    #   - "homepage.description=Media server with transcoding; organize and watch your TV shows/movies."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=recast.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20237"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=answer"
-    #   - "homepage.description=answer self-hosted service."
+    #   - "homepage.description=Answer self-hosted service."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=answer.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20411"

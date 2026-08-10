@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=synapse"
-    #   - "homepage.description=Reference Matrix homeserver for federated chat."""
+    #   - "homepage.description=Reference Matrix homeserver for federated chat."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=synapse.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20318"

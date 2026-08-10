@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=hyperswitch"
-    #   - "homepage.description=Open-source payments infrastructure; routing, retries, and reconciliation."""
+    #   - "homepage.description=Open-source payments infrastructure; routing, retries, and reconciliation."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=hyperswitch.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20113"

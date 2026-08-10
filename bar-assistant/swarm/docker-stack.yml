@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=bar-assistant"
-    #   - "homepage.description=Self-hosted cocktail and drink recipe manager."""
+    #   - "homepage.description=Self-hosted cocktail and drink recipe manager."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=bar-assistant.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20010"

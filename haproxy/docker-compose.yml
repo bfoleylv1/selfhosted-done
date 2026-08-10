@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=haproxy"
-    #   - "homepage.description=Reliable, high-performance TCP/HTTP load balancer."""
+    #   - "homepage.description=Reliable, high-performance TCP/HTTP load balancer."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=haproxy.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20107"

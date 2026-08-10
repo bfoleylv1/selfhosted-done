@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=appwrite"
-    #   - "homepage.description=Open-source backend-as-a-service (BaaS) for web and mobile apps."""
+    #   - "homepage.description=Open-source backend-as-a-service (BaaS) for web and mobile apps."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=appwrite.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20003"

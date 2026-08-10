@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=outline-vpn"
-    #   - "homepage.description=Secure team network access; Shadowsocks-based proxy."""
+    #   - "homepage.description=Secure team network access; Shadowsocks-based proxy."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=outline-vpn.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20187"

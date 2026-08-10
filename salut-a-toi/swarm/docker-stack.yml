@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=salut-a-toi"
-    #   - "homepage.description=Multipurpose XMPP/Jabber client and ecosystem."""
+    #   - "homepage.description=Multipurpose XMPP/Jabber client and ecosystem."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=salut-a-toi.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20263"

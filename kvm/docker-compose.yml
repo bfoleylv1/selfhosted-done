@@ -29,7 +29,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=kvm"
-    #   - "homepage.description=Full virtualization for Linux; kernel-based virtual machine."""
+    #   - "homepage.description=Full virtualization for Linux; kernel-based virtual machine."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=kvm.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20136"

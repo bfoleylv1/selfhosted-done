@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=pgadmin"
-    #   - "homepage.description=Web-based PostgreSQL database management tool; GUI for PostgreSQL."""
+    #   - "homepage.description=Web-based PostgreSQL database management tool; GUI for PostgreSQL."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=pgadmin.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20199"

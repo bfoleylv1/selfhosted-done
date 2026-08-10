@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=writefreely"
-    #   - "homepage.description=Federated publishing platform; write and share articles."""
+    #   - "homepage.description=Federated publishing platform; write and share articles."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=writefreely.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20371"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=dbeaver"
-    #   - "homepage.description=Universal database tool; supports all major databases."""
+    #   - "homepage.description=Universal database tool; supports all major databases."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=dbeaver.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8978"

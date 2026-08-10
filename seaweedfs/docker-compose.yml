@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=seaweedfs"
-    #   - "homepage.description=Distributed object, block and file storage system."""
+    #   - "homepage.description=Distributed object, block and file storage system."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=seaweedfs.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9333"

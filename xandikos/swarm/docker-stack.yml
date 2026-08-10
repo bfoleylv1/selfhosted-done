@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=xandikos"
-    #   - "homepage.description=CalDAV server written in Python."""
+    #   - "homepage.description=CalDAV server written in Python."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=xandikos.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20372"

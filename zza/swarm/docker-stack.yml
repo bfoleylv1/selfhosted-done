@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=zza"
-    #   - "homepage.description=Self-hosted link reader; read and save links for later."""
+    #   - "homepage.description=Self-hosted link reader; read and save links for later."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=zza.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20392"

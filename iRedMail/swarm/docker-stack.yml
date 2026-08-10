@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=iRedMail"
-    #   - "homepage.description=Complete mail server solution; quick and easy setup."""
+    #   - "homepage.description=Complete mail server solution; quick and easy setup."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=iRedMail.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20114"

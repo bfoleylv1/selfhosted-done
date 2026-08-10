@@ -52,7 +52,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=gpt-engineer"
-    #   - "homepage.description=AI-powered code generation tool; create projects from descriptions."""
+    #   - "homepage.description=AI-powered code generation tool; create projects from descriptions."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=gpt-engineer.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20102"

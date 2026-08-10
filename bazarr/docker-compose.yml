@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=bazarr"
-    #   - "homepage.description=Subtitle manager for Sonarr and Radarr; automatic download and management."""
+    #   - "homepage.description=Subtitle manager for Sonarr and Radarr; automatic download and management."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=bazarr.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:6767"

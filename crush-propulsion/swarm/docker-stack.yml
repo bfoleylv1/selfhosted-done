@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=crush-propulsion"
-    #   - "homepage.description=Social platform for sharing thoughts and ideas."""
+    #   - "homepage.description=Social platform for sharing thoughts and ideas."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=crush-propulsion.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20039"

@@ -29,7 +29,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=qemu"
-    #   - "homepage.description=Open source emulator and virtualization; hardware emulation."""
+    #   - "homepage.description=Open source emulator and virtualization; hardware emulation."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=qemu.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20228"

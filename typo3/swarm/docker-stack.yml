@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=typo3"
-    #   - "homepage.description=Open-source CMS; enterprise-grade content management."""
+    #   - "homepage.description=Open-source CMS; enterprise-grade content management."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=typo3.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20341"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=datasette"
-    #   - "homepage.description=Explore and publish SQLite databases as JSON APIs and dashboards."""
+    #   - "homepage.description=Explore and publish SQLite databases as JSON APIs and dashboards."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=datasette.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8001"

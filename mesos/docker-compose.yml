@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=mesos"
-    #   - "homepage.description=Distributed systems kernel; orchestrate containers and apps."""
+    #   - "homepage.description=Distributed systems kernel; orchestrate containers and apps."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=mesos.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:5050"

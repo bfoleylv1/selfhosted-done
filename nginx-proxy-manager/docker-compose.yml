@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=nginx-proxy-manager"
-    #   - "homepage.description=Web interface for managing Nginx proxies; simple reverse proxy."""
+    #   - "homepage.description=Web interface for managing Nginx proxies; simple reverse proxy."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=nginx-proxy-manager.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20167"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=lemmy"
-    #   - "homepage.description=Decentralised link aggregation; Reddit-like topic browsing."""
+    #   - "homepage.description=Decentralised link aggregation; Reddit-like topic browsing."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=lemmy.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8536"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=zeek"
-    #   - "homepage.description=Network security monitoring; powerful traffic analysis."""
+    #   - "homepage.description=Network security monitoring; powerful traffic analysis."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=zeek.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20382"

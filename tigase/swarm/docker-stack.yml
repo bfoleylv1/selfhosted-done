@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=tigase"
-    #   - "homepage.description=High-performance XMPP / Jabber server."""
+    #   - "homepage.description=High-performance XMPP / Jabber server."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=tigase.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20327"

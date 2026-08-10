@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=ackee"
-    #   - "homepage.description=Lightweight anonymised web analytics; self-hosted solution."""
+    #   - "homepage.description=Lightweight anonymised web analytics; self-hosted solution."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=ackee.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20394"

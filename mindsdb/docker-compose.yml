@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=mindsdb"
-    #   - "homepage.description=mindsdb self-hosted service."
+    #   - "homepage.description=Mindsdb self-hosted service."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=mindsdb.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20476"

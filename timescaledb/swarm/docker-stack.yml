@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=timescaledb"
-    #   - "homepage.description=PostgreSQL extension for time-series data; SQL for time-series."""
+    #   - "homepage.description=PostgreSQL extension for time-series data; SQL for time-series."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=timescaledb.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20329"

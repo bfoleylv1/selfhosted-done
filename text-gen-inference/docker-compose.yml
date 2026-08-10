@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=text-gen-inference"
-    #   - "homepage.description=Text generation inference server for LLMs (HuggingFace TGI)."""
+    #   - "homepage.description=Text generation inference server for LLMs (HuggingFace TGI)."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=text-gen-inference.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20323"

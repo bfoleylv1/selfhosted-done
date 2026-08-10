@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=saleor"
-    #   - "homepage.description=E-commerce platform; GraphQL-first headless commerce solution."""
+    #   - "homepage.description=E-commerce platform; GraphQL-first headless commerce solution."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=saleor.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20261"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=podman"
-    #   - "homepage.description=Daemonless container engine; drop-in replacement for Docker."""
+    #   - "homepage.description=Daemonless container engine; drop-in replacement for Docker."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=podman.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20213"

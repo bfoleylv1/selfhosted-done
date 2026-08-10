@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=magento"
-    #   - "homepage.description=Open-source e-commerce platform; Adobe Commerce predecessor."""
+    #   - "homepage.description=Open-source e-commerce platform; Adobe Commerce predecessor."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=magento.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20146"

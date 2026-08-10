@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=calibre"
-    #   - "homepage.description=calibre self-hosted service."
+    #   - "homepage.description=Calibre self-hosted service."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=calibre.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8083"

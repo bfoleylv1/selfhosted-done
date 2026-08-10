@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=awstats"
-    #   - "homepage.description=Advanced web statistics; detailed reporting and log analysis."""
+    #   - "homepage.description=Advanced web statistics; detailed reporting and log analysis."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=awstats.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20004"

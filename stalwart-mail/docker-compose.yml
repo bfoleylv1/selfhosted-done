@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=stalwart-mail"
-    #   - "homepage.description=All-in-one mail server (SMTP/IMAP/JMAP) written in Rust."""
+    #   - "homepage.description=All-in-one mail server (SMTP/IMAP/JMAP) written in Rust."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=stalwart-mail.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20299"

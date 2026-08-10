@@ -33,7 +33,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=peertube"
-    #   - "homepage.description=Decentralised video hosting platform; ActivityPub federated videos."""
+    #   - "homepage.description=Decentralised video hosting platform; ActivityPub federated videos."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=peertube.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20198"

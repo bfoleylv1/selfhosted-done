@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=openconnect"
-    #   - "homepage.description=SSL VPN solution; Cisco AnyConnect compatible."""
+    #   - "homepage.description=SSL VPN solution; Cisco AnyConnect compatible."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=openconnect.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20177"

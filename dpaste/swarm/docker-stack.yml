@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=dpaste"
-    #   - "homepage.description=Self-hosted pastebin / code snippet service."""
+    #   - "homepage.description=Self-hosted pastebin / code snippet service."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=dpaste.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20050"

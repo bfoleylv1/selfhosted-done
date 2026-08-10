@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=opencode"
-    #   - "homepage.description=Open-source AI coding agent / assistant."""
+    #   - "homepage.description=Open-source AI coding agent / assistant."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=opencode.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20176"

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cloudflare-argo"
-    #   - "homepage.description=Cloudflare's smart routing; secure and fast connections."""
+    #   - "homepage.description=Cloudflare's smart routing; secure and fast connections."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=cloudflare-argo.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:2000"

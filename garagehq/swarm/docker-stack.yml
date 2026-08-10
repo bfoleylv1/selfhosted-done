@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=garagehq"
-    #   - "homepage.description=Lightweight S3-compatible distributed object storage."""
+    #   - "homepage.description=Lightweight S3-compatible distributed object storage."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=garagehq.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:3900"

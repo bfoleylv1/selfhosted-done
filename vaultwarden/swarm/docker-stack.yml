@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=vaultwarden"
-    #   - "homepage.description=Unofficial Bitwarden server implementation; lightweight and fast."""
+    #   - "homepage.description=Unofficial Bitwarden server implementation; lightweight and fast."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=vaultwarden.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20347"

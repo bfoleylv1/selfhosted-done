@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=syncthing"
-    #   - "homepage.description=Continuous file synchronization; peer-to-peer sync without central server."""
+    #   - "homepage.description=Continuous file synchronization; peer-to-peer sync without central server."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=syncthing.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8384"

@@ -37,7 +37,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=litellm"
-    #   - "homepage.description=Proxy gateway for 100+ LLM providers with load balancing and fallbacks."""
+    #   - "homepage.description=Proxy gateway for 100+ LLM providers with load balancing and fallbacks."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=litellm.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:4000"

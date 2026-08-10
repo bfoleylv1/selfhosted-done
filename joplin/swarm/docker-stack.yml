@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=joplin"
-    #   - "homepage.description=Note-taking and to-do application; Markdown support with encryption."""
+    #   - "homepage.description=Note-taking and to-do application; Markdown support with encryption."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=joplin.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:22300"

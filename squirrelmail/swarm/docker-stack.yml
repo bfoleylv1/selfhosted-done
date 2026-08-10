@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=squirrelmail"
-    #   - "homepage.description=Web-based email client; traditional webmail interface."""
+    #   - "homepage.description=Web-based email client; traditional webmail interface."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=squirrelmail.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20297"

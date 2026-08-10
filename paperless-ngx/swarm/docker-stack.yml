@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=paperless-ngx"
-    #   - "homepage.description=Document management system; scan, index, archive."""
+    #   - "homepage.description=Document management system; scan, index, archive."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=paperless-ngx.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20189"

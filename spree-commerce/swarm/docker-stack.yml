@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=spree-commerce"
-    #   - "homepage.description=Complete online store platform; Ruby on Rails based."""
+    #   - "homepage.description=Complete online store platform; Ruby on Rails based."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=spree-commerce.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20294"

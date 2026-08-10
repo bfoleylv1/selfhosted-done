@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=the-old-reader"
-    #   - "homepage.description=Social RSS reader; sharing and discovery of RSS feeds."""
+    #   - "homepage.description=Social RSS reader; sharing and discovery of RSS feeds."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=the-old-reader.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20324"

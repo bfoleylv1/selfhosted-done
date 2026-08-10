@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=wireguard"
-    #   - "homepage.description=Next-generation VPN protocol; fast and modern VPN solution."""
+    #   - "homepage.description=Next-generation VPN protocol; fast and modern VPN solution."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=wireguard.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:51820"

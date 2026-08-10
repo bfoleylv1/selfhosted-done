@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=discord"
-    #   - "homepage.description=Self-hosted Discord alternative; open source communication platform."""
+    #   - "homepage.description=Self-hosted Discord alternative; open source communication platform."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=discord.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20044"

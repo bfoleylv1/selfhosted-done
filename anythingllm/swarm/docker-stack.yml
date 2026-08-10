@@ -52,7 +52,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=anythingllm"
-    #   - "homepage.description=anythingllm self-hosted service."
+    #   - "homepage.description=Anythingllm self-hosted service."""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=anythingllm.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20412"

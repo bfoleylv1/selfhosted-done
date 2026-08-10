@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=minio"
-    #   - "homepage.description=High-performance object storage; S3-compatible."""
+    #   - "homepage.description=High-performance object storage; S3-compatible."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=minio.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20157"

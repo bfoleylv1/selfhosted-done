@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=prestashop"
-    #   - "homepage.description=Free open-source e-commerce solution; customizable online store."""
+    #   - "homepage.description=Free open-source e-commerce solution; customizable online store."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=prestashop.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20218"

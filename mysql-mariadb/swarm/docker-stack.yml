@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=mysql-mariadb"
-    #   - "homepage.description=Popular relational database; MariaDB is a drop-in MySQL compatible alternative."""
+    #   - "homepage.description=Popular relational database; MariaDB is a drop-in MySQL compatible alternative."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=mysql-mariadb.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20161"

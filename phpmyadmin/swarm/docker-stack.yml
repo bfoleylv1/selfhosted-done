@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=phpmyadmin"
-    #   - "homepage.description=Web interface for MySQL database management."""
+    #   - "homepage.description=Web interface for MySQL database management."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=phpmyadmin.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20203"

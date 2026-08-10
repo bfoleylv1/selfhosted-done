@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=keypass"
-    #   - "homepage.description=Simple password generator; create secure random passwords."""
+    #   - "homepage.description=Simple password generator; create secure random passwords."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=keypass.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20126"

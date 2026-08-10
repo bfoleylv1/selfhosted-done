@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=vercel"
-    #   - "homepage.description=Platform for frontend deployment (open-core)."""
+    #   - "homepage.description=Platform for frontend deployment (open-core)."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=vercel.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20348"

@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=ftp-server"
-    #   - "homepage.description=File Transfer Protocol server; traditional file access."""
+    #   - "homepage.description=File Transfer Protocol server; traditional file access."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=ftp-server.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20082"

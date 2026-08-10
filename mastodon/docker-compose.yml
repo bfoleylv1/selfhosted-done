@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=mastodon"
-    #   - "homepage.description=Server for Twitter-like microblogging; federated social network."""
+    #   - "homepage.description=Server for Twitter-like microblogging; federated social network."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=mastodon.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20151"
