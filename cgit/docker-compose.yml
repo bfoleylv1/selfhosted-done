@@ -7,7 +7,7 @@ services:
     container_name: cgit
     restart: unless-stopped
     ports:
-      - "20027:8080"
+      - "20027:20027"
     environment:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
@@ -16,13 +16,13 @@ services:
       - ./config:/config
       - ./data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20027 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 60s
     # labels:
-    #   - "homepage.group=Self Hosting Solutions"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cgit"
     #   - "homepage.description=cgit self-hosted service."
     #   - "homepage.tags=Self Hosting Solutions"

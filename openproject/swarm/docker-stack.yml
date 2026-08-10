@@ -1,0 +1,59 @@
+# openproject - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml openproject
+# image verified to exist at generation time: openproject/openproject:15
+
+services:
+  openproject:
+    image: openproject/openproject:15
+    ports:
+      - target: 20178
+        published: 20178
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - openproject_config:/config
+      - openproject_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20178 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=openproject"
+    #   - "homepage.description=openproject self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=openproject.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20178"
+    #   - "homepage.server=localhost"
+
+volumes:
+  openproject_config:
+  openproject_data:
+
+networks:
+  default:
+    name: openproject_net
+    driver: overlay
+    attachable: true

@@ -1,0 +1,35 @@
+# trailbase - docker compose (single host)
+# image verified to exist at generation time: trailbase/trailbase:latest
+
+services:
+  trailbase:
+    image: trailbase/trailbase:latest
+    container_name: trailbase
+    restart: unless-stopped
+    ports:
+      - "20333:20333"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20333 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=trailbase"
+    #   - "homepage.description=trailbase self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=trailbase.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20333"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: trailbase_net

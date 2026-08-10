@@ -1,0 +1,59 @@
+# sub-converter - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml sub-converter
+# image verified to exist at generation time: python:3.11-slim
+
+services:
+  sub-converter:
+    image: python:3.11-slim
+    ports:
+      - target: 25500
+        published: 25500
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - sub-converter_config:/config
+      - sub-converter_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 25500 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=sub-converter"
+    #   - "homepage.description=sub-converter self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=sub-converter.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:25500"
+    #   - "homepage.server=localhost"
+
+volumes:
+  sub-converter_config:
+  sub-converter_data:
+
+networks:
+  default:
+    name: sub-converter_net
+    driver: overlay
+    attachable: true

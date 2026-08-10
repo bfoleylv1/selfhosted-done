@@ -7,7 +7,7 @@ services:
     container_name: axigen
     restart: unless-stopped
     ports:
-      - "20005:80"
+      - "20005:20005"
     environment:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
@@ -16,16 +16,16 @@ services:
       - ./config:/config
       - ./data:/data
     healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:80/ || wget -qO- http://127.0.0.1:80/ || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20005 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 60s
     # labels:
-    #   - "homepage.group=Email"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=axigen"
-    #   - "homepage.description=Mail server; enterprise email and collaboration."
-    #   - "homepage.tags=Email,Communication"
+    #   - "homepage.description=axigen self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=axigen.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20005"
     #   - "homepage.server=localhost"

@@ -1,0 +1,35 @@
+# pinboard - docker compose (single host)
+# image verified to exist at generation time: alpine:3.20
+
+services:
+  pinboard:
+    image: alpine:3.20
+    container_name: pinboard
+    restart: unless-stopped
+    ports:
+      - "20205:20205"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20205 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=pinboard"
+    #   - "homepage.description=pinboard self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=pinboard.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20205"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: pinboard_net

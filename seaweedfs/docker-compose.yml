@@ -1,0 +1,35 @@
+# seaweedfs - docker compose (single host)
+# image verified to exist at generation time: chrislusf/seaweedfs:latest
+
+services:
+  seaweedfs:
+    image: chrislusf/seaweedfs:latest
+    container_name: seaweedfs
+    restart: unless-stopped
+    ports:
+      - "9333:9333"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 9333 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=seaweedfs"
+    #   - "homepage.description=seaweedfs self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=seaweedfs.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:9333"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: seaweedfs_net

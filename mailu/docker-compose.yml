@@ -1,0 +1,35 @@
+# mailu - docker compose (single host)
+# image verified to exist at generation time: ghcr.io/mailu/admin:2.0
+
+services:
+  mailu:
+    image: ghcr.io/mailu/admin:2.0
+    container_name: mailu
+    restart: unless-stopped
+    ports:
+      - "20148:20148"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20148 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=mailu"
+    #   - "homepage.description=mailu self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=mailu.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20148"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: mailu_net

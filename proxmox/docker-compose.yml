@@ -1,0 +1,40 @@
+# proxmox - docker compose (single host)
+# image verified to exist at generation time: ubuntu:24.04
+
+services:
+  proxmox:
+    image: ubuntu:24.04
+    container_name: proxmox
+    restart: unless-stopped
+    ports:
+      - "20222:8006"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+      # - LIBVA_DRIVER_NAME=iHD
+      # - INTEL_GPU=1
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8006/ || wget -qO- http://127.0.0.1:8006/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # devices:
+    #   - /dev/kvm:/dev/kvm
+    #   - /dev/dri:/dev/dri
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=proxmox"
+    #   - "homepage.description=proxmox self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=proxmox.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20222"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: proxmox_net

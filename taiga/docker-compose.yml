@@ -1,0 +1,35 @@
+# taiga - docker compose (single host)
+# image verified to exist at generation time: taigaio/taiga-back:latest
+
+services:
+  taiga:
+    image: taigaio/taiga-back:latest
+    container_name: taiga
+    restart: unless-stopped
+    ports:
+      - "20319:80"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:80/ || wget -qO- http://127.0.0.1:80/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=taiga"
+    #   - "homepage.description=taiga self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=taiga.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20319"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: taiga_net

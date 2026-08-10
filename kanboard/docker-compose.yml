@@ -1,0 +1,35 @@
+# kanboard - docker compose (single host)
+# image verified to exist at generation time: kanboard/kanboard:latest
+
+services:
+  kanboard:
+    image: kanboard/kanboard:latest
+    container_name: kanboard
+    restart: unless-stopped
+    ports:
+      - "20121:80"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:80/ || wget -qO- http://127.0.0.1:80/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=kanboard"
+    #   - "homepage.description=kanboard self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=kanboard.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20121"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: kanboard_net

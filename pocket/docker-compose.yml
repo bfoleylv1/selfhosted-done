@@ -1,0 +1,35 @@
+# pocket - docker compose (single host)
+# image verified to exist at generation time: alpine:3.20
+
+services:
+  pocket:
+    image: alpine:3.20
+    container_name: pocket
+    restart: unless-stopped
+    ports:
+      - "20212:20212"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20212 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=pocket"
+    #   - "homepage.description=pocket self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=pocket.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20212"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: pocket_net

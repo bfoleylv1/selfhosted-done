@@ -1,0 +1,35 @@
+# sqlite - docker compose (single host)
+# image verified to exist at generation time: keinos/sqlite3:latest
+
+services:
+  sqlite:
+    image: keinos/sqlite3:latest
+    container_name: sqlite
+    restart: unless-stopped
+    ports:
+      - "20295:20295"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20295 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=sqlite"
+    #   - "homepage.description=sqlite self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=sqlite.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20295"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: sqlite_net

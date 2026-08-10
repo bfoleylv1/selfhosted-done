@@ -1,0 +1,35 @@
+# youtubedl-server - docker compose (single host)
+# image verified to exist at generation time: nbr23/youtube-dl-server:latest
+
+services:
+  youtubedl-server:
+    image: nbr23/youtube-dl-server:latest
+    container_name: youtubedl-server
+    restart: unless-stopped
+    ports:
+      - "20380:20380"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20380 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=youtubedl-server"
+    #   - "homepage.description=youtubedl-server self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=youtubedl-server.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20380"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: youtubedl-server_net

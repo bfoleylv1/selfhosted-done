@@ -7,7 +7,7 @@ services:
     container_name: bifrost
     restart: unless-stopped
     ports:
-      - "20012:8080"
+      - "20012:20012"
     environment:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
@@ -16,16 +16,16 @@ services:
       - ./config:/config
       - ./data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20012 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 60s
     # labels:
-    #   - "homepage.group=Audio"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=bifrost"
-    #   - "homepage.description=Media server with Jellyfin-like features; open source and self-hosted."
-    #   - "homepage.tags=Audio,Media Processing"
+    #   - "homepage.description=bifrost self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=bifrost.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20012"
     #   - "homepage.server=localhost"

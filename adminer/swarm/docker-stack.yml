@@ -40,10 +40,10 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Database Tools"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=adminer"
-    #   - "homepage.description=Tool for managing MySQL, PostgreSQL, SQLite, and other databases."
-    #   - "homepage.tags=Database Tools"
+    #   - "homepage.description=adminer self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=adminer.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20395"
     #   - "homepage.server=localhost"

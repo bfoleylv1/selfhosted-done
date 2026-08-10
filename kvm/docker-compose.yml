@@ -1,0 +1,40 @@
+# kvm - docker compose (single host)
+# image verified to exist at generation time: qemux/qemu:latest
+
+services:
+  kvm:
+    image: qemux/qemu:latest
+    container_name: kvm
+    restart: unless-stopped
+    ports:
+      - "20136:20136"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+      # - LIBVA_DRIVER_NAME=iHD
+      # - INTEL_GPU=1
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20136 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # devices:
+    #   - /dev/kvm:/dev/kvm
+    #   - /dev/dri:/dev/dri
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=kvm"
+    #   - "homepage.description=kvm self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=kvm.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20136"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: kvm_net

@@ -1,0 +1,35 @@
+# telebugs - docker compose (single host)
+# image verified to exist at generation time: ruby:3.3-alpine
+
+services:
+  telebugs:
+    image: ruby:3.3-alpine
+    container_name: telebugs
+    restart: unless-stopped
+    ports:
+      - "20321:20321"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20321 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=telebugs"
+    #   - "homepage.description=telebugs self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=telebugs.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20321"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: telebugs_net

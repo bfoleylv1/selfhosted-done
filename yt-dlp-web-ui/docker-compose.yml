@@ -1,0 +1,35 @@
+# yt-dlp-web-ui - docker compose (single host)
+# image verified to exist at generation time: marcobaobao/yt-dlp-webui:latest
+
+services:
+  yt-dlp-web-ui:
+    image: marcobaobao/yt-dlp-webui:latest
+    container_name: yt-dlp-web-ui
+    restart: unless-stopped
+    ports:
+      - "3033:3033"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 3033 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=yt-dlp-web-ui"
+    #   - "homepage.description=yt-dlp-web-ui self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=yt-dlp-web-ui.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:3033"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: yt-dlp-web-ui_net

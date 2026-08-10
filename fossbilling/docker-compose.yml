@@ -1,0 +1,35 @@
+# fossbilling - docker compose (single host)
+# image verified to exist at generation time: fossbilling/fossbilling:latest
+
+services:
+  fossbilling:
+    image: fossbilling/fossbilling:latest
+    container_name: fossbilling
+    restart: unless-stopped
+    ports:
+      - "20075:20075"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20075 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=fossbilling"
+    #   - "homepage.description=fossbilling self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=fossbilling.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20075"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: fossbilling_net

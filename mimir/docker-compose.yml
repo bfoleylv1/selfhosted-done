@@ -1,0 +1,35 @@
+# mimir - docker compose (single host)
+# image verified to exist at generation time: grafana/mimir:latest
+
+services:
+  mimir:
+    image: grafana/mimir:latest
+    container_name: mimir
+    restart: unless-stopped
+    ports:
+      - "20155:20155"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20155 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=mimir"
+    #   - "homepage.description=mimir self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=mimir.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20155"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: mimir_net

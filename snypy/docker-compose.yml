@@ -1,0 +1,35 @@
+# snypy - docker compose (single host)
+# image verified to exist at generation time: python:3.11-slim
+
+services:
+  snypy:
+    image: python:3.11-slim
+    container_name: snypy
+    restart: unless-stopped
+    ports:
+      - "20288:20288"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20288 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=snypy"
+    #   - "homepage.description=snypy self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=snypy.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20288"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: snypy_net

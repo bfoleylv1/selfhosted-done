@@ -1,0 +1,59 @@
+# xandikos - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml xandikos
+# image verified to exist at generation time: ghcr.io/jelmer/xandikos:latest
+
+services:
+  xandikos:
+    image: ghcr.io/jelmer/xandikos:latest
+    ports:
+      - target: 20372
+        published: 20372
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - xandikos_config:/config
+      - xandikos_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20372 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=xandikos"
+    #   - "homepage.description=xandikos self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=xandikos.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20372"
+    #   - "homepage.server=localhost"
+
+volumes:
+  xandikos_config:
+  xandikos_data:
+
+networks:
+  default:
+    name: xandikos_net
+    driver: overlay
+    attachable: true

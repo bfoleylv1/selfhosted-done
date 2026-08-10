@@ -1,0 +1,35 @@
+# text-generation-webui - docker compose (single host)
+# image verified to exist at generation time: atinoda/text-generation-webui:default
+
+services:
+  text-generation-webui:
+    image: atinoda/text-generation-webui:default
+    container_name: text-generation-webui
+    restart: unless-stopped
+    ports:
+      - "7860:7860"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 7860 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=text-generation-webui"
+    #   - "homepage.description=text-generation-webui self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=text-generation-webui.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:7860"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: text-generation-webui_net

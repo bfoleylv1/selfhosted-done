@@ -6,7 +6,7 @@ services:
   c15t:
     image: node:20-alpine
     ports:
-      - target: 8080
+      - target: 20021
         published: 20021
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - c15t_config:/config
       - c15t_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20021 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,7 +40,7 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Self Hosting Solutions"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=c15t"
     #   - "homepage.description=c15t self-hosted service."
     #   - "homepage.tags=Self Hosting Solutions"

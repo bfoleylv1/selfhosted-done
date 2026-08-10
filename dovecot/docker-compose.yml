@@ -1,0 +1,35 @@
+# dovecot - docker compose (single host)
+# image verified to exist at generation time: dovecot/dovecot:latest
+
+services:
+  dovecot:
+    image: dovecot/dovecot:latest
+    container_name: dovecot
+    restart: unless-stopped
+    ports:
+      - "20049:143"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 143 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=dovecot"
+    #   - "homepage.description=dovecot self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=dovecot.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20049"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: dovecot_net

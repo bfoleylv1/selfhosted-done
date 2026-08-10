@@ -7,7 +7,7 @@ services:
     container_name: borgbackup
     restart: unless-stopped
     ports:
-      - "20017:8080"
+      - "20017:20017"
     environment:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
@@ -16,16 +16,16 @@ services:
       - ./config:/config
       - ./data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20017 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 60s
     # labels:
-    #   - "homepage.group=Backup"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=borgbackup"
-    #   - "homepage.description=Deduplicating backup program; efficient storage for backups."
-    #   - "homepage.tags=Backup,Archiving"
+    #   - "homepage.description=borgbackup self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=borgbackup.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20017"
     #   - "homepage.server=localhost"

@@ -1,0 +1,59 @@
+# snort - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml snort
+# image verified to exist at generation time: ciscotalos/snort3:latest
+
+services:
+  snort:
+    image: ciscotalos/snort3:latest
+    ports:
+      - target: 20287
+        published: 20287
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - snort_config:/config
+      - snort_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20287 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=snort"
+    #   - "homepage.description=snort self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=snort.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20287"
+    #   - "homepage.server=localhost"
+
+volumes:
+  snort_config:
+  snort_data:
+
+networks:
+  default:
+    name: snort_net
+    driver: overlay
+    attachable: true

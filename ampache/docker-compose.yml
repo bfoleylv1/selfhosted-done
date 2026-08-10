@@ -12,14 +12,9 @@ services:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
       - PGID=${PGID:-1000}
-      ## -- GPU env: remove the '#' on the lines for your hardware --
-      ## Intel Quick Sync / VAAPI:
-      # - LIBVA_DRIVER_NAME=iHD          # 'i965' for pre-Gen8 Intel
-      ## AMD VAAPI (amdgpu):
-      # - LIBVA_DRIVER_NAME=radeonsi
-      ## NVIDIA NVENC/NVDEC:
-      # - NVIDIA_VISIBLE_DEVICES=all
-      # - NVIDIA_DRIVER_CAPABILITIES=video,compute,utility
+      # - NVIDIA_DRIVER_CAPABILITIES=all
+      # - LIBVA_DRIVER_NAME=iHD            # Intel iGPU VAAPI/QSV
+      # - VAAPI_DRIVER=iHD
     volumes:
       - ./config:/config
       - ./data:/data
@@ -29,31 +24,17 @@ services:
       timeout: 10s
       retries: 3
       start_period: 60s
-    ## -------------------------------------------------------------
-    ## HARDWARE ACCELERATION (video transcode) - uncomment ONE variant
-    ## (single '#' = real config, remove it to enable)
-    ## -------------------------------------------------------------
-    ## --- Intel Quick Sync / VAAPI  OR  AMD VAAPI ---
     # devices:
     #   - /dev/dri:/dev/dri
     # group_add:
-    #   - "video"
-    #   - "render"
-    ##
-    ## --- NVIDIA NVENC/NVDEC (needs nvidia-container-toolkit) ---
+    #   - render
+    #   - video
     # runtime: nvidia
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       devices:
-    #         - driver: nvidia
-    #           count: all
-    #           capabilities: [gpu, video]
     # labels:
-    #   - "homepage.group=Music"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=ampache"
-    #   - "homepage.description=Web-based audio file manager; provides streaming and management interface."
-    #   - "homepage.tags=Music,Audio"
+    #   - "homepage.description=ampache self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=ampache.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20404"
     #   - "homepage.server=localhost"

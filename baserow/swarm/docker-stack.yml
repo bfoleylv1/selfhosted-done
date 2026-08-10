@@ -6,7 +6,7 @@ services:
   baserow:
     image: baserow/baserow:latest
     ports:
-      - target: 80
+      - target: 20011
         published: 20011
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - baserow_config:/config
       - baserow_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:80/api/_health/ || wget -qO- http://127.0.0.1:80/api/_health/ || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20011 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,10 +40,10 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Email"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=baserow"
-    #   - "homepage.description=Open source Notion alternative; database and form builder."
-    #   - "homepage.tags=Email,Communication"
+    #   - "homepage.description=baserow self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=baserow.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20011"
     #   - "homepage.server=localhost"

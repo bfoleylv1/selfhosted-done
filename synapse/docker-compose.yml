@@ -1,0 +1,35 @@
+# synapse - docker compose (single host)
+# image verified to exist at generation time: matrixdotorg/synapse:latest
+
+services:
+  synapse:
+    image: matrixdotorg/synapse:latest
+    container_name: synapse
+    restart: unless-stopped
+    ports:
+      - "20318:8008"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8008/health || wget -qO- http://127.0.0.1:8008/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=synapse"
+    #   - "homepage.description=synapse self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=synapse.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20318"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: synapse_net

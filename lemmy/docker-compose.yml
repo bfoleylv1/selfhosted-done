@@ -1,0 +1,35 @@
+# lemmy - docker compose (single host)
+# image verified to exist at generation time: dessalines/lemmy:0.19.5
+
+services:
+  lemmy:
+    image: dessalines/lemmy:0.19.5
+    container_name: lemmy
+    restart: unless-stopped
+    ports:
+      - "8536:8536"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 8536 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=lemmy"
+    #   - "homepage.description=lemmy self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=lemmy.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:8536"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: lemmy_net

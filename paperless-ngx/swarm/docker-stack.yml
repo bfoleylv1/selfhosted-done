@@ -1,0 +1,59 @@
+# paperless-ngx - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml paperless-ngx
+# image verified to exist at generation time: linuxserver/paperless-ngx:latest
+
+services:
+  paperless-ngx:
+    image: linuxserver/paperless-ngx:latest
+    ports:
+      - target: 20189
+        published: 20189
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - paperless-ngx_config:/config
+      - paperless-ngx_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20189 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=paperless-ngx"
+    #   - "homepage.description=paperless-ngx self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=paperless-ngx.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20189"
+    #   - "homepage.server=localhost"
+
+volumes:
+  paperless-ngx_config:
+  paperless-ngx_data:
+
+networks:
+  default:
+    name: paperless-ngx_net
+    driver: overlay
+    attachable: true

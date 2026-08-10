@@ -1,0 +1,35 @@
+# plunker - docker compose (single host)
+# image verified to exist at generation time: node:20-alpine
+
+services:
+  plunker:
+    image: node:20-alpine
+    container_name: plunker
+    restart: unless-stopped
+    ports:
+      - "20211:20211"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20211 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=plunker"
+    #   - "homepage.description=plunker self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=plunker.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20211"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: plunker_net

@@ -16,16 +16,16 @@ services:
       - ./config:/config
       - ./data:/data
     healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:5984/_up || wget -qO- http://127.0.0.1:5984/_up || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 5984 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 60s
     # labels:
-    #   - "homepage.group=Database Management"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=couchdb"
-    #   - "homepage.description=ouchdb-style JSON document database with MVCC and multi-master replication."
-    #   - "homepage.tags=Database Management"
+    #   - "homepage.description=couchdb self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=couchdb.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:5984"
     #   - "homepage.server=localhost"

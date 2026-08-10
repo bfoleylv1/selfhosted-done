@@ -1,0 +1,35 @@
+# radarr - docker compose (single host)
+# image verified to exist at generation time: lscr.io/linuxserver/radarr:latest
+
+services:
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    restart: unless-stopped
+    ports:
+      - "20230:7878"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:7878/ || wget -qO- http://127.0.0.1:7878/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=radarr"
+    #   - "homepage.description=radarr self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=radarr.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20230"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: radarr_net

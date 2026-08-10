@@ -6,7 +6,7 @@ services:
   citus:
     image: citusdata/citus:12
     ports:
-      - target: 5432
+      - target: 20029
         published: 20029
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - citus_config:/config
       - citus_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 5432 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20029 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,10 +40,10 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Database Tools"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=citus"
-    #   - "homepage.description=Extension to PostgreSQL; real-time analytics and scaling."
-    #   - "homepage.tags=Database Tools"
+    #   - "homepage.description=citus self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=citus.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20029"
     #   - "homepage.server=localhost"

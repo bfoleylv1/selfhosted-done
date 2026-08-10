@@ -1,0 +1,35 @@
+# miniflux - docker compose (single host)
+# image verified to exist at generation time: miniflux/miniflux:latest
+
+services:
+  miniflux:
+    image: miniflux/miniflux:latest
+    container_name: miniflux
+    restart: unless-stopped
+    ports:
+      - "20156:8080"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8080/healthcheck || wget -qO- http://127.0.0.1:8080/healthcheck || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=miniflux"
+    #   - "homepage.description=miniflux self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=miniflux.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20156"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: miniflux_net

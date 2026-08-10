@@ -6,7 +6,7 @@ services:
   axigen:
     image: axigen/axigen:latest
     ports:
-      - target: 80
+      - target: 20005
         published: 20005
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - axigen_config:/config
       - axigen_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:80/ || wget -qO- http://127.0.0.1:80/ || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20005 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,10 +40,10 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Email"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=axigen"
-    #   - "homepage.description=Mail server; enterprise email and collaboration."
-    #   - "homepage.tags=Email,Communication"
+    #   - "homepage.description=axigen self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=axigen.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20005"
     #   - "homepage.server=localhost"

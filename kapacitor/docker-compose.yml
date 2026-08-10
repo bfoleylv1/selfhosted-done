@@ -1,0 +1,35 @@
+# kapacitor - docker compose (single host)
+# image verified to exist at generation time: kapacitor:latest
+
+services:
+  kapacitor:
+    image: kapacitor:latest
+    container_name: kapacitor
+    restart: unless-stopped
+    ports:
+      - "9092:9092"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 9092 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=kapacitor"
+    #   - "homepage.description=kapacitor self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=kapacitor.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:9092"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: kapacitor_net

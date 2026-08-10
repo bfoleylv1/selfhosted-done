@@ -1,0 +1,59 @@
+# grafana - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml grafana
+# image verified to exist at generation time: grafana/grafana:latest
+
+services:
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - target: 3000
+        published: 20104
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - grafana_config:/config
+      - grafana_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:3000/api/health || wget -qO- http://127.0.0.1:3000/api/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=grafana"
+    #   - "homepage.description=grafana self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=grafana.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20104"
+    #   - "homepage.server=localhost"
+
+volumes:
+  grafana_config:
+  grafana_data:
+
+networks:
+  default:
+    name: grafana_net
+    driver: overlay
+    attachable: true

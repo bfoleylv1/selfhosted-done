@@ -6,7 +6,7 @@ services:
   centrifugo:
     image: centrifugo/centrifugo:v5
     ports:
-      - target: 8000
+      - target: 20025
         published: 20025
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - centrifugo_config:/config
       - centrifugo_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8000/health || wget -qO- http://127.0.0.1:8000/health || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20025 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,7 +40,7 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Self Hosting Solutions"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=centrifugo"
     #   - "homepage.description=centrifugo self-hosted service."
     #   - "homepage.tags=Self Hosting Solutions"

@@ -1,0 +1,35 @@
+# netlify - docker compose (single host)
+# image verified to exist at generation time: node:20-alpine
+
+services:
+  netlify:
+    image: node:20-alpine
+    container_name: netlify
+    restart: unless-stopped
+    ports:
+      - "20162:20162"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20162 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=netlify"
+    #   - "homepage.description=netlify self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=netlify.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20162"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: netlify_net

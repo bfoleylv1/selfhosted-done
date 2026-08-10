@@ -1,0 +1,35 @@
+# tyk - docker compose (single host)
+# image verified to exist at generation time: tykio/tyk-gateway:latest
+
+services:
+  tyk:
+    image: tykio/tyk-gateway:latest
+    container_name: tyk
+    restart: unless-stopped
+    ports:
+      - "20340:20340"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20340 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=tyk"
+    #   - "homepage.description=tyk self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=tyk.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20340"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: tyk_net

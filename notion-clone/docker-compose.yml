@@ -1,0 +1,35 @@
+# notion-clone - docker compose (single host)
+# image verified to exist at generation time: appflowyinc/appflowy_cloud:latest
+
+services:
+  notion-clone:
+    image: appflowyinc/appflowy_cloud:latest
+    container_name: notion-clone
+    restart: unless-stopped
+    ports:
+      - "20170:20170"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20170 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=notion-clone"
+    #   - "homepage.description=notion-clone self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=notion-clone.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20170"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: notion-clone_net

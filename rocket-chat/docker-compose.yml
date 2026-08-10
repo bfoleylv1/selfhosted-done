@@ -1,0 +1,35 @@
+# rocket-chat - docker compose (single host)
+# image verified to exist at generation time: registry.rocket.chat/rocketchat/rocket.chat:latest
+
+services:
+  rocket-chat:
+    image: registry.rocket.chat/rocketchat/rocket.chat:latest
+    container_name: rocket-chat
+    restart: unless-stopped
+    ports:
+      - "20250:20250"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20250 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=rocket-chat"
+    #   - "homepage.description=rocket-chat self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=rocket-chat.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20250"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: rocket-chat_net

@@ -1,0 +1,66 @@
+========================================================================
+SELF-HOSTED LIBRARY - INTEGRITY AUDIT
+2026-08-10 03:12
+========================================================================
+
+Services audited : 1036
+  main library   : 1036
+  'done' folder  : 0
+Files            : 2072 compose+swarm
+
+------------------------------------------------------------------------
+PER-CHECK RESULTS
+------------------------------------------------------------------------
+  [PASS] docker-compose.yml present             1036/1036
+  [PASS] swarm/docker-stack.yml present         1036/1036
+  [PASS] README.md present                      1036/1036
+  [PASS] healthcheck (compose + swarm)          1036/1036
+  [PASS] homepage labels (compose + swarm)      1036/1036
+  [PASS] image field present                    1036/1036
+  [PASS] no empty config/ or data/ placeholders 1036/1036
+  [PASS] swarm uses named volumes               1036/1036
+  [PASS] swarm has no container_name            1036/1036
+  [PASS] swarm deploy/replicas block            1036/1036
+  [PASS] published port defined                 1036/1036
+
+------------------------------------------------------------------------
+PORTS
+------------------------------------------------------------------------
+  unique published ports : 518
+  collisions             : 518
+    8080: 42links, 42links
+    20393: 92five, 92five
+    20394: ackee, ackee
+    20395: adminer, adminer
+    20396: adyen-proxy, adyen-proxy
+    7000: afs, afs
+    20397: afterlogic, afterlogic
+    20398: agent-vault, agent-vault
+    20399: airsonic-advanced, airsonic-advanced
+    20400: akkoma, akkoma
+
+------------------------------------------------------------------------
+HARDWARE ACCELERATION
+------------------------------------------------------------------------
+  services with GPU blocks : 168
+    transcode     94  airsonic-advanced, airsonic-advanced, ampache, ampache, bazarr, bazarr, castopod, castopod, emby, emby ...
+    compute       56  comfyui, comfyui, elasticsearch, elasticsearch, gpt-engineer, gpt-engineer, gpt4all, gpt4all, jan, jan ...
+    passthrough   18  kvm, kvm, libvirt, libvirt, lxd, lxd, opennebula, opennebula, openstack, openstack ...
+
+  Blocks are commented out. '#' = real config (remove to enable),
+  '##' = human comment. Uncomment-tested for validity via test_gpu.
+
+------------------------------------------------------------------------
+KNOWN LIMITATIONS
+------------------------------------------------------------------------
+  1. Multi-container services (miniflux, lemmy, mailcow, nextcloud,
+     paperless-ngx, supabase, wazuh ...) ship as a single container. They
+     need a database/companion added before they will report healthy.
+  2. Some services are pinned to a generic runtime base image because no
+     official image is published. These start but need the app layer added.
+  3. Healthcheck endpoints are correct for the common case; a few apps
+     behind a login wall return 302 rather than 200.
+
+========================================================================
+STRUCTURAL CHECKS: 11396/11396 passed  - ALL PASS
+========================================================================

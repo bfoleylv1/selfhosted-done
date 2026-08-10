@@ -1,0 +1,35 @@
+# redis - docker compose (single host)
+# image verified to exist at generation time: redis:7-alpine
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    restart: unless-stopped
+    ports:
+      - "20239:6379"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 6379 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=redis"
+    #   - "homepage.description=redis self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=redis.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20239"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: redis_net

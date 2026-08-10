@@ -22,7 +22,7 @@ services:
       retries: 3
       start_period: 60s
     # labels:
-    #   - "homepage.group=Self Hosting Solutions"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=42links"
     #   - "homepage.description=42links self-hosted service."
     #   - "homepage.tags=Self Hosting Solutions"

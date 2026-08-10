@@ -1,0 +1,35 @@
+# prometheus - docker compose (single host)
+# image verified to exist at generation time: prom/prometheus:latest
+
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    restart: unless-stopped
+    ports:
+      - "20221:9090"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:9090/-/healthy || wget -qO- http://127.0.0.1:9090/-/healthy || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=prometheus"
+    #   - "homepage.description=prometheus self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=prometheus.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20221"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: prometheus_net

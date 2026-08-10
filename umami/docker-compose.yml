@@ -1,0 +1,35 @@
+# umami - docker compose (single host)
+# image verified to exist at generation time: ghcr.io/umami-software/umami:postgresql-latest
+
+services:
+  umami:
+    image: ghcr.io/umami-software/umami:postgresql-latest
+    container_name: umami
+    restart: unless-stopped
+    ports:
+      - "20342:3000"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:3000/api/health || wget -qO- http://127.0.0.1:3000/api/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=umami"
+    #   - "homepage.description=umami self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=umami.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20342"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: umami_net

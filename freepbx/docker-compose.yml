@@ -1,0 +1,35 @@
+# freepbx - docker compose (single host)
+# image verified to exist at generation time: debian:12-slim
+
+services:
+  freepbx:
+    image: debian:12-slim
+    container_name: freepbx
+    restart: unless-stopped
+    ports:
+      - "20077:20077"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20077 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=freepbx"
+    #   - "homepage.description=freepbx self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=freepbx.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20077"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: freepbx_net

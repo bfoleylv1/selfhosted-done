@@ -1,0 +1,59 @@
+# tahoe-lafs - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml tahoe-lafs
+# image verified to exist at generation time: tahoelafs/base:latest
+
+services:
+  tahoe-lafs:
+    image: tahoelafs/base:latest
+    ports:
+      - target: 3456
+        published: 3456
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - tahoe-lafs_config:/config
+      - tahoe-lafs_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 3456 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=tahoe-lafs"
+    #   - "homepage.description=tahoe-lafs self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=tahoe-lafs.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:3456"
+    #   - "homepage.server=localhost"
+
+volumes:
+  tahoe-lafs_config:
+  tahoe-lafs_data:
+
+networks:
+  default:
+    name: tahoe-lafs_net
+    driver: overlay
+    attachable: true

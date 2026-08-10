@@ -1,0 +1,59 @@
+# gaseous-server - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml gaseous-server
+# image verified to exist at generation time: gaseousgames/gaseousserver:latest
+
+services:
+  gaseous-server:
+    image: gaseousgames/gaseousserver:latest
+    ports:
+      - target: 5198
+        published: 5198
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - gaseous-server_config:/config
+      - gaseous-server_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 5198 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=gaseous-server"
+    #   - "homepage.description=gaseous-server self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=gaseous-server.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:5198"
+    #   - "homepage.server=localhost"
+
+volumes:
+  gaseous-server_config:
+  gaseous-server_data:
+
+networks:
+  default:
+    name: gaseous-server_net
+    driver: overlay
+    attachable: true

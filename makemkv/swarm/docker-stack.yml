@@ -1,0 +1,68 @@
+# makemkv - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml makemkv
+# image verified to exist at generation time: jlesage/makemkv:latest
+
+services:
+  makemkv:
+    image: jlesage/makemkv:latest
+    ports:
+      - target: 20149
+        published: 20149
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+      # - NVIDIA_DRIVER_CAPABILITIES=all
+      # - LIBVA_DRIVER_NAME=iHD            # Intel iGPU VAAPI/QSV
+      # - VAAPI_DRIVER=iHD
+    volumes:
+      - makemkv_config:/config
+      - makemkv_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20149 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+          # - node.role == manager
+          # GPU: add node-generic-resources to daemon.json and:
+          #   - node.labels.gpu == true
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+      # GPU: swarm ignores `devices:`/`runtime:`. Declare in
+      #   /etc/docker/daemon.json: "node-generic-resources": ["gpu=1"]
+      #   then use deploy.resources.reservations.generic_resources.
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=makemkv"
+    #   - "homepage.description=makemkv self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=makemkv.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20149"
+    #   - "homepage.server=localhost"
+
+volumes:
+  makemkv_config:
+  makemkv_data:
+
+networks:
+  default:
+    name: makemkv_net
+    driver: overlay
+    attachable: true

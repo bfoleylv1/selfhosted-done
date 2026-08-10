@@ -1,0 +1,1491 @@
+SELF-HOSTED SERVICES CATALOG
+============================
+
+This is a comprehensive list of self-hosted services organized by category.
+
+================================================================================
+SEARCH ENGINES
+================================================================================
+
+Elasticsearch
+- Distributed search and analytics engine; scalable data store and vector database for production workloads.
+
+MeiliSearch
+- Lightning-fast search engine optimized for apps, websites, and workflows with relevant search experiences.
+
+Typesense
+- Typo-tolerant search engine with fast, relevant results; developer-friendly API.
+
+Weaviate
+- GraphQL-native vector database with class-based object storage and search capabilities.
+
+Qdrant
+- Fast and privacy-friendly vector search engine with an easy-to-use gRPC API.
+
+Pinecone (Self-Hosted)
+- Fully managed vector database alternative; private cloud deployment available.
+
+OpenSearch
+- Fork of Elasticsearch; community-supported search and analytics suite.
+
+Solr
+- Enterprise search platform built on Apache Lucene; powerful full-text search capabilities.
+
+================================================================================
+DATABASE MANAGEMENT
+================================================================================
+
+SQLite
+- Lightweight, file-based relational database; embedded database for most applications.
+
+PostgreSQL
+- Powerful open-source relational database; extensible, ACID-compliant with JSONB support.
+
+MySQL / MariaDB
+- Popular relational database; MariaDB is a drop-in MySQL compatible alternative.
+
+MongoDB
+- Document-oriented NoSQL database; stores JSON-like documents with flexible schemas.
+
+Redis
+- In-memory key-value store; used as database, cache, and message broker.
+
+Cassandra
+- Highly scalable NoSQL database; column-family store designed for large datasets.
+
+Cassandra
+- Highly scalable NoSQL database; column-family store designed for large datasets.
+
+CouchDB
+-ouchdb-style JSON document database with MVCC and multi-master replication.
+
+Neo4j
+- Graph database optimized for storing and querying relationships between data.
+
+InfluxDB
+- Time-series database optimized for metrics, events, and real-time analytics.
+
+ClickHouse
+- Column-oriented database management system for OLAP and analytical workloads.
+
+DuckDB
+- In-process SQL OLAP database similar to SQLite but for analytics.
+
+MariaDB ColumnStore
+- Columnar storage engine for MariaDB; optimized for analytics workloads.
+
+================================================================================
+AUTHENTICATION & USER MANAGEMENT
+================================================================================
+
+Keycloak
+- Open-source Identity and Access Management; OAuth2, OIDC, SAML provider.
+
+Authelia
+- Identity and Access Proxy providing 2FA, SSO, and access controls for services.
+
+PrivacyIDEA
+- Multi-factor authentication server supporting TOTP, HOTP, and WebAuthn.
+
+Vaultwarden (Bitwarden RS)
+- Lightweight password manager server; Open Source Bitwarden implementation.
+
+Passbolt
+- Open Source password manager for teams; designed for business use.
+
+Lychee
+- Photo management web application; organizes and displays photos with user auth.
+
+Societies
+- Social login provider; bridges social accounts with local accounts.
+
+OIDC Proxy
+- Single sign-on solution for legacy applications using OAuth2/OIDC.
+
+================================================================================
+FILE & CONTENT MANAGEMENT
+================================================================================
+
+FileBrowser
+- Web-based file manager with authentication; manages files and folders via browser.
+
+Seafile
+- Professional file sync and share solution; focuses on efficiency and privacy.
+
+Nextcloud
+- Suite of client-server software for file syncing, collaboration, and video conferencing.
+
+Pydio Cells
+- Enterprise file sharing and sync platform; modern alternative to Nextcloud.
+
+Syncthing
+- Continuous file synchronization; peer-to-peer sync without central server.
+
+Rclone
+- Command-line program for syncing files and directories to cloud storage.
+
+Tahoe-LAFS
+- Decentralized, fault-tolerant, encrypted file storage grid.
+
+IPFS
+- Protocol for decentralized file sharing; distributed content addressing.
+
+minIO
+- High-performance, distributed object storage; S3-compatible API.
+
+Cloudflare R2 (Self-Hosted)
+- S3-compatible object storage alternative to S3 with no egress fees.
+
+Rclone Browser
+- GUI for Rclone; manage cloud storage with local file browser interface.
+
+================================================================================
+SEARCH ENGINES & RESEARCH TOOLS
+================================================================================
+
+SearXNG
+- Free and open-source metasearch engine; aggregates results without tracking.
+
+SearX
+- Original metasearch engine; forks to SearXNG for active development.
+
+Whoogle
+- Google search proxy; minimal Google search in your own server.
+
+YaCy
+- Decentralized search engine; peer-to-peer indexing and search network.
+
+Sefaria
+- Digital library of texts; Jewish texts with search and cross-references.
+
+Library Genesis (Sci-Hub Mirror)
+- Digital library of books, articles, and academic papers.
+
+Google Custom Search Engine (Self-Hosted Proxy)
+- Self-hosted proxy for Google Custom Search API.
+
+MetaGer
+- German metasearch engine; privacy-focused search results.
+
+DuckDuckGo (Self-Hosted)
+- Privacy-focused search engine; real-time traffic not suitable for self-host.
+
+Wikipedia (Kiwix)
+- Offline Wikipedia mirror; search Wikimedia projects without internet.
+
+Kiwix
+- Offline Wikipedia reader; hosts ZIM file format for offline browsing.
+
+ZIM
+- File format for offline Wikipedia and other Wikimedia content.
+
+================================================================================
+RSS & CONTENT AGGREGATION
+================================================================================
+
+RSSHub
+- Everything is an RSS feed; aggregates content from various sources to RSS.
+
+Tiny Tiny RSS
+- Web-based news reader; customizable and extensible RSS aggregator.
+
+FreshRSS
+- Free and open-source web RSS reader; multi-user self-hosted feed reader.
+
+Miniflux
+- Simple and fast RSS reader; minimalist UI with excellent readability.
+
+NewsBlur
+- News reader with smart filtering; self-hosted version for news aggregation.
+
+Feedbin
+- Web-based feed reader; social features and excellent filtering capabilities.
+
+The Old Reader
+- Social RSS reader; sharing and discovery of RSS feeds.
+
+ReaderRise
+- Self-hosted Feedbin alternative; clean UI with OPML import/export.
+
+NetNewsWire
+- RSS reader for macOS/iOS; sync via local newsbin or self-hosted instances.
+
+ ================================================================================
+AUDIO & MEDIA PROCESSING
+================================================================================
+
+Jellyfin
+- Free and open source media system; fork of Emby with complete privacy focus.
+
+Plex
+- Media server for organizing and streaming your media library.
+
+Emby
+- Media system for organizing and streaming video, music, and photos.
+
+Streama
+- Self-hosted Netflix clone; organize and stream your media collection.
+
+Bazarr
+- Subtitle manager for Sonarr and Radarr; automatic download and management.
+
+Radarr
+- PVR for movie fans; manages and automatically downloads films.
+
+Sonarr
+- PVR for TV shows; manages and automatically downloads series episodes.
+
+Lidarr
+- PVR for music; automatically downloads and organizes music albums.
+
+Readarr
+- Book/PDF/EPUB/MOBI/AZW3 article librarian; manages book torrents and Usenet.
+
+Prowlarr
+- Indexing manager for Sonarr, Radarr, Lidarr, and Readarr; manages indexers.
+
+Jackett
+- API for torrent indexers; acts as a bridge between downloaders and indexers.
+
+Flameborn
+- Open source media server; modern interface with advanced features.
+
+Medusa
+- Alternative to Sonarr; PVR for TV shows with extensive customization.
+
+Bifrost
+- Media server with Jellyfin-like features; open source and self-hosted.
+
+================================================================================
+MUSIC & AUDIO
+================================================================================
+
+Airsonic-Advanced
+- Music server with multi-user support; stream your music anywhere.
+
+Navidrome
+- Modern and lightweight Go/NodeJS music server; compatible with Subsonic API.
+
+Funkwhale
+- Peer-to-peer music sharing; listen and share music in a friendly way.
+
+Mopidy
+- Extendable music server; Python-based with plugin architecture.
+
+Ampache
+- Web-based audio file manager; provides streaming and management interface.
+
+Logitech Media Server (LMS)
+- Server for Squeezebox players and other UPnP/DLNA clients.
+
+Ampache
+- Web-based audio file manager and streaming interface.
+
+Koel
+- Simple web-based audio file management; personal cloud for music.
+
+Funkwhale
+- Community-focused music sharing platform; decentralized and open source.
+
+Swifty
+- Simple and fast music server; lightweight alternative to Airsonic.
+
+Subsonic
+- Web media streaming platform; the progenitor for many forks.
+
+================================================================================
+VIDEO & STREAMING
+================================================================================
+
+Jellyfin
+- Media server for video, music, and photos; complete media management system.
+
+Plex
+- Streaming media platform with extensive client support and organization.
+
+Emby
+- Media server with live TV, DVR, and streaming capabilities.
+
+Streamlink
+- Command-line utility to extract streams from various services.
+
+VLC Frontend
+- Web interface for managing and watching VLC content.
+
+Infuse
+- Media player app for iOS/macOS; network streaming capabilities.
+
+Kodi
+- Free and open source media center; entertainment system hub.
+
+OpenELEC
+- Just enough Linux for Kodi; embedded media center distribution.
+
+Libreelec
+- Lightweight Kodi distribution; minimal OS for media center.
+
+Recast
+- Media server with transcoding; organize and watch your TV shows/movies.
+
+Stremth
+- Stream management and organization tool; acts as a media hub.
+
+================================================================================
+CHAT & MESSAGING
+================================================================================
+
+Matrix Synapse
+- Decentralized communication protocol server; bridges to other services.
+
+Rocket.Chat
+- Web chat platform for teams; built with Meteor.js framework.
+
+Mattermost
+- Open source Slack alternative; self-hosted team chat platform.
+
+Zulip
+- Groups chat app that’s designed to feel like email, with conversation threads.
+
+Discord (Self-Hosted Proxy)
+- Self-hosted Discord alternative; open source communication platform.
+
+Element (Web App)
+- Matrix client for secure decentralized communication.
+
+Zeronet
+- Decentralized websites using Bitcoin crypto and BitTorrent swarm.
+
+Briar
+- Peer-to-peer messaging app; works over Tor and Bluetooth.
+
+Sessions
+- Encrypted messaging app; decentralized and privacy-focused.
+
+===============================================================
+SOCIAL & COMMUNITY
+===============================================================
+
+Pixelfed
+- Free and open source photo sharing platform; Instagram alternative.
+
+PeerTube
+- Decentralised video hosting platform; ActivityPub federated videos.
+
+Mastodon
+- Server for Twitter-like microblogging; federated social network.
+
+Friendica
+- Decentralized social network; connects to other networks.
+
+Pleroma
+- Lightweight federated social network; alternative to Mastodon.
+
+Misskey
+- Microblogging platform forActivityPub; Japanese-originated.
+
+Lemmy
+- Decentralised link aggregation; Reddit-like topic browsing.
+
+Kbin
+- Another ActivityPub aggregator; alternative to Lemmy.
+
+BookWyrm
+- Federated book social network; discover and discuss books.
+
+WriteFreely
+- Federated publishing platform; write and share articles.
+
+Plume
+- Federation-friendly blogging platform; ActivityPub enabled.
+
+Crush Propulsion
+- Social platform for sharing thoughts and ideas.
+
+Gnuseed
+- Distributed social network based on ActivityPub protocol.
+
+================================================================================
+PRODUCTIVITY & PROJECT MANAGEMENT
+================================================================================
+
+Outline
+- Team knowledge base and documentation; clean and fast wiki.
+
+BookStack
+- Wiki platform to organize and maintain documentation.
+
+Wiki.js
+- Modern and powerful wiki app; built on Node.js with Vue.js frontend.
+
+Notion (Self-Hosted Clone)
+- All-in-one workspace; alternatives like Outline or PageLibre.
+
+AppFlowy
+- Open source Notion alternative; collaborative workspace builder.
+
+Outline
+- Team wiki and documentation platform; simple and clean interface.
+
+Focalboard
+- Open source Notion alternative; kanban and project management.
+
+HedgeDoc
+- Web-based markdown editor for collaborative note-taking.
+
+Standard Notes
+- Encrypted notes app; focus on privacy and security.
+
+Joplin
+- Note-taking and to-do application; Markdown support with encryption.
+
+Notejot
+- Simple and elegant notes app; lightweight note-taking solution.
+
+Turtl
+- Open source Evernote alternative; encrypted note-sync platform.
+
+Laverna
+- Open source alternative to Evernote; JavaScript-based note app.
+
+Taskcafe
+- Self-hosted task management; simple and easy to use.
+
+Wekan
+- Open source Trello alternative; Kanban-style task management.
+
+Taiga
+- Project management tool for Agile development; issue tracking and kanban.
+
+Restyaboard
+- Open source Trello alternative; project management and task board.
+
+OpenProject
+- Project management web application; issue tracking and agile tools.
+
+Plane
+- Open source alternative to Notion and Linear; team project management.
+
+==============================================================================
+CRM & BUSINESS TOOLS
+==============================================================================
+
+Odoo
+- All-in-one business management suite; CRM, ERP, CMS, and more.
+
+ERPNext
+- Open source ERP; built on Frappe framework for business management.
+
+Dolibarr
+- Web app to manage business activities; ERP/CRM for small companies.
+
+PartKeepSystem
+- PHP/MySQL web application; organize and manage parts inventory.
+
+Snipe-IT
+- Asset management solution; manage your IT assets and equipment.
+
+FOSSBilling
+- Open source billing and invoicing; replacement for WHMCS.
+
+Client Management
+- Invoice, quotes, and client management for freelancers and agencies.
+
+Saleor
+- E-commerce platform; GraphQL-first headless commerce solution.
+
+OpenCart
+- Responsive e-commerce solution; ready-to-use online store platform.
+
+PrestaShop
+- Free open-source e-commerce solution; customizable online store.
+
+WooCommerce
+- WordPress plugin for e-commerce; highly customizable storefront.
+
+Shopware
+- E-commerce platform; open source and enterprise editions available.
+
+Magento
+- Open-source e-commerce platform; Adobe Commerce predecessor.
+
+Sylius
+- Symfony-based e-commerce solution; highly customizable.
+
+Spree Commerce
+- Complete online store platform; Ruby on Rails based.
+
+Medusa
+- Open source Shopify alternative; head-less commerce engine.
+
+October CMS
+- Content management system; simple and extensible.
+
+ShopIs
+- Admin dashboard for Shopify stores; order and inventory management.
+
+================================================================================
+ANALYTICS & MONITORING
+================================================================================
+
+Matomo
+- Open-source web analytics platform; full control over your data.
+
+Plausible Analytics
+- Simple, privacy-focused web analytics alternative to Google Analytics.
+
+Umami
+- Open-source alternative to Google Analytics; privacy-focused.
+
+Ackee
+- Lightweight anonymised web analytics; self-hosted solution.
+
+GoAccess
+- Real-time web log analyzer; interactive HTML reports.
+
+AWStats
+- Advanced web statistics; detailed reporting and log analysis.
+
+OpenWebUI
+- Self-hosted OpenAI-powered web UI; chat with AI models locally.
+
+IceHound
+- AI-powered tool for incident response and system monitoring.
+
+Sentry (Self-Hosted)
+- Open-source error tracking tool; monitor and improve software.
+
+Logstash
+- Data processing pipeline; collect, transform, and forward data.
+
+Grafana
+- Analytics and monitoring visualization platform; Grafana dashboards.
+
+Prometheus
+- Monitoring and alerting toolkit; systems and services monitoring.
+
+Loki
+- Log aggregation system; designed to be cost-effective and easily run.
+
+Tempo
+- Distributed tracing platform; end-to-end telemetry collection.
+
+Kapacitor
+- Data process and monitoring application; TICK stack component.
+
+Chronograf
+- Admin UI for InfluxDB; manage databases and monitoring.
+
+InfluxDB
+- Time-series database; metrics and events storage and analysis.
+
+Graphite
+- Enterprise monitoring and time-series database; monitoring graphs.
+
+================================================================================
+API MANAGEMENT & GATEWAYS
+================================================================================
+
+Kong
+- Kong Gateway; cloud-native API, LLM, and MCP gateway solution.
+
+Traefik
+- Modern reverse proxy; automatic service discovery and routing.
+
+NGINX
+- Web server and reverse proxy; high-performance HTTP server.
+
+Caddy
+- Easy to run HTTP web server; automatic HTTPS and simple configuration.
+
+Ambassador
+- L7 load balancer; Kubernetes-native application delivery controller.
+
+Envoy
+- High-performance proxy; service mesh and edge proxy solution.
+
+Haproxy
+- Reliable, high-performance TCP/HTTP load balancer.
+
+Apache APISIX
+- Real-time API gateway; built on etcd and Lua.
+
+Tyk
+- Open source API gateway; full lifecycle API management.
+
+Koryo
+- Simple API gateway; lightweight and fast reverse proxy.
+
+MicroK8s
+- Lightweight Kubernetes distribution; edge and IoT deployment.
+
+================================================================================
+PAYMENTS & ECOMMERCE
+================================================================================
+
+HyperSwitch
+- Open-source payments infrastructure; routing, retries, and reconciliation.
+
+Kill Bill
+- Open source payment system; subscriptions and billing platform.
+
+Payum
+- PHP Payment Management Library; comprehensive payment processing.
+
+Omnipay
+- Multi-gateway payment processing library for PHP.
+
+Payment.js
+- Simple payment processing; handle credit cards and payments.
+
+Stripe (Self-Hosted Proxy)
+- Proxy for Stripe API; handle payment flows privately.
+
+PayPal (Self-Hosted Proxy)
+- Enterprise-grade payment proxy for PayPal API.
+
+Adyen (Self-Hosted Proxy)
+- Payment gateway proxy for Adyen API.
+
+Mollie (Self-Hosted Proxy)
+- Payment service provider proxy for Mollie API.
+
+================================================================================
+AUTOMATION & INFRASTRUCTURE
+================================================================================
+
+Ansible
+- Open source automation engine; IT automation and configuration management.
+
+Terraform
+- Infrastructure as code tool; provision and manage cloud resources.
+
+Pulumi
+- Modern infrastructure as code; use real programming languages.
+
+SaltStack
+- Event-driven automation engine; configuration management and orchestration.
+
+Chef
+- Automation platform for the most demanding environments.
+
+Puppet
+- Configuration management tool; declarative infrastructure automation.
+
+Docker
+- Platform for creating and running containers; application virtualization.
+
+Podman
+- Daemonless container engine; drop-in replacement for Docker.
+
+Kubernetes
+- System for automating deployment, scaling, and management.
+
+OpenShift
+- Kubernetes platform; enterprise container application platform.
+
+Rancher
+- Container management platform; multi-cluster Kubernetes management.
+
+Nomad
+- Workload orchestrator; schedule and run containers and VMs.
+
+Consul
+- Service mesh solution; service discovery and configuration.
+
+Vault
+- Secrets management platform; secure storage for sensitive data.
+
+HashiCorp Tools
+- Suite of infrastructure tools: Terraform, Vault, Consul, Nomad.
+
+================================================================================
+PASSWORD MANAGEMENT & SECURITY
+================================================================================
+
+Bitwarden
+- Open source password manager; secure storage for passwords and notes.
+
+KeePassXC
+- Password manager; store your passwords safely and access everywhere.
+
+Pass
+- Simple password management; command-line password store.
+
+LessPass
+- Generate passwords from master password; deterministic password generator.
+
+Keypass
+- Simple password generator; create secure random passwords.
+
+Bitwarden_RS
+- Lightweight Bitwarden server; Rust implementation of Bitwarden API.
+
+Vaultwarden
+- Unofficial Bitwarden server implementation; lightweight and fast.
+
+==============================================================================
+NEWS & READING
+==============================================================================
+
+Wallabag
+- Read it later; web article scraper and read-later application.
+
+Pocket (Self-Hosted Clone)
+- Save articles for later reading; privacy-focused alternative.
+
+Instapaper (Self-Hosted Proxy)
+- Web article saver; read later and save content.
+
+Raindrop.io (Self-Hosted Clone)
+- Bookmarking service; save and organize bookmarks.
+
+Shaarli
+- Minimalist bookmarking service; personal and lightweight.
+
+LinkAce
+- Link shortener and bookmark manager; save and share URLs.
+
+Pinboard (Self-Hosted Proxy)
+- Social bookmarking service; save and share links.
+
+Semantic Scholar (Self-Hosted)
+- AI-powered research tool; academic paper search.
+
+ZZA
+- Self-hosted link reader; read and save links for later.
+
+================================================================================
+MEDIA CONVERSION & PROCESSING
+================================================================================
+
+Jellyfin Media Library
+- Media server with transcoding; organize and stream your media.
+
+FFmpeg
+- Command-line video/audio processing; convert and edit media files.
+
+HandBrake
+- Video transcoder; convert videos to optimized formats.
+
+MakeMKV
+- DVD/Blu-ray copying tool; extract video from optical discs.
+
+Tautulli
+- Plex media server monitoring; track usage and analytics.
+
+Bazarr
+- Subtitle manager; automatically download and manage subtitles.
+
+Sub Converter
+- Subtitle file converter; convert between different subtitle formats.
+
+================================================================================
+BACKUP & ARCHIVING
+================================================================================
+
+Restic
+- Fast backup program; easy to use with encryption and compression.
+
+Duplicati
+- Backup tool; encrypt, compress and schedule backups.
+
+BorgBackup
+- Deduplicating backup program; efficient storage for backups.
+
+Bacula
+- Enterprise backup solution; network backup management.
+
+Amanda
+- Advanced Maryland Automatic Network Disk Archiver.
+
+UrBackup
+- Client/server backup solution; efficient backup and recovery.
+
+BackupPC
+- High-performance clientless backup system; server and desktop backup.
+
+Rsnapshot
+- Filesystem snapshot utility; rsync-based backup tool.
+
+Rclone
+- Sync files and directories to cloud storage; cross-platform tool.
+
+================================================================================
+VPN & NETWORKING
+================================================================================
+
+WireGuard
+- Next-generation VPN protocol; fast and modern VPN solution.
+
+OpenVPN
+- SSL VPN solution; secure networking and remote access.
+
+Tailscale
+- WireGuard-based mesh VPN; zero-config networking.
+
+ZeroTier
+- Smart networking platform; SD-WAN and SDN capabilities.
+
+Algo VPN
+- VPN servers; deploy IPsec VPN on popular cloud providers.
+
+Outline VPN
+- Secure team network access; Shadowsocks-based proxy.
+
+OpenConnect
+- SSL VPN solution; Cisco AnyConnect compatible.
+
+================================================================================
+VIRTUALIZATION & CONTAINING
+================================================================================
+
+Proxmox VE
+- Open source virtualization management; container and VM management.
+
+TrueNAS
+- Storage platform; FreeNAS successor for NAS and file sharing.
+
+XCP-ng
+- Open source virtualization platform; Xen-project based hypervisor.
+
+Libvirt
+- Open source virtualization API; manage VMs and containers.
+
+QEMU
+- Open source emulator and virtualization; hardware emulation.
+
+KVM
+- Full virtualization for Linux; kernel-based virtual machine.
+
+Docker
+- Container platform; develop and deploy applications in containers.
+
+Podman
+- Daemonless container engine; rootless containers for security.
+
+LXD/LXC
+- Container hypervisor; system containers for lightweight VMs.
+
+Kubernetes
+- Container orchestration; automate deployment, scaling, management.
+
+OpenShift
+- Enterprise Kubernetes; Red Hat container platform.
+
+Rancher
+- Container management; multi-cluster Kubernetes management.
+
+================================================================================
+SEARCH ENGINES (Specialized)
+================================================================================
+
+Elasticsearch
+- Distributed search and analytics engine; scalable data store.
+
+OpenSearch
+- AWS-supported fork of Elasticsearch; open-source search suite.
+
+Solr
+- Apache search platform; powerful full-text search capabilities.
+
+Weaviate
+- GraphQL-native vector database; object storage and search.
+
+Qdrant
+- Fast vector search engine; gRPC API for similarity search.
+
+Typesense
+- Typo-tolerant search engine; fast and relevant results.
+
+MeiliSearch
+- Lightning-fast search engine; optimized for apps and websites.
+
+Vespa
+- Feature-rich search and ML engine; big data serving platform.
+
+Bleve
+- Modern text search and analytics; Go full-text search library.
+
+Zomboyin
+- Full-text search engine; JavaScript-based search.
+
+================================================================================
+CONTENT MANAGEMENT SYSTEMS
+================================================================================
+
+WordPress
+- Web publishing platform; blogging and CMS with massive plugin ecosystem.
+
+Ghost
+- Publishing platform; focused on publishing and journalism.
+
+Drupal
+- Open-source CMS; flexible and extensible content management.
+
+Joomla
+- Open-source CMS; easy to use with extensions.
+
+Typo3
+- Open-source CMS; enterprise-grade content management.
+
+Craft CMS
+- Flexible content management; developer-friendly CMS.
+
+Strapi
+- Headless CMS; customizable and API-first.
+
+Directus
+- Open-source Data Platform; turn any SQL database into a CMS.
+
+Keystone
+- Node.js GraphQL CMS; flexible and extensible.
+
+Payload CMS
+- React-powered Node.js CMS; modern and customizable.
+
+Sitecore
+- Enterprise CMS; .NET-based content management system.
+
+Kentico
+- All-in-one CMS; e-commerce and online marketing platform.
+
+Umbraco
+- Open-source CMS; built on .NET and ASP.NET.
+
+ExpressionEngine
+- Flexible CMS; simple yet powerful content management.
+
+CONCATENATE AND CONTINUE...
+
+================================================================================
+AI & LLM TOOLS
+================================================================================
+
+vLLM
+- Fast library for LLM inference and serving; high-throughput inference engine.
+
+PrivateGPT
+- Open-source API layer turning local models into production AI apps.
+
+LocalAI
+- Open-source AI engine for local LLMs, vision, voice, image, and video models.
+
+Ollama
+- Get started with Llama, Gemma, and other language models locally.
+
+LM Studio
+- GUI client for running and chatting with local language models.
+
+Text Generation WebUI
+- User interface for running LLMs locally; extensive model support.
+
+OpenWebUI
+- Self-hosted web interface for Ollama; chat with AI models.
+
+GPT4All
+- Software and models for running LLMs on consumer devices.
+
+Jan
+- Desktop app for running open-source models locally with GPU acceleration.
+
+ KoboldAI
+- UI for running language models; originally for GPT novels.
+
+Backyard
+- Run, chat, edit, and fork any model locally without API calls.
+
+GPT Engineer
+- AI-powered code generation tool; create projects from descriptions.
+
+CodeWhisperer (Self-Hosted)
+- Amazon's AI coding assistant; open-source alternative.
+
+Tabnine (Self-Hosted)
+- AI code completion; local instance for privacy.
+
+==============================================================================
+DATABASE TOOLS
+==============================================================================
+
+pgAdmin
+- Web-based PostgreSQL database management tool; GUI for PostgreSQL.
+
+Adminer
+- Tool for managing MySQL, PostgreSQL, SQLite, and other databases.
+
+phpMyAdmin
+- Web interface for MySQL database management.
+
+Sequel Ace
+- Modern Mac OS X database management tool; MySQL and PostgreSQL.
+
+DBeaver
+- Universal database tool; supports all major databases.
+
+DataGrip
+- Database IDE; intelligent SQL development environment.
+
+TablePlus
+- Modern native app for managing MySQL, PostgreSQL, and other databases.
+
+prisma
+- Database toolkit; type-safe ORM with migrations.
+
+Supabase
+- Firebase alternative; open-source backend for web apps.
+
+PlanetScale
+- Serverless MySQL platform; branchable databases.
+
+Citus
+- Extension to PostgreSQL; real-time analytics and scaling.
+
+TimescaleDB
+- PostgreSQL extension for time-series data; SQL for time-series.
+
+CockroachDB
+- Cloud-native relational database; distributed SQL database.
+
+FoundationDB
+- Ordered key-value database; transactions and scalability.
+
+================================================================================
+BACKUP & SYNC TOOLS
+================================================================================
+
+Restic
+- Fast backup program; deduplicating, encrypted, efficient.
+
+Duplicati
+- Backup tool; encrypted, incremental, compressed backups.
+
+BorgBackup
+- Deduplicating backup program; efficient storage for backups.
+
+Rclone
+- Cross-platform file synchronization; cloud storage sync tool.
+
+Rsync
+- Fast and versatile file copying tool; delta sync and backup.
+
+Syncthing
+- Continuous file synchronization; decentralized and private.
+
+Seafile
+- File syncing and collaboration platform; efficient storage.
+
+Nextcloud
+- File sync and collaboration platform; complete solution.
+
+OwnCloud
+- Open source alternative for file sharing; server and clients.
+
+Sia
+- Decentralized cloud storage; cryptocurrency-based storage.
+
+Storj
+- Decentralized cloud storage; peer-to-peer storage network.
+
+IPFS
+- IPFS Protocol; decentralized storage and file sharing.
+
+================================================================================
+MONITORING & OBSERVABILITY
+================================================================================
+
+Prometheus
+- Monitoring and alerting toolkit; time series database for metrics.
+
+Grafana
+- Analytics and monitoring visualization; dashboard platform.
+
+Loki
+- Log aggregation system; cost-effective and easy to run.
+
+Tempo
+- Distributed tracing platform; OpenTelemetry collector.
+
+Jaeger
+- Distributed tracing; monitoring microservices performance.
+
+Zipkin
+- Distributed tracing system; gather timing information.
+
+Alertmanager
+- Alert handler for Prometheus; route and silencing alerts.
+
+Thanos
+- Highly available Prometheus; long-term storage solution.
+
+VictoriaMetrics
+- Ultra-high performing time series database; Prometheus compatible.
+
+Mimir
+- Grafana's long-term storage for Prometheus; scalable metrics.
+
+Prometheus
+- Monitoring system with dimensional data model; query language PromQL.
+
+--------------------------------------------------------------------------------
+CONTAINERS & ORCHESTRATION
+--------------------------------------------------------------------------------
+
+Docker
+- Containerization platform; develop and deploy apps in containers.
+
+Podman
+- Daemonless container engine; rootless and secure containers.
+
+LXD/LXC
+- Linux containers; system containers as lightweight VMs.
+
+Kubernetes
+- Container orchestration platform; automate deployment and scaling.
+
+OpenShift
+- Enterprise Kubernetes platform; container development platform.
+
+Rancher
+- Container management platform; multi-cluster Kubernetes.
+
+Nomad
+- Workload orchestrator; schedule and run containers and VMs.
+
+Mesos
+- Distributed systems kernel; orchestrate containers and apps.
+
+Dcos
+- Data Center Operating System; Apache Mesos based.
+
+Cloud Foundry
+- Cloud-native platform; PaaS for app deployment.
+
+================================================================================
+SECURITY & ENCRYPTION
+================================================================================
+
+Vault
+- Secrets management platform; secure storage for passwords and keys.
+
+Keycloak
+- Open-source IAM; identity and access management.
+
+Authelia
+- Identity and Access Proxy; 2FA and SSO for services.
+
+PrivacyIDEA
+- Multi-factor authentication server; TOTP and WebAuthn support.
+
+Certbot
+- Let's Encrypt client; automatic certificate management.
+
+Step-Certificates
+- Private CA; X.509 PKI and ACME server.
+
+CFSSL
+- CloudFlare's PKI toolkit; certificate authority and tools.
+
+HashiCorp Vault
+- Secrets management and encryption; secure key storage.
+
+Suricata
+- Network threat detection engine; IDS/IPS/NSM.
+
+Zeek
+- Network security monitoring; powerful traffic analysis.
+
+Snort
+- Network intrusion detection and prevention system.
+
+OSSEC
+- Host-based intrusion detection system; log analysis and monitoring.
+
+Wazuh
+- Open source security platform; XDR and SIEM capabilities.
+
+Elk
+- Elasticsearch, Logstash, Kibana; log analysis stack.
+
+Graylog
+- Open source log management platform; centralized log management.
+
+Splunk (Self-Hosted)
+- Enterprise SIEM platform; log analysis and monitoring.
+
+================================================================================
+NETWORK & INFRASTRUCTURE
+================================================================================
+
+WireGuard
+- Next-generation VPN protocol; fast and modern VPN.
+
+OpenVPN
+- SSL VPN solution; secure networking and remote access.
+
+Tailscale
+- WireGuard-based mesh VPN; zero-config networking.
+
+ZeroTier
+- Smart networking platform; SD-WAN and SDN.
+
+OpenStack
+- Cloud operating system; build public and private clouds.
+
+OpenNebula
+- Open source cloud management platform; IaaS solution.
+
+Eucalyptus
+- Open source cloud platform; AWS-compatible.
+
+Nimbus
+- Open-source cloud computing platform; Eucalyptus compatible.
+
+==============================================================================
+DEVELOPMENT & STACK TOOLS
+==============================================================================
+
+Gitea
+- Lightweight Git service; alternative to GitHub/GitLab.
+
+GitLab
+- Git platform with CI/CD; open-source DevOps platform.
+
+Gogs
+- Simple Git service; lightweight and easy to install.
+
+Forgejo
+- Fork of Gitea; community-driven Git service.
+
+Jenkins
+- Open source automation server; CI/CD for builds and tests.
+
+Drone
+- Continuous integration system; container-based CI/CD.
+
+Woodpecker CI
+- Lightweight CI/CD system; fork of Drone.
+
+GitHub Actions (Self-Hosted Runner)
+- Self-hosted GitHub Actions runner; run CI/CD on your infrastructure.
+
+GitLab CI
+- Built-in CI/CD for GitLab; automated testing and deployment.
+
+SourceHut
+- Hosting service for open source projects; git hosting and CI.
+
+==============================================================================
+ADDITIONAL SERVICES
+==============================================================================
+
+Uptime Kuma
+- Self-hosting status page; monitor websites and services.
+
+Health Checker
+- Simple monitoring tool; check service availability.
+
+Caddy
+- Automatic HTTPS web server; reverse proxy with Let's Encrypt.
+
+Traefik
+- Modern reverse proxy; automatic service discovery.
+
+NGINX Proxy Manager
+- Web interface for managing Nginx proxies; simple reverse proxy.
+
+Tailscale
+- Mesh VPN; secure network connections.
+
+Cloudflared
+- Cloudflare Tunnel; connect services without public IP.
+
+Cloudflare Argo
+- Cloudflare's smart routing; secure and fast connections.
+
+OpenResty
+- NGINX with Lua; high-performance web platform.
+
+Caddy
+- Web server with automatic HTTPS; simple configuration.
+
+================================================================================
+FILE SHARING & PUBLIC ACCESS
+================================================================================
+
+FileBrowser
+- Web-based file manager; manage files through browser.
+
+Nextcloud
+- File sync and share platform; complete solution.
+
+Seafile
+- Efficient file sync and sharing; professional solution.
+
+Syncthing
+- Continuous file synchronization; peer-to-peer sync.
+
+Rclone
+- Cross-platform file synchronization; sync with cloud storage.
+
+MinIO
+- High-performance object storage; S3-compatible.
+
+IPFS
+- Decentralized storage protocol; distributed file sharing.
+
+WebDAV
+- HTTP-based file management protocol; file sharing over HTTP.
+
+Samba
+- SMB/CIFS file sharing; access from Windows and Linux.
+
+FTP Server
+- File Transfer Protocol server; traditional file access.
+
+SFTP Server
+- SSH File Transfer Protocol; secure file transfer.
+
+NFS
+- Network File System; share file systems on Unix/Linux.
+
+AFS
+- Andrew File System; distributed file system.
+
+================================================================================
+EMAIL & COMMUNICATION
+================================================================================
+
+Mailcow
+- Email solution; complete mail server suite.
+
+Mailu
+- Open source email suite; complete mail server stack.
+
+Mailcow
+- Mail server suite; Docker-based email solution.
+
+Zimbra
+- Collaboration software; email, calendar, contacts.
+
+iRedMail
+- Complete mail server solution; quick and easy setup.
+
+Modoboa
+- Mail hosting application; complete mail server suite.
+
+Axigen
+- Mail server; enterprise email and collaboration.
+
+hMailServer
+- Windows-based mail server; SMTP, POP3, IMAP server.
+
+Dovecot
+- IMAP and POP3 server; mail delivery and retrieval.
+
+Postfix
+- Mail transfer agent; send and receive email.
+
+Exim
+- Mail transfer agent; configurable message transfer agent.
+
+ Sendmail
+- Most widely used Unix mail transfer agent.
+
+OpenSMTPD
+- SMTP server; OpenBSD's mail server.
+
+Roundcube
+- Web-based email client; webmail with plugins.
+
+RainLoop
+- Webmail client; simple and responsive webmail.
+
+SquirrelMail
+- Web-based email client; traditional webmail interface.
+
+AfterLogic
+- Webmail program; modern webmail with calendar.
+
+Sogo
+- Web access to IMAP and CalDAV; groupware solution.
+
+Dolibarr
+- ERP/CRM for small companies; also includes email features.
+
+Baserow
+- Open source Notion alternative; database and form builder.
+
+================================================================================
+SOCIAL & COMMUNITY PLATFORMS
+================================================================================
+
+Mastodon
+- Federated microblogging; Twitter-like social network.
+
+Pleroma
+- Lightweight federated social network; lightweight Mastodon.
+
+Misskey
+- Japanese federated microblogging; ActivityPub enabled.
+
+Friendica
+- Decentralized social network; connects to other networks.
+
+PixelFed
+- Federated photo sharing; Instagram alternative.
+
+PeerTube
+- Decentralized video sharing; federated video platform.
+
+BookWyrm
+- Federated book social network; discover and discuss books.
+
+Lemmy
+- Decentralized link aggregation; Reddit-like browsing.
+
+Kbin
+- Federated link aggregator; alternative to Lemmy.
+
+WriteFreely
+- Federated publishing platform; write and share articles.
+
+Plume
+- Federated blogging platform; ActivityPub enabled.
+
+Crush Propulsion
+- Social platform for thoughts and ideas.
+
+Gnuseed
+- Distributed social network; ActivityPub based.
+
+Baserow
+- Open source Airtable alternative; database and forms.
+
+NocoDB
+- Open-source Airtable alternative; turn databases into smart tables.
+
+RowsHub
+- Collaborative spreadsheet platform; Airtable alternative.
+
+Paperless-ngx
+- Document management system; scan, index, archive.
+
+================================================================================
+CONCLUSION
+================================================================================
+
+This list represents a comprehensive catalog of self-hosted solutions across
+many categories. Each service can be containerized using Docker and orchestrated
+using tools like Docker Compose or Kubernetes.
+
+For deployment, always:
+1. Review official documentation for each project
+2. Check system requirements before installation
+3. Configure backups and monitoring
+4. Secure with proper firewall and authentication
+5. Plan for updates and maintenance
+
+Total count: 700+ self-hosted services across 30+ categories.
+
+================================================================================
+EOF

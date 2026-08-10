@@ -6,7 +6,7 @@ services:
   cloudflared:
     image: cloudflare/cloudflared:latest
     ports:
-      - target: 2000
+      - target: 20032
         published: 20032
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - cloudflared_config:/config
       - cloudflared_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:2000/ready || wget -qO- http://127.0.0.1:2000/ready || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20032 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,10 +40,10 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Additional Services"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cloudflared"
-    #   - "homepage.description=Cloudflare Tunnel; connect services without public IP."
-    #   - "homepage.tags=Additional Services"
+    #   - "homepage.description=cloudflared self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=cloudflared.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20032"
     #   - "homepage.server=localhost"

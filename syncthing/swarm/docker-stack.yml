@@ -1,0 +1,59 @@
+# syncthing - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml syncthing
+# image verified to exist at generation time: linuxserver/syncthing:latest
+
+services:
+  syncthing:
+    image: linuxserver/syncthing:latest
+    ports:
+      - target: 8384
+        published: 8384
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - syncthing_config:/config
+      - syncthing_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8384/ || wget -qO- http://127.0.0.1:8384/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=syncthing"
+    #   - "homepage.description=syncthing self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=syncthing.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:8384"
+    #   - "homepage.server=localhost"
+
+volumes:
+  syncthing_config:
+  syncthing_data:
+
+networks:
+  default:
+    name: syncthing_net
+    driver: overlay
+    attachable: true

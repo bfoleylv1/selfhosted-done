@@ -1,12 +1,12 @@
 # airsonic-advanced - docker swarm stack
 # deploy: docker stack deploy -c docker-stack.yml airsonic-advanced
-# image verified to exist at generation time: airsonicadvanced/airsonic-advanced:latest
+# image verified to exist at generation time: lscr.io/linuxserver/airsonic-advanced:latest
 
 services:
   airsonic-advanced:
-    image: airsonicadvanced/airsonic-advanced:latest
+    image: lscr.io/linuxserver/airsonic-advanced:latest
     ports:
-      - target: 4040
+      - target: 20399
         published: 20399
         protocol: tcp
         mode: ingress
@@ -14,19 +14,11 @@ services:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
       - PGID=${PGID:-1000}
-      ## -- GPU env: remove the '#' on the lines for your hardware --
-      ## Intel Quick Sync / VAAPI:
-      # - LIBVA_DRIVER_NAME=iHD          # 'i965' for pre-Gen8 Intel
-      ## AMD VAAPI (amdgpu):
-      # - LIBVA_DRIVER_NAME=radeonsi
-      ## NVIDIA NVENC/NVDEC:
-      # - NVIDIA_VISIBLE_DEVICES=all
-      # - NVIDIA_DRIVER_CAPABILITIES=video,compute,utility
     volumes:
       - airsonic-advanced_config:/config
       - airsonic-advanced_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:4040/ || wget -qO- http://127.0.0.1:4040/ || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20399 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -37,7 +29,6 @@ services:
       placement:
         constraints:
           - node.platform.os == linux
-          # - node.labels.gpu == true   ## docker node update --label-add gpu=true <node>
       restart_policy:
         condition: on-failure
         delay: 5s
@@ -48,22 +39,11 @@ services:
       resources:
         limits:
           memory: 2G
-      ## -------------------------------------------------------------
-      ## GPU under Swarm: `devices:`/`runtime:` are IGNORED. Advertise
-      ## the GPU on the node in /etc/docker/daemon.json:
-      ##   {"node-generic-resources": ["NVIDIA-GPU=GPU-<uuid>"]}
-      ## then uncomment below + the node.labels.gpu constraint above.
-      ## -------------------------------------------------------------
-      # reservations:
-      #   generic_resources:
-      #     - discrete_resource_spec:
-      #         kind: 'NVIDIA-GPU'
-      #         value: 1
     # labels:
-    #   - "homepage.group=Music"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=airsonic-advanced"
-    #   - "homepage.description=Music server with multi-user support; stream your music anywhere."
-    #   - "homepage.tags=Music,Audio"
+    #   - "homepage.description=airsonic-advanced self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=airsonic-advanced.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20399"
     #   - "homepage.server=localhost"

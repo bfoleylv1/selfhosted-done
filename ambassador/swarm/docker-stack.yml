@@ -6,7 +6,7 @@ services:
   ambassador:
     image: docker.io/emissaryingress/emissary:3.9.1
     ports:
-      - target: 8080
+      - target: 20403
         published: 20403
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - ambassador_config:/config
       - ambassador_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20403 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,10 +40,10 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Api Management"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=ambassador"
-    #   - "homepage.description=L7 load balancer; Kubernetes-native application delivery controller."
-    #   - "homepage.tags=Api Management,Gateways"
+    #   - "homepage.description=ambassador self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=ambassador.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20403"
     #   - "homepage.server=localhost"

@@ -12,14 +12,9 @@ services:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
       - PGID=${PGID:-1000}
-      ## -- GPU env: remove the '#' on the lines for your hardware --
-      ## NVIDIA CUDA:
-      # - NVIDIA_VISIBLE_DEVICES=all
-      # - NVIDIA_DRIVER_CAPABILITIES=compute,utility
-      ## Intel oneAPI / OpenVINO:
-      # - ONEAPI_DEVICE_SELECTOR=level_zero:gpu
-      ## AMD ROCm:
-      # - HSA_OVERRIDE_GFX_VERSION=11.0.0   # match your card
+      # - NVIDIA_DRIVER_CAPABILITIES=all
+      # - LIBVA_DRIVER_NAME=iHD            # Intel iGPU VAAPI/QSV
+      # - VAAPI_DRIVER=iHD
     volumes:
       - ./config:/config
       - ./data:/data
@@ -29,38 +24,14 @@ services:
       timeout: 10s
       retries: 3
       start_period: 60s
-    ## -------------------------------------------------------------
-    ## HARDWARE ACCELERATION (GPU compute) - uncomment ONE variant
-    ## (single '#' = real config, remove it to enable)
-    ## -------------------------------------------------------------
-    ## --- NVIDIA CUDA (needs nvidia-container-toolkit) ---
+    # devices:
+    #   - /dev/dri:/dev/dri
+    # group_add:
+    #   - render
+    #   - video
     # runtime: nvidia
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       devices:
-    #         - driver: nvidia
-    #           count: all
-    #           capabilities: [gpu]
-    ##
-    ## --- Intel oneAPI / OpenVINO (iGPU compute) ---
-    # devices:
-    #   - /dev/dri:/dev/dri
-    # group_add:
-    #   - "video"
-    #   - "render"
-    ##
-    ## --- AMD ROCm ---
-    # devices:
-    #   - /dev/kfd:/dev/kfd
-    #   - /dev/dri:/dev/dri
-    # group_add:
-    #   - "video"
-    #   - "render"
-    # security_opt:
-    #   - seccomp:unconfined
     # labels:
-    #   - "homepage.group=Self Hosting Solutions"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=comfyui"
     #   - "homepage.description=comfyui self-hosted service."
     #   - "homepage.tags=Self Hosting Solutions"

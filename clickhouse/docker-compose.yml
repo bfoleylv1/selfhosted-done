@@ -12,6 +12,10 @@ services:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
       - PGID=${PGID:-1000}
+      # - NVIDIA_DRIVER_CAPABILITIES=all
+      # - NVIDIA_VISIBLE_DEVICES=all
+      # - ONEAPI_DEVICE_SELECTOR=*        # Intel iGPU/Arc OpenVINO
+      # - ZES_ENABLE_SYSMAN=1
     volumes:
       - ./config:/config
       - ./data:/data
@@ -21,11 +25,20 @@ services:
       timeout: 10s
       retries: 3
       start_period: 60s
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+    # devices:
+    #   - /dev/dri:/dev/dri
     # labels:
-    #   - "homepage.group=Database Management"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=clickhouse"
-    #   - "homepage.description=Column-oriented database management system for OLAP and analytical workloads."
-    #   - "homepage.tags=Database Management"
+    #   - "homepage.description=clickhouse self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=clickhouse.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8123"
     #   - "homepage.server=localhost"

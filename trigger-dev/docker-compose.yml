@@ -1,0 +1,35 @@
+# trigger-dev - docker compose (single host)
+# image verified to exist at generation time: ghcr.io/triggerdotdev/trigger.dev:v3
+
+services:
+  trigger-dev:
+    image: ghcr.io/triggerdotdev/trigger.dev:v3
+    container_name: trigger-dev
+    restart: unless-stopped
+    ports:
+      - "20334:20334"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20334 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=trigger-dev"
+    #   - "homepage.description=trigger-dev self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=trigger-dev.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20334"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: trigger-dev_net

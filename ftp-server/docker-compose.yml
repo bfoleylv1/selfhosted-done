@@ -1,0 +1,35 @@
+# ftp-server - docker compose (single host)
+# image verified to exist at generation time: delfer/alpine-ftp-server:latest
+
+services:
+  ftp-server:
+    image: delfer/alpine-ftp-server:latest
+    container_name: ftp-server
+    restart: unless-stopped
+    ports:
+      - "20082:20082"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20082 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=ftp-server"
+    #   - "homepage.description=ftp-server self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=ftp-server.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20082"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: ftp-server_net

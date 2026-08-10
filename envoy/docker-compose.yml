@@ -1,0 +1,35 @@
+# envoy - docker compose (single host)
+# image verified to exist at generation time: envoyproxy/envoy:v1.31-latest
+
+services:
+  envoy:
+    image: envoyproxy/envoy:v1.31-latest
+    container_name: envoy
+    restart: unless-stopped
+    ports:
+      - "10000:10000"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 10000 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=envoy"
+    #   - "homepage.description=envoy self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=envoy.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:10000"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: envoy_net

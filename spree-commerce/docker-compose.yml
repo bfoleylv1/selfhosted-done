@@ -1,0 +1,35 @@
+# spree-commerce - docker compose (single host)
+# image verified to exist at generation time: ruby:3.3-alpine
+
+services:
+  spree-commerce:
+    image: ruby:3.3-alpine
+    container_name: spree-commerce
+    restart: unless-stopped
+    ports:
+      - "20294:20294"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20294 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=spree-commerce"
+    #   - "homepage.description=spree-commerce self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=spree-commerce.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20294"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: spree-commerce_net

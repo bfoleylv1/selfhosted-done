@@ -7,7 +7,7 @@ services:
     container_name: afterlogic
     restart: unless-stopped
     ports:
-      - "20397:80"
+      - "20397:20397"
     environment:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
@@ -16,16 +16,16 @@ services:
       - ./config:/config
       - ./data:/data
     healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:80/ || wget -qO- http://127.0.0.1:80/ || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20397 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 60s
     # labels:
-    #   - "homepage.group=Email"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=afterlogic"
-    #   - "homepage.description=Webmail program; modern webmail with calendar."
-    #   - "homepage.tags=Email,Communication"
+    #   - "homepage.description=afterlogic self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=afterlogic.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20397"
     #   - "homepage.server=localhost"

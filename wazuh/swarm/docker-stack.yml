@@ -1,0 +1,59 @@
+# wazuh - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml wazuh
+# image verified to exist at generation time: wazuh/wazuh-manager:4.9.2
+
+services:
+  wazuh:
+    image: wazuh/wazuh-manager:4.9.2
+    ports:
+      - target: 55000
+        published: 55000
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - wazuh_config:/config
+      - wazuh_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 55000 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=wazuh"
+    #   - "homepage.description=wazuh self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=wazuh.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:55000"
+    #   - "homepage.server=localhost"
+
+volumes:
+  wazuh_config:
+  wazuh_data:
+
+networks:
+  default:
+    name: wazuh_net
+    driver: overlay
+    attachable: true

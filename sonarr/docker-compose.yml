@@ -1,0 +1,35 @@
+# sonarr - docker compose (single host)
+# image verified to exist at generation time: lscr.io/linuxserver/sonarr:latest
+
+services:
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    restart: unless-stopped
+    ports:
+      - "8989:8989"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8989/ || wget -qO- http://127.0.0.1:8989/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=sonarr"
+    #   - "homepage.description=sonarr self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=sonarr.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:8989"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: sonarr_net

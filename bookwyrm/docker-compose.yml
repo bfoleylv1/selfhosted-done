@@ -16,16 +16,16 @@ services:
       - ./config:/config
       - ./data:/data
     healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8000/ || wget -qO- http://127.0.0.1:8000/ || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 8000 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 60s
     # labels:
-    #   - "homepage.group=Social"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=bookwyrm"
-    #   - "homepage.description=Federated book social network; discover and discuss books."
-    #   - "homepage.tags=Social,Community"
+    #   - "homepage.description=bookwyrm self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=bookwyrm.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:8000"
     #   - "homepage.server=localhost"

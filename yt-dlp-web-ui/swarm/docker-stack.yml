@@ -1,0 +1,59 @@
+# yt-dlp-web-ui - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml yt-dlp-web-ui
+# image verified to exist at generation time: marcobaobao/yt-dlp-webui:latest
+
+services:
+  yt-dlp-web-ui:
+    image: marcobaobao/yt-dlp-webui:latest
+    ports:
+      - target: 3033
+        published: 3033
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - yt-dlp-web-ui_config:/config
+      - yt-dlp-web-ui_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 3033 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=yt-dlp-web-ui"
+    #   - "homepage.description=yt-dlp-web-ui self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=yt-dlp-web-ui.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:3033"
+    #   - "homepage.server=localhost"
+
+volumes:
+  yt-dlp-web-ui_config:
+  yt-dlp-web-ui_data:
+
+networks:
+  default:
+    name: yt-dlp-web-ui_net
+    driver: overlay
+    attachable: true

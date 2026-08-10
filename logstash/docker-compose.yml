@@ -1,0 +1,35 @@
+# logstash - docker compose (single host)
+# image verified to exist at generation time: docker.elastic.co/logstash/logstash:8.15.0
+
+services:
+  logstash:
+    image: docker.elastic.co/logstash/logstash:8.15.0
+    container_name: logstash
+    restart: unless-stopped
+    ports:
+      - "9600:9600"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:9600/ || wget -qO- http://127.0.0.1:9600/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=logstash"
+    #   - "homepage.description=logstash self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=logstash.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:9600"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: logstash_net

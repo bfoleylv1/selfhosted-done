@@ -1,0 +1,35 @@
+# rukovoditel - docker compose (single host)
+# image verified to exist at generation time: php:8.2-apache
+
+services:
+  rukovoditel:
+    image: php:8.2-apache
+    container_name: rukovoditel
+    restart: unless-stopped
+    ports:
+      - "20259:20259"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20259 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=rukovoditel"
+    #   - "homepage.description=rukovoditel self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=rukovoditel.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20259"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: rukovoditel_net

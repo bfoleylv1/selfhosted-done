@@ -6,7 +6,7 @@ services:
   browserstack-turboscale:
     image: alpine:3.20
     ports:
-      - target: 8080
+      - target: 20019
         published: 20019
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - browserstack-turboscale_config:/config
       - browserstack-turboscale_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20019 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,7 +40,7 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Self Hosting Solutions"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=browserstack-turboscale"
     #   - "homepage.description=browserstack-turboscale self-hosted service."
     #   - "homepage.tags=Self Hosting Solutions"

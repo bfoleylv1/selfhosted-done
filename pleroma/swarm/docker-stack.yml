@@ -1,0 +1,59 @@
+# pleroma - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml pleroma
+# image verified to exist at generation time: elixir:1.16-alpine
+
+services:
+  pleroma:
+    image: elixir:1.16-alpine
+    ports:
+      - target: 20210
+        published: 20210
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - pleroma_config:/config
+      - pleroma_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20210 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=pleroma"
+    #   - "homepage.description=pleroma self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=pleroma.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20210"
+    #   - "homepage.server=localhost"
+
+volumes:
+  pleroma_config:
+  pleroma_data:
+
+networks:
+  default:
+    name: pleroma_net
+    driver: overlay
+    attachable: true

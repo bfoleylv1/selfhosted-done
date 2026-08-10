@@ -1,0 +1,35 @@
+# element-web - docker compose (single host)
+# image verified to exist at generation time: vectorim/element-web:latest
+
+services:
+  element-web:
+    image: vectorim/element-web:latest
+    container_name: element-web
+    restart: unless-stopped
+    ports:
+      - "20058:20058"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20058 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=element-web"
+    #   - "homepage.description=element-web self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=element-web.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20058"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: element-web_net

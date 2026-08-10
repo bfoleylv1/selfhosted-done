@@ -6,7 +6,7 @@ services:
   awstats:
     image: php:8.2-apache
     ports:
-      - target: 8080
+      - target: 20004
         published: 20004
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - awstats_config:/config
       - awstats_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20004 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,10 +40,10 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Analytics"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=awstats"
-    #   - "homepage.description=Advanced web statistics; detailed reporting and log analysis."
-    #   - "homepage.tags=Analytics,Monitoring"
+    #   - "homepage.description=awstats self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=awstats.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20004"
     #   - "homepage.server=localhost"

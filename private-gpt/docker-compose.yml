@@ -1,0 +1,35 @@
+# private-gpt - docker compose (single host)
+# image verified to exist at generation time: 3x3cut0r/privategpt:latest
+
+services:
+  private-gpt:
+    image: 3x3cut0r/privategpt:latest
+    container_name: private-gpt
+    restart: unless-stopped
+    ports:
+      - "20220:20220"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20220 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=private-gpt"
+    #   - "homepage.description=private-gpt self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=private-gpt.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20220"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: private-gpt_net

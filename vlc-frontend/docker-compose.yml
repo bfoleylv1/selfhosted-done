@@ -1,0 +1,35 @@
+# vlc-frontend - docker compose (single host)
+# image verified to exist at generation time: lscr.io/linuxserver/webtop:ubuntu-kde
+
+services:
+  vlc-frontend:
+    image: lscr.io/linuxserver/webtop:ubuntu-kde
+    container_name: vlc-frontend
+    restart: unless-stopped
+    ports:
+      - "20350:20350"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20350 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=vlc-frontend"
+    #   - "homepage.description=vlc-frontend self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=vlc-frontend.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20350"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: vlc-frontend_net

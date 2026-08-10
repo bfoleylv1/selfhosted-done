@@ -1,0 +1,35 @@
+# sefaria - docker compose (single host)
+# image verified to exist at generation time: python:3.11-slim
+
+services:
+  sefaria:
+    image: python:3.11-slim
+    container_name: sefaria
+    restart: unless-stopped
+    ports:
+      - "20268:20268"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20268 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=sefaria"
+    #   - "homepage.description=sefaria self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=sefaria.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20268"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: sefaria_net

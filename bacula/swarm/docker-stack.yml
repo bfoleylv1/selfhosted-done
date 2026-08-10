@@ -6,7 +6,7 @@ services:
   bacula:
     image: ubuntu:24.04
     ports:
-      - target: 8080
+      - target: 20008
         published: 20008
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - bacula_config:/config
       - bacula_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20008 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,10 +40,10 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Backup"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=bacula"
-    #   - "homepage.description=Enterprise backup solution; network backup management."
-    #   - "homepage.tags=Backup,Archiving"
+    #   - "homepage.description=bacula self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=bacula.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20008"
     #   - "homepage.server=localhost"

@@ -1,0 +1,35 @@
+# shkeeper - docker compose (single host)
+# image verified to exist at generation time: python:3.11-slim
+
+services:
+  shkeeper:
+    image: python:3.11-slim
+    container_name: shkeeper
+    restart: unless-stopped
+    ports:
+      - "20277:20277"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20277 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=shkeeper"
+    #   - "homepage.description=shkeeper self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=shkeeper.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20277"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: shkeeper_net

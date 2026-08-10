@@ -1,0 +1,35 @@
+# crush-propulsion - docker compose (single host)
+# image verified to exist at generation time: alpine:3.20
+
+services:
+  crush-propulsion:
+    image: alpine:3.20
+    container_name: crush-propulsion
+    restart: unless-stopped
+    ports:
+      - "20039:20039"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20039 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=crush-propulsion"
+    #   - "homepage.description=crush-propulsion self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=crush-propulsion.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20039"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: crush-propulsion_net

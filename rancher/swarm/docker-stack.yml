@@ -1,0 +1,67 @@
+# rancher - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml rancher
+# image verified to exist at generation time: rancher/rancher:latest
+
+services:
+  rancher:
+    image: rancher/rancher:latest
+    ports:
+      - target: 80
+        published: 20233
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+      # - LIBVA_DRIVER_NAME=iHD
+      # - INTEL_GPU=1
+    volumes:
+      - rancher_config:/config
+      - rancher_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:80/ || wget -qO- http://127.0.0.1:80/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+          # - node.role == manager
+          # GPU: add node-generic-resources to daemon.json and:
+          #   - node.labels.gpu == true
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+      # GPU: swarm ignores `devices:`/`runtime:`. Declare in
+      #   /etc/docker/daemon.json: "node-generic-resources": ["gpu=1"]
+      #   then use deploy.resources.reservations.generic_resources.
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=rancher"
+    #   - "homepage.description=rancher self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=rancher.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20233"
+    #   - "homepage.server=localhost"
+
+volumes:
+  rancher_config:
+  rancher_data:
+
+networks:
+  default:
+    name: rancher_net
+    driver: overlay
+    attachable: true

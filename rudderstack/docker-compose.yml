@@ -1,0 +1,35 @@
+# rudderstack - docker compose (single host)
+# image verified to exist at generation time: rudderlabs/rudder-server:latest
+
+services:
+  rudderstack:
+    image: rudderlabs/rudder-server:latest
+    container_name: rudderstack
+    restart: unless-stopped
+    ports:
+      - "20258:20258"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20258 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=rudderstack"
+    #   - "homepage.description=rudderstack self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=rudderstack.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20258"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: rudderstack_net

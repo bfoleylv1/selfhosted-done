@@ -1,0 +1,35 @@
+# revert - docker compose (single host)
+# image verified to exist at generation time: node:20-alpine
+
+services:
+  revert:
+    image: node:20-alpine
+    container_name: revert
+    restart: unless-stopped
+    ports:
+      - "20247:20247"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20247 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=revert"
+    #   - "homepage.description=revert self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=revert.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20247"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: revert_net

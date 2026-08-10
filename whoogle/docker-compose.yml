@@ -1,0 +1,35 @@
+# whoogle - docker compose (single host)
+# image verified to exist at generation time: benbusby/whoogle-search:latest
+
+services:
+  whoogle:
+    image: benbusby/whoogle-search:latest
+    container_name: whoogle
+    restart: unless-stopped
+    ports:
+      - "20362:5000"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:5000/ || wget -qO- http://127.0.0.1:5000/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=whoogle"
+    #   - "homepage.description=whoogle self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=whoogle.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20362"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: whoogle_net

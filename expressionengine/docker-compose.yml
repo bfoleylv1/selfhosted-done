@@ -1,0 +1,35 @@
+# expressionengine - docker compose (single host)
+# image verified to exist at generation time: php:8.2-apache
+
+services:
+  expressionengine:
+    image: php:8.2-apache
+    container_name: expressionengine
+    restart: unless-stopped
+    ports:
+      - "20066:20066"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20066 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=expressionengine"
+    #   - "homepage.description=expressionengine self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=expressionengine.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20066"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: expressionengine_net

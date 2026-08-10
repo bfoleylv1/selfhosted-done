@@ -7,7 +7,7 @@ services:
     container_name: chef
     restart: unless-stopped
     ports:
-      - "20405:443"
+      - "20405:20405"
     environment:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
@@ -16,16 +16,16 @@ services:
       - ./config:/config
       - ./data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 443 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20405 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 60s
     # labels:
-    #   - "homepage.group=Automation"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=chef"
-    #   - "homepage.description=Automation platform for the most demanding environments."
-    #   - "homepage.tags=Automation,Infrastructure"
+    #   - "homepage.description=chef self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=chef.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20405"
     #   - "homepage.server=localhost"

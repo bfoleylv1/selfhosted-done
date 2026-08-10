@@ -1,0 +1,35 @@
+# rs-short - docker compose (single host)
+# image verified to exist at generation time: alpine:3.20
+
+services:
+  rs-short:
+    image: alpine:3.20
+    container_name: rs-short
+    restart: unless-stopped
+    ports:
+      - "20254:20254"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20254 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=rs-short"
+    #   - "homepage.description=rs-short self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=rs-short.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20254"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: rs-short_net

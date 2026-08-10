@@ -1,0 +1,35 @@
+# tiny-tiny-rss - docker compose (single host)
+# image verified to exist at generation time: php:8.2-fpm
+
+services:
+  tiny-tiny-rss:
+    image: php:8.2-fpm
+    container_name: tiny-tiny-rss
+    restart: unless-stopped
+    ports:
+      - "20331:20331"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20331 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=tiny-tiny-rss"
+    #   - "homepage.description=tiny-tiny-rss self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=tiny-tiny-rss.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20331"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: tiny-tiny-rss_net

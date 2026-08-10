@@ -1,0 +1,59 @@
+# nginx-proxy-manager - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml nginx-proxy-manager
+# image verified to exist at generation time: jc21/nginx-proxy-manager:latest
+
+services:
+  nginx-proxy-manager:
+    image: jc21/nginx-proxy-manager:latest
+    ports:
+      - target: 20167
+        published: 20167
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - nginx-proxy-manager_config:/config
+      - nginx-proxy-manager_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20167 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=nginx-proxy-manager"
+    #   - "homepage.description=nginx-proxy-manager self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=nginx-proxy-manager.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20167"
+    #   - "homepage.server=localhost"
+
+volumes:
+  nginx-proxy-manager_config:
+  nginx-proxy-manager_data:
+
+networks:
+  default:
+    name: nginx-proxy-manager_net
+    driver: overlay
+    attachable: true

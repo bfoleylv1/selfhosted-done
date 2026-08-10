@@ -1,0 +1,59 @@
+# text-generation-webui - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml text-generation-webui
+# image verified to exist at generation time: atinoda/text-generation-webui:default
+
+services:
+  text-generation-webui:
+    image: atinoda/text-generation-webui:default
+    ports:
+      - target: 7860
+        published: 7860
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - text-generation-webui_config:/config
+      - text-generation-webui_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 7860 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=text-generation-webui"
+    #   - "homepage.description=text-generation-webui self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=text-generation-webui.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:7860"
+    #   - "homepage.server=localhost"
+
+volumes:
+  text-generation-webui_config:
+  text-generation-webui_data:
+
+networks:
+  default:
+    name: text-generation-webui_net
+    driver: overlay
+    attachable: true

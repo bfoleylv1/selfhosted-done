@@ -1,0 +1,35 @@
+# ossec - docker compose (single host)
+# image verified to exist at generation time: atomicorp/ossec-docker:latest
+
+services:
+  ossec:
+    image: atomicorp/ossec-docker:latest
+    container_name: ossec
+    restart: unless-stopped
+    ports:
+      - "1514:1514"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 1514 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=ossec"
+    #   - "homepage.description=ossec self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=ossec.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:1514"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: ossec_net

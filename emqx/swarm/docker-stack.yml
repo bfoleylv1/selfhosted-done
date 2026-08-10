@@ -1,0 +1,59 @@
+# emqx - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml emqx
+# image verified to exist at generation time: emqx/emqx:latest
+
+services:
+  emqx:
+    image: emqx/emqx:latest
+    ports:
+      - target: 18083
+        published: 18083
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - emqx_config:/config
+      - emqx_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:18083/status || wget -qO- http://127.0.0.1:18083/status || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=emqx"
+    #   - "homepage.description=emqx self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=emqx.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:18083"
+    #   - "homepage.server=localhost"
+
+volumes:
+  emqx_config:
+  emqx_data:
+
+networks:
+  default:
+    name: emqx_net
+    driver: overlay
+    attachable: true

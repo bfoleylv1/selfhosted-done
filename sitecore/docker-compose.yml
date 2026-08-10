@@ -1,0 +1,35 @@
+# sitecore - docker compose (single host)
+# image verified to exist at generation time: mcr.microsoft.com/dotnet/aspnet:8.0
+
+services:
+  sitecore:
+    image: mcr.microsoft.com/dotnet/aspnet:8.0
+    container_name: sitecore
+    restart: unless-stopped
+    ports:
+      - "20283:20283"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20283 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=sitecore"
+    #   - "homepage.description=sitecore self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=sitecore.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20283"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: sitecore_net

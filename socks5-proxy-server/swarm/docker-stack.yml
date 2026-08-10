@@ -1,0 +1,59 @@
+# socks5-proxy-server - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml socks5-proxy-server
+# image verified to exist at generation time: serjs/go-socks5-proxy:latest
+
+services:
+  socks5-proxy-server:
+    image: serjs/go-socks5-proxy:latest
+    ports:
+      - target: 1080
+        published: 1080
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - socks5-proxy-server_config:/config
+      - socks5-proxy-server_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 1080 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=socks5-proxy-server"
+    #   - "homepage.description=socks5-proxy-server self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=socks5-proxy-server.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:1080"
+    #   - "homepage.server=localhost"
+
+volumes:
+  socks5-proxy-server_config:
+  socks5-proxy-server_data:
+
+networks:
+  default:
+    name: socks5-proxy-server_net
+    driver: overlay
+    attachable: true

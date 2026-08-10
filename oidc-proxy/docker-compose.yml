@@ -1,0 +1,35 @@
+# oidc-proxy - docker compose (single host)
+# image verified to exist at generation time: quay.io/oauth2-proxy/oauth2-proxy:latest
+
+services:
+  oidc-proxy:
+    image: quay.io/oauth2-proxy/oauth2-proxy:latest
+    container_name: oidc-proxy
+    restart: unless-stopped
+    ports:
+      - "4180:4180"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 4180 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=oidc-proxy"
+    #   - "homepage.description=oidc-proxy self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=oidc-proxy.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:4180"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: oidc-proxy_net

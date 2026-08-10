@@ -1,0 +1,35 @@
+# duckduckgo-proxy - docker compose (single host)
+# image verified to exist at generation time: benbusby/whoogle-search:latest
+
+services:
+  duckduckgo-proxy:
+    image: benbusby/whoogle-search:latest
+    container_name: duckduckgo-proxy
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 5000 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=duckduckgo-proxy"
+    #   - "homepage.description=duckduckgo-proxy self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=duckduckgo-proxy.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:5000"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: duckduckgo-proxy_net

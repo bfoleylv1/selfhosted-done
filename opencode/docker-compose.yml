@@ -1,0 +1,35 @@
+# opencode - docker compose (single host)
+# image verified to exist at generation time: node:20-alpine
+
+services:
+  opencode:
+    image: node:20-alpine
+    container_name: opencode
+    restart: unless-stopped
+    ports:
+      - "20176:20176"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20176 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=opencode"
+    #   - "homepage.description=opencode self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=opencode.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20176"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: opencode_net

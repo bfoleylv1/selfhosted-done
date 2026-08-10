@@ -1,0 +1,35 @@
+# davical - docker compose (single host)
+# image verified to exist at generation time: php:8.2-apache
+
+services:
+  davical:
+    image: php:8.2-apache
+    container_name: davical
+    restart: unless-stopped
+    ports:
+      - "20041:20041"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20041 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=davical"
+    #   - "homepage.description=davical self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=davical.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20041"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: davical_net

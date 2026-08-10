@@ -7,7 +7,7 @@ services:
     container_name: amanda
     restart: unless-stopped
     ports:
-      - "20402:8080"
+      - "20402:20402"
     environment:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
@@ -16,16 +16,16 @@ services:
       - ./config:/config
       - ./data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20402 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 60s
     # labels:
-    #   - "homepage.group=Backup"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=amanda"
-    #   - "homepage.description=Advanced Maryland Automatic Network Disk Archiver."
-    #   - "homepage.tags=Backup,Archiving"
+    #   - "homepage.description=amanda self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=amanda.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20402"
     #   - "homepage.server=localhost"

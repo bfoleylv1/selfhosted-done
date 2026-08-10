@@ -1,0 +1,35 @@
+# outline-vpn - docker compose (single host)
+# image verified to exist at generation time: quay.io/outline/shadowbox:stable
+
+services:
+  outline-vpn:
+    image: quay.io/outline/shadowbox:stable
+    container_name: outline-vpn
+    restart: unless-stopped
+    ports:
+      - "20187:20187"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20187 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=outline-vpn"
+    #   - "homepage.description=outline-vpn self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=outline-vpn.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20187"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: outline-vpn_net

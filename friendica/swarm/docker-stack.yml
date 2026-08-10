@@ -1,0 +1,59 @@
+# friendica - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml friendica
+# image verified to exist at generation time: friendica:latest
+
+services:
+  friendica:
+    image: friendica:latest
+    ports:
+      - target: 20080
+        published: 20080
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - friendica_config:/config
+      - friendica_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20080 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=friendica"
+    #   - "homepage.description=friendica self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=friendica.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20080"
+    #   - "homepage.server=localhost"
+
+volumes:
+  friendica_config:
+  friendica_data:
+
+networks:
+  default:
+    name: friendica_net
+    driver: overlay
+    attachable: true

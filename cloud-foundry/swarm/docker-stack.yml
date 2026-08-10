@@ -6,7 +6,7 @@ services:
   cloud-foundry:
     image: alpine:3.20
     ports:
-      - target: 8080
+      - target: 20031
         published: 20031
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - cloud-foundry_config:/config
       - cloud-foundry_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20031 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,10 +40,10 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Monitoring"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cloud-foundry"
-    #   - "homepage.description=Cloud-native platform; PaaS for app deployment."
-    #   - "homepage.tags=Monitoring,Observability"
+    #   - "homepage.description=cloud-foundry self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=cloud-foundry.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20031"
     #   - "homepage.server=localhost"

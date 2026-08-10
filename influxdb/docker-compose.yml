@@ -1,0 +1,35 @@
+# influxdb - docker compose (single host)
+# image verified to exist at generation time: influxdb:2
+
+services:
+  influxdb:
+    image: influxdb:2
+    container_name: influxdb
+    restart: unless-stopped
+    ports:
+      - "8086:8086"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8086/health || wget -qO- http://127.0.0.1:8086/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=influxdb"
+    #   - "homepage.description=influxdb self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=influxdb.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:8086"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: influxdb_net

@@ -1,0 +1,35 @@
+# tahoe-lafs - docker compose (single host)
+# image verified to exist at generation time: tahoelafs/base:latest
+
+services:
+  tahoe-lafs:
+    image: tahoelafs/base:latest
+    container_name: tahoe-lafs
+    restart: unless-stopped
+    ports:
+      - "3456:3456"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 3456 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=tahoe-lafs"
+    #   - "homepage.description=tahoe-lafs self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=tahoe-lafs.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:3456"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: tahoe-lafs_net

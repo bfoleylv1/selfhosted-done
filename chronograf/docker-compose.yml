@@ -7,7 +7,7 @@ services:
     container_name: chronograf
     restart: unless-stopped
     ports:
-      - "20028:8888"
+      - "20028:20028"
     environment:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
@@ -16,16 +16,16 @@ services:
       - ./config:/config
       - ./data:/data
     healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8888/ping || wget -qO- http://127.0.0.1:8888/ping || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20028 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 60s
     # labels:
-    #   - "homepage.group=Analytics"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=chronograf"
-    #   - "homepage.description=Admin UI for InfluxDB; manage databases and monitoring."
-    #   - "homepage.tags=Analytics,Monitoring"
+    #   - "homepage.description=chronograf self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=chronograf.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20028"
     #   - "homepage.server=localhost"

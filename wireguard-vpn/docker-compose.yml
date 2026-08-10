@@ -1,0 +1,35 @@
+# wireguard-vpn - docker compose (single host)
+# image verified to exist at generation time: lscr.io/linuxserver/wireguard:latest
+
+services:
+  wireguard-vpn:
+    image: lscr.io/linuxserver/wireguard:latest
+    container_name: wireguard-vpn
+    restart: unless-stopped
+    ports:
+      - "20366:20366"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20366 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=wireguard-vpn"
+    #   - "homepage.description=wireguard-vpn self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=wireguard-vpn.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20366"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: wireguard-vpn_net

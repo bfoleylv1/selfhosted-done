@@ -1,0 +1,59 @@
+# lemmy - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml lemmy
+# image verified to exist at generation time: dessalines/lemmy:0.19.5
+
+services:
+  lemmy:
+    image: dessalines/lemmy:0.19.5
+    ports:
+      - target: 8536
+        published: 8536
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - lemmy_config:/config
+      - lemmy_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 8536 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=lemmy"
+    #   - "homepage.description=lemmy self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=lemmy.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:8536"
+    #   - "homepage.server=localhost"
+
+volumes:
+  lemmy_config:
+  lemmy_data:
+
+networks:
+  default:
+    name: lemmy_net
+    driver: overlay
+    attachable: true

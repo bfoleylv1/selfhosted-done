@@ -6,7 +6,7 @@ services:
   cluster-control:
     image: severalnines/clustercontrol:latest
     ports:
-      - target: 8080
+      - target: 20034
         published: 20034
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - cluster-control_config:/config
       - cluster-control_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20034 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,7 +40,7 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Self Hosting Solutions"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cluster-control"
     #   - "homepage.description=cluster-control self-hosted service."
     #   - "homepage.tags=Self Hosting Solutions"

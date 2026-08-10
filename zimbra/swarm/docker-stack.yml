@@ -1,0 +1,59 @@
+# zimbra - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml zimbra
+# image verified to exist at generation time: ubuntu:24.04
+
+services:
+  zimbra:
+    image: ubuntu:24.04
+    ports:
+      - target: 20386
+        published: 20386
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - zimbra_config:/config
+      - zimbra_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20386 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=zimbra"
+    #   - "homepage.description=zimbra self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=zimbra.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20386"
+    #   - "homepage.server=localhost"
+
+volumes:
+  zimbra_config:
+  zimbra_data:
+
+networks:
+  default:
+    name: zimbra_net
+    driver: overlay
+    attachable: true

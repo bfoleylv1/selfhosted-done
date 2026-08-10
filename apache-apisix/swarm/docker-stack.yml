@@ -40,10 +40,10 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Api Management"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=apache-apisix"
-    #   - "homepage.description=Real-time API gateway; built on etcd and Lua."
-    #   - "homepage.tags=Api Management,Gateways"
+    #   - "homepage.description=apache-apisix self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=apache-apisix.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9080"
     #   - "homepage.server=localhost"

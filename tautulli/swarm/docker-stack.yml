@@ -1,0 +1,68 @@
+# tautulli - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml tautulli
+# image verified to exist at generation time: lscr.io/linuxserver/tautulli:latest
+
+services:
+  tautulli:
+    image: lscr.io/linuxserver/tautulli:latest
+    ports:
+      - target: 8181
+        published: 8181
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+      # - NVIDIA_DRIVER_CAPABILITIES=all
+      # - LIBVA_DRIVER_NAME=iHD            # Intel iGPU VAAPI/QSV
+      # - VAAPI_DRIVER=iHD
+    volumes:
+      - tautulli_config:/config
+      - tautulli_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8181/ || wget -qO- http://127.0.0.1:8181/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+          # - node.role == manager
+          # GPU: add node-generic-resources to daemon.json and:
+          #   - node.labels.gpu == true
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+      # GPU: swarm ignores `devices:`/`runtime:`. Declare in
+      #   /etc/docker/daemon.json: "node-generic-resources": ["gpu=1"]
+      #   then use deploy.resources.reservations.generic_resources.
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=tautulli"
+    #   - "homepage.description=tautulli self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=tautulli.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:8181"
+    #   - "homepage.server=localhost"
+
+volumes:
+  tautulli_config:
+  tautulli_data:
+
+networks:
+  default:
+    name: tautulli_net
+    driver: overlay
+    attachable: true

@@ -1,0 +1,35 @@
+# surge - docker compose (single host)
+# image verified to exist at generation time: node:20-alpine
+
+services:
+  surge:
+    image: node:20-alpine
+    container_name: surge
+    restart: unless-stopped
+    ports:
+      - "20314:20314"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20314 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=surge"
+    #   - "homepage.description=surge self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=surge.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20314"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: surge_net

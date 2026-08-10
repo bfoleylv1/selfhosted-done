@@ -1,0 +1,59 @@
+# wildduck - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml wildduck
+# image verified to exist at generation time: nodemailer/wildduck:latest
+
+services:
+  wildduck:
+    image: nodemailer/wildduck:latest
+    ports:
+      - target: 20365
+        published: 20365
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - wildduck_config:/config
+      - wildduck_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20365 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=wildduck"
+    #   - "homepage.description=wildduck self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=wildduck.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20365"
+    #   - "homepage.server=localhost"
+
+volumes:
+  wildduck_config:
+  wildduck_data:
+
+networks:
+  default:
+    name: wildduck_net
+    driver: overlay
+    attachable: true

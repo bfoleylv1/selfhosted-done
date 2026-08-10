@@ -1,0 +1,68 @@
+# jellyfin - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml jellyfin
+# image verified to exist at generation time: jellyfin/jellyfin:latest
+
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    ports:
+      - target: 8096
+        published: 20117
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+      # - NVIDIA_DRIVER_CAPABILITIES=all
+      # - LIBVA_DRIVER_NAME=iHD            # Intel iGPU VAAPI/QSV
+      # - VAAPI_DRIVER=iHD
+    volumes:
+      - jellyfin_config:/config
+      - jellyfin_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8096/health || wget -qO- http://127.0.0.1:8096/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+          # - node.role == manager
+          # GPU: add node-generic-resources to daemon.json and:
+          #   - node.labels.gpu == true
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+      # GPU: swarm ignores `devices:`/`runtime:`. Declare in
+      #   /etc/docker/daemon.json: "node-generic-resources": ["gpu=1"]
+      #   then use deploy.resources.reservations.generic_resources.
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=jellyfin"
+    #   - "homepage.description=jellyfin self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=jellyfin.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20117"
+    #   - "homepage.server=localhost"
+
+volumes:
+  jellyfin_config:
+  jellyfin_data:
+
+networks:
+  default:
+    name: jellyfin_net
+    driver: overlay
+    attachable: true

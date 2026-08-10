@@ -7,7 +7,7 @@ services:
     container_name: client-management
     restart: unless-stopped
     ports:
-      - "20030:8080"
+      - "20030:20030"
     environment:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
@@ -16,16 +16,16 @@ services:
       - ./config:/config
       - ./data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20030 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 60s
     # labels:
-    #   - "homepage.group=Crm"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=client-management"
-    #   - "homepage.description=Invoice, quotes, and client management for freelancers and agencies."
-    #   - "homepage.tags=Crm,Business Tools"
+    #   - "homepage.description=client-management self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=client-management.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20030"
     #   - "homepage.server=localhost"

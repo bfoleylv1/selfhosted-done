@@ -1,0 +1,35 @@
+# solr - docker compose (single host)
+# image verified to exist at generation time: solr:9
+
+services:
+  solr:
+    image: solr:9
+    container_name: solr
+    restart: unless-stopped
+    ports:
+      - "8983:8983"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8983/solr/ || wget -qO- http://127.0.0.1:8983/solr/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=solr"
+    #   - "homepage.description=solr self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=solr.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:8983"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: solr_net

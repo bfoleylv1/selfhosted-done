@@ -1,0 +1,35 @@
+# gomodel - docker compose (single host)
+# image verified to exist at generation time: golang:1.23-alpine
+
+services:
+  gomodel:
+    image: golang:1.23-alpine
+    container_name: gomodel
+    restart: unless-stopped
+    ports:
+      - "20099:20099"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20099 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=gomodel"
+    #   - "homepage.description=gomodel self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=gomodel.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20099"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: gomodel_net

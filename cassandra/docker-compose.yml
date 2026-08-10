@@ -22,10 +22,10 @@ services:
       retries: 3
       start_period: 60s
     # labels:
-    #   - "homepage.group=Database Management"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cassandra"
-    #   - "homepage.description=Highly scalable NoSQL database; column-family store designed for large datasets."
-    #   - "homepage.tags=Database Management"
+    #   - "homepage.description=cassandra self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=cassandra.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:9042"
     #   - "homepage.server=localhost"

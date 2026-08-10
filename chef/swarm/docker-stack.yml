@@ -6,7 +6,7 @@ services:
   chef:
     image: chef/chef:latest
     ports:
-      - target: 443
+      - target: 20405
         published: 20405
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - chef_config:/config
       - chef_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 443 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20405 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,10 +40,10 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Automation"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=chef"
-    #   - "homepage.description=Automation platform for the most demanding environments."
-    #   - "homepage.tags=Automation,Infrastructure"
+    #   - "homepage.description=chef self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=chef.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20405"
     #   - "homepage.server=localhost"

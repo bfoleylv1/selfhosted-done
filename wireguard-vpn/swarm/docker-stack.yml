@@ -1,0 +1,59 @@
+# wireguard-vpn - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml wireguard-vpn
+# image verified to exist at generation time: lscr.io/linuxserver/wireguard:latest
+
+services:
+  wireguard-vpn:
+    image: lscr.io/linuxserver/wireguard:latest
+    ports:
+      - target: 20366
+        published: 20366
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - wireguard-vpn_config:/config
+      - wireguard-vpn_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20366 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=wireguard-vpn"
+    #   - "homepage.description=wireguard-vpn self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=wireguard-vpn.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20366"
+    #   - "homepage.server=localhost"
+
+volumes:
+  wireguard-vpn_config:
+  wireguard-vpn_data:
+
+networks:
+  default:
+    name: wireguard-vpn_net
+    driver: overlay
+    attachable: true

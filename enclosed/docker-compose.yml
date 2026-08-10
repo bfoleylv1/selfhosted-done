@@ -1,0 +1,35 @@
+# enclosed - docker compose (single host)
+# image verified to exist at generation time: ghcr.io/corentinth/enclosed:latest
+
+services:
+  enclosed:
+    image: ghcr.io/corentinth/enclosed:latest
+    container_name: enclosed
+    restart: unless-stopped
+    ports:
+      - "8787:8787"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 8787 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=enclosed"
+    #   - "homepage.description=enclosed self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=enclosed.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:8787"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: enclosed_net

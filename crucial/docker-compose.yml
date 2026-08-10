@@ -1,0 +1,35 @@
+# crucial - docker compose (single host)
+# image verified to exist at generation time: alpine:3.20
+
+services:
+  crucial:
+    image: alpine:3.20
+    container_name: crucial
+    restart: unless-stopped
+    ports:
+      - "20038:20038"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20038 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=crucial"
+    #   - "homepage.description=crucial self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=crucial.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20038"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: crucial_net

@@ -1,0 +1,44 @@
+# mopidy - docker compose (single host)
+# image verified to exist at generation time: wernight/mopidy:latest
+
+services:
+  mopidy:
+    image: wernight/mopidy:latest
+    container_name: mopidy
+    restart: unless-stopped
+    ports:
+      - "6680:6680"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+      # - NVIDIA_DRIVER_CAPABILITIES=all
+      # - LIBVA_DRIVER_NAME=iHD            # Intel iGPU VAAPI/QSV
+      # - VAAPI_DRIVER=iHD
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:6680/ || wget -qO- http://127.0.0.1:6680/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # devices:
+    #   - /dev/dri:/dev/dri
+    # group_add:
+    #   - render
+    #   - video
+    # runtime: nvidia
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=mopidy"
+    #   - "homepage.description=mopidy self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=mopidy.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:6680"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: mopidy_net

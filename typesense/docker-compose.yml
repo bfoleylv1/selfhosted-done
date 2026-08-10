@@ -1,0 +1,48 @@
+# typesense - docker compose (single host)
+# image verified to exist at generation time: typesense/typesense:27.1
+
+services:
+  typesense:
+    image: typesense/typesense:27.1
+    container_name: typesense
+    restart: unless-stopped
+    ports:
+      - "8108:8108"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+      # - NVIDIA_DRIVER_CAPABILITIES=all
+      # - NVIDIA_VISIBLE_DEVICES=all
+      # - ONEAPI_DEVICE_SELECTOR=*        # Intel iGPU/Arc OpenVINO
+      # - ZES_ENABLE_SYSMAN=1
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8108/health || wget -qO- http://127.0.0.1:8108/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+    # devices:
+    #   - /dev/dri:/dev/dri
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=typesense"
+    #   - "homepage.description=typesense self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=typesense.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:8108"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: typesense_net

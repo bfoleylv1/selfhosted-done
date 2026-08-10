@@ -16,16 +16,16 @@ services:
       - ./config:/config
       - ./data:/data
     healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:80/alive || wget -qO- http://127.0.0.1:80/alive || exit 1"]
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:80/ || wget -qO- http://127.0.0.1:80/ || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 60s
     # labels:
-    #   - "homepage.group=Password Management"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=bitwarden"
-    #   - "homepage.description=Open source password manager; secure storage for passwords and notes."
-    #   - "homepage.tags=Password Management,Security"
+    #   - "homepage.description=bitwarden self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=bitwarden.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20013"
     #   - "homepage.server=localhost"

@@ -1,0 +1,35 @@
+# thanos - docker compose (single host)
+# image verified to exist at generation time: quay.io/thanos/thanos:v0.37.2
+
+services:
+  thanos:
+    image: quay.io/thanos/thanos:v0.37.2
+    container_name: thanos
+    restart: unless-stopped
+    ports:
+      - "10902:10901"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:10901/metrics || wget -qO- http://127.0.0.1:10901/metrics || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=thanos"
+    #   - "homepage.description=thanos self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=thanos.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:10902"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: thanos_net

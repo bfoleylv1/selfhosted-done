@@ -1,0 +1,3374 @@
+{
+ "resolved": {
+  "42links": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "92five": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "ackee": {
+   "image": "electerious/ackee:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "adminer": {
+   "image": "adminer:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "adyen-proxy": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "afs": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "afterlogic": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "agent-vault": {
+   "image": "hashicorp/vault:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "airsonic-advanced": {
+   "image": "lscr.io/linuxserver/airsonic-advanced:latest",
+   "root": "selfhosted done",
+   "upgraded": true
+  },
+  "akkoma": {
+   "image": "akkoma/akkoma:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "alertmanager": {
+   "image": "prom/alertmanager:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "algo-vpn": {
+   "image": "ubuntu:24.04",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "amanda": {
+   "image": "ubuntu:24.04",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "ambassador": {
+   "image": "docker.io/emissaryingress/emissary:3.9.1",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "ampache": {
+   "image": "ampache/ampache:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "ansible": {
+   "image": "alpine/ansible:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "apache-apisix": {
+   "image": "apache/apisix:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "appflowy": {
+   "image": "appflowyinc/appflowy_cloud:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "appwrite": {
+   "image": "appwrite/appwrite:1.6.0",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "authelia": {
+   "image": "authelia/authelia:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "awstats": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "axigen": {
+   "image": "axigen/axigen:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "b1gMail": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "backuppc": {
+   "image": "adferrand/backuppc:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "bacula": {
+   "image": "ubuntu:24.04",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "baikal": {
+   "image": "ckulka/baikal:nginx",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "bamboo": {
+   "image": "atlassian/bamboo:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "bar-assistant": {
+   "image": "barassistant/server:v5",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "baserow": {
+   "image": "baserow/baserow:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "bazarr": {
+   "image": "lscr.io/linuxserver/bazarr:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "bifrost": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "bitwarden": {
+   "image": "vaultwarden/server:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "bitwarden-rs": {
+   "image": "vaultwarden/server:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "bleve": {
+   "image": "golang:1.23-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "booklore": {
+   "image": "ghcr.io/booklore-app/booklore:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "bookstack": {
+   "image": "lscr.io/linuxserver/bookstack:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "bookwyrm": {
+   "image": "python:3.11-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "borgbackup": {
+   "image": "ghcr.io/borgmatic-collective/borgmatic:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "briar": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "browserstack-turboscale": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "buddy-enterprise": {
+   "image": "debian:12-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "c15t": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "caddy": {
+   "image": "caddy:alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "canvas-lms": {
+   "image": "instructure/canvas-lms:stable",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "cap": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "cassandra": {
+   "image": "cassandra:5",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "castopod": {
+   "image": "castopod/castopod:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "centrifugo": {
+   "image": "centrifugo/centrifugo:v5",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "cerbos": {
+   "image": "ghcr.io/cerbos/cerbos:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "certbot": {
+   "image": "certbot/certbot:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "cfssl": {
+   "image": "cfssl/cfssl:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "cgit": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "chef": {
+   "image": "chef/chef:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "chronograf": {
+   "image": "chronograf:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "citus": {
+   "image": "citusdata/citus:12",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "clickhouse": {
+   "image": "clickhouse/clickhouse-server:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "client-management": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "cloud-foundry": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "cloudflare-argo": {
+   "image": "cloudflare/cloudflared:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "cloudflare-r2": {
+   "image": "minio/minio:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "cloudflared": {
+   "image": "cloudflare/cloudflared:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "cloudron": {
+   "image": "ubuntu:24.04",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "cluster-control": {
+   "image": "severalnines/clustercontrol:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "cockpit": {
+   "image": "quay.io/cockpit/ws:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "cockroachdb": {
+   "image": "cockroachdb/cockroach:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "collabora-online": {
+   "image": "collabora/code:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "comfyui": {
+   "image": "ghcr.io/ai-dock/comfyui:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "commentario": {
+   "image": "registry.gitlab.com/comentario/comentario:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "conduit": {
+   "image": "matrixconduit/matrix-conduit:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "consul": {
+   "image": "hashicorp/consul:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "couchdb": {
+   "image": "couchdb:3",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "craftcms": {
+   "image": "craftcms/nginx:8.2",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "crucial": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "crush-propulsion": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "daisy": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "datasette": {
+   "image": "datasetteproject/datasette:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "davical": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "davis": {
+   "image": "ghcr.io/tchapi/davis:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "dbeaver": {
+   "image": "dbeaver/cloudbeaver:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "depay": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "directus": {
+   "image": "directus/directus:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "discord": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "docker": {
+   "image": "docker:dind",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "docuddle": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "documenso": {
+   "image": "documenso/documenso:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "dolibarr": {
+   "image": "dolibarr/dolibarr:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "dovecot": {
+   "image": "dovecot/dovecot:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "dpaste": {
+   "image": "python:3.11-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "dreamfactory": {
+   "image": "dreamfactorysoftware/df-docker:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "drone": {
+   "image": "drone/drone:2",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "druid": {
+   "image": "apache/druid:31.0.0",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "drupal": {
+   "image": "drupal:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "duckdb": {
+   "image": "davidgasquez/duckdb:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "duckduckgo-proxy": {
+   "image": "benbusby/whoogle-search:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "duplicati": {
+   "image": "linuxserver/duplicati:latest",
+   "root": "selfhosted done",
+   "upgraded": true
+  },
+  "easypanel": {
+   "image": "easypanel/easypanel:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "ejabberd": {
+   "image": "ejabberd/ecs:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "ekso": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "elasticsearch": {
+   "image": "docker.elastic.co/elasticsearch/elasticsearch:8.15.0",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "element-web": {
+   "image": "vectorim/element-web:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "element-web-app": {
+   "image": "vectorim/element-web:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "elixire": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "elk": {
+   "image": "sebp/elk:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "emby": {
+   "image": "linuxserver/emby:latest",
+   "root": "selfhosted done",
+   "upgraded": true
+  },
+  "emqx": {
+   "image": "emqx/emqx:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "enclosed": {
+   "image": "ghcr.io/corentinth/enclosed:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "engity-bifrost": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "envoy": {
+   "image": "envoyproxy/envoy:v1.31-latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "epicyon": {
+   "image": "python:3.11-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "erpnext": {
+   "image": "frappe/erpnext:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "excalidraw": {
+   "image": "excalidraw/excalidraw:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "exim": {
+   "image": "debian:12-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "expressionengine": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "feedbin": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "ffmpeg": {
+   "image": "linuxserver/ffmpeg:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "filebrowser": {
+   "image": "filebrowser/filebrowser:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "flameborn": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "fmd-server": {
+   "image": "golang:1.23-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "focalboard": {
+   "image": "mattermost/focalboard:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "forgejo": {
+   "image": "codeberg.org/forgejo/forgejo:9",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "formio": {
+   "image": "formio/formio:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "forward-email": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "fossbilling": {
+   "image": "fossbilling/fossbilling:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "foundationdb": {
+   "image": "foundationdb/foundationdb:7.3.27",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "framadate": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "fredy": {
+   "image": "ghcr.io/orangecoding/fredy:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "freepbx": {
+   "image": "debian:12-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "freeswitch": {
+   "image": "safarov/freeswitch:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "freshrss": {
+   "image": "lscr.io/linuxserver/freshrss:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "friendica": {
+   "image": "friendica:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "frigate": {
+   "image": "ghcr.io/blakeblackshear/frigate:stable",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "ftp-server": {
+   "image": "delfer/alpine-ftp-server:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "full-help": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "funkwhale": {
+   "image": "funkwhale/all-in-one:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "fusio": {
+   "image": "fusio/fusio:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "gamevault": {
+   "image": "phalcode/gamevault-backend:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "garagehq": {
+   "image": "dxflrs/garage:v1.0.1",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "gaseous-server": {
+   "image": "gaseousgames/gaseousserver:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "gathio": {
+   "image": "ghcr.io/lowercasename/gathio:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "geo2tz": {
+   "image": "noandrea/geo2tz:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "ghost": {
+   "image": "ghost:5-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "ghostery": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "gitea": {
+   "image": "gitea/gitea:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "github-ntfy": {
+   "image": "binwiederhier/ntfy:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "github-runner": {
+   "image": "myoung34/github-runner:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "gitlab": {
+   "image": "gitlab/gitlab-ce:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "gitlab-ci": {
+   "image": "gitlab/gitlab-runner:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "glance": {
+   "image": "glanceapp/glance:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "glitchtip": {
+   "image": "glitchtip/glitchtip:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "globaleaks": {
+   "image": "globaleaks/globaleaks:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "gnuseed": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "go-feature-flag": {
+   "image": "thomaspoignant/go-feature-flag:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "goaccess": {
+   "image": "allinurl/goaccess:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "gogs": {
+   "image": "gogs/gogs:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "gomodel": {
+   "image": "golang:1.23-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "google-cse-proxy": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "gordian": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "gpt-engineer": {
+   "image": "python:3.11-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "gpt4all": {
+   "image": "python:3.11-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "grafana": {
+   "image": "grafana/grafana:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "graphite": {
+   "image": "graphiteapp/graphite-statsd:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "graylog": {
+   "image": "graylog/graylog:6.1",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "handbrake": {
+   "image": "linuxserver/handbrake:latest",
+   "root": "selfhosted done",
+   "upgraded": true
+  },
+  "haproxy": {
+   "image": "haproxy:lts-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "hashicorp-tools": {
+   "image": "hashicorp/terraform:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "hashicorp-vault": {
+   "image": "hashicorp/vault:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "health-checker": {
+   "image": "lscr.io/linuxserver/healthchecks:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "hedgedoc": {
+   "image": "quay.io/hedgedoc/hedgedoc:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "homer": {
+   "image": "b4bz/homer:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "hyperswitch": {
+   "image": "juspaydotin/hyperswitch-router:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "iRedMail": {
+   "image": "ubuntu:24.04",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "icehound": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "influxdb": {
+   "image": "influxdb:2",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "instapaper": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "ipfs": {
+   "image": "ipfs/kubo:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "jackett": {
+   "image": "lscr.io/linuxserver/jackett:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "jaeger": {
+   "image": "jaegertracing/all-in-one:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "jan": {
+   "image": "python:3.11-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "jellyfin": {
+   "image": "jellyfin/jellyfin:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "jellyfin-library": {
+   "image": "jellyfin/jellyfin:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "jenkins": {
+   "image": "jenkins/jenkins:lts",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "joomla": {
+   "image": "joomla:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "joplin": {
+   "image": "linuxserver/joplin:latest",
+   "root": "selfhosted done",
+   "upgraded": true
+  },
+  "kanboard": {
+   "image": "kanboard/kanboard:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "kapacitor": {
+   "image": "kapacitor:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "kbin": {
+   "image": "php:8.2-fpm",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "keepassxc": {
+   "image": "lscr.io/linuxserver/keepassxc:latest",
+   "root": "selfhosted done",
+   "upgraded": true
+  },
+  "kentico": {
+   "image": "mcr.microsoft.com/dotnet/aspnet:8.0",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "keycloak": {
+   "image": "quay.io/keycloak/keycloak:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "keypass": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "keystone": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "kill-bill": {
+   "image": "killbill/killbill:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "kiwix": {
+   "image": "ghcr.io/kiwix/kiwix-serve:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "koboldai": {
+   "image": "koboldai/koboldai:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "kodi": {
+   "image": "lscr.io/linuxserver/webtop:ubuntu-kde",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "koel": {
+   "image": "phanan/koel:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "kong": {
+   "image": "kong/kong:latest",
+   "root": "selfhosted done",
+   "upgraded": true
+  },
+  "koryo": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "kubernetes": {
+   "image": "registry.k8s.io/kube-apiserver:v1.31.0",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "kvm": {
+   "image": "qemux/qemu:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "laverna": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "lemmy": {
+   "image": "dessalines/lemmy:0.19.5",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "lesspass": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "libervrt": {
+   "image": "lscr.io/linuxserver/emby:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "library-genesis": {
+   "image": "nginx:alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "libvirt": {
+   "image": "ubuntu:24.04",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "lidarr": {
+   "image": "lscr.io/linuxserver/lidarr:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "linkace": {
+   "image": "linkace/linkace:simple",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "litellm": {
+   "image": "ghcr.io/berriai/litellm:main-latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "lms": {
+   "image": "lmscommunity/lyrionmusicserver:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "localai": {
+   "image": "localai/localai:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "logstash": {
+   "image": "docker.elastic.co/logstash/logstash:8.15.0",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "loki": {
+   "image": "grafana/loki:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "lxd": {
+   "image": "ubuntu:24.04",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "lychee": {
+   "image": "lycheeorg/lychee:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "magento": {
+   "image": "alexcheng/magento2:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "mailcow": {
+   "image": "mailcow/rspamd:1.99",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "mailu": {
+   "image": "ghcr.io/mailu/admin:2.0",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "makemkv": {
+   "image": "jlesage/makemkv:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "mariadb-columnstore": {
+   "image": "mariadb/columnstore:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "mastodon": {
+   "image": "ghcr.io/mastodon/mastodon:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "matomo": {
+   "image": "matomo:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "matrix-synapse": {
+   "image": "matrixdotorg/synapse:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "mattermost": {
+   "image": "mattermost/mattermost-team-edition:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "medusa": {
+   "image": "lscr.io/linuxserver/medusa:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "meilisearch": {
+   "image": "getmeili/meilisearch:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "mesos": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "metager": {
+   "image": "php:8.2-fpm",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "microk8s": {
+   "image": "ubuntu:24.04",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "mimir": {
+   "image": "grafana/mimir:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "miniflux": {
+   "image": "miniflux/miniflux:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "minio": {
+   "image": "quay.io/minio/minio:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "misskey": {
+   "image": "misskey/misskey:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "modoboa": {
+   "image": "python:3.11-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "mollie-proxy": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "mongodb": {
+   "image": "mongo:7",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "mopidy": {
+   "image": "wernight/mopidy:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "mysql-mariadb": {
+   "image": "mariadb:11",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "navidrome": {
+   "image": "deluan/navidrome:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "neo4j": {
+   "image": "neo4j:5",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "netlify": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "newsblur": {
+   "image": "python:3.11-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "nextchat": {
+   "image": "yidadaa/chatgpt-next-web:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "nextcloud": {
+   "image": "nextcloud:stable",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "nfs": {
+   "image": "itsthenetwork/nfs-server-alpine:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "nginx": {
+   "image": "nginx:alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "nginx-proxy-manager": {
+   "image": "jc21/nginx-proxy-manager:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "noco-db": {
+   "image": "nocodb/nocodb:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "nomad": {
+   "image": "hashicorp/nomad:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "notejot": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "notion-clone": {
+   "image": "appflowyinc/appflowy_cloud:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "october-cms": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "odoo": {
+   "image": "odoo:17",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "oidc-proxy": {
+   "image": "quay.io/oauth2-proxy/oauth2-proxy:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "ollama": {
+   "image": "ollama/ollama:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "omnipay": {
+   "image": "php:8.2-fpm",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "online-invoicing": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "opencart": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "openclaw": {
+   "image": "ghcr.io/openclaw/openclaw:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "opencode": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "openconnect": {
+   "image": "ubuntu:24.04",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "opennebula": {
+   "image": "opennebula/opennebula:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "openproject": {
+   "image": "openproject/openproject:15",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "openresty": {
+   "image": "openresty/openresty:alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "opensearch": {
+   "image": "opensearchproject/opensearch:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "openshift": {
+   "image": "quay.io/openshift/origin-cli:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "opensmtpd": {
+   "image": "debian:12-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "openstack": {
+   "image": "ubuntu:24.04",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "openvpn": {
+   "image": "kylemanna/openvpn:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "openwebui": {
+   "image": "ghcr.io/open-webui/open-webui:main",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "organizr": {
+   "image": "organizr/organizr:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "ossec": {
+   "image": "atomicorp/ossec-docker:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "outline": {
+   "image": "outlinewiki/outline:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "outline-vpn": {
+   "image": "quay.io/outline/shadowbox:stable",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "owncloud": {
+   "image": "owncloud/server:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "paperless-ngx": {
+   "image": "linuxserver/paperless-ngx:latest",
+   "root": "selfhosted done",
+   "upgraded": true
+  },
+  "para": {
+   "image": "eclipse-temurin:17-jre",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "partkeep-system": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "pass": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "passbolt": {
+   "image": "passbolt/passbolt:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "payloadcms": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "payment-js": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "paypal-proxy": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "payum": {
+   "image": "php:8.2-fpm",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "peertube": {
+   "image": "chocobozzz/peertube:production-bookworm",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "pgadmin": {
+   "image": "dpage/pgadmin4:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "pgdog": {
+   "image": "ghcr.io/pgdogdev/pgdog:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "phice": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "phorge": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "phpmyadmin": {
+   "image": "phpmyadmin:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "piefed": {
+   "image": "python:3.11-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "pinboard": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "pinecone": {
+   "image": "qdrant/qdrant:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "pixelfed": {
+   "image": "zknt/pixelfed:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "plane": {
+   "image": "makeplane/plane-backend:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "planetscale": {
+   "image": "vitess/lite:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "plausible": {
+   "image": "ghcr.io/plausible/community-edition:v2.1.4",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "plausible-analytics": {
+   "image": "ghcr.io/plausible/community-edition:v2.1.4",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "pleroma": {
+   "image": "elixir:1.16-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "plex": {
+   "image": "linuxserver/plex:latest",
+   "root": "selfhosted done",
+   "upgraded": true
+  },
+  "plume": {
+   "image": "plumeorg/plume:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "plunker": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "pocket": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "pocket-id": {
+   "image": "ghcr.io/pocket-id/pocket-id:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "pocketbase": {
+   "image": "ghcr.io/muchobien/pocketbase:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "podman": {
+   "image": "quay.io/podman/stable:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "portainer": {
+   "image": "portainer/portainer-ce:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "postal": {
+   "image": "ghcr.io/postalserver/postal:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "poste-io": {
+   "image": "analogic/poste.io:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "postfix": {
+   "image": "boky/postfix:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "postgresql": {
+   "image": "postgres:16-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "prestashop": {
+   "image": "prestashop/prestashop:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "prisma": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "privacyidea": {
+   "image": "python:3.11-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "private-gpt": {
+   "image": "3x3cut0r/privategpt:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "prometheus": {
+   "image": "prom/prometheus:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "prowlarr": {
+   "image": "lscr.io/linuxserver/prowlarr:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "proxmox": {
+   "image": "ubuntu:24.04",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "pulumi": {
+   "image": "pulumi/pulumi:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "puppet": {
+   "image": "puppet/puppetserver:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "pushbits": {
+   "image": "ghcr.io/pushbits/server:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "pydio-cells": {
+   "image": "linuxserver/pydio-cells:latest",
+   "root": "selfhosted done",
+   "upgraded": true
+  },
+  "qdrant": {
+   "image": "qdrant/qdrant:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "qemu": {
+   "image": "qemux/qemu:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "r2": {
+   "image": "minio/minio:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "radarr": {
+   "image": "lscr.io/linuxserver/radarr:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "radicale": {
+   "image": "tomsquest/docker-radicale:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "raindrop-io": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "rainloop": {
+   "image": "hardware/rainloop:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "rancher": {
+   "image": "rancher/rancher:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "rclone": {
+   "image": "rclone/rclone:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "rclone-browser": {
+   "image": "rclone/rclone:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "readarr": {
+   "image": "lscr.io/linuxserver/readarr:develop",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "reader-rise": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "recast": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "redirect": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "redis": {
+   "image": "redis:7-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "repo-flow": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "reservo": {
+   "image": "reservo/reservo:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "resourcespace": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "restic": {
+   "image": "restic/restic:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "restreamer": {
+   "image": "datarhei/restreamer:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "restyaboard": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "revent": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "revert": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "rgit": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "rhode-code": {
+   "image": "python:3.11-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "rocket-chat": {
+   "image": "registry.rocket.chat/rocketchat/rocket.chat:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "roundcube": {
+   "image": "roundcube/roundcubemail:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "routr": {
+   "image": "fonoster/routr:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "rowshub": {
+   "image": "nocodb/nocodb:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "rs-short": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "rsnapshot": {
+   "image": "linuxserver/rsnapshot:latest",
+   "root": "selfhosted done",
+   "upgraded": true
+  },
+  "rss-bridge": {
+   "image": "rssbridge/rss-bridge:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "rsshub": {
+   "image": "diygod/rsshub:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "rsync": {
+   "image": "eeacms/rsync:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "rudderstack": {
+   "image": "rudderlabs/rudder-server:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "rukovoditel": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "sabre-dav": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "saleor": {
+   "image": "ghcr.io/saleor/saleor:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "saltstack": {
+   "image": "saltstack/salt:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "salut-a-toi": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "sama": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "samba": {
+   "image": "dperson/samba:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "seafile": {
+   "image": "seafileltd/seafile-mc:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "searxng": {
+   "image": "docker.io/searxng/searxng:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "seaweedfs": {
+   "image": "chrislusf/seaweedfs:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "sefaria": {
+   "image": "python:3.11-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "semantic-scholar": {
+   "image": "python:3.11-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "sendmail": {
+   "image": "debian:12-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "sendy": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "sentry": {
+   "image": "sentry:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "seppo": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "sessions": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "sftp-server": {
+   "image": "atmoz/sftp:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "shaarli": {
+   "image": "ghcr.io/shaarli/shaarli:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "shkeeper": {
+   "image": "python:3.11-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "shopis": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "shopware": {
+   "image": "dockware/dev:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "sia": {
+   "image": "ghcr.io/siafoundation/renterd:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "signoz": {
+   "image": "signoz/query-service:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "sip3": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "sitecore": {
+   "image": "mcr.microsoft.com/dotnet/aspnet:8.0",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "smederee": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "smite": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "snipe-it": {
+   "image": "snipe/snipe-it:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "snort": {
+   "image": "ciscotalos/snort3:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "snypy": {
+   "image": "python:3.11-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "societies": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "socks5-proxy-server": {
+   "image": "serjs/go-socks5-proxy:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "sogo": {
+   "image": "debian:12-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "solr": {
+   "image": "solr:9",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "sonarr": {
+   "image": "lscr.io/linuxserver/sonarr:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "sourcehut": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "speed-test": {
+   "image": "openspeedtest/latest:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "splunk": {
+   "image": "splunk/splunk:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "spoolman": {
+   "image": "ghcr.io/donkie/spoolman:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "spree-commerce": {
+   "image": "ruby:3.3-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "sqlite": {
+   "image": "keinos/sqlite3:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "squidex": {
+   "image": "squidex/squidex:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "squirrelmail": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "srs": {
+   "image": "ossrs/srs:5",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "stack-auth": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "stalwart-mail": {
+   "image": "stalwartlabs/stalwart:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "standard-notes": {
+   "image": "standardnotes/server:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "step-certificates": {
+   "image": "smallstep/step-ca:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "stirling-pdf": {
+   "image": "ghcr.io/stirling-tools/stirling-pdf:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "storj": {
+   "image": "storjlabs/storagenode:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "strapi": {
+   "image": "naskio/strapi:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "streama": {
+   "image": "eclipse-temurin:17-jre",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "streamlink": {
+   "image": "python:3.11-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "stremth": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "stripe-proxy": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "stripe-self-hosted": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "sub-converter": {
+   "image": "python:3.11-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "subsonic": {
+   "image": "lscr.io/linuxserver/airsonic-advanced:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "subtitle-converter": {
+   "image": "lscr.io/linuxserver/ffmpeg:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "supabase": {
+   "image": "supabase/postgres:15.8.1.020",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "supers3cret": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "supportpal": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "surfer": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "surge": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "suricata": {
+   "image": "jasonish/suricata:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "svix": {
+   "image": "svix/svix-server:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "swifty": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "sylius": {
+   "image": "php:8.2-fpm",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "synapse": {
+   "image": "matrixdotorg/synapse:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "syncthing": {
+   "image": "linuxserver/syncthing:latest",
+   "root": "selfhosted done",
+   "upgraded": true
+  },
+  "tahoe-lafs": {
+   "image": "tahoelafs/base:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "taiga": {
+   "image": "taigaio/taiga-back:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "tailscale": {
+   "image": "tailscale/tailscale:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "taskcafe": {
+   "image": "taskcafe/taskcafe:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "tautulli": {
+   "image": "lscr.io/linuxserver/tautulli:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "teikei": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "telebugs": {
+   "image": "ruby:3.3-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "tempo": {
+   "image": "grafana/tempo:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "terraform": {
+   "image": "hashicorp/terraform:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "text-gen-inference": {
+   "image": "ghcr.io/huggingface/text-generation-inference:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "text-generation-webui": {
+   "image": "atinoda/text-generation-webui:default",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "thanos": {
+   "image": "quay.io/thanos/thanos:v0.37.2",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "the-old-reader": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "thelia": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "thumbor": {
+   "image": "ghcr.io/thumbor/thumbor:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "tigase": {
+   "image": "tigase/tigase-xmpp-server:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "tileserver-gl": {
+   "image": "maptiler/tileserver-gl:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "timescaledb": {
+   "image": "timescale/timescaledb:latest-pg16",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "tinode": {
+   "image": "tinode/tinode:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "tiny-tiny-rss": {
+   "image": "php:8.2-fpm",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "traefik": {
+   "image": "traefik:v3.2",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "trailbase": {
+   "image": "trailbase/trailbase:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "trigger-dev": {
+   "image": "ghcr.io/triggerdotdev/trigger.dev:v3",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "truenas": {
+   "image": "ubuntu:24.04",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "tuleap": {
+   "image": "tuleap/tuleap-community-edition:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "turtl": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "tuwunel": {
+   "image": "ghcr.io/matrix-construct/tuwunel:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "txtdot": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "tyk": {
+   "image": "tykio/tyk-gateway:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "typesense": {
+   "image": "typesense/typesense:27.1",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "typo3": {
+   "image": "ghcr.io/typo3/core-testing-php82:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "umami": {
+   "image": "ghcr.io/umami-software/umami:postgresql-latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "umbraco": {
+   "image": "mcr.microsoft.com/dotnet/aspnet:8.0",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "uptime-kuma": {
+   "image": "louislam/uptime-kuma:1",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "urbackup": {
+   "image": "uroni/urbackup-server:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "url-to-png": {
+   "image": "ghcr.io/browserless/chromium:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "vault": {
+   "image": "hashicorp/vault:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "vaultwarden": {
+   "image": "vaultwarden/server:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "vercel": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "vespa": {
+   "image": "vespaengine/vespa:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "victoriametrics": {
+   "image": "victoriametrics/victoria-metrics:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "vlc-frontend": {
+   "image": "lscr.io/linuxserver/webtop:ubuntu-kde",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "vllm": {
+   "image": "vllm/vllm-openai:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "wagmios": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "wakapi": {
+   "image": "ghcr.io/muety/wakapi:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "wallabag": {
+   "image": "wallabag/wallabag:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "watchcode": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "watchtower": {
+   "image": "containrrr/watchtower:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "wazo": {
+   "image": "debian:12-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "wazuh": {
+   "image": "wazuh/wazuh-manager:4.9.2",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "weaviate": {
+   "image": "semitechnologies/weaviate:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "webdav": {
+   "image": "bytemark/webdav:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "webiny": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "wekan": {
+   "image": "wekanteam/wekan:latest",
+   "root": "selfhosted done",
+   "upgraded": true
+  },
+  "whoogle": {
+   "image": "benbusby/whoogle-search:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "wiki-js": {
+   "image": "ghcr.io/requarks/wiki:2",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "wikipedia-kiwix": {
+   "image": "ghcr.io/kiwix/kiwix-serve:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "wildduck": {
+   "image": "nodemailer/wildduck:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "wireguard": {
+   "image": "lscr.io/linuxserver/wireguard:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "wireguard-vpn": {
+   "image": "lscr.io/linuxserver/wireguard:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "woocommerce": {
+   "image": "wordpress:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "woodpecker-ci": {
+   "image": "woodpeckerci/woodpecker-server:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "wordpress": {
+   "image": "wordpress:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "workadventure": {
+   "image": "thecodingmachine/workadventure-play:master",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "writefreely": {
+   "image": "writeas/writefreely:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "xandikos": {
+   "image": "ghcr.io/jelmer/xandikos:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "xcpg": {
+   "image": "ubuntu:24.04",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "yacy": {
+   "image": "yacy/yacy_search_server:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "yarn-social": {
+   "image": "prologic/yarnd:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "ydl-api-ng": {
+   "image": "python:3.11-slim",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "yeti-switch": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "yetishare": {
+   "image": "php:8.2-apache",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "yourls": {
+   "image": "yourls:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "youtubedl-server": {
+   "image": "nbr23/youtube-dl-server:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "yt-dlp-web-ui": {
+   "image": "marcobaobao/yt-dlp-webui:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "zed": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "zeek": {
+   "image": "zeek/zeek:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "zeit": {
+   "image": "node:20-alpine",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "zeronet": {
+   "image": "nofish/zeronet:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "zerotier": {
+   "image": "zerotier/zerotier:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "zim": {
+   "image": "ghcr.io/openzim/zim-tools:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "zimbra": {
+   "image": "ubuntu:24.04",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "zimbra-collaboration": {
+   "image": "ubuntu:24.04",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "zincsearch": {
+   "image": "public.ecr.aws/zinclabs/zincsearch:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "zipkin": {
+   "image": "openzipkin/zipkin:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "zk-cloudserver": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "zomboyin": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "zot-oci-registry": {
+   "image": "ghcr.io/project-zot/zot-linux-amd64:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "zulip": {
+   "image": "zulip/docker-zulip:latest",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "zza": {
+   "image": "alpine:3.20",
+   "root": "selfhosted done",
+   "upgraded": false
+  },
+  "affine": {
+   "image": "affine/affine:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "affine-ce": {
+   "image": "affine/affine-community:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "alfresco": {
+   "image": "alfresco/alfresco-content-repository-community:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "aliasvault": {
+   "image": "ghcr.io/aliasvault/aliasvault:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "anchor": {
+   "image": "anchor/anchor:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "answer": {
+   "image": "answerdev/answer:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "anythingllm": {
+   "image": "mintplexlabs/anythingllm:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "app": {
+   "image": "app/app:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "archivebox": {
+   "image": "ghcr.io/archivebox/archivebox:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "asmbb": {
+   "image": "asmbb/asmbb:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "atheos": {
+   "image": "atheos/atheos:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "autogpt": {
+   "image": "singnet/auto-gpt:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "backlog": {
+   "image": "backlogmd/backlog:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "bagisto": {
+   "image": "bagisto/bagisto:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "bichon": {
+   "image": "bichon/bichon:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "bindery": {
+   "image": "bindery/bindery:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "bruno": {
+   "image": "BrunoKB/bruno:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "bumpress": {
+   "image": "wordpress:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "calibre": {
+   "image": "linuxserver/calibre:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "canary-tokens": {
+   "image": "openCanary/canarytokens:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "centaur": {
+   "image": "centaur/centaur:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "changedetection": {
+   "image": "dgtlmoon/changedetection.io:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "channeltube": {
+   "image": "josh5/conductor:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "chatbox": {
+   "image": "badal4071/chatbox:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "chatto": {
+   "image": "chatto/chatto:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "claude-code": {
+   "image": "anthropics/claude-code:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "cline": {
+   "image": "author/cline:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "codeman": {
+   "image": "codeman/codeman:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "codex": {
+   "image": "xai/codex:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "codiff": {
+   "image": "codiff/codiff:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "context7": {
+   "image": "context7/context7:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "cookcli": {
+   "image": "cooklang/cookcli:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "copyparty": {
+   "image": "copyparty/copyparty:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "crm": {
+   "image": "crm/crm:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "crush": {
+   "image": "crush-shell/crush:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "debops": {
+   "image": "debops/debops:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "dietpi": {
+   "image": "dietpi/dietpi:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "dify": {
+   "image": "langgenius/dify-api:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "dirac": {
+   "image": "dirac/dirac:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "discourse": {
+   "image": "discourse/discourse:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "django-wiki": {
+   "image": "django-wiki/django-wiki:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "dvvinyl": {
+   "image": "dvvinyl/dvvinyl:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "echo": {
+   "image": "echo/echo:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "element": {
+   "image": "vectorim/element-web:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "enigma-bbs": {
+   "image": "enigma-bbs/enigma:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "ente": {
+   "image": "ente/ente:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "ergo": {
+   "image": "ergochat/ergo:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "fablecut": {
+   "image": "fablecut/fablecut:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "firecamp": {
+   "image": "wulio/firecamp:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "fungible": {
+   "image": "fungible/fungible:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "gencad": {
+   "image": "ml6team/gencad:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "goose": {
+   "image": "goose/goose:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "goploader": {
+   "image": "altenzh/goploader:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "gotify": {
+   "image": "gotify/server:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "graphhopper": {
+   "image": "graphhopper/graphhopper:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "grimoire": {
+   "image": "grimoire/grimoire:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "habitica": {
+   "image": "habitica/habitica:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "halo": {
+   "image": "halohub/halo:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "herdr": {
+   "image": "herdr/herdr:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "hermes-agent": {
+   "image": "hermes/agent:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "hive-pal": {
+   "image": "hivewallet/hive-pal:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "homeassistant": {
+   "image": "ghcr.io/home-assistant/home-assistant:stable",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "homebutler": {
+   "image": "homebutler/homebutler:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "honeywire": {
+   "image": "honeywire/honeywire:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "hoppscotch": {
+   "image": "hoppscotch/hoppscotch:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "huginn": {
+   "image": "hivehogn/huginn:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "hunk": {
+   "image": "hunk/hunk:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "hyrax": {
+   "image": "samvera/hyrax:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "ideon": {
+   "image": "ideon/ideon:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "immich": {
+   "image": "ghcr.io/immich-app/immich-server:release",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "inspircd": {
+   "image": "inspircd/inspircd:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "jina": {
+   "image": "jina-ai/jina:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "jitsi-meet": {
+   "image": "jitsi/meet:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "karakeep": {
+   "image": "karakeep/karakeep:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "kiwix-serve": {
+   "image": "kiwix/kiwix-serve:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "langflow": {
+   "image": "langflowai/langflow:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "languagetool": {
+   "image": "languagetool/languagetool:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "larasend": {
+   "image": "larasend/larasend:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "librechat": {
+   "image": "librechat/librechat:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "lila": {
+   "image": "lila/lila:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "linkwarden": {
+   "image": "linkwarden/linkwarden:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "lobe-hub": {
+   "image": "lobehub/lobe-hub:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "lobechat": {
+   "image": "lobehub/lobe-chat:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "logseq": {
+   "image": "logseq/logseq:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "machtiani": {
+   "image": "machtiani/machtiani:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "matchering": {
+   "image": "matchering/matchering:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "materia": {
+   "image": "ghcr.io/numt/materia:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "mcfly": {
+   "image": "mcfly/mcfly:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "memos": {
+   "image": "neosistec/memos:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "metabase": {
+   "image": "metabase/metabase:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "metube": {
+   "image": "alexta69/metube:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "mindsdb": {
+   "image": "mindsdb/mindsdb:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "mindustry": {
+   "image": "Anuken/Mindustry:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "minimal-git-server": {
+   "image": "mattiasw2/minimal-git-server:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "mkvpriority": {
+   "image": "hacdiaz/mkvprofile:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "musikcube": {
+   "image": "mutahhir/musikcube:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "mylar3": {
+   "image": "linuxserver/mylar3:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "n8n": {
+   "image": "n8nio/n8n:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "nanoclaw": {
+   "image": "nanoclaw/nanoclaw:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "netwatch": {
+   "image": "netwatch/netwatch:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "nodebb": {
+   "image": "ghcr.io/nodebb/nodebb:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "ntfy": {
+   "image": "binwiederhier/ntfy:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "nutritrace": {
+   "image": "nutritrace/nutritrace:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "octobox": {
+   "image": "octobox/octobox:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "once": {
+   "image": "once-platform/once:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "onecli": {
+   "image": "onecli/onecli:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "opencedit": {
+   "image": "opencut/opencut:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "openship": {
+   "image": "openship/openship:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "openwa": {
+   "image": "openwa/openwa:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "openwork": {
+   "image": "openwork/openwork:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "orca": {
+   "image": "orca/os:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "organicmaps": {
+   "image": "organicmaps/organicmaps:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "otherswrite": {
+   "image": "otherswrite/otherswrite:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "pastefy": {
+   "image": "pastefy/pastefy:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "pdf-dark": {
+   "image": "pdf-dark/pdf-dark:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "pi": {
+   "image": "openai/pi:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "picoclaw": {
+   "image": "picoclaw/picoclaw:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "piqueserver": {
+   "image": "vi/Citadel:piqueserver",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "posting": {
+   "image": "posting-app/posting:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "prime-agent": {
+   "image": "prime-agent/prime-agent:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "pyload": {
+   "image": "linuxserver/pyload:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "qm": {
+   "image": "qm/qm:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "rconcli": {
+   "image": "rconcli/rconcli:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "recipesage": {
+   "image": "recipesage/recipesage:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "rejourney": {
+   "image": "rejourney/rejourney:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "replaya": {
+   "image": "replaya/replaya:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "rmux": {
+   "image": "rmux/rmux:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "rocketchat": {
+   "image": "rocket.chat:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "runtm": {
+   "image": "runtm/runtm:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "se2eend": {
+   "image": "se2eend/se2eend:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "servas": {
+   "image": "servas/servas:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "sillytavern": {
+   "image": "sillytdaws/sillytavern:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "simplelogin": {
+   "image": "simplelogin/app:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "simplement": {
+   "image": "simplement/go-simplext:dev",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "simplex-chat": {
+   "image": "simplexchat/simplex-chat:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "sish": {
+   "image": "antoniomika/sish:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "siyuan": {
+   "image": "b3log/siyuan:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "slash": {
+   "image": "slash/slash:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "snapotter": {
+   "image": "snapotter/snapotter:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "spooty": {
+   "image": "alexboe/spooty:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "static-web-server": {
+   "image": "joseluisq/static-web-server:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "strava": {
+   "image": "dreeve/strava:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "tailchat": {
+   "image": "tailhook/tailchat:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "teleport": {
+   "image": "quay.io/gravitational/teleport:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "tiramisu": {
+   "image": "tira/tira:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "tldraw": {
+   "image": "tldraw/tldraw:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "transfer-sh": {
+   "image": "dutchcoders/transfer.sh:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "trek": {
+   "image": "trek/trek:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "ttrss": {
+   "image": "ttrss/ttrss:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "voltius": {
+   "image": "voltius/voltius:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "wayback": {
+   "image": "ibitto/wayback:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "weechat": {
+   "image": "weechat/weechat:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "writer-computer": {
+   "image": "writer-computer/writer:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "yaade": {
+   "image": "yaade/yaade:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "zeroclaw": {
+   "image": "zeroclaw/zeroclaw:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  },
+  "zerostack": {
+   "image": "zerostack/zerostack:latest",
+   "root": "self-hosted-2",
+   "upgraded": false
+  }
+ }
+}

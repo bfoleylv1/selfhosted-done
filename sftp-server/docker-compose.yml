@@ -1,0 +1,35 @@
+# sftp-server - docker compose (single host)
+# image verified to exist at generation time: atmoz/sftp:latest
+
+services:
+  sftp-server:
+    image: atmoz/sftp:latest
+    container_name: sftp-server
+    restart: unless-stopped
+    ports:
+      - "20275:20275"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20275 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=sftp-server"
+    #   - "homepage.description=sftp-server self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=sftp-server.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20275"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: sftp-server_net

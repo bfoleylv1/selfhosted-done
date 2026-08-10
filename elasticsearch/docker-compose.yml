@@ -1,0 +1,48 @@
+# elasticsearch - docker compose (single host)
+# image verified to exist at generation time: docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+    container_name: elasticsearch
+    restart: unless-stopped
+    ports:
+      - "9200:9200"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+      # - NVIDIA_DRIVER_CAPABILITIES=all
+      # - NVIDIA_VISIBLE_DEVICES=all
+      # - ONEAPI_DEVICE_SELECTOR=*        # Intel iGPU/Arc OpenVINO
+      # - ZES_ENABLE_SYSMAN=1
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:9200/ || wget -qO- http://127.0.0.1:9200/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+    # devices:
+    #   - /dev/dri:/dev/dri
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=elasticsearch"
+    #   - "homepage.description=elasticsearch self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=elasticsearch.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:9200"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: elasticsearch_net

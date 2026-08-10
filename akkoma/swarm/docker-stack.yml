@@ -6,7 +6,7 @@ services:
   akkoma:
     image: akkoma/akkoma:latest
     ports:
-      - target: 4000
+      - target: 20400
         published: 20400
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - akkoma_config:/config
       - akkoma_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:4000/ || wget -qO- http://127.0.0.1:4000/ || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20400 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,7 +40,7 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Self Hosting Solutions"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=akkoma"
     #   - "homepage.description=akkoma self-hosted service."
     #   - "homepage.tags=Self Hosting Solutions"

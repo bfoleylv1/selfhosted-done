@@ -1,0 +1,59 @@
+# poste-io - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml poste-io
+# image verified to exist at generation time: analogic/poste.io:latest
+
+services:
+  poste-io:
+    image: analogic/poste.io:latest
+    ports:
+      - target: 20215
+        published: 20215
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - poste-io_config:/config
+      - poste-io_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20215 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=poste-io"
+    #   - "homepage.description=poste-io self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=poste-io.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20215"
+    #   - "homepage.server=localhost"
+
+volumes:
+  poste-io_config:
+  poste-io_data:
+
+networks:
+  default:
+    name: poste-io_net
+    driver: overlay
+    attachable: true

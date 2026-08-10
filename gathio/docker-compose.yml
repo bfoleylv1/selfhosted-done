@@ -1,0 +1,35 @@
+# gathio - docker compose (single host)
+# image verified to exist at generation time: ghcr.io/lowercasename/gathio:latest
+
+services:
+  gathio:
+    image: ghcr.io/lowercasename/gathio:latest
+    container_name: gathio
+    restart: unless-stopped
+    ports:
+      - "20087:20087"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20087 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=gathio"
+    #   - "homepage.description=gathio self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=gathio.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20087"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: gathio_net

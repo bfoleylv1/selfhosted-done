@@ -1,0 +1,59 @@
+# duckdb - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml duckdb
+# image verified to exist at generation time: davidgasquez/duckdb:latest
+
+services:
+  duckdb:
+    image: davidgasquez/duckdb:latest
+    ports:
+      - target: 20055
+        published: 20055
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - duckdb_config:/config
+      - duckdb_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20055 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=duckdb"
+    #   - "homepage.description=duckdb self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=duckdb.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20055"
+    #   - "homepage.server=localhost"
+
+volumes:
+  duckdb_config:
+  duckdb_data:
+
+networks:
+  default:
+    name: duckdb_net
+    driver: overlay
+    attachable: true

@@ -1,0 +1,35 @@
+# pushbits - docker compose (single host)
+# image verified to exist at generation time: ghcr.io/pushbits/server:latest
+
+services:
+  pushbits:
+    image: ghcr.io/pushbits/server:latest
+    container_name: pushbits
+    restart: unless-stopped
+    ports:
+      - "20225:20225"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20225 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=pushbits"
+    #   - "homepage.description=pushbits self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=pushbits.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20225"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: pushbits_net

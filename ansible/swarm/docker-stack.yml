@@ -6,7 +6,7 @@ services:
   ansible:
     image: alpine/ansible:latest
     ports:
-      - target: 8080
+      - target: 20001
         published: 20001
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - ansible_config:/config
       - ansible_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20001 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,10 +40,10 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Automation"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=ansible"
-    #   - "homepage.description=Open source automation engine; IT automation and configuration management."
-    #   - "homepage.tags=Automation,Infrastructure"
+    #   - "homepage.description=ansible self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=ansible.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20001"
     #   - "homepage.server=localhost"

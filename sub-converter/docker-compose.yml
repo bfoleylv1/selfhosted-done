@@ -1,0 +1,35 @@
+# sub-converter - docker compose (single host)
+# image verified to exist at generation time: python:3.11-slim
+
+services:
+  sub-converter:
+    image: python:3.11-slim
+    container_name: sub-converter
+    restart: unless-stopped
+    ports:
+      - "25500:25500"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 25500 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=sub-converter"
+    #   - "homepage.description=sub-converter self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=sub-converter.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:25500"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: sub-converter_net

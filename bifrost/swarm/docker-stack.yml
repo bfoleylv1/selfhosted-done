@@ -6,7 +6,7 @@ services:
   bifrost:
     image: alpine:3.20
     ports:
-      - target: 8080
+      - target: 20012
         published: 20012
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - bifrost_config:/config
       - bifrost_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20012 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,10 +40,10 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Audio"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=bifrost"
-    #   - "homepage.description=Media server with Jellyfin-like features; open source and self-hosted."
-    #   - "homepage.tags=Audio,Media Processing"
+    #   - "homepage.description=bifrost self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=bifrost.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20012"
     #   - "homepage.server=localhost"

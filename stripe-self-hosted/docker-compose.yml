@@ -1,0 +1,35 @@
+# stripe-self-hosted - docker compose (single host)
+# image verified to exist at generation time: node:20-alpine
+
+services:
+  stripe-self-hosted:
+    image: node:20-alpine
+    container_name: stripe-self-hosted
+    restart: unless-stopped
+    ports:
+      - "20308:20308"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20308 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=stripe-self-hosted"
+    #   - "homepage.description=stripe-self-hosted self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=stripe-self-hosted.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20308"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: stripe-self-hosted_net

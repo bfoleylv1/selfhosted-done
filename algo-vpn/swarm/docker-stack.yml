@@ -6,7 +6,7 @@ services:
   algo-vpn:
     image: ubuntu:24.04
     ports:
-      - target: 8080
+      - target: 20401
         published: 20401
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - algo-vpn_config:/config
       - algo-vpn_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20401 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,10 +40,10 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Vpn"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=algo-vpn"
-    #   - "homepage.description=VPN servers; deploy IPsec VPN on popular cloud providers."
-    #   - "homepage.tags=Vpn,Networking"
+    #   - "homepage.description=algo-vpn self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=algo-vpn.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20401"
     #   - "homepage.server=localhost"

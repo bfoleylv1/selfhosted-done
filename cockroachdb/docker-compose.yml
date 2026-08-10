@@ -7,7 +7,7 @@ services:
     container_name: cockroachdb
     restart: unless-stopped
     ports:
-      - "20035:8080"
+      - "20035:26257"
     environment:
       - TZ=${TZ:-America/Los_Angeles}
       - PUID=${PUID:-1000}
@@ -16,16 +16,16 @@ services:
       - ./config:/config
       - ./data:/data
     healthcheck:
-      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8080/health || wget -qO- http://127.0.0.1:8080/health || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 26257 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 60s
     # labels:
-    #   - "homepage.group=Database Tools"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=cockroachdb"
-    #   - "homepage.description=Cloud-native relational database; distributed SQL database."
-    #   - "homepage.tags=Database Tools"
+    #   - "homepage.description=cockroachdb self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=cockroachdb.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20035"
     #   - "homepage.server=localhost"

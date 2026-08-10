@@ -1,0 +1,59 @@
+# online-invoicing - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml online-invoicing
+# image verified to exist at generation time: php:8.2-apache
+
+services:
+  online-invoicing:
+    image: php:8.2-apache
+    ports:
+      - target: 20173
+        published: 20173
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - online-invoicing_config:/config
+      - online-invoicing_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20173 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=online-invoicing"
+    #   - "homepage.description=online-invoicing self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=online-invoicing.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20173"
+    #   - "homepage.server=localhost"
+
+volumes:
+  online-invoicing_config:
+  online-invoicing_data:
+
+networks:
+  default:
+    name: online-invoicing_net
+    driver: overlay
+    attachable: true

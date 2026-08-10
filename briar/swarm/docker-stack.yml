@@ -6,7 +6,7 @@ services:
   briar:
     image: alpine:3.20
     ports:
-      - target: 8080
+      - target: 20018
         published: 20018
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - briar_config:/config
       - briar_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20018 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,10 +40,10 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Chat"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=briar"
-    #   - "homepage.description=Peer-to-peer messaging app; works over Tor and Bluetooth."
-    #   - "homepage.tags=Chat,Messaging"
+    #   - "homepage.description=briar self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=briar.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20018"
     #   - "homepage.server=localhost"

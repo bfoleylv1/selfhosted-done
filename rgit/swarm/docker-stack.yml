@@ -1,0 +1,59 @@
+# rgit - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml rgit
+# image verified to exist at generation time: alpine:3.20
+
+services:
+  rgit:
+    image: alpine:3.20
+    ports:
+      - target: 20248
+        published: 20248
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - rgit_config:/config
+      - rgit_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20248 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=rgit"
+    #   - "homepage.description=rgit self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=rgit.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20248"
+    #   - "homepage.server=localhost"
+
+volumes:
+  rgit_config:
+  rgit_data:
+
+networks:
+  default:
+    name: rgit_net
+    driver: overlay
+    attachable: true

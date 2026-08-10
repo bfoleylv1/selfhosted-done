@@ -6,7 +6,7 @@ services:
   borgbackup:
     image: ghcr.io/borgmatic-collective/borgmatic:latest
     ports:
-      - target: 8080
+      - target: 20017
         published: 20017
         protocol: tcp
         mode: ingress
@@ -18,7 +18,7 @@ services:
       - borgbackup_config:/config
       - borgbackup_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "nc -z 127.0.0.1 8080 || exit 1"]
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20017 || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -40,10 +40,10 @@ services:
         limits:
           memory: 2G
     # labels:
-    #   - "homepage.group=Backup"
+    #   - "homepage.group=Self Hosted"
     #   - "homepage.name=borgbackup"
-    #   - "homepage.description=Deduplicating backup program; efficient storage for backups."
-    #   - "homepage.tags=Backup,Archiving"
+    #   - "homepage.description=borgbackup self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=borgbackup.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20017"
     #   - "homepage.server=localhost"

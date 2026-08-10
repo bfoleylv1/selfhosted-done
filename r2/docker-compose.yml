@@ -1,0 +1,35 @@
+# r2 - docker compose (single host)
+# image verified to exist at generation time: minio/minio:latest
+
+services:
+  r2:
+    image: minio/minio:latest
+    container_name: r2
+    restart: unless-stopped
+    ports:
+      - "20229:20229"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20229 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=r2"
+    #   - "homepage.description=r2 self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=r2.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20229"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: r2_net

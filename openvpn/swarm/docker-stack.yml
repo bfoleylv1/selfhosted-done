@@ -1,0 +1,59 @@
+# openvpn - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml openvpn
+# image verified to exist at generation time: kylemanna/openvpn:latest
+
+services:
+  openvpn:
+    image: kylemanna/openvpn:latest
+    ports:
+      - target: 1194
+        published: 1194
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - openvpn_config:/config
+      - openvpn_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 1194 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=openvpn"
+    #   - "homepage.description=openvpn self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=openvpn.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:1194"
+    #   - "homepage.server=localhost"
+
+volumes:
+  openvpn_config:
+  openvpn_data:
+
+networks:
+  default:
+    name: openvpn_net
+    driver: overlay
+    attachable: true

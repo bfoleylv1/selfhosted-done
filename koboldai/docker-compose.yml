@@ -1,0 +1,48 @@
+# koboldai - docker compose (single host)
+# image verified to exist at generation time: koboldai/koboldai:latest
+
+services:
+  koboldai:
+    image: koboldai/koboldai:latest
+    container_name: koboldai
+    restart: unless-stopped
+    ports:
+      - "20130:5001"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+      # - NVIDIA_DRIVER_CAPABILITIES=all
+      # - NVIDIA_VISIBLE_DEVICES=all
+      # - ONEAPI_DEVICE_SELECTOR=*        # Intel iGPU/Arc OpenVINO
+      # - ZES_ENABLE_SYSMAN=1
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:5001/ || wget -qO- http://127.0.0.1:5001/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+    # devices:
+    #   - /dev/dri:/dev/dri
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=koboldai"
+    #   - "homepage.description=koboldai self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=koboldai.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20130"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: koboldai_net

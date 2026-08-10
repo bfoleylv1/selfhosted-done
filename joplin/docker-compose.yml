@@ -1,0 +1,35 @@
+# joplin - docker compose (single host)
+# image verified to exist at generation time: linuxserver/joplin:latest
+
+services:
+  joplin:
+    image: linuxserver/joplin:latest
+    container_name: joplin
+    restart: unless-stopped
+    ports:
+      - "22300:22300"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 22300 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=joplin"
+    #   - "homepage.description=joplin self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=joplin.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:22300"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: joplin_net
