@@ -7,8 +7,9 @@ LibreChat: open-source ChatGPT-compatible frontend with multi-model support and 
 | **Image** | `librechat/librechat:latest` |
 | **Host port** | `20465` |
 | **Container port** | `20465` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml librechat
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{.State.Health.Status}' librechat
+docker compose ps
 ```
 
 ## Homepage

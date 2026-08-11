@@ -1,0 +1,66 @@
+# posterizarr - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml posterizarr
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: ghcr.io/fscorrupt/posterizarr:latest
+    environment:
+    - TZ=Europe/Amsterdam
+    - TERM=xterm
+    - RUN_TIME=disabled
+    user: 1000:1000
+    volumes:
+    - posterizarr_posterizarr_data_config:/config:rw
+    - posterizarr_posterizarr_data_assets:/assets:rw
+    - posterizarr_posterizarr_data_assetsbackup:/assetsbackup:rw
+    - posterizarr_posterizarr_data_manualassets:/manualassets:rw
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - posterizarr
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 8000
+      published: 20602
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=posterizarr"
+    #   - "homepage.description=posterizarr self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=posterizarr.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20602"
+    #   - "homepage.server=localhost"
+volumes:
+  posterizarr_posterizarr_data_config: null
+  posterizarr_posterizarr_data_assets: null
+  posterizarr_posterizarr_data_assetsbackup: null
+  posterizarr_posterizarr_data_manualassets: null
+networks:
+  default:
+    name: posterizarr_net
+    driver: overlay
+    attachable: true

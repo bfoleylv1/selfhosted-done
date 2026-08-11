@@ -1,0 +1,35 @@
+# orca - docker compose (single host)
+# image verified to exist at generation time: orca/os:latest
+
+services:
+  orca:
+    # image: orca/os:latest  # UNVERIFIED
+    container_name: orca
+    restart: unless-stopped
+    ports:
+      - "20490:20490"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20490 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=orca"
+    #   - "homepage.description=orca self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=orca.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20490"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: orca_net

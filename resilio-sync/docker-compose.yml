@@ -1,0 +1,37 @@
+# resilio-sync - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: linuxserver/resilio-sync:latest
+    container_name: app-resilio-sync
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    volumes:
+    - ./resilio-sync-data/config:/config
+    - ./resilio-sync-data/downloads:/downloads
+    - ./resilio-sync-data/data:/sync
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - rslsync
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20605:8888
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=resilio-sync"
+    #   - "homepage.description=resilio-sync self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=resilio-sync.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20605"
+    #   - "homepage.server=localhost"

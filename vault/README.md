@@ -1,14 +1,15 @@
 # Vault
 
-Secrets management platform; secure storage for sensitive data
+Secrets management platform; secure storage for sensitive data.
 
 | | |
 |---|---|
 | **Image** | `hashicorp/vault:latest` |
 | **Host port** | `20346` |
 | **Container port** | `8200` |
+| **Containers** | 1 |
+| **Healthcheck** | HTTP `http://127.0.0.1:8200/v1/sys/health` |
 | **Category** | Automation |
-| **Healthcheck** | HTTP `/v1/sys/health` |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml vault
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' vault
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

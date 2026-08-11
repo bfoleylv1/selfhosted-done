@@ -1,0 +1,25 @@
+services:
+  piqueserver:
+    image: ghcr.io/piqueserver/piqueserver:latest
+    container_name: piqueserver
+    restart: unless-stopped
+    ports:
+    - 20495:20495
+    environment:
+    - TZ=${TZ:-America/Los_Angeles}
+    - PUID=${PUID:-1000}
+    - PGID=${PGID:-1000}
+    volumes:
+    - ./config:/config
+    - ./data:/data
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - nc -z 127.0.0.1 20495 || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+networks:
+  default:
+    name: piqueserver_net

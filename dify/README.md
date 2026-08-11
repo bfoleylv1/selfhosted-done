@@ -6,9 +6,11 @@ Dify: open-source LLM app development platform (agents, RAG, workflows)
 |---|---|
 | **Image** | `langgenius/dify-api:latest` |
 | **Host port** | `20531` |
-| **Container port** | `20531` |
+| **Container port** | `3000` |
+| **Containers** | 1 |
+| **Healthcheck** | HTTP `http://127.0.0.1:3000/api/health` |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP port probe |
+| **GPU** | hardware-acceleration block included (commented) |
 
 ## Run it
 
@@ -31,14 +33,12 @@ docker stack deploy -c swarm/docker-stack.yml dify
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{.State.Health.Status}' dify
+docker compose ps
 ```
 
 ## Homepage

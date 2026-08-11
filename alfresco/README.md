@@ -7,8 +7,9 @@ Alfresco Community Edition: open-source enterprise content management (ECM) plat
 | **Image** | `alfresco/alfresco-content-repository-community:latest` |
 | **Host port** | `20408` |
 | **Container port** | `20408` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml alfresco
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{.State.Health.Status}' alfresco
+docker compose ps
 ```
 
 ## Homepage

@@ -1,0 +1,92 @@
+# coder - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml coder
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: ghcr.io/coder/coder:latest
+    environment:
+      CODER_PG_CONNECTION_URL: postgresql://username:strongpassword@localhost/coder?sslmode=disable
+      CODER_HTTP_ADDRESS: 0.0.0.0:7080
+      CODER_ACCESS_URL: http://localhost:7080
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock:ro
+    - coder_coder_data_coder_home:/home/coder
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - coder
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 7080
+      published: 7080
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+  database:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: strongpassword
+      POSTGRES_DB: coder
+    volumes:
+    - coder_coder_data_coder_data:/var/lib/postgresql/data
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - pg_isready -U username -d coder
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=coder"
+    #   - "homepage.description=coder self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=coder.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:7080"
+    #   - "homepage.server=localhost"
+volumes:
+  coder_coder_data_coder_home: null
+  coder_coder_data_coder_data: null
+networks:
+  default:
+    name: coder_net
+    driver: overlay
+    attachable: true

@@ -1,0 +1,47 @@
+services:
+  goploader:
+    image: ghcr.io/depado/goploader:latest
+    ports:
+    - target: 20447
+      published: 20447
+      protocol: tcp
+      mode: ingress
+    environment:
+    - TZ=${TZ:-America/Los_Angeles}
+    - PUID=${PUID:-1000}
+    - PGID=${PGID:-1000}
+    volumes:
+    - goploader_config:/config
+    - goploader_data:/data
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - nc -z 127.0.0.1 20447 || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+volumes:
+  goploader_config: null
+  goploader_data: null
+networks:
+  default:
+    name: goploader_net
+    driver: overlay
+    attachable: true

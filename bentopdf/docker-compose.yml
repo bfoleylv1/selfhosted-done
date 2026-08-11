@@ -1,0 +1,33 @@
+# bentopdf - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: ghcr.io/alam00000/bentopdf:latest
+    container_name: app-bentopdf
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    volumes:
+    - ./bentopdf-data/app/config:/config
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - wget --no-verbose --tries=1 --spider http://127.0.0.1:8080/ || exit 1
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20560:3000
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=bentopdf"
+    #   - "homepage.description=bentopdf self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=bentopdf.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20560"
+    #   - "homepage.server=localhost"

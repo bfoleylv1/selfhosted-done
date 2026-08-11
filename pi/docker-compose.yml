@@ -1,0 +1,35 @@
+# pi - docker compose (single host)
+# image verified to exist at generation time: openai/pi:latest
+
+services:
+  pi:
+    # image: openai/pi:latest  # UNVERIFIED
+    container_name: pi
+    restart: unless-stopped
+    ports:
+      - "20493:20493"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20493 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=pi"
+    #   - "homepage.description=pi self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=pi.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20493"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: pi_net

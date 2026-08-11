@@ -6,9 +6,10 @@ Self-hosted coding time and activity tracker (WakaTime compatible)
 |---|---|
 | **Image** | `ghcr.io/muety/wakapi:latest` |
 | **Host port** | `20353` |
-| **Container port** | `3000` |
+| **Container port** | `20353` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | HTTP `/api/health` |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml wakapi
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' wakapi
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

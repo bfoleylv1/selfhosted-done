@@ -1,0 +1,73 @@
+# ddns-updater - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml ddns-updater
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: qmcgaw/ddns-updater:latest
+    environment:
+    - TZ=America/Los_Angeles
+    - CONFIG=
+    - PERIOD=5m
+    - UPDATE_COOLDOWN_PERIOD=5m
+    - PUBLICIP_FETCHERS=all
+    - PUBLICIP_HTTP_PROVIDERS=all
+    - PUBLICIPV4_HTTP_PROVIDERS=all
+    - PUBLICIPV6_HTTP_PROVIDERS=all
+    - PUBLICIP_DNS_PROVIDERS=all
+    - PUBLICIP_DNS_TIMEOUT=3s
+    - HTTP_TIMEOUT=10s
+    - LISTENING_ADDRESS=:8000
+    - ROOT_URL=/
+    - BACKUP_PERIOD=0
+    - BACKUP_DIRECTORY=/updater/data
+    - LOG_LEVEL=info
+    - LOG_CALLER=hidden
+    volumes:
+    - ddns-updater_ddns_updater_data_data:/updater/data
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - ddns-updater
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 8000
+      published: 20566
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=ddns-updater"
+    #   - "homepage.description=ddns-updater self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=ddns-updater.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20566"
+    #   - "homepage.server=localhost"
+volumes:
+  ddns-updater_ddns_updater_data_data: null
+networks:
+  default:
+    name: ddns-updater_net
+    driver: overlay
+    attachable: true

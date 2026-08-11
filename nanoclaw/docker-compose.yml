@@ -1,0 +1,25 @@
+services:
+  nanoclaw:
+    image: bitcryptic/nanoclaw:latest
+    container_name: nanoclaw
+    restart: unless-stopped
+    ports:
+    - 20540:20540
+    environment:
+    - TZ=${TZ:-America/Los_Angeles}
+    - PUID=${PUID:-1000}
+    - PGID=${PGID:-1000}
+    volumes:
+    - ./config:/config
+    - ./data:/data
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - nc -z 127.0.0.1 20540 || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+networks:
+  default:
+    name: nanoclaw_net

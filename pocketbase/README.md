@@ -7,8 +7,9 @@ Open-source backend (SQLite + realtime + auth) in a single file
 | **Image** | `ghcr.io/muchobien/pocketbase:latest` |
 | **Host port** | `8090` |
 | **Container port** | `8090` |
+| **Containers** | 1 |
+| **Healthcheck** | HTTP `http://127.0.0.1:8090/api/health` |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | HTTP `/api/health` |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml pocketbase
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' pocketbase
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

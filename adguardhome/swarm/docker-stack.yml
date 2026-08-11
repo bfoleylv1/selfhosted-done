@@ -1,0 +1,59 @@
+# adguardhome - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml adguardhome
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: adguard/adguardhome:latest
+    environment:
+    - 'TZ=America/Los_Angeles# See: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'
+    volumes:
+    - adguardhome_adguardhome_data_workdir:/opt/adguardhome/work
+    - adguardhome_adguardhome_data_configdir:/opt/adguardhome/conf
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - adguardhome
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 53
+      published: 20557
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=adguardhome"
+    #   - "homepage.description=adguardhome self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=adguardhome.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20557"
+    #   - "homepage.server=localhost"
+volumes:
+  adguardhome_adguardhome_data_workdir: null
+  adguardhome_adguardhome_data_configdir: null
+networks:
+  default:
+    name: adguardhome_net
+    driver: overlay
+    attachable: true

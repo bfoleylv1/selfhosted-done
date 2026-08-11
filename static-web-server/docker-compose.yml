@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=static-web-server"
-    #   - "homepage.description=static-web-server self-hosted service."
+    #   - "homepage.description=static-web-server: tiny, fast, secure static file web server written in Rust."
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=static-web-server.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20512"

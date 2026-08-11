@@ -1,0 +1,38 @@
+# donetick - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: donetick/donetick:latest
+    container_name: app-donetick
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    - DT_ENV=selfhosted
+    - DT_SQLITE_PATH=/donetick-data/donetick.db
+    volumes:
+    - ./donetick-data/config:/config
+    - ./donetick-data/data:/donetick-data
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - donetick
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 2021:2021
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=donetick"
+    #   - "homepage.description=donetick self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=donetick.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:2021"
+    #   - "homepage.server=localhost"

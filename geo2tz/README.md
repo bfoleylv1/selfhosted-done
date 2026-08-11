@@ -6,9 +6,10 @@ Convert geographic coordinates to a timezone
 |---|---|
 | **Image** | `noandrea/geo2tz:latest` |
 | **Host port** | `20088` |
-| **Container port** | `8080` |
+| **Container port** | `20088` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | HTTP `/health` |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml geo2tz
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' geo2tz
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

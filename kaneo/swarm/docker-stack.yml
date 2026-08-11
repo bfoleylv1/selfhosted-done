@@ -1,0 +1,104 @@
+# kaneo - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml kaneo
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_PASSWORD: 8ru_BDmUOxqqBLSCR3fHuQqnpdiaEsB7
+      POSTGRES_USER: kaneo
+      POSTGRES_DB: kaneo
+    volumes:
+    - kaneo_kaneo_data_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - pg_isready -U kaneo -d kaneo
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+  backend:
+    image: ghcr.io/usekaneo/api:latest
+    environment:
+      DATABASE_URL: postgresql://kaneo:8ru_BDmUOxqqBLSCR3fHuQqnpdiaEsB7@localhost:5432/kaneo
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+  frontend:
+    image: ghcr.io/usekaneo/web:latest
+    ports:
+    - target: 5173
+      published: 20585
+      protocol: tcp
+      mode: ingress
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:5173/ || wget -qO- http://127.0.0.1:5173/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=kaneo"
+    #   - "homepage.description=kaneo self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=kaneo.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20585"
+    #   - "homepage.server=localhost"
+volumes:
+  postgres_data: null
+  kaneo_kaneo_data_postgres_data: null
+networks:
+  default:
+    name: kaneo_net
+    driver: overlay
+    attachable: true

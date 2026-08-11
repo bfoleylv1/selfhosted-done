@@ -1,0 +1,35 @@
+# open-webui - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: app-open-webui
+    environment:
+    - OLLAMA_BASE_URL=http://host.docker.internal:11434
+    - WEBUI_SECRET_KEY=TTqmUm5E_P4C89oUvgf8cvK3lQuG-qWe
+    - TZ=America/Los_Angeles
+    volumes:
+    - ./open-webui-data:/app/backend/data
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - open-webui
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20597:8080
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=open-webui"
+    #   - "homepage.description=open-webui self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=open-webui.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20597"
+    #   - "homepage.server=localhost"

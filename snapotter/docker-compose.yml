@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=snapotter"
-    #   - "homepage.description=snapotter self-hosted service."
+    #   - "homepage.description=Snapotter: self-hosted service for managing and viewing server snapshots/backups."
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=snapotter.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20548"

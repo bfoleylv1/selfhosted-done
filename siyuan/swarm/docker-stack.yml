@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=siyuan"
-    #   - "homepage.description=siyuan self-hosted service."
+    #   - "homepage.description=SiYuan: open-source, privacy-first personal knowledge management and note-taking app."
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=siyuan.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20509"

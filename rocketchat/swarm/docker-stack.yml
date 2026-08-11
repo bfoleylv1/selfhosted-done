@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=rocketchat"
-    #   - "homepage.description=rocketchat self-hosted service."
+    #   - "homepage.description=Web chat platform for teams; built with Meteor.js framework."
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=rocketchat.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20503"

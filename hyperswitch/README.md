@@ -1,14 +1,15 @@
-# HyperSwitch
+# Hyperswitch
 
-Open-source payments infrastructure; routing, retries, and reconciliation
+Open-source payments infrastructure; routing, retries, and reconciliation.
 
 | | |
 |---|---|
 | **Image** | `juspaydotin/hyperswitch-router:latest` |
 | **Host port** | `20113` |
-| **Container port** | `8080` |
+| **Container port** | `20113` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Payments |
-| **Healthcheck** | HTTP `/health` |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml hyperswitch
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' hyperswitch
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

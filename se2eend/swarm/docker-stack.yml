@@ -1,0 +1,59 @@
+# se2eend - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml se2eend
+# image verified to exist at generation time: se2eend/se2eend:latest
+
+services:
+  se2eend:
+    # image: se2eend/se2eend:latest  # UNVERIFIED
+    ports:
+      - target: 20547
+        published: 20547
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - se2eend_config:/config
+      - se2eend_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20547 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=se2eend"
+    #   - "homepage.description=se2eend self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=se2eend.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20547"
+    #   - "homepage.server=localhost"
+
+volumes:
+  se2eend_config:
+  se2eend_data:
+
+networks:
+  default:
+    name: se2eend_net
+    driver: overlay
+    attachable: true

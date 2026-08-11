@@ -1,0 +1,59 @@
+# tailchat - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml tailchat
+# image verified to exist at generation time: tailhook/tailchat:latest
+
+services:
+  tailchat:
+    # image: tailhook/tailchat:latest  # UNVERIFIED
+    ports:
+      - target: 20514
+        published: 20514
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - tailchat_config:/config
+      - tailchat_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20514 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=tailchat"
+    #   - "homepage.description=tailchat self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=tailchat.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20514"
+    #   - "homepage.server=localhost"
+
+volumes:
+  tailchat_config:
+  tailchat_data:
+
+networks:
+  default:
+    name: tailchat_net
+    driver: overlay
+    attachable: true

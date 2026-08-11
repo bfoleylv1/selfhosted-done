@@ -1,0 +1,59 @@
+# kaneo - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: app-kaneo-postgres
+    environment:
+      POSTGRES_PASSWORD: 8ru_BDmUOxqqBLSCR3fHuQqnpdiaEsB7
+      POSTGRES_USER: kaneo
+      POSTGRES_DB: kaneo
+    volumes:
+    - ./kaneo-data/postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - pg_isready -U kaneo -d kaneo
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+  backend:
+    image: ghcr.io/usekaneo/api:latest
+    container_name: app-kaneo-backend
+    environment:
+      DATABASE_URL: postgresql://kaneo:8ru_BDmUOxqqBLSCR3fHuQqnpdiaEsB7@localhost:5432/kaneo
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+  frontend:
+    image: ghcr.io/usekaneo/web:latest
+    container_name: app-kaneo-frontend
+    depends_on:
+      backend:
+        condition: service_started
+    restart: unless-stopped
+    ports:
+    - 20585:5173
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:5173/ || wget -qO- http://127.0.0.1:5173/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=kaneo"
+    #   - "homepage.description=kaneo self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=kaneo.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20585"
+    #   - "homepage.server=localhost"
+volumes:
+  postgres_data: null

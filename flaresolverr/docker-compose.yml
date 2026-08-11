@@ -1,0 +1,33 @@
+# flaresolverr - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    container_name: app-flaresolverr-server
+    environment:
+    - LOG_LEVEL=info
+    - LOG_FILE=none
+    - LOG_HTML=false
+    - CAPTCHA_SOLVER=none
+    - TZ=America/Los_Angeles
+    restart: unless-stopped
+    ports:
+    - 8191:8191
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:8191/ || wget -qO- http://127.0.0.1:8191/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=flaresolverr"
+    #   - "homepage.description=flaresolverr self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=flaresolverr.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:8191"
+    #   - "homepage.server=localhost"

@@ -1,0 +1,85 @@
+# rustdesk-server - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml rustdesk-server
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: rustdesk/rustdesk-server:latest
+    command: hbbs
+    volumes:
+    - rustdesk-server_rustdesk_server_data_hbbs:/root
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    - ALWAYS_USE_RELAY=N
+    ports:
+    - target: 80
+      published: 20606
+      protocol: tcp
+      mode: ingress
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:80/ || wget -qO- http://127.0.0.1:80/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+  hbbr:
+    image: rustdesk/rustdesk-server:latest
+    command: hbbr
+    volumes:
+    - rustdesk-server_rustdesk_server_data_hbbr:/root
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=rustdesk-server"
+    #   - "homepage.description=rustdesk-server self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=rustdesk-server.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20606"
+    #   - "homepage.server=localhost"
+volumes:
+  rustdesk-server_rustdesk_server_data_hbbs: null
+  rustdesk-server_rustdesk_server_data_hbbr: null
+networks:
+  default:
+    name: rustdesk-server_net
+    driver: overlay
+    attachable: true

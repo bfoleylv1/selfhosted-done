@@ -1,0 +1,31 @@
+# cyberchef - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: ghcr.io/gchq/cyberchef:latest
+    container_name: app-cyberchef
+    environment:
+    - TZ=America/Los_Angeles
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - nginx
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20565:8080
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=cyberchef"
+    #   - "homepage.description=cyberchef self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=cyberchef.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20565"
+    #   - "homepage.server=localhost"

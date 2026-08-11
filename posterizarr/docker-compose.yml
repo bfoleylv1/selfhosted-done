@@ -1,0 +1,39 @@
+# posterizarr - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: ghcr.io/fscorrupt/posterizarr:latest
+    container_name: app-posterizarr
+    environment:
+    - TZ=Europe/Amsterdam
+    - TERM=xterm
+    - RUN_TIME=disabled
+    user: 1000:1000
+    volumes:
+    - ./posterizarr-data/config:/config:rw
+    - ./posterizarr-data/assets:/assets:rw
+    - ./posterizarr-data/assetsbackup:/assetsbackup:rw
+    - ./posterizarr-data/manualassets:/manualassets:rw
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - posterizarr
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20602:8000
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=posterizarr"
+    #   - "homepage.description=posterizarr self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=posterizarr.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20602"
+    #   - "homepage.server=localhost"

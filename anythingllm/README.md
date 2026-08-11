@@ -6,9 +6,11 @@ AnythingLLM: all-in-one desktop and self-hosted app for chatting with documents 
 |---|---|
 | **Image** | `mintplexlabs/anythingllm:latest` |
 | **Host port** | `20412` |
-| **Container port** | `20412` |
+| **Container port** | `3001` |
+| **Containers** | 1 |
+| **Healthcheck** | HTTP `http://127.0.0.1:3001/api/health` |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP port probe |
+| **GPU** | hardware-acceleration block included (commented) |
 
 ## Run it
 
@@ -31,14 +33,12 @@ docker stack deploy -c swarm/docker-stack.yml anythingllm
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{.State.Health.Status}' anythingllm
+docker compose ps
 ```
 
 ## Homepage

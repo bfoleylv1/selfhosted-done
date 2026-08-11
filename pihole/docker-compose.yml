@@ -1,0 +1,36 @@
+# pihole - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: pihole/pihole:latest
+    container_name: app-pihole
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    volumes:
+    - ./pihole-data/etc-pihole:/etc/pihole
+    - ./pihole-data/etc-dnsmasq.d:/etc/dnsmasq.d
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - pihole-FTL
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20600:80
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=pihole"
+    #   - "homepage.description=pihole self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=pihole.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20600"
+    #   - "homepage.server=localhost"

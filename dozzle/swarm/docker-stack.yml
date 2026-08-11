@@ -1,0 +1,55 @@
+# dozzle - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml dozzle
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: amir20/dozzle:latest
+    volumes:
+    - dozzle_dozzle_data_dozzle_data:/data
+    - /var/run/docker.sock:/var/run/docker.sock:ro
+    healthcheck:
+      test:
+      - CMD
+      - /dozzle
+      - healthcheck
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 8080
+      published: 20570
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=dozzle"
+    #   - "homepage.description=dozzle self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=dozzle.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20570"
+    #   - "homepage.server=localhost"
+volumes:
+  dozzle_dozzle_data_dozzle_data: null
+networks:
+  default:
+    name: dozzle_net
+    driver: overlay
+    attachable: true

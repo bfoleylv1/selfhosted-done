@@ -7,8 +7,9 @@ MeTube: self-hosted YouTube-dl / yt-dlp web UI for downloading media
 | **Image** | `alexta69/metube:latest` |
 | **Host port** | `20475` |
 | **Container port** | `20475` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml metube
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{.State.Health.Status}' metube
+docker compose ps
 ```
 
 ## Homepage

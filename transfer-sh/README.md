@@ -1,14 +1,15 @@
-# Transfer-Sh
+# Transfer Sh
 
-Self-hosted service: transfer-sh
+Self-hosted service: transfer-sh.
 
 | | |
 |---|---|
 | **Image** | `dutchcoders/transfer.sh:latest` |
 | **Host port** | `20516` |
 | **Container port** | `20516` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP/HTTP probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml transfer-sh
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' transfer-sh
+docker compose ps
 ```
 
 ## Homepage

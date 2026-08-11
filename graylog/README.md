@@ -1,14 +1,15 @@
 # Graylog
 
-Open source log management platform; centralized log management
+Open source log management platform; centralized log management.
 
 | | |
 |---|---|
 | **Image** | `graylog/graylog:6.1` |
 | **Host port** | `20106` |
 | **Container port** | `9000` |
+| **Containers** | 1 |
+| **Healthcheck** | HTTP `http://127.0.0.1:9000/api/health` |
 | **Category** | Security |
-| **Healthcheck** | HTTP `/api` |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml graylog
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' graylog
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

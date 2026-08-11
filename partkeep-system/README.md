@@ -1,4 +1,4 @@
-# PartKeepSystem
+# Partkeep System
 
 PHP/MySQL web application; organize and manage parts inventory
 
@@ -6,9 +6,10 @@ PHP/MySQL web application; organize and manage parts inventory
 |---|---|
 | **Image** | `php:8.2-apache` |
 | **Host port** | `20191` |
-| **Container port** | `8080` |
+| **Container port** | `20191` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Crm |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml partkeep-system
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' partkeep-system
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

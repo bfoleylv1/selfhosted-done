@@ -1,0 +1,60 @@
+# vikunja - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml vikunja
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: vikunja/vikunja:latest
+    user: 0:0
+    environment:
+    - TZ=America/Los_Angeles
+    - VIKUNJA_SERVICE_PUBLICURL=http://localhost:20614
+    - VIKUNJA_DATABASE_PATH=/db/vikunja.db
+    volumes:
+    - vikunja_vikunja_data_files:/app/vikunja/files
+    - vikunja_vikunja_data_db:/db
+    ports:
+    - target: 3456
+      published: 20614
+      protocol: tcp
+      mode: ingress
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:3456/ || wget -qO- http://127.0.0.1:3456/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=vikunja"
+    #   - "homepage.description=vikunja self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=vikunja.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20614"
+    #   - "homepage.server=localhost"
+volumes:
+  vikunja_vikunja_data_files: null
+  vikunja_vikunja_data_db: null
+networks:
+  default:
+    name: vikunja_net
+    driver: overlay
+    attachable: true

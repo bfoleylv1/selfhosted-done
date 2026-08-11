@@ -1,4 +1,4 @@
-# Algo VPN
+# Algo Vpn
 
 VPN servers; deploy IPsec VPN on popular cloud providers
 
@@ -6,9 +6,10 @@ VPN servers; deploy IPsec VPN on popular cloud providers
 |---|---|
 | **Image** | `ubuntu:24.04` |
 | **Host port** | `20401` |
-| **Container port** | `8080` |
+| **Container port** | `20401` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Vpn |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml algo-vpn
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' algo-vpn
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

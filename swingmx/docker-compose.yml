@@ -1,0 +1,36 @@
+# swingmx - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: ghcr.io/swingmx/swingmusic:latest
+    container_name: app-swingmusic
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    volumes:
+    - ./swingmusic-data/app/config:/config
+    - /path/to/music:/music
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - swingmusic
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 1970:1970
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=swingmx"
+    #   - "homepage.description=swingmx self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=swingmx.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:1970"
+    #   - "homepage.server=localhost"

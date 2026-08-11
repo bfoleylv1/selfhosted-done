@@ -7,8 +7,9 @@ Mylar3: automated Comic Book (CBZ/CBR) downloader and manager
 | **Image** | `linuxserver/mylar3:latest` |
 | **Host port** | `20539` |
 | **Container port** | `20539` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml mylar3
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{.State.Health.Status}' mylar3
+docker compose ps
 ```
 
 ## Homepage

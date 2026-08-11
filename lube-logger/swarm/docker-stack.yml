@@ -1,0 +1,56 @@
+# lube-logger - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml lube-logger
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: ghcr.io/hargata/lubelogger:latest
+    build: .
+    volumes:
+    - lube-logger_lubelogger_data_data:/App/data
+    - lube-logger_lubelogger_data_keys:/root/.aspnet/DataProtection-Keys
+    ports:
+    - target: 8080
+      published: 20589
+      protocol: tcp
+      mode: ingress
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:8080/ || wget -qO- http://127.0.0.1:8080/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=lube-logger"
+    #   - "homepage.description=lube-logger self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=lube-logger.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20589"
+    #   - "homepage.server=localhost"
+volumes:
+  lube-logger_lubelogger_data_data: null
+  lube-logger_lubelogger_data_keys: null
+networks:
+  default:
+    name: lube-logger_net
+    driver: overlay
+    attachable: true

@@ -7,8 +7,9 @@ Gotify: simple self-hosted push notification server (Android/iOS/desktop)
 | **Image** | `gotify/server:latest` |
 | **Host port** | `20448` |
 | **Container port** | `20448` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml gotify
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{.State.Health.Status}' gotify
+docker compose ps
 ```
 
 ## Homepage

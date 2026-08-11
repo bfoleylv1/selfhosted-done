@@ -1,0 +1,34 @@
+# isley - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: dwot/isley:latest
+    container_name: app-isley
+    environment:
+    - TZ=America/Los_Angeles
+    volumes:
+    - ./isley-data/isley-db:/app/data
+    - ./isley-data/isley-uploads:/app/uploads
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - isley
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20583:8080
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=isley"
+    #   - "homepage.description=isley self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=isley.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20583"
+    #   - "homepage.server=localhost"

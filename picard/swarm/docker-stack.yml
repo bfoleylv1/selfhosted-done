@@ -1,0 +1,61 @@
+# picard - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml picard
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: mikenye/picard:latest
+    environment:
+    - USER_ID=1000
+    - GROUP_ID=1000
+    - TZ=Europe/Amsterdam
+    volumes:
+    - picard_picard_data_config:/config:rw
+    - picard_picard_data_music:/storage:rw
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - picard
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 5800
+      published: 20599
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=picard"
+    #   - "homepage.description=picard self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=picard.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20599"
+    #   - "homepage.server=localhost"
+volumes:
+  picard_picard_data_config: null
+  picard_picard_data_music: null
+networks:
+  default:
+    name: picard_net
+    driver: overlay
+    attachable: true

@@ -6,9 +6,10 @@ Complete mail server solution; quick and easy setup
 |---|---|
 | **Image** | `ubuntu:24.04` |
 | **Host port** | `20114` |
-| **Container port** | `8080` |
+| **Container port** | `20114` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Email |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml iRedMail
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' iRedMail
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

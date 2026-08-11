@@ -1,0 +1,98 @@
+# espocrm - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml espocrm
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  database:
+    image: mariadb:12.2
+    environment:
+    - MARIADB_ROOT_PASSWORD=password
+    - MARIADB_DATABASE=espocrm
+    - MARIADB_USER=espocrm
+    - MARIADB_PASSWORD=password
+    volumes:
+    - espocrm_espocrm_db:/var/lib/mysql
+    healthcheck:
+      test:
+      - CMD
+      - healthcheck.sh
+      - --connect
+      - --innodb_initialized
+      interval: 1m
+      start_period: 30s
+      timeout: 10s
+      retries: 3
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+  application:
+    image: espocrm/espocrm:latest
+    environment:
+    - ESPOCRM_DATABASE_PLATFORM=Mysql
+    - ESPOCRM_DATABASE_HOST=espocrm-db
+    - ESPOCRM_DATABASE_USER=espocrm
+    - ESPOCRM_DATABASE_PASSWORD=password
+    - ESPOCRM_ADMIN_USERNAME=admin
+    - ESPOCRM_ADMIN_PASSWORD=password
+    - ESPOCRM_SITE_URL=http://localhost:20573
+    - ESPOCRM_DEFAULT_CURRENCY=EUR
+    volumes:
+    - espocrm_espocrm_data:/var/www/html
+    ports:
+    - target: 80
+      published: 20573
+      protocol: tcp
+      mode: ingress
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:80/ || wget -qO- http://127.0.0.1:80/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=espocrm"
+    #   - "homepage.description=espocrm self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=espocrm.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20573"
+    #   - "homepage.server=localhost"
+volumes:
+  espocrm_espocrm_db: null
+  espocrm_espocrm_data: null
+networks:
+  default:
+    name: espocrm_net
+    driver: overlay
+    attachable: true

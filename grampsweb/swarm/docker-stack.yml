@@ -1,0 +1,139 @@
+# grampsweb - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml grampsweb
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: ghcr.io/gramps-project/grampsweb:latest
+    environment:
+      PUID: '1000'
+      PGID: '1000'
+      TZ: Europe/Amsterdam
+      GRAMPSWEB_TREE: Gramps Web
+      GRAMPSWEB_CELERY_CONFIG__broker_url: redis://grampsweb_redis:6379/0
+      GRAMPSWEB_CELERY_CONFIG__result_backend: redis://grampsweb_redis:6379/0
+      GRAMPSWEB_RATELIMIT_STORAGE_URI: redis://grampsweb_redis:6379/1
+    volumes:
+    - grampsweb_grampsweb_data_gramps_users:/app/users
+    - grampsweb_grampsweb_data_gramps_index:/app/indexdir
+    - grampsweb_grampsweb_data_gramps_thumb_cache:/app/thumbnail_cache
+    - grampsweb_grampsweb_data_gramps_cache:/app/cache
+    - grampsweb_grampsweb_data_gramps_secret:/app/secret
+    - grampsweb_grampsweb_data_gramps_db:/root/.gramps/grampsdb
+    - grampsweb_grampsweb_data_gramps_media:/app/media
+    - grampsweb_grampsweb_data_gramps_tmp:/tmp
+    ports:
+    - target: 5000
+      published: 20578
+      protocol: tcp
+      mode: ingress
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:5000/ || wget -qO- http://127.0.0.1:5000/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+  grampsweb_celery:
+    image: ghcr.io/gramps-project/grampsweb:latest
+    environment:
+      PUID: '1000'
+      PGID: '1000'
+      TZ: Europe/Amsterdam
+      GRAMPSWEB_TREE: Gramps Web
+      GRAMPSWEB_CELERY_CONFIG__broker_url: redis://grampsweb_redis:6379/0
+      GRAMPSWEB_CELERY_CONFIG__result_backend: redis://grampsweb_redis:6379/0
+      GRAMPSWEB_RATELIMIT_STORAGE_URI: redis://grampsweb_redis:6379/1
+    volumes:
+    - grampsweb_grampsweb_data_gramps_users:/app/users
+    - grampsweb_grampsweb_data_gramps_index:/app/indexdir
+    - grampsweb_grampsweb_data_gramps_thumb_cache:/app/thumbnail_cache
+    - grampsweb_grampsweb_data_gramps_cache:/app/cache
+    - grampsweb_grampsweb_data_gramps_secret:/app/secret
+    - grampsweb_grampsweb_data_gramps_db:/root/.gramps/grampsdb
+    - grampsweb_grampsweb_data_gramps_media:/app/media
+    - grampsweb_grampsweb_data_gramps_tmp:/tmp
+    ports: []
+    command: celery -A gramps_webapi.celery worker --loglevel=INFO --concurrency=2
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+  grampsweb_redis:
+    image: docker.io/library/redis:7.2.4-alpine
+    healthcheck:
+      test:
+      - CMD
+      - redis-cli
+      - ping
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=grampsweb"
+    #   - "homepage.description=grampsweb self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=grampsweb.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20578"
+    #   - "homepage.server=localhost"
+volumes:
+  grampsweb_grampsweb_data_gramps_users: null
+  grampsweb_grampsweb_data_gramps_index: null
+  grampsweb_grampsweb_data_gramps_thumb_cache: null
+  grampsweb_grampsweb_data_gramps_cache: null
+  grampsweb_grampsweb_data_gramps_secret: null
+  grampsweb_grampsweb_data_gramps_db: null
+  grampsweb_grampsweb_data_gramps_media: null
+  grampsweb_grampsweb_data_gramps_tmp: null
+networks:
+  default:
+    name: grampsweb_net
+    driver: overlay
+    attachable: true

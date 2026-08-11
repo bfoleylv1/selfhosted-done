@@ -1,0 +1,58 @@
+# dockhand - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml dockhand
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: fnsys/dockhand:latest
+    environment:
+    - HOST_DATA_DIR=/app/data
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - dockhand_dockhand_data:/app/data
+    healthcheck:
+      test:
+      - CMD
+      - curl
+      - -fsS
+      - http://127.0.0.1:41234/healthz
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 3000
+      published: 20568
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=dockhand"
+    #   - "homepage.description=dockhand self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=dockhand.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20568"
+    #   - "homepage.server=localhost"
+volumes:
+  dockhand_dockhand_data: null
+networks:
+  default:
+    name: dockhand_net
+    driver: overlay
+    attachable: true

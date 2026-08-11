@@ -1,14 +1,15 @@
 # Bumpress
 
-Bumpress: self-hosted service for publishing and syndicating content
+Self-hosted service: bumpress.
 
 | | |
 |---|---|
 | **Image** | `wordpress:latest` |
 | **Host port** | `20419` |
 | **Container port** | `20419` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml bumpress
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{.State.Health.Status}' bumpress
+docker compose ps
 ```
 
 ## Homepage

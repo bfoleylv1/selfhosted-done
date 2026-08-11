@@ -1,0 +1,38 @@
+# speedtest-tracker - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: lscr.io/linuxserver/speedtest-tracker:latest
+    container_name: app-speedtest-tracker
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - APP_KEY=
+    - DB_CONNECTION=sqlite
+    - APP_URL=
+    volumes:
+    - ./speedtest-tracker-data:/config
+    - ./nginx/default.conf:/config/nginx/site-confs/default.conf
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - speedtest-tracker
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20608:8888
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=speedtest-tracker"
+    #   - "homepage.description=speedtest-tracker self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=speedtest-tracker.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20608"
+    #   - "homepage.server=localhost"

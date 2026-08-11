@@ -1,0 +1,25 @@
+services:
+  openwork:
+    image: sharmarahul0810/openwork:latest
+    container_name: openwork
+    restart: unless-stopped
+    ports:
+    - 20489:20489
+    environment:
+    - TZ=${TZ:-America/Los_Angeles}
+    - PUID=${PUID:-1000}
+    - PGID=${PGID:-1000}
+    volumes:
+    - ./config:/config
+    - ./data:/data
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - nc -z 127.0.0.1 20489 || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+networks:
+  default:
+    name: openwork_net

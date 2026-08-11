@@ -1,0 +1,55 @@
+# miniqr - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml miniqr
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: ghcr.io/lyqht/mini-qr:latest
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - serve
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 8080
+      published: 20591
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=miniqr"
+    #   - "homepage.description=miniqr self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=miniqr.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20591"
+    #   - "homepage.server=localhost"
+networks:
+  default:
+    name: miniqr_net
+    driver: overlay
+    attachable: true

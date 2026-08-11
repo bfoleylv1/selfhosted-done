@@ -1,0 +1,34 @@
+# wallos - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: bellamy/wallos:latest
+    container_name: app-wallos
+    environment:
+    - TZ=America/Los_Angeles
+    volumes:
+    - ./wallos-data/db:/var/www/html/db
+    - ./wallos-data/logos:/var/www/html/images/uploads/logos
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - nginx
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20615:80
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=wallos"
+    #   - "homepage.description=wallos self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=wallos.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20615"
+    #   - "homepage.server=localhost"

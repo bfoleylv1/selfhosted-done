@@ -18,3 +18,9 @@ docker-compose.override.yml
 # python bytecode
 __pycache__/
 *.pyc
+
+# internal generator state — not part of the published library
+.tools/secret-salt
+.tools/regcache.json
+.tools/sh2_regcache.json
+.tools/resolved.json

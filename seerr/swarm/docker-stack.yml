@@ -1,0 +1,56 @@
+# seerr - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml seerr
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: ghcr.io/seerr-team/seerr:latest
+    init: true
+    environment:
+    - LOG_LEVEL=debug
+    - TZ=America/Los_Angeles
+    - PORT=5055
+    volumes:
+    - seerr_seerr_data_config:/app/config
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://localhost:5055/api/v1/status || exit 1
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 5055
+      published: 5055
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=seerr"
+    #   - "homepage.description=seerr self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=seerr.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:5055"
+    #   - "homepage.server=localhost"
+volumes:
+  seerr_seerr_data_config: null
+networks:
+  default:
+    name: seerr_net
+    driver: overlay
+    attachable: true

@@ -1,0 +1,36 @@
+# picard - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: mikenye/picard:latest
+    container_name: app-picard
+    environment:
+    - USER_ID=1000
+    - GROUP_ID=1000
+    - TZ=Europe/Amsterdam
+    volumes:
+    - ./picard-data/config:/config:rw
+    - ./picard-data/music:/storage:rw
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - picard
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20599:5800
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=picard"
+    #   - "homepage.description=picard self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=picard.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20599"
+    #   - "homepage.server=localhost"

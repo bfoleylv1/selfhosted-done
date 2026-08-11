@@ -6,9 +6,10 @@ Home Assistant: open-source home automation platform
 |---|---|
 | **Image** | `ghcr.io/home-assistant/home-assistant:stable` |
 | **Host port** | `20455` |
-| **Container port** | `20455` |
+| **Container port** | `8123` |
+| **Containers** | 1 |
+| **Healthcheck** | HTTP `http://127.0.0.1:8123/` |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml homeassistant
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{.State.Health.Status}' homeassistant
+docker compose ps
 ```
 
 ## Homepage

@@ -1,14 +1,15 @@
 # Sish
 
-Self-hosted service: sish
+sish: open-source tunneled reverse proxy server (self-hosted ngrok/serveo alternative)
 
 | | |
 |---|---|
 | **Image** | `antoniomika/sish:latest` |
 | **Host port** | `20508` |
 | **Container port** | `20508` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP/HTTP probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml sish
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' sish
+docker compose ps
 ```
 
 ## Homepage

@@ -1,0 +1,85 @@
+# grampsweb - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: ghcr.io/gramps-project/grampsweb:latest
+    container_name: app-grampsweb
+    environment:
+      PUID: '1000'
+      PGID: '1000'
+      TZ: Europe/Amsterdam
+      GRAMPSWEB_TREE: Gramps Web
+      GRAMPSWEB_CELERY_CONFIG__broker_url: redis://grampsweb_redis:6379/0
+      GRAMPSWEB_CELERY_CONFIG__result_backend: redis://grampsweb_redis:6379/0
+      GRAMPSWEB_RATELIMIT_STORAGE_URI: redis://grampsweb_redis:6379/1
+    volumes:
+    - ./grampsweb-data/gramps_users:/app/users
+    - ./grampsweb-data/gramps_index:/app/indexdir
+    - ./grampsweb-data/gramps_thumb_cache:/app/thumbnail_cache
+    - ./grampsweb-data/gramps_cache:/app/cache
+    - ./grampsweb-data/gramps_secret:/app/secret
+    - ./grampsweb-data/gramps_db:/root/.gramps/grampsdb
+    - ./grampsweb-data/gramps_media:/app/media
+    - ./grampsweb-data/gramps_tmp:/tmp
+    depends_on:
+      grampsweb_redis:
+        condition: service_healthy
+    restart: always
+    ports:
+    - 20578:5000
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:5000/ || wget -qO- http://127.0.0.1:5000/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+  grampsweb_celery:
+    image: ghcr.io/gramps-project/grampsweb:latest
+    container_name: app-grampsweb-celery
+    environment:
+      PUID: '1000'
+      PGID: '1000'
+      TZ: Europe/Amsterdam
+      GRAMPSWEB_TREE: Gramps Web
+      GRAMPSWEB_CELERY_CONFIG__broker_url: redis://grampsweb_redis:6379/0
+      GRAMPSWEB_CELERY_CONFIG__result_backend: redis://grampsweb_redis:6379/0
+      GRAMPSWEB_RATELIMIT_STORAGE_URI: redis://grampsweb_redis:6379/1
+    volumes:
+    - ./grampsweb-data/gramps_users:/app/users
+    - ./grampsweb-data/gramps_index:/app/indexdir
+    - ./grampsweb-data/gramps_thumb_cache:/app/thumbnail_cache
+    - ./grampsweb-data/gramps_cache:/app/cache
+    - ./grampsweb-data/gramps_secret:/app/secret
+    - ./grampsweb-data/gramps_db:/root/.gramps/grampsdb
+    - ./grampsweb-data/gramps_media:/app/media
+    - ./grampsweb-data/gramps_tmp:/tmp
+    depends_on:
+    - grampsweb_redis
+    restart: always
+    ports: []
+    command: celery -A gramps_webapi.celery worker --loglevel=INFO --concurrency=2
+  grampsweb_redis:
+    image: docker.io/library/redis:7.2.4-alpine
+    container_name: app-grampsweb-redis
+    healthcheck:
+      test:
+      - CMD
+      - redis-cli
+      - ping
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=grampsweb"
+    #   - "homepage.description=grampsweb self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=grampsweb.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20578"
+    #   - "homepage.server=localhost"

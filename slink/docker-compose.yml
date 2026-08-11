@@ -1,0 +1,42 @@
+# slink - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: anirdev/slink:latest
+    container_name: app-slink
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    - ORIGIN=https://your-domain.com
+    - USER_APPROVAL_REQUIRED=true
+    - USER_PASSWORD_MIN_LENGTH=8
+    - USER_PASSWORD_REQUIREMENTS=15
+    - IMAGE_MAX_SIZE=15M
+    - STORAGE_PROVIDER=local
+    volumes:
+    - ./slink-data/var/data:/app/var/data
+    - ./slink-data/images:/app/slink/images
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - slink
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20607:3000
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=slink"
+    #   - "homepage.description=slink self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=slink.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20607"
+    #   - "homepage.server=localhost"

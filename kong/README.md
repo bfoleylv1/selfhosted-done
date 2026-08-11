@@ -1,14 +1,15 @@
 # Kong
 
-Kong Gateway; cloud-native API, LLM, and MCP gateway solution
+Kong Gateway; cloud-native API, LLM, and MCP gateway solution.
 
 | | |
 |---|---|
-| **Image** | `kong:latest` |
+| **Image** | `kong/kong:latest` |
 | **Host port** | `20133` |
-| **Container port** | `8000` |
+| **Container port** | `20133` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Api Management |
-| **Healthcheck** | HTTP `/status` |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml kong
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' kong
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

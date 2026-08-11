@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=sish"
-    #   - "homepage.description=sish self-hosted service."
+    #   - "homepage.description=sish: open-source tunneled reverse proxy server (self-hosted ngrok/serveo alternative)."
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=sish.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20508"

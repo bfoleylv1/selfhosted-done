@@ -1,14 +1,15 @@
-# FreshRSS
+# Freshrss
 
-Free and open-source web RSS reader; multi-user self-hosted feed reader
+Free and open-source web RSS reader; multi-user self-hosted feed reader.
 
 | | |
 |---|---|
-| **Image** | `freshrss/freshrss:latest` |
+| **Image** | `lscr.io/linuxserver/freshrss:latest` |
 | **Host port** | `20079` |
 | **Container port** | `80` |
+| **Containers** | 1 |
+| **Healthcheck** | HTTP `http://127.0.0.1:80/` |
 | **Category** | Rss |
-| **Healthcheck** | HTTP `/api/greader.php` |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml freshrss
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' freshrss
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

@@ -1,14 +1,15 @@
 # Rocketchat
 
-Self-hosted service: rocketchat
+Web chat platform for teams; built with Meteor.js framework.
 
 | | |
 |---|---|
 | **Image** | `rocket.chat:latest` |
 | **Host port** | `20503` |
-| **Container port** | `20503` |
+| **Container port** | `3000` |
+| **Containers** | 1 |
+| **Healthcheck** | HTTP `http://127.0.0.1:3000/api/v1/health` |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP/HTTP probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml rocketchat
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' rocketchat
+docker compose ps
 ```
 
 ## Homepage

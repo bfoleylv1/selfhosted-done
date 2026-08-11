@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=transfer-sh"
-    #   - "homepage.description=transfer-sh self-hosted service."
+    #   - "homepage.description=transfer.sh: easy, self-hosted service for transferring files over the internet."
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=transfer-sh.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20516"

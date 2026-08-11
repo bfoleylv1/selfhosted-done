@@ -1,0 +1,35 @@
+# linkding - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: sissbruecker/linkding:latest
+    container_name: app-linkding
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    volumes:
+    - ./linkding-data/data:/etc/linkding/data
+    healthcheck:
+      test:
+      - CMD
+      - curl
+      - -sf
+      - http://127.0.0.1:9090/login/
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20588:9090
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=linkding"
+    #   - "homepage.description=linkding self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=linkding.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20588"
+    #   - "homepage.server=localhost"

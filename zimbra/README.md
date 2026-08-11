@@ -1,14 +1,15 @@
 # Zimbra
 
-Collaboration software; email, calendar, contacts
+Collaboration software; email, calendar, contacts.
 
 | | |
 |---|---|
 | **Image** | `ubuntu:24.04` |
 | **Host port** | `20386` |
-| **Container port** | `8080` |
+| **Container port** | `20386` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Email |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml zimbra
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' zimbra
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

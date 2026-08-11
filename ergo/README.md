@@ -7,8 +7,9 @@ Ergo (IRCd): modern, easy-to-run IRC server written in Go
 | **Image** | `ergochat/ergo:latest` |
 | **Host port** | `20441` |
 | **Container port** | `20441` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml ergo
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{.State.Health.Status}' ergo
+docker compose ps
 ```
 
 ## Homepage

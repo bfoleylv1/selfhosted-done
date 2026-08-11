@@ -1,0 +1,70 @@
+# arcane - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml arcane
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: ghcr.io/getarcaneapp/arcane:latest
+    environment:
+    - APP_URL=http://localhost:3552
+    - PUID=1000
+    - PGID=1000
+    - ENCRYPTION_KEY=verysecretkeythatshouldbereplaced
+    - JWT_SECRET=verysecretkeythatshouldbereplaced
+    - LOG_LEVEL=info
+    - LOG_JSON=false
+    - OIDC_ENABLED=false
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - arcane_arcane_data:/app/data
+    - arcane_opt_dockerdata:/app/data/projects
+    healthcheck:
+      test:
+      - CMD
+      - curl
+      - -f
+      - http://localhost:3552/
+      - -s
+      - -o
+      - /dev/null
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 3552
+      published: 3552
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=arcane"
+    #   - "homepage.description=arcane self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=arcane.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:3552"
+    #   - "homepage.server=localhost"
+volumes:
+  arcane_arcane_data: null
+  arcane_opt_dockerdata: null
+networks:
+  default:
+    name: arcane_net
+    driver: overlay
+    attachable: true

@@ -1,4 +1,4 @@
-# Sentry (Self-Hosted)
+# Sentry
 
 Open-source error tracking tool; monitor and improve software
 
@@ -7,8 +7,9 @@ Open-source error tracking tool; monitor and improve software
 | **Image** | `sentry:latest` |
 | **Host port** | `20272` |
 | **Container port** | `9000` |
+| **Containers** | 1 |
+| **Healthcheck** | HTTP `http://127.0.0.1:9000/api/0/` |
 | **Category** | Analytics |
-| **Healthcheck** | HTTP `/_health/` |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml sentry
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' sentry
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

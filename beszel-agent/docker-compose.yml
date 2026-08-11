@@ -1,0 +1,33 @@
+# beszel-agent - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: henrygd/beszel-agent:latest
+    container_name: app-beszel-agent
+    environment:
+      PORT: '45876'
+      KEY: ssh-ed25519 <ADD-YOUR-beszel-agent-KEY-HERE>
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock:ro
+    healthcheck:
+      test:
+      - CMD
+      - /agent
+      - health
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 45876:45876
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=beszel-agent"
+    #   - "homepage.description=beszel-agent self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=beszel-agent.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:45876"
+    #   - "homepage.server=localhost"

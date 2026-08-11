@@ -1,0 +1,60 @@
+# homarr - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml homarr
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: ghcr.io/homarr-labs/homarr:latest
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    - SECRET_ENCRYPTION_KEY=
+    volumes:
+    - homarr_homarr_data_appdata:/appdata
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - homarr
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 7575
+      published: 7575
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=homarr"
+    #   - "homepage.description=homarr self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=homarr.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:7575"
+    #   - "homepage.server=localhost"
+volumes:
+  homarr_homarr_data_appdata: null
+networks:
+  default:
+    name: homarr_net
+    driver: overlay
+    attachable: true

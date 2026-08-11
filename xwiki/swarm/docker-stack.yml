@@ -1,0 +1,92 @@
+# xwiki - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml xwiki
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: xwiki:stable-mariadb-tomcat
+    environment:
+    - XWIKI_VERSION=18.2.1
+    - DB_USER=xwiki
+    - DB_PASSWORD=xwiki
+    - DB_DATABASE=xwiki
+    - DB_HOST=db-xwiki
+    volumes:
+    - xwiki_xwiki_data_xwiki:/usr/local/xwiki
+    ports:
+    - target: 80
+      published: 20616
+      protocol: tcp
+      mode: ingress
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:80/ || wget -qO- http://127.0.0.1:80/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+  db:
+    image: mariadb:12
+    volumes:
+    - xwiki_xwiki_data_mariadb:/var/lib/mysql
+    - type: bind
+      source: ./init.sql
+      target: /docker-entrypoint-initdb.d/init.sql
+    environment:
+    - MARIADB_ROOT_PASSWORD=xwiki
+    - MARIADB_USER=xwiki
+    - MARIADB_PASSWORD=xwiki
+    - MARIADB_DATABASE=xwiki
+    command:
+    - --character-set-server=utf8mb4
+    - --collation-server=utf8mb4_bin
+    - --explicit-defaults-for-timestamp=1
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=xwiki"
+    #   - "homepage.description=xwiki self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=xwiki.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20616"
+    #   - "homepage.server=localhost"
+volumes:
+  xwiki_xwiki_data_xwiki: null
+  xwiki_xwiki_data_mariadb: null
+networks:
+  default:
+    name: xwiki_net
+    driver: overlay
+    attachable: true

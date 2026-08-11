@@ -1,0 +1,35 @@
+# vikunja - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: vikunja/vikunja:latest
+    container_name: app-vikunja
+    user: 0:0
+    environment:
+    - TZ=America/Los_Angeles
+    - VIKUNJA_SERVICE_PUBLICURL=http://localhost:20614
+    - VIKUNJA_DATABASE_PATH=/db/vikunja.db
+    volumes:
+    - ./vikunja-data/files:/app/vikunja/files
+    - ./vikunja-data/db:/db
+    restart: always
+    ports:
+    - 20614:3456
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:3456/ || wget -qO- http://127.0.0.1:3456/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=vikunja"
+    #   - "homepage.description=vikunja self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=vikunja.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20614"
+    #   - "homepage.server=localhost"

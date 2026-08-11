@@ -1,0 +1,35 @@
+# voltius - docker compose (single host)
+# image verified to exist at generation time: voltius/voltius:latest
+
+services:
+  voltius:
+    # image: voltius/voltius:latest  # UNVERIFIED
+    container_name: voltius
+    restart: unless-stopped
+    ports:
+      - "20551:20551"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20551 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=voltius"
+    #   - "homepage.description=voltius self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=voltius.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20551"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: voltius_net

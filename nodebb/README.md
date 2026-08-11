@@ -7,8 +7,9 @@ NodeBB: open-source Node.js based forum software
 | **Image** | `ghcr.io/nodebb/nodebb:latest` |
 | **Host port** | `20482` |
 | **Container port** | `20482` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml nodebb
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{.State.Health.Status}' nodebb
+docker compose ps
 ```
 
 ## Homepage

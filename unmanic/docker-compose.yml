@@ -1,0 +1,48 @@
+# unmanic - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: josh5/unmanic:latest
+    container_name: app-unmanic
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    volumes:
+    - ./config/unmanic:/config
+    - /mnt/ramdisk:/tmp/unmanic
+    - /mnt/tvshows:/tvshows
+    - /mnt/movies:/library
+    - /mnt/backup:/backup
+    - /mnt/metadata:/metadata
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            count: all
+            capabilities:
+            - gpu
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - unmanic
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20613:80
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=unmanic"
+    #   - "homepage.description=unmanic self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=unmanic.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20613"
+    #   - "homepage.server=localhost"

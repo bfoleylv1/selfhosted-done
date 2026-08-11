@@ -1,0 +1,56 @@
+# tandoor - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: vabene1111/recipes:latest
+    container_name: app-tandoor
+    environment:
+    - TZ=America/Los_Angeles
+    - TANDOOR_PORT=9001
+    volumes:
+    - ./tandoor-data/staticfiles:/opt/recipes/staticfiles
+    - ./tandoor-data/mediafiles:/opt/recipes/mediafiles
+    depends_on:
+      database:
+        condition: service_healthy
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - tandoor
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 9001:9001
+  database:
+    image: postgres:16-alpine
+    container_name: app-tandoor-database
+    environment:
+      POSTGRES_PASSWORD: VmQYnP2FZOM5EV_Gqqawta-sqmWmnGcO
+      POSTGRES_USER: postgres
+      POSTGRES_DB: tandoor
+    volumes:
+    - ./tandoor-data/database:/var/lib/postgresql/data
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - pg_isready -U postgres -d tandoor
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=tandoor"
+    #   - "homepage.description=tandoor self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=tandoor.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:9001"
+    #   - "homepage.server=localhost"

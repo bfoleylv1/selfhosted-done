@@ -7,8 +7,10 @@ Immich: self-hosted photo and video backup solution with AI search
 | **Image** | `ghcr.io/immich-app/immich-server:release` |
 | **Host port** | `2283` |
 | **Container port** | `2283` |
+| **Containers** | 1 |
+| **Healthcheck** | HTTP `http://127.0.0.1:2283/` |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP port probe |
+| **GPU** | hardware-acceleration block included (commented) |
 
 ## Run it
 
@@ -31,14 +33,12 @@ docker stack deploy -c swarm/docker-stack.yml immich
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{.State.Health.Status}' immich
+docker compose ps
 ```
 
 ## Homepage

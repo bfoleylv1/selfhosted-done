@@ -1,0 +1,34 @@
+# clipcascade - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: sathvikrao/clipcascade:latest
+    container_name: app-clipcascade
+    environment:
+    - CC_MAX_MESSAGE_SIZE_IN_MiB=1
+    - TZ=America/Los_Angeles
+    volumes:
+    - ./clipcascade-data/cc_users:/database
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - clipcascade
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20562:8080
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=clipcascade"
+    #   - "homepage.description=clipcascade self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=clipcascade.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20562"
+    #   - "homepage.server=localhost"

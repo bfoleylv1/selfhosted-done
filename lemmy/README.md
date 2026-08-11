@@ -1,14 +1,15 @@
 # Lemmy
 
-Decentralised link aggregation; Reddit-like topic browsing
+Decentralised link aggregation; Reddit-like topic browsing.
 
 | | |
 |---|---|
 | **Image** | `dessalines/lemmy:0.19.5` |
 | **Host port** | `8536` |
 | **Container port** | `8536` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Social |
-| **Healthcheck** | HTTP `/` |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml lemmy
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' lemmy
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

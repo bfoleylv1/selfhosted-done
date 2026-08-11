@@ -7,8 +7,9 @@ MindsDB: open-source machine learning platform that brings ML to your database
 | **Image** | `mindsdb/mindsdb:latest` |
 | **Host port** | `20476` |
 | **Container port** | `20476` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml mindsdb
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{.State.Health.Status}' mindsdb
+docker compose ps
 ```
 
 ## Homepage

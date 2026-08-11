@@ -1,0 +1,35 @@
+# tldraw - docker compose (single host)
+# image verified to exist at generation time: tldraw/tldraw:latest
+
+services:
+  tldraw:
+    # image: tldraw/tldraw:latest  # UNVERIFIED
+    container_name: tldraw
+    restart: unless-stopped
+    ports:
+      - "20556:80"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:80/ || wget -qO- http://127.0.0.1:80/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=tldraw"
+    #   - "homepage.description=tldraw self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=tldraw.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20556"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: tldraw_net

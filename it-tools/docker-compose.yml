@@ -1,0 +1,31 @@
+# it-tools - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: corentinth/it-tools:latest
+    container_name: app-it-tools
+    environment:
+    - TZ=America/Los_Angeles
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - nginx
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20584:80
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=it-tools"
+    #   - "homepage.description=it-tools self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=it-tools.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20584"
+    #   - "homepage.server=localhost"

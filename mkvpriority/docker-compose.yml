@@ -1,0 +1,35 @@
+# mkvpriority - docker compose (single host)
+# image verified to exist at generation time: hacdiaz/mkvprofile:latest
+
+services:
+  mkvpriority:
+    # image: hacdiaz/mkvprofile:latest  # UNVERIFIED
+    container_name: mkvpriority
+    restart: unless-stopped
+    ports:
+      - "20479:20479"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20479 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=mkvpriority"
+    #   - "homepage.description=mkvpriority self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=mkvpriority.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20479"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: mkvpriority_net

@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=revert"
-    #   - "homepage.description=Self-hosted service."""""
+    #   - "homepage.description=Placeholder entry — no real upstream image configured (generic base image only); not yet implemented."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=revert.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20247"

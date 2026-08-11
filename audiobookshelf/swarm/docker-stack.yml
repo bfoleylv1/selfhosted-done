@@ -1,0 +1,65 @@
+# audiobookshelf - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml audiobookshelf
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: ghcr.io/advplyr/audiobookshelf:latest
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    volumes:
+    - audiobookshelf_audiobookshelf_data_app_config:/config
+    - audiobookshelf_audiobookshelf_data_app_audiobooks:/audiobooks
+    - audiobookshelf_audiobookshelf_data_app_podcasts:/podcasts
+    - audiobookshelf_audiobookshelf_data_app_metadata:/metadata
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - audiobookshelf
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 80
+      published: 20559
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=audiobookshelf"
+    #   - "homepage.description=audiobookshelf self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=audiobookshelf.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20559"
+    #   - "homepage.server=localhost"
+volumes:
+  audiobookshelf_audiobookshelf_data_app_config: null
+  audiobookshelf_audiobookshelf_data_app_audiobooks: null
+  audiobookshelf_audiobookshelf_data_app_podcasts: null
+  audiobookshelf_audiobookshelf_data_app_metadata: null
+networks:
+  default:
+    name: audiobookshelf_net
+    driver: overlay
+    attachable: true

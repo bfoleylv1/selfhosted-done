@@ -1,0 +1,35 @@
+# octobox - docker compose (single host)
+# image verified to exist at generation time: octobox/octobox:latest
+
+services:
+  octobox:
+    # image: octobox/octobox:latest  # UNVERIFIED
+    container_name: octobox
+    restart: unless-stopped
+    ports:
+      - "20484:20484"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20484 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=octobox"
+    #   - "homepage.description=octobox self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=octobox.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20484"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: octobox_net

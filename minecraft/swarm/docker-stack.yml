@@ -1,0 +1,63 @@
+# minecraft - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml minecraft
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: itzg/minecraft-server:latest
+    environment:
+    - EULA=TRUE
+    - TYPE=VANILLA
+    - VERSION=LATEST
+    - DIFFICULTY=normal
+    - MAX_PLAYERS=10
+    - MOTD=A Minecraft Server on Tailscale
+    - MEMORY=2G
+    - ONLINE_MODE=true
+    - TZ=America/Los_Angeles
+    volumes:
+    - minecraft_minecraft_data:/data
+    ports:
+    - target: 25565
+      published: 25565
+      protocol: tcp
+      mode: ingress
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - mc-monitor status --host 127.0.0.1 --port 25565
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 90s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=minecraft"
+    #   - "homepage.description=minecraft self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=minecraft.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:25565"
+    #   - "homepage.server=localhost"
+volumes:
+  minecraft_minecraft_data: null
+networks:
+  default:
+    name: minecraft_net
+    driver: overlay
+    attachable: true

@@ -1,0 +1,138 @@
+# sure - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  web:
+    image: ghcr.io/we-promise/sure:stable
+    container_name: app-sure-web
+    volumes:
+    - ./app-storage:/rails/storage
+    restart: unless-stopped
+    environment:
+    - POSTGRES_USER=sure_user
+    - POSTGRES_PASSWORD=sure_password
+    - POSTGRES_DB=sure_production
+    - SECRET_KEY_BASE=FtJ37sKlYVIExyIOlhFnIkR5_UxJPAwS
+    - SELF_HOSTED=true
+    - RAILS_FORCE_SSL=true
+    - RAILS_ASSUME_SSL=true
+    - DB_HOST=172.28.0.10
+    - DB_PORT=5432
+    - REDIS_URL=redis://172.28.0.11:6379/1
+    - OPENAI_ACCESS_TOKEN=-r_thKXh3uRI8ywbPTiysD6isyjKC66D
+    - OIDC_ISSUER=
+    - OIDC_CLIENT_ID=
+    - OIDC_CLIENT_SECRET=1TNxLz2rJ4Pj-Q4rSRTiLeaxoXyQ7wyH
+    - OIDC_REDIRECT_URI=https://<your-domain>/auth/openid_connect/callback
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    ports:
+    - 20611:3000
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:3000/ || wget -qO- http://127.0.0.1:3000/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+  worker:
+    image: ghcr.io/we-promise/sure:stable
+    container_name: app-sure-worker
+    command: bundle exec sidekiq
+    volumes:
+    - ./app-storage:/rails/storage
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+    - POSTGRES_USER=sure_user
+    - POSTGRES_PASSWORD=sure_password
+    - POSTGRES_DB=sure_production
+    - SECRET_KEY_BASE=FtJ37sKlYVIExyIOlhFnIkR5_UxJPAwS
+    - SELF_HOSTED=true
+    - RAILS_FORCE_SSL=true
+    - RAILS_ASSUME_SSL=true
+    - DB_HOST=172.28.0.10
+    - DB_PORT=5432
+    - REDIS_URL=redis://172.28.0.11:6379/1
+    - OPENAI_ACCESS_TOKEN=-r_thKXh3uRI8ywbPTiysD6isyjKC66D
+  db:
+    image: postgres:16
+    container_name: app-sure-db
+    restart: unless-stopped
+    volumes:
+    - ./postgres-data:/var/lib/postgresql/data
+    environment:
+    - POSTGRES_USER=sure_user
+    - POSTGRES_PASSWORD=sure_password
+    - POSTGRES_DB=sure_production
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      sure_net:
+        ipv4_address: 172.28.0.10
+  backup:
+    profiles:
+    - backup
+    image: prodrigestivill/postgres-backup-local:latest
+    container_name: app-sure-backup
+    restart: unless-stopped
+    volumes:
+    - ./backups:/backups
+    environment:
+    - POSTGRES_HOST=db
+    - POSTGRES_DB=sure_production
+    - POSTGRES_USER=sure_user
+    - POSTGRES_PASSWORD=sure_password
+    - SCHEDULE=@daily
+    - BACKUP_KEEP_DAYS=7
+    - BACKUP_KEEP_WEEKS=4
+    - BACKUP_KEEP_MONTHS=6
+    depends_on:
+    - db
+    networks:
+    - sure_net
+  redis:
+    image: redis:latest
+    container_name: app-sure-redis
+    restart: unless-stopped
+    volumes:
+    - ./redis-data:/data
+    healthcheck:
+      test:
+      - CMD
+      - redis-cli
+      - ping
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      sure_net:
+        ipv4_address: 172.28.0.11
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=sure"
+    #   - "homepage.description=sure self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=sure.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20611"
+    #   - "homepage.server=localhost"
+networks:
+  sure_net:
+    driver: bridge
+    ipam:
+      config:
+      - subnet: 172.28.0.0/16

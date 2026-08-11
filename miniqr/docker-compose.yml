@@ -1,0 +1,33 @@
+# miniqr - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: ghcr.io/lyqht/mini-qr:latest
+    container_name: app-mini-qr
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - serve
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20591:8080
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=miniqr"
+    #   - "homepage.description=miniqr self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=miniqr.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20591"
+    #   - "homepage.server=localhost"

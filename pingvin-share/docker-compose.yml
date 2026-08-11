@@ -1,0 +1,35 @@
+# pingvin-share - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: stonith404/pingvin-share:latest
+    container_name: app-pingvin-share
+    environment:
+    - TRUST_PROXY=false
+    - TZ=America/Los_Angeles
+    volumes:
+    - ./pingvin-share-data/data:/opt/app/backend/data
+    - ./pingvin-share-data/images:/opt/app/frontend/public/img
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - caddy
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20601:3000
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=pingvin-share"
+    #   - "homepage.description=pingvin-share self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=pingvin-share.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20601"
+    #   - "homepage.server=localhost"

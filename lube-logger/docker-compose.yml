@@ -1,0 +1,31 @@
+# lube-logger - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: ghcr.io/hargata/lubelogger:latest
+    container_name: app-lubelogger
+    build: .
+    volumes:
+    - ./lubelogger-data/data:/App/data
+    - ./lubelogger-data/keys:/root/.aspnet/DataProtection-Keys
+    restart: always
+    ports:
+    - 20589:8080
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:8080/ || wget -qO- http://127.0.0.1:8080/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=lube-logger"
+    #   - "homepage.description=lube-logger self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=lube-logger.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20589"
+    #   - "homepage.server=localhost"

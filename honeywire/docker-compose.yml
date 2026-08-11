@@ -1,0 +1,35 @@
+# honeywire - docker compose (single host)
+# image verified to exist at generation time: honeywire/honeywire:latest
+
+services:
+  honeywire:
+    # image: honeywire/honeywire:latest  # UNVERIFIED
+    container_name: honeywire
+    restart: unless-stopped
+    ports:
+      - "20537:20537"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20537 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=honeywire"
+    #   - "homepage.description=honeywire self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=honeywire.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20537"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: honeywire_net

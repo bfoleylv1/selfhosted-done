@@ -7,8 +7,9 @@ Reference Matrix homeserver for federated chat
 | **Image** | `matrixdotorg/synapse:latest` |
 | **Host port** | `20318` |
 | **Container port** | `8008` |
+| **Containers** | 1 |
+| **Healthcheck** | HTTP `http://127.0.0.1:8008/health` |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | HTTP `/health` |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml synapse
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' synapse
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

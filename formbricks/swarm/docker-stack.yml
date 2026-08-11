@@ -1,0 +1,174 @@
+# formbricks - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml formbricks
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    volumes:
+    - formbricks_formbricks_data_postgres:/var/lib/postgresql/data
+    environment:
+    - POSTGRES_PASSWORD=postgres
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+  redis:
+    image: valkey/valkey@sha256:12ba4f45a7c3e1d0f076acd616cb230834e75a77e8516dde382720af32832d6d
+    command: valkey-server --appendonly yes
+    volumes:
+    - formbricks_formbricks_data_redis:/data
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+  formbricks:
+    image: ghcr.io/formbricks/formbricks:latest
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    - WEBAPP_URL=http://localhost:3000
+    - NEXTAUTH_URL=http://localhost:20575
+    - DATABASE_URL="postgresql://postgres:postgres@postgres:5432/formbricks?schema=public"
+    - NEXTAUTH_SECRET="7b62c37371798cf96dc019f3d4f712a27d1b05d0755ffcf96481b8504697f532"
+    - ENCRYPTION_KEY="i1e284266e3f7ace4772e329e0494aa1d6110fba48db06bd9652e7a9fdd167281"
+    - CRON_SECRET="b5af3d39789e7730004a01bb84922914ea0b478fe67784ce3fa8e4c35096d6b4"
+    - REDIS_URL="redis://redis:6379"
+    - LOG_LEVEL="info"
+    - ENTERPRISE_LICENSE_KEY=UvWDYALqJfURp_aL9ZDQhCUJrjXa2UJ4
+    - MAIL_FROM="from@some.host"
+    - MAIL_FROM_NAME="from host"
+    - SMTP_HOST="some.host"
+    - SMTP_PORT="587"
+    - SMTP_USER="SMTPUser"
+    - SMTP_PASSWORD="SMTPPassword"
+    - SMTP_AUTHENTICATED="1"
+    - SMTP_SECURE_ENABLED="0"
+    - SMTP_REJECT_UNAUTHORIZED_TLS="1"
+    - EMAIL_VERIFICATION_DISABLED="1"
+    - PASSWORD_RESET_DISABLED="1"
+    - EMAIL_AUTH_DISABLED="0"
+    - INVITE_DISABLED="0"
+    - ASSET_PREFIX_URL=
+    - UNSPLASH_ACCESS_KEY=bpA3Q7pi6l0aZPxdWIJ_l5kxxjfcBw6Y
+    - PUBLIC_URL=http://localhost:20575
+    - SENTRY_DSN=
+    - SENTRY_AUTH_TOKEN=-SNzBtG0_nrv1MuhUZMCQ1-pMk3lBquE
+    - SENTRY_ENVIRONMENT=
+    - S3_ACCESS_KEY=${S3_ACCESS_KEY}
+    - S3_SECRET_KEY=${S3_SECRET_KEY}
+    - S3_REGION=${S3_REGION}
+    - S3_BUCKET_NAME=${S3_BUCKET_NAME}
+    - S3_ENDPOINT_URL=${S3_ENDPOINT_URL}
+    - S3_FORCE_PATH_STYLE="0"
+    - TURNSTILE_SITE_KEY=AyeOp4qYeAKGjqWqpwJQn6RjG2zpr5K9
+    - TURNSTILE_SECRET_KEY=Iy9oijwK-Qh2qmachPqQCZfvyxazJIaV
+    - RECAPTCHA_SITE_KEY=fb_wQIN6F7Xws3-j7n4kRIFEeWmen2ao
+    - RECAPTCHA_SECRET_KEY=Kx_jutPQe6dLWZX9Rahf4Tq6j41DyF1I
+    - GITHUB_ID=
+    - GITHUB_SECRET=bBys31jDn3AiTd3uaN39MMg0fK1FaSDt
+    - GOOGLE_CLIENT_ID=
+    - GOOGLE_CLIENT_SECRET=A84ZeWZX1mGpP4U_yAw2xlmM-PVHUx0L
+    - AZUREAD_CLIENT_ID=
+    - AZUREAD_CLIENT_SECRET=I8VJL2TN5SjsHvkxudHh27dPaPSffpVR
+    - AZUREAD_TENANT_ID=
+    - OIDC_CLIENT_ID=
+    - OIDC_CLIENT_SECRET=b52SW8dKZ35h5C9CvaZPMbC2MOrdfUip
+    - OIDC_ISSUER=
+    - OIDC_DISPLAY_NAME=
+    - OIDC_SIGNING_ALGORITHM=
+    - SAML_DATABASE_URL=
+    - NOTION_OAUTH_CLIENT_ID=
+    - NOTION_OAUTH_CLIENT_SECRET=oZW-1JxGEuls2dJjIqNPF5IVUl_aFGUN
+    - GOOGLE_SHEETS_CLIENT_ID=
+    - GOOGLE_SHEETS_CLIENT_SECRET=rntrl3PFeEfl9PaBR73AvodWuFMe_GoJ
+    - GOOGLE_SHEETS_REDIRECT_URL=
+    - AIRTABLE_CLIENT_ID=
+    - SLACK_CLIENT_ID=
+    - SLACK_CLIENT_SECRET=gCYzTTOO4EAOcexi1mbG2Cz1WqxUqEfe
+    - PRIVACY_URL=
+    - TERMS_URL=
+    - IMPRINT_URL=
+    - IMPRINT_ADDRESS=
+    - RATE_LIMITING_DISABLED="1"
+    - AUDIT_LOG_ENABLED="1"
+    - AUDIT_LOG_GET_USER_IP="1"
+    - AUTH_SKIP_INVITE_FOR_SSO="0"
+    - AUTH_SSO_DEFAULT_TEAM_ID=
+    - USER_MANAGEMENT_MINIMUM_ROLE="manager"
+    - SESSION_MAX_AGE="86400"
+    volumes:
+    - formbricks_formbricks_data_app_config:/config
+    - formbricks_formbricks_data_saml_connection:/home/nextjs/apps/web/saml-connection
+    ports:
+    - target: 3000
+      published: 20575
+      protocol: tcp
+      mode: ingress
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:3000/ || wget -qO- http://127.0.0.1:3000/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=formbricks"
+    #   - "homepage.description=formbricks self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=formbricks.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20575"
+    #   - "homepage.server=localhost"
+volumes:
+  formbricks_formbricks_data_postgres: null
+  formbricks_formbricks_data_redis: null
+  formbricks_formbricks_data_app_config: null
+  formbricks_formbricks_data_saml_connection: null
+networks:
+  default:
+    name: formbricks_net
+    driver: overlay
+    attachable: true

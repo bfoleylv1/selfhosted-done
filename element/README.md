@@ -6,9 +6,10 @@ Element: feature-rich web client for the Matrix decentralized chat protocol
 |---|---|
 | **Image** | `vectorim/element-web:latest` |
 | **Host port** | `20438` |
-| **Container port** | `20438` |
+| **Container port** | `8080` |
+| **Containers** | 1 |
+| **Healthcheck** | HTTP `http://127.0.0.1:8080/` |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml element
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{.State.Health.Status}' element
+docker compose ps
 ```
 
 ## Homepage

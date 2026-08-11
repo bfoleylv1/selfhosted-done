@@ -1,0 +1,59 @@
+# machtiani - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml machtiani
+# image verified to exist at generation time: machtiani/machtiani:latest
+
+services:
+  machtiani:
+    # image: machtiani/machtiani:latest  # UNVERIFIED
+    ports:
+      - target: 20471
+        published: 20471
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - machtiani_config:/config
+      - machtiani_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20471 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=machtiani"
+    #   - "homepage.description=machtiani self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=machtiani.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20471"
+    #   - "homepage.server=localhost"
+
+volumes:
+  machtiani_config:
+  machtiani_data:
+
+networks:
+  default:
+    name: machtiani_net
+    driver: overlay
+    attachable: true

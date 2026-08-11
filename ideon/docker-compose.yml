@@ -1,0 +1,25 @@
+services:
+  ideon:
+    image: idocker1688/ideon:latest
+    container_name: ideon
+    restart: unless-stopped
+    ports:
+    - 20538:20538
+    environment:
+    - TZ=${TZ:-America/Los_Angeles}
+    - PUID=${PUID:-1000}
+    - PGID=${PGID:-1000}
+    volumes:
+    - ./config:/config
+    - ./data:/data
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - nc -z 127.0.0.1 20538 || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+networks:
+  default:
+    name: ideon_net

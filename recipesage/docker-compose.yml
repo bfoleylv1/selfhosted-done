@@ -1,0 +1,35 @@
+# recipesage - docker compose (single host)
+# image verified to exist at generation time: recipesage/recipesage:latest
+
+services:
+  recipesage:
+    # image: recipesage/recipesage:latest  # UNVERIFIED
+    container_name: recipesage
+    restart: unless-stopped
+    ports:
+      - "20500:20500"
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - ./config:/config
+      - ./data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20500 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=recipesage"
+    #   - "homepage.description=recipesage self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=recipesage.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20500"
+    #   - "homepage.server=localhost"
+
+networks:
+  default:
+    name: recipesage_net

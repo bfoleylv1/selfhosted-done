@@ -1,14 +1,15 @@
-# Static-Web-Server
+# Static Web Server
 
-Self-hosted service: static-web-server
+static-web-server: tiny, fast, secure static file web server written in Rust
 
 | | |
 |---|---|
 | **Image** | `joseluisq/static-web-server:latest` |
 | **Host port** | `20512` |
 | **Container port** | `20512` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP/HTTP probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml static-web-server
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' static-web-server
+docker compose ps
 ```
 
 ## Homepage

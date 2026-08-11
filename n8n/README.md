@@ -7,8 +7,9 @@ n8n: open-source workflow automation tool with 400+ integrations
 | **Image** | `n8nio/n8n:latest` |
 | **Host port** | `5678` |
 | **Container port** | `5678` |
+| **Containers** | 1 |
+| **Healthcheck** | HTTP `http://127.0.0.1:5678/` |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml n8n
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{.State.Health.Status}' n8n
+docker compose ps
 ```
 
 ## Homepage

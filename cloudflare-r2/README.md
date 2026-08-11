@@ -1,4 +1,4 @@
-# Cloudflare R2 (Self-Hosted)
+# Cloudflare R2
 
 S3-compatible object storage alternative to S3 with no egress fees
 
@@ -7,8 +7,9 @@ S3-compatible object storage alternative to S3 with no egress fees
 | **Image** | `minio/minio:latest` |
 | **Host port** | `9000` |
 | **Container port** | `9000` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | File |
-| **Healthcheck** | HTTP `/minio/health/live` |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml cloudflare-r2
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' cloudflare-r2
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

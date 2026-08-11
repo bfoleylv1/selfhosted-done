@@ -1,0 +1,35 @@
+# dockge - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: louislam/dockge:1
+    container_name: app-dockge
+    environment:
+    - DOCKGE_STACKS_DIR=/home/bfoleylv/homelab-plex
+    - PUID=1000
+    - PGID=1000
+    volumes:
+    - ./dockge-data/app/config:/app/data
+    - /var/run/docker.sock:/var/run/docker.sock
+    - /home/bfoleylv/homelab-plex:/stacks
+    restart: always
+    ports:
+    - 20567:5001
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:5001/ || wget -qO- http://127.0.0.1:5001/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=dockge"
+    #   - "homepage.description=dockge self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=dockge.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20567"
+    #   - "homepage.server=localhost"

@@ -1,0 +1,59 @@
+# linkding - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml linkding
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: sissbruecker/linkding:latest
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    volumes:
+    - linkding_linkding_data_data:/etc/linkding/data
+    healthcheck:
+      test:
+      - CMD
+      - curl
+      - -sf
+      - http://127.0.0.1:9090/login/
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 9090
+      published: 20588
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=linkding"
+    #   - "homepage.description=linkding self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=linkding.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20588"
+    #   - "homepage.server=localhost"
+volumes:
+  linkding_linkding_data_data: null
+networks:
+  default:
+    name: linkding_net
+    driver: overlay
+    attachable: true

@@ -1,0 +1,33 @@
+# convertx - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: ghcr.io/c4illin/convertx:latest
+    container_name: app-convertx
+    environment:
+    - JWT_SECRET=aLongAndSecretStringUsedToSignTheJSONWebToken1234
+    volumes:
+    - ./convertx-data:/app/data
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - bun
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20564:3000
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=convertx"
+    #   - "homepage.description=convertx self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=convertx.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20564"
+    #   - "homepage.server=localhost"

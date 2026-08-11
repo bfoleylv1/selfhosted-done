@@ -1,0 +1,39 @@
+# next-explorer - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: nxzai/explorer:latest
+    container_name: app-file-explorer
+    restart: unless-stopped
+    dns:
+    - 9.9.9.9
+    environment:
+    - NODE_ENV=production
+    - PUBLIC_URL=http://localhost:20595
+    - SESSION_SECRET=your-super-secret
+    - PUID=1000
+    - PGID=1000
+    volumes:
+    - ./config:/config
+    - ./cache:/cache
+    - /home/root/data:/mnt/Files
+    ports:
+    - 20595:3000
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:3000/ || wget -qO- http://127.0.0.1:3000/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=next-explorer"
+    #   - "homepage.description=next-explorer self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=next-explorer.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20595"
+    #   - "homepage.server=localhost"

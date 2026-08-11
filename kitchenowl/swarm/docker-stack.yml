@@ -1,0 +1,55 @@
+# kitchenowl - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml kitchenowl
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  kitchenowl:
+    image: tombursch/kitchenowl:latest
+    volumes:
+    - kitchenowl_kitchenowl_data:/data
+    environment:
+    - JWT_SECRET_KEY=LfGQkEk7ZoByRlKAD5B4iaAUmawUwRjm
+    ports:
+    - target: 8080
+      published: 20587
+      protocol: tcp
+      mode: ingress
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:8080/ || wget -qO- http://127.0.0.1:8080/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=kitchenowl"
+    #   - "homepage.description=kitchenowl self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=kitchenowl.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20587"
+    #   - "homepage.server=localhost"
+volumes:
+  kitchenowl_kitchenowl_data: null
+networks:
+  default:
+    name: kitchenowl_net
+    driver: overlay
+    attachable: true

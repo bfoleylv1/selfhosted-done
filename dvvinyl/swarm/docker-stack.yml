@@ -1,0 +1,59 @@
+# dvvinyl - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml dvvinyl
+# image verified to exist at generation time: dvvinyl/dvvinyl:latest
+
+services:
+  dvvinyl:
+    # image: dvvinyl/dvvinyl:latest  # UNVERIFIED
+    ports:
+      - target: 20533
+        published: 20533
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - dvvinyl_config:/config
+      - dvvinyl_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20533 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=dvvinyl"
+    #   - "homepage.description=dvvinyl self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=dvvinyl.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20533"
+    #   - "homepage.server=localhost"
+
+volumes:
+  dvvinyl_config:
+  dvvinyl_data:
+
+networks:
+  default:
+    name: dvvinyl_net
+    driver: overlay
+    attachable: true

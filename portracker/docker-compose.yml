@@ -1,0 +1,34 @@
+# portracker - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: mostafawahied/portracker:latest
+    container_name: app-portracker
+    volumes:
+    - ./portracker-data/data:/data
+    - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+    - DATABASE_PATH=/data/portracker.db
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - index.js
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 4999:4999
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=portracker"
+    #   - "homepage.description=portracker self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=portracker.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:4999"
+    #   - "homepage.server=localhost"

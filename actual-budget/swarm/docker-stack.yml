@@ -1,0 +1,57 @@
+# actual-budget - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml actual-budget
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: docker.io/actualbudget/actual-server:latest
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    volumes:
+    - actual-budget_actual_budget_data:/data
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - node src/scripts/health-check.js
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    ports:
+    - target: 5006
+      published: 5006
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=actual-budget"
+    #   - "homepage.description=actual-budget self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=actual-budget.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:5006"
+    #   - "homepage.server=localhost"
+volumes:
+  actual-budget_actual_budget_data: null
+networks:
+  default:
+    name: actual-budget_net
+    driver: overlay
+    attachable: true

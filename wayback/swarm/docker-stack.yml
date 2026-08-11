@@ -1,0 +1,47 @@
+services:
+  wayback:
+    image: ghcr.io/wabarc/wayback:latest
+    ports:
+    - target: 20518
+      published: 20518
+      protocol: tcp
+      mode: ingress
+    environment:
+    - TZ=${TZ:-America/Los_Angeles}
+    - PUID=${PUID:-1000}
+    - PGID=${PGID:-1000}
+    volumes:
+    - wayback_config:/config
+    - wayback_data:/data
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - nc -z 127.0.0.1 20518 || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+volumes:
+  wayback_config: null
+  wayback_data: null
+networks:
+  default:
+    name: wayback_net
+    driver: overlay
+    attachable: true

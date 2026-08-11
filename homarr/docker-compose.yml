@@ -1,0 +1,36 @@
+# homarr - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: ghcr.io/homarr-labs/homarr:latest
+    container_name: app-homarr
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    - SECRET_ENCRYPTION_KEY=
+    volumes:
+    - ./homarr-data/appdata:/appdata
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - homarr
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 7575:7575
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=homarr"
+    #   - "homepage.description=homarr self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=homarr.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:7575"
+    #   - "homepage.server=localhost"

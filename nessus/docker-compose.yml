@@ -1,0 +1,33 @@
+# nessus - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: tenable/nessus:latest-ubuntu
+    container_name: app-nessus
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - nessus
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 8834:8834
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=nessus"
+    #   - "homepage.description=nessus self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=nessus.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:8834"
+    #   - "homepage.server=localhost"

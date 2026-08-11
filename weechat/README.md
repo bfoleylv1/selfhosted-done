@@ -1,14 +1,15 @@
 # Weechat
 
-Self-hosted service: weechat
+WeeChat: fast, light, extensible terminal IRC client (with relay for web/mobile clients)
 
 | | |
 |---|---|
 | **Image** | `weechat/weechat:latest` |
 | **Host port** | `20519` |
 | **Container port** | `20519` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP/HTTP probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml weechat
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' weechat
+docker compose ps
 ```
 
 ## Homepage

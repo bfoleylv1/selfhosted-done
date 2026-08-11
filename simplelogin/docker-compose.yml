@@ -24,7 +24,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=simplelogin"
-    #   - "homepage.description=simplelogin self-hosted service."
+    #   - "homepage.description=SimpleLogin: open-source email alias/forwarding service for protecting your real email address."
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=simplelogin.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20505"

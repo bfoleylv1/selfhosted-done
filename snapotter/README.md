@@ -1,14 +1,15 @@
 # Snapotter
 
-Self-hosted service: snapotter
+Self-hosted service: snapotter.
 
 | | |
 |---|---|
 | **Image** | `snapotter/snapotter:latest` |
 | **Host port** | `20548` |
 | **Container port** | `20548` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP/HTTP probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml snapotter
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' snapotter
+docker compose ps
 ```
 
 ## Homepage

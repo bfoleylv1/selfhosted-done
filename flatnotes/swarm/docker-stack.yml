@@ -1,0 +1,61 @@
+# flatnotes - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml flatnotes
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: dullage/flatnotes:latest
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    - FLATNOTES_AUTH_TYPE=password
+    - FLATNOTES_USERNAME=user
+    - FLATNOTES_PASSWORD=changeMe!
+    - FLATNOTES_SECRET_KEY=aLongRandomSeriesOfCharacters
+    volumes:
+    - flatnotes_flatnotes_data:/data
+    ports:
+    - target: 8080
+      published: 20574
+      protocol: tcp
+      mode: ingress
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:8080/ || wget -qO- http://127.0.0.1:8080/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=flatnotes"
+    #   - "homepage.description=flatnotes self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=flatnotes.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20574"
+    #   - "homepage.server=localhost"
+volumes:
+  flatnotes_flatnotes_data: null
+networks:
+  default:
+    name: flatnotes_net
+    driver: overlay
+    attachable: true

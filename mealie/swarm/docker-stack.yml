@@ -1,0 +1,59 @@
+# mealie - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml mealie
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: ghcr.io/mealie-recipes/mealie:latest
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    environment:
+      ALLOW_SIGNUP: 'false'
+      PUID: '1000'
+      PGID: '1000'
+      TZ: Europe/Amsterdam
+      BASE_URL: http://localhost:20590
+    volumes:
+    - mealie_mealie_data:/app/data/
+    ports:
+    - target: 9000
+      published: 20590
+      protocol: tcp
+      mode: ingress
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:9000/ || wget -qO- http://127.0.0.1:9000/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=mealie"
+    #   - "homepage.description=mealie self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=mealie.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20590"
+    #   - "homepage.server=localhost"
+volumes:
+  mealie_mealie_data: null
+networks:
+  default:
+    name: mealie_net
+    driver: overlay
+    attachable: true

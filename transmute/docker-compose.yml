@@ -1,0 +1,38 @@
+# transmute - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: ghcr.io/transmute-app/transmute:latest
+    container_name: app-transmute
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    volumes:
+    - ./transmute-data:/app/data
+    healthcheck:
+      test:
+      - CMD
+      - wget
+      - -q
+      - -O
+      - /dev/null
+      - --tries=1
+      - http://localhost:3313/api/health/ready
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 3313:3313
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=transmute"
+    #   - "homepage.description=transmute self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=transmute.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:3313"
+    #   - "homepage.server=localhost"

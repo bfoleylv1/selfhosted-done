@@ -1,0 +1,36 @@
+# stirlingpdf - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: frooodle/s-pdf:latest
+    container_name: app-stirlingpdf
+    environment:
+    - DOCKER_ENABLE_SECURITY=false
+    - INSTALL_BOOK_AND_ADVANCED_HTML_OPS=false
+    - LANGS=en_GB
+    volumes:
+    - ./stirlingpdf-data/trainingData:/usr/share/tessdata
+    - ./stirlingpdf-data/extraConfigs:/configs
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - app.jar
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20609:8080
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=stirlingpdf"
+    #   - "homepage.description=stirlingpdf self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=stirlingpdf.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20609"
+    #   - "homepage.server=localhost"

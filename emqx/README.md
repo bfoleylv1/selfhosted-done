@@ -7,8 +7,9 @@ Scalable open-source MQTT broker for IoT
 | **Image** | `emqx/emqx:latest` |
 | **Host port** | `18083` |
 | **Container port** | `18083` |
+| **Containers** | 1 |
+| **Healthcheck** | HTTP `http://127.0.0.1:18083/status` |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | HTTP `/status` |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml emqx
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' emqx
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

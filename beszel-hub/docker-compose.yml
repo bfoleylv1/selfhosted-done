@@ -1,0 +1,36 @@
+# beszel-hub - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: henrygd/beszel:latest
+    container_name: app-beszel-hub
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    volumes:
+    - ./beszel-hub-data/beszel_data:/beszel_data
+    healthcheck:
+      test:
+      - CMD
+      - /beszel
+      - health
+      - --url
+      - http://localhost:8090
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20561:8090
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=beszel-hub"
+    #   - "homepage.description=beszel-hub self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=beszel-hub.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20561"
+    #   - "homepage.server=localhost"

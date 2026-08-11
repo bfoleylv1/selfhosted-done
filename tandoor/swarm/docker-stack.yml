@@ -1,0 +1,93 @@
+# tandoor - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml tandoor
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: vabene1111/recipes:latest
+    environment:
+    - TZ=America/Los_Angeles
+    - TANDOOR_PORT=9001
+    volumes:
+    - tandoor_tandoor_data_staticfiles:/opt/recipes/staticfiles
+    - tandoor_tandoor_data_mediafiles:/opt/recipes/mediafiles
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - tandoor
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 9001
+      published: 9001
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+  database:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_PASSWORD: VmQYnP2FZOM5EV_Gqqawta-sqmWmnGcO
+      POSTGRES_USER: postgres
+      POSTGRES_DB: tandoor
+    volumes:
+    - tandoor_tandoor_data_database:/var/lib/postgresql/data
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - pg_isready -U postgres -d tandoor
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=tandoor"
+    #   - "homepage.description=tandoor self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=tandoor.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:9001"
+    #   - "homepage.server=localhost"
+volumes:
+  tandoor_tandoor_data_staticfiles: null
+  tandoor_tandoor_data_mediafiles: null
+  tandoor_tandoor_data_database: null
+networks:
+  default:
+    name: tandoor_net
+    driver: overlay
+    attachable: true

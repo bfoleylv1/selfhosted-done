@@ -7,8 +7,9 @@ Static dashboard / startpage for your homelab
 | **Image** | `b4bz/homer:latest` |
 | **Host port** | `20112` |
 | **Container port** | `8080` |
+| **Containers** | 1 |
+| **Healthcheck** | HTTP `http://127.0.0.1:8080/` |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | HTTP `/` |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml homer
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' homer
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

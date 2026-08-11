@@ -1,14 +1,15 @@
-# WireGuard
+# Wireguard
 
-Next-generation VPN protocol; fast and modern VPN solution
+Next-generation VPN protocol; fast and modern VPN solution.
 
 | | |
 |---|---|
 | **Image** | `lscr.io/linuxserver/wireguard:latest` |
 | **Host port** | `51820` |
 | **Container port** | `51820` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Vpn |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml wireguard
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' wireguard
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

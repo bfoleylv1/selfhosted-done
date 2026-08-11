@@ -1,0 +1,38 @@
+# adguardhome-sync - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: ghcr.io/bakito/adguardhome-sync:latest
+    container_name: app-adguardhome-sync
+    command: run
+    environment:
+    - TZ=America/Los_Angeles
+    - ORIGIN_URL=http://192.168.1.1:3000
+    - ORIGIN_USERNAME=username
+    - ORIGIN_PASSWORD=password
+    - REPLICA1_URL=http://192.168.1.2
+    - REPLICA1_USERNAME=dbtech
+    - REPLICA1_PASSWORD=password
+    - CRON=*/1 * * * *
+    - RUN_ON_START=true
+    restart: always
+    ports:
+    - 20558:8080
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:8080/ || wget -qO- http://127.0.0.1:8080/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=adguardhome-sync"
+    #   - "homepage.description=adguardhome-sync self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=adguardhome-sync.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20558"
+    #   - "homepage.server=localhost"

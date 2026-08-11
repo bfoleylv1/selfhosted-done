@@ -1,0 +1,47 @@
+services:
+  huginn:
+    image: ghcr.io/huginn/huginn:latest
+    ports:
+    - target: 20552
+      published: 20552
+      protocol: tcp
+      mode: ingress
+    environment:
+    - TZ=${TZ:-America/Los_Angeles}
+    - PUID=${PUID:-1000}
+    - PGID=${PGID:-1000}
+    volumes:
+    - huginn_config:/config
+    - huginn_data:/data
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - nc -z 127.0.0.1 20552 || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+volumes:
+  huginn_config: null
+  huginn_data: null
+networks:
+  default:
+    name: huginn_net
+    driver: overlay
+    attachable: true

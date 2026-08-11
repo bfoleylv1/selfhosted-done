@@ -1,14 +1,15 @@
 # Siyuan
 
-Self-hosted service: siyuan
+SiYuan: open-source, privacy-first personal knowledge management and note-taking app
 
 | | |
 |---|---|
 | **Image** | `b3log/siyuan:latest` |
 | **Host port** | `20509` |
 | **Container port** | `20509` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP/HTTP probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml siyuan
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' siyuan
+docker compose ps
 ```
 
 ## Homepage

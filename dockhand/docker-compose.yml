@@ -1,0 +1,34 @@
+# dockhand - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: fnsys/dockhand:latest
+    container_name: app-dockhand
+    environment:
+    - HOST_DATA_DIR=/app/data
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - ./dockhand-data:/app/data
+    healthcheck:
+      test:
+      - CMD
+      - curl
+      - -fsS
+      - http://127.0.0.1:41234/healthz
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20568:3000
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=dockhand"
+    #   - "homepage.description=dockhand self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=dockhand.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20568"
+    #   - "homepage.server=localhost"

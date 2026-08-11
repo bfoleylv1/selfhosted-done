@@ -1,0 +1,61 @@
+# technitium - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml technitium
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: technitium/dns-server:latest
+    environment:
+    - DNS_SERVER_DOMAIN=technitium.local
+    - DNS_SERVER_ADMIN_PASSWORD=ChangeME
+    - DNS_SERVER_PREFER_IPV6=false
+    - DNS_SERVER_RECURSION=Allow
+    - DNS_SERVER_FORWARDERS=9.9.9.9,8.8.4.4
+    volumes:
+    - technitium_technitium_data_app_config:/config
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - technitium
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 5380
+      published: 5380
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=technitium"
+    #   - "homepage.description=technitium self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=technitium.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:5380"
+    #   - "homepage.server=localhost"
+volumes:
+  technitium_technitium_data_app_config: null
+networks:
+  default:
+    name: technitium_net
+    driver: overlay
+    attachable: true

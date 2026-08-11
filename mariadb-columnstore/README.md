@@ -1,4 +1,4 @@
-# MariaDB ColumnStore
+# Mariadb Columnstore
 
 Columnar storage engine for MariaDB; optimized for analytics workloads
 
@@ -6,9 +6,10 @@ Columnar storage engine for MariaDB; optimized for analytics workloads
 |---|---|
 | **Image** | `mariadb/columnstore:latest` |
 | **Host port** | `20150` |
-| **Container port** | `3306` |
+| **Container port** | `20150` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Database Management |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml mariadb-columnstore
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' mariadb-columnstore
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

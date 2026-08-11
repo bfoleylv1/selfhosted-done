@@ -1,0 +1,63 @@
+# kavita - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml kavita
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: jvmilazz0/kavita:latest
+    environment:
+    - TZ=America/Los_Angeles
+    volumes:
+    - kavita_kavita_data_manga:/manga
+    - kavita_kavita_data_comics:/comics
+    - kavita_kavita_data_books:/books
+    - kavita_kavita_data_config:/kavita/config
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - kavita
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 5000
+      published: 20586
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=kavita"
+    #   - "homepage.description=kavita self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=kavita.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20586"
+    #   - "homepage.server=localhost"
+volumes:
+  kavita_kavita_data_manga: null
+  kavita_kavita_data_comics: null
+  kavita_kavita_data_books: null
+  kavita_kavita_data_config: null
+networks:
+  default:
+    name: kavita_net
+    driver: overlay
+    attachable: true

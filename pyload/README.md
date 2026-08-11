@@ -7,8 +7,9 @@ pyLoad: lightweight, open-source download manager with a web interface (supports
 | **Image** | `linuxserver/pyload:latest` |
 | **Host port** | `20497` |
 | **Container port** | `20497` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml pyload
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{.State.Health.Status}' pyload
+docker compose ps
 ```
 
 ## Homepage

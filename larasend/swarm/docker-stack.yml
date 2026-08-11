@@ -1,0 +1,59 @@
+# larasend - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml larasend
+# image verified to exist at generation time: larasend/larasend:latest
+
+services:
+  larasend:
+    # image: larasend/larasend:latest  # UNVERIFIED
+    ports:
+      - target: 20488
+        published: 20488
+        protocol: tcp
+        mode: ingress
+    environment:
+      - TZ=${TZ:-America/Los_Angeles}
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
+    volumes:
+      - larasend_config:/config
+      - larasend_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 20488 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=larasend"
+    #   - "homepage.description=larasend self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=larasend.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20488"
+    #   - "homepage.server=localhost"
+
+volumes:
+  larasend_config:
+  larasend_data:
+
+networks:
+  default:
+    name: larasend_net
+    driver: overlay
+    attachable: true

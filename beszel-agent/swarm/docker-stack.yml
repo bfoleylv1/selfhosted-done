@@ -1,0 +1,55 @@
+# beszel-agent - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml beszel-agent
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: henrygd/beszel-agent:latest
+    environment:
+      PORT: '45876'
+      KEY: ssh-ed25519 <ADD-YOUR-beszel-agent-KEY-HERE>
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock:ro
+    healthcheck:
+      test:
+      - CMD
+      - /agent
+      - health
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 45876
+      published: 45876
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=beszel-agent"
+    #   - "homepage.description=beszel-agent self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=beszel-agent.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:45876"
+    #   - "homepage.server=localhost"
+networks:
+  default:
+    name: beszel-agent_net
+    driver: overlay
+    attachable: true

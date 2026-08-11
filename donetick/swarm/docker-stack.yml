@@ -1,0 +1,63 @@
+# donetick - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml donetick
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: donetick/donetick:latest
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    - DT_ENV=selfhosted
+    - DT_SQLITE_PATH=/donetick-data/donetick.db
+    volumes:
+    - donetick_donetick_data_config:/config
+    - donetick_donetick_data_data:/donetick-data
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - donetick
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 2021
+      published: 2021
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=donetick"
+    #   - "homepage.description=donetick self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=donetick.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:2021"
+    #   - "homepage.server=localhost"
+volumes:
+  donetick_donetick_data_config: null
+  donetick_donetick_data_data: null
+networks:
+  default:
+    name: donetick_net
+    driver: overlay
+    attachable: true

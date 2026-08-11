@@ -1,0 +1,31 @@
+# haptic - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: chroxify/haptic-web:latest
+    container_name: app-haptic
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    restart: always
+    ports:
+    - 20579:3000
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:3000/ || wget -qO- http://127.0.0.1:3000/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=haptic"
+    #   - "homepage.description=haptic self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=haptic.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20579"
+    #   - "homepage.server=localhost"

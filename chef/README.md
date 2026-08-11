@@ -1,14 +1,15 @@
 # Chef
 
-Automation platform for the most demanding environments
+Automation platform for the most demanding environments.
 
 | | |
 |---|---|
 | **Image** | `chef/chef:latest` |
 | **Host port** | `20405` |
-| **Container port** | `443` |
+| **Container port** | `20405` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Automation |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml chef
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' chef
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

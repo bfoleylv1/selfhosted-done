@@ -1,14 +1,16 @@
 # Rancher
 
-Container management platform; multi-cluster Kubernetes management
+Container management platform; multi-cluster Kubernetes management.
 
 | | |
 |---|---|
 | **Image** | `rancher/rancher:latest` |
 | **Host port** | `20233` |
-| **Container port** | `443` |
+| **Container port** | `80` |
+| **Containers** | 1 |
+| **Healthcheck** | HTTP `http://127.0.0.1:80/` |
 | **Category** | Automation |
-| **Healthcheck** | TCP port probe |
+| **GPU** | hardware-acceleration block included (commented) |
 
 ## Run it
 
@@ -31,18 +33,14 @@ docker stack deploy -c swarm/docker-stack.yml rancher
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' rancher
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

@@ -1,0 +1,34 @@
+# adguardhome - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: adguard/adguardhome:latest
+    container_name: app-adguardhome
+    environment:
+    - 'TZ=America/Los_Angeles# See: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones'
+    volumes:
+    - ./adguardhome-data/workdir:/opt/adguardhome/work
+    - ./adguardhome-data/configdir:/opt/adguardhome/conf
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - adguardhome
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - '20557:53'
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=adguardhome"
+    #   - "homepage.description=adguardhome self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=adguardhome.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20557"
+    #   - "homepage.server=localhost"

@@ -1,0 +1,127 @@
+# paperless - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml paperless
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: ghcr.io/paperless-ngx/paperless-ngx:latest
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - paperless
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    volumes:
+    - paperless_paperless_data_data:/usr/src/paperless/data
+    - paperless_paperless_data_media:/usr/src/paperless/media
+    - paperless_paperless_data_export:/usr/src/paperless/export
+    - paperless_paperless_data_consume:/usr/src/paperless/consume
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=Europe/Amsterdam
+    - PAPERLESS_TIME_ZONE=Europe/London
+    - PAPERLESS_OCR_LANGUAGE=eng
+    - PAPERLESS_SECRET_KEY='change this to any random sting'
+    - PAPERLESS_PORT=80
+    - PAPERLESS_PROXY_SSL_HEADER=["HTTP_X_FORWARDED_PROTO", "https"]
+    - PAPERLESS_ADMIN_USER=admin
+    - PAPERLESS_ADMIN_PASSWORD=LIiufj4nnwQ6FivSVRpHV81hj-TOwHPX
+    - PAPERLESS_REDIS=redis://broker:6379
+    - PAPERLESS_DBHOST=db
+    ports:
+    - target: 80
+      published: 20598
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+  db:
+    image: docker.io/library/postgres:18
+    volumes:
+    - paperless_paperless_data_pgdata:/var/lib/postgresql
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=Europe/Amsterdam
+    - POSTGRES_DB=paperless
+    - POSTGRES_USER=paperless
+    - POSTGRES_PASSWORD=paperless
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+  broker:
+    image: docker.io/library/redis:8
+    volumes:
+    - paperless_paperless_data_redisdata:/data
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=Europe/Amsterdam
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=paperless"
+    #   - "homepage.description=paperless self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=paperless.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20598"
+    #   - "homepage.server=localhost"
+volumes:
+  paperless_paperless_data_data: null
+  paperless_paperless_data_media: null
+  paperless_paperless_data_export: null
+  paperless_paperless_data_consume: null
+  paperless_paperless_data_pgdata: null
+  paperless_paperless_data_redisdata: null
+networks:
+  default:
+    name: paperless_net
+    driver: overlay
+    attachable: true

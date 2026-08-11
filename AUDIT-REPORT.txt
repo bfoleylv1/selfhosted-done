@@ -1,66 +1,50 @@
 ========================================================================
 SELF-HOSTED LIBRARY - INTEGRITY AUDIT
-2026-08-10 04:58
+2026-08-11 01:36
 ========================================================================
 
-Services audited : 1114
-  main library   : 1114
-  'done' folder  : 0
-Files            : 2228 compose+swarm
+Services audited : 752
+  done           : 752
+  self-hosted-2  : 0
 
 ------------------------------------------------------------------------
 PER-CHECK RESULTS
 ------------------------------------------------------------------------
-  [PASS] docker-compose.yml present             1114/1114
-  [PASS] swarm/docker-stack.yml present         1114/1114
-  [PASS] README.md present                      1114/1114
-  [PASS] healthcheck (compose + swarm)          1114/1114
-  [PASS] homepage labels (compose + swarm)      1114/1114
-  [PASS] image field present                    1114/1114
-  [PASS] no empty config/ or data/ placeholders 1114/1114
-  [PASS] swarm uses named volumes               1114/1114
-  [PASS] swarm has no container_name            1114/1114
-  [PASS] swarm deploy/replicas block            1114/1114
-  [PASS] published port defined                 1114/1114
+  [PASS] docker-compose.yml present                   752/752
+  [PASS] swarm/docker-stack.yml present               752/752
+  [PASS] README.md present                            752/752
+  [PASS] compose parses                               752/752
+  [PASS] swarm parses                                 752/752
+  [FAIL] has image                                    710/752
+           - done/codiff
+           - done/dvvinyl
+           - done/fablecut
+           - done/homebutler
+           - done/honeywire
+           - done/larasend
+           - done/machtiani
+           - done/mkvpriority
+  [PASS] has healthcheck                              752/752
+  [FAIL] published port defined                       750/752
+           - done/configarr
+           - done/recyclarr
+  [FAIL] homepage labels                              677/752
+           - done/affine
+           - done/affine-ce
+           - done/anchor
+           - done/app
+           - done/asmbb
+           - done/atheos
+           - done/autogpt
+           - done/backlog
+  [PASS] no tailnet leftovers                         752/752
+  [PASS] swarm: no container_name                     752/752
+  [PASS] swarm: deploy block                          752/752
+  [PASS] swarm: named volumes (no relative binds)     752/752
+  [PASS] swarm: overlay network                       752/752
 
 ------------------------------------------------------------------------
 PORTS
 ------------------------------------------------------------------------
-  unique published ports : 557
-  collisions             : 557
-    8080: 42links, 42links
-    20393: 92five, 92five
-    20394: ackee, ackee
-    20395: adminer, adminer
-    20396: adyen-proxy, adyen-proxy
-    7000: afs, afs
-    20397: afterlogic, afterlogic
-    20398: agent-vault, agent-vault
-    20399: airsonic-advanced, airsonic-advanced
-    20400: akkoma, akkoma
-
-------------------------------------------------------------------------
-HARDWARE ACCELERATION
-------------------------------------------------------------------------
-  services with GPU blocks : 0
-    transcode      0  
-    compute        0  
-    passthrough    0  
-
-  Blocks are commented out. '#' = real config (remove to enable),
-  '##' = human comment. Uncomment-tested for validity via test_gpu.
-
-------------------------------------------------------------------------
-KNOWN LIMITATIONS
-------------------------------------------------------------------------
-  1. Multi-container services (miniflux, lemmy, mailcow, nextcloud,
-     paperless-ngx, supabase, wazuh ...) ship as a single container. They
-     need a database/companion added before they will report healthy.
-  2. Some services are pinned to a generic runtime base image because no
-     official image is published. These start but need the app layer added.
-  3. Healthcheck endpoints are correct for the common case; a few apps
-     behind a login wall return 302 rather than 200.
-
-========================================================================
-STRUCTURAL CHECKS: 12254/12254 passed  - ALL PASS
-========================================================================
+  unique published ports : 750
+  collisions             : 0

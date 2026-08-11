@@ -1,0 +1,55 @@
+# nessus - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml nessus
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: tenable/nessus:latest-ubuntu
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - nessus
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 8834
+      published: 8834
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=nessus"
+    #   - "homepage.description=nessus self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=nessus.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:8834"
+    #   - "homepage.server=localhost"
+networks:
+  default:
+    name: nessus_net
+    driver: overlay
+    attachable: true

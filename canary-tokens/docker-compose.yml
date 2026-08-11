@@ -1,0 +1,25 @@
+services:
+  canary-tokens:
+    image: thinkst/canarytokens:latest
+    container_name: canary-tokens
+    restart: unless-stopped
+    ports:
+    - 20420:20420
+    environment:
+    - TZ=${TZ:-America/Los_Angeles}
+    - PUID=${PUID:-1000}
+    - PGID=${PGID:-1000}
+    volumes:
+    - ./config:/config
+    - ./data:/data
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - nc -z 127.0.0.1 20420 || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+networks:
+  default:
+    name: canary-tokens_net

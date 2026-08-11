@@ -7,8 +7,9 @@ Hoppscotch Community Edition: open-source API development ecosystem (requests, t
 | **Image** | `hoppscotch/hoppscotch:latest` |
 | **Host port** | `20456` |
 | **Container port** | `20456` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml hoppscotch
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{.State.Health.Status}' hoppscotch
+docker compose ps
 ```
 
 ## Homepage

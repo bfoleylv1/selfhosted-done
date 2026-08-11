@@ -1,0 +1,59 @@
+# tracktor - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml tracktor
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: ghcr.io/javedh-dev/tracktor:latest
+    environment:
+    - TRACKTOR_DEMO_MODE=false
+    - FORCE_DATA_SEED=false
+    - CORS_ORIGINS="http://localhost:20612"
+    volumes:
+    - tracktor_tracktor_data:/data
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - node build
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 3333
+      published: 20612
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=tracktor"
+    #   - "homepage.description=tracktor self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=tracktor.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20612"
+    #   - "homepage.server=localhost"
+volumes:
+  tracktor_tracktor_data: null
+networks:
+  default:
+    name: tracktor_net
+    driver: overlay
+    attachable: true

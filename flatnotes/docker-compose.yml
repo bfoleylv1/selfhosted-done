@@ -1,0 +1,37 @@
+# flatnotes - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: dullage/flatnotes:latest
+    container_name: app-flatnotes
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    - FLATNOTES_AUTH_TYPE=password
+    - FLATNOTES_USERNAME=user
+    - FLATNOTES_PASSWORD=changeMe!
+    - FLATNOTES_SECRET_KEY=aLongRandomSeriesOfCharacters
+    volumes:
+    - ./flatnotes-data:/data
+    restart: always
+    ports:
+    - 20574:8080
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:8080/ || wget -qO- http://127.0.0.1:8080/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=flatnotes"
+    #   - "homepage.description=flatnotes self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=flatnotes.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20574"
+    #   - "homepage.server=localhost"

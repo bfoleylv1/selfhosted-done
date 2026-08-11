@@ -1,0 +1,38 @@
+# hytale - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: deinfreu/hytale-server:experimental
+    container_name: app-hytale
+    environment:
+    - SERVER_IP=0.0.0.0
+    - SERVER_PORT=5520
+    - PROD=FALSE
+    - DEBUG=FALSE
+    - TZ=America/Los_Angeles
+    volumes:
+    - ./hytale-data:/home/container
+    - /etc/machine-id:/etc/machine-id:ro
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    ports:
+    - 5520:5520
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:5520/ || wget -qO- http://127.0.0.1:5520/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=hytale"
+    #   - "homepage.description=hytale self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=hytale.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:5520"
+    #   - "homepage.server=localhost"

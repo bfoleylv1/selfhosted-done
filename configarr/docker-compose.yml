@@ -1,0 +1,30 @@
+# configarr - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: ghcr.io/raydak-labs/configarr:latest
+    container_name: app-configarr
+    environment:
+    - TZ=America/Los_Angeles
+    volumes:
+    - ./configarr-data/config:/app/config
+    - ${PWD}/configarr-data/dockerrepos:/app/repos
+    restart: never
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - pgrep -f configarr || pgrep -f node
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 90s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=configarr"
+    #   - "homepage.description=configarr self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=configarr.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20563"
+    #   - "homepage.server=localhost"

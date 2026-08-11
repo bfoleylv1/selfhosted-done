@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=sama"
-    #   - "homepage.description=SAMA: next-gen self-hosted chat server and clients (GPL-3.0, Node.js/Docker)."""""
+    #   - "homepage.description=Placeholder entry — no real upstream image configured (generic base image only); not yet implemented."""""
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=sama.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20264"

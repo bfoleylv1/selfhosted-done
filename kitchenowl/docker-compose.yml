@@ -1,0 +1,31 @@
+# kitchenowl - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  kitchenowl:
+    image: tombursch/kitchenowl:latest
+    container_name: app-kitchenowl
+    volumes:
+    - ./kitchenowl-data/:/data
+    environment:
+    - JWT_SECRET_KEY=LfGQkEk7ZoByRlKAD5B4iaAUmawUwRjm
+    restart: unless-stopped
+    ports:
+    - 20587:8080
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - curl -fsS http://127.0.0.1:8080/ || wget -qO- http://127.0.0.1:8080/ || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=kitchenowl"
+    #   - "homepage.description=kitchenowl self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=kitchenowl.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20587"
+    #   - "homepage.server=localhost"

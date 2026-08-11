@@ -1,14 +1,15 @@
-# OpenConnect
+# Openconnect
 
-SSL VPN solution; Cisco AnyConnect compatible
+SSL VPN solution; Cisco AnyConnect compatible.
 
 | | |
 |---|---|
 | **Image** | `ubuntu:24.04` |
 | **Host port** | `20177` |
-| **Container port** | `8080` |
+| **Container port** | `20177` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Vpn |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml openconnect
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' openconnect
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

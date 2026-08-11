@@ -1,0 +1,34 @@
+# homepage - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: app-homepage
+    environment:
+    - HOMEPAGE_ALLOWED_HOSTS=localhost
+    volumes:
+    - ./homepage-data/config:/app/config
+    - /var/run/docker.sock:/var/run/docker.sock:ro
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - next-server
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20582:3000
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=homepage"
+    #   - "homepage.description=homepage self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=homepage.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20582"
+    #   - "homepage.server=localhost"

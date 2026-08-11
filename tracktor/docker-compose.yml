@@ -1,0 +1,35 @@
+# tracktor - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: ghcr.io/javedh-dev/tracktor:latest
+    container_name: app-tracktor
+    environment:
+    - TRACKTOR_DEMO_MODE=false
+    - FORCE_DATA_SEED=false
+    - CORS_ORIGINS="http://localhost:20612"
+    volumes:
+    - ./tracktor-data:/data
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - node build
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20612:3333
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=tracktor"
+    #   - "homepage.description=tracktor self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=tracktor.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20612"
+    #   - "homepage.server=localhost"

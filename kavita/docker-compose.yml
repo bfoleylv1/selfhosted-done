@@ -1,0 +1,36 @@
+# kavita - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: jvmilazz0/kavita:latest
+    container_name: app-kavita
+    environment:
+    - TZ=America/Los_Angeles
+    volumes:
+    - ./kavita-data/manga:/manga
+    - ./kavita-data/comics:/comics
+    - ./kavita-data/books:/books
+    - ./kavita-data/config:/kavita/config
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - kavita
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20586:5000
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=kavita"
+    #   - "homepage.description=kavita self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=kavita.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20586"
+    #   - "homepage.server=localhost"

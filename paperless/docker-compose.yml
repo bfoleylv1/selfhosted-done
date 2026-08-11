@@ -1,0 +1,75 @@
+# paperless - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: ghcr.io/paperless-ngx/paperless-ngx:latest
+    container_name: app-paperless
+    depends_on:
+      db:
+        condition: service_started
+      broker:
+        condition: service_started
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - paperless
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    volumes:
+    - ./paperless-data/data:/usr/src/paperless/data
+    - ./paperless-data/media:/usr/src/paperless/media
+    - ./paperless-data/export:/usr/src/paperless/export
+    - ./paperless-data/consume:/usr/src/paperless/consume
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=Europe/Amsterdam
+    - PAPERLESS_TIME_ZONE=Europe/London
+    - PAPERLESS_OCR_LANGUAGE=eng
+    - PAPERLESS_SECRET_KEY='change this to any random sting'
+    - PAPERLESS_PORT=80
+    - PAPERLESS_PROXY_SSL_HEADER=["HTTP_X_FORWARDED_PROTO", "https"]
+    - PAPERLESS_ADMIN_USER=admin
+    - PAPERLESS_ADMIN_PASSWORD=LIiufj4nnwQ6FivSVRpHV81hj-TOwHPX
+    - PAPERLESS_REDIS=redis://broker:6379
+    - PAPERLESS_DBHOST=db
+    ports:
+    - 20598:80
+  db:
+    image: docker.io/library/postgres:18
+    container_name: app-paperless-db
+    restart: always
+    volumes:
+    - ./paperless-data/pgdata:/var/lib/postgresql
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=Europe/Amsterdam
+    - POSTGRES_DB=paperless
+    - POSTGRES_USER=paperless
+    - POSTGRES_PASSWORD=paperless
+  broker:
+    image: docker.io/library/redis:8
+    container_name: app-paperless-broker
+    restart: always
+    volumes:
+    - ./paperless-data/redisdata:/data
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=Europe/Amsterdam
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=paperless"
+    #   - "homepage.description=paperless self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=paperless.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20598"
+    #   - "homepage.server=localhost"

@@ -1,0 +1,35 @@
+# nodered - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: nodered/node-red:latest
+    container_name: app-nodered
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    volumes:
+    - ./nodered-data/app/config:/data
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - nodered
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20596:1080
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=nodered"
+    #   - "homepage.description=nodered self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=nodered.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20596"
+    #   - "homepage.server=localhost"

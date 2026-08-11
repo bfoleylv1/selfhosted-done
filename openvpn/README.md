@@ -1,14 +1,15 @@
-# OpenVPN
+# Openvpn
 
-SSL VPN solution; secure networking and remote access
+SSL VPN solution; secure networking and remote access.
 
 | | |
 |---|---|
 | **Image** | `kylemanna/openvpn:latest` |
 | **Host port** | `1194` |
 | **Container port** | `1194` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Vpn |
-| **Healthcheck** | TCP port probe |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml openvpn
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' openvpn
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

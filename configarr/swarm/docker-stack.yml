@@ -1,0 +1,51 @@
+# configarr - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml configarr
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: ghcr.io/raydak-labs/configarr:latest
+    environment:
+    - TZ=America/Los_Angeles
+    volumes:
+    - configarr_configarr_data_config:/app/config
+    - ${PWD}/configarr-data/dockerrepos:/app/repos
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - pgrep -f configarr || pgrep -f node
+      interval: 60s
+      timeout: 10s
+      retries: 3
+      start_period: 90s
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=configarr"
+    #   - "homepage.description=configarr self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=configarr.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20563"
+    #   - "homepage.server=localhost"
+volumes:
+  configarr_configarr_data_config: null
+networks:
+  default:
+    name: configarr_net
+    driver: overlay
+    attachable: true

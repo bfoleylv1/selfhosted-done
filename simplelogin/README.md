@@ -1,14 +1,15 @@
 # Simplelogin
 
-Self-hosted service: simplelogin
+SimpleLogin: open-source email alias/forwarding service for protecting your real email address
 
 | | |
 |---|---|
 | **Image** | `simplelogin/app:latest` |
 | **Host port** | `20505` |
 | **Container port** | `20505` |
+| **Containers** | 1 |
+| **Healthcheck** | command probe |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP/HTTP probe |
 
 ## Run it
 
@@ -31,14 +32,12 @@ docker stack deploy -c swarm/docker-stack.yml simplelogin
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' simplelogin
+docker compose ps
 ```
 
 ## Homepage

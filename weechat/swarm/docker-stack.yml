@@ -42,7 +42,7 @@ services:
     # labels:
     #   - "homepage.group=Self Hosted"
     #   - "homepage.name=weechat"
-    #   - "homepage.description=weechat self-hosted service."
+    #   - "homepage.description=WeeChat: fast, light, extensible terminal IRC client (with relay for web/mobile clients)."
     #   - "homepage.tags=Self Hosting Solutions"
     #   - "homepage.icon=weechat.png"
     #   - "homepage.href=http://${HOST_IP:-localhost}:20519"

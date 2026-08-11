@@ -6,9 +6,11 @@ Langflow: visual builder for LangChain and LLM workflows
 |---|---|
 | **Image** | `langflowai/langflow:latest` |
 | **Host port** | `20463` |
-| **Container port** | `20463` |
+| **Container port** | `7860` |
+| **Containers** | 1 |
+| **Healthcheck** | HTTP `http://127.0.0.1:7860/` |
 | **Category** | Self Hosting Solutions |
-| **Healthcheck** | TCP port probe |
+| **GPU** | hardware-acceleration block included (commented) |
 
 ## Run it
 
@@ -31,14 +33,12 @@ docker stack deploy -c swarm/docker-stack.yml langflow
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{.State.Health.Status}' langflow
+docker compose ps
 ```
 
 ## Homepage

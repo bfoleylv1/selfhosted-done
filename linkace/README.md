@@ -1,14 +1,15 @@
-# LinkAce
+# Linkace
 
-Link shortener and bookmark manager; save and share URLs
+Link shortener and bookmark manager; save and share URLs.
 
 | | |
 |---|---|
 | **Image** | `linkace/linkace:simple` |
 | **Host port** | `20141` |
 | **Container port** | `80` |
+| **Containers** | 1 |
+| **Healthcheck** | HTTP `http://127.0.0.1:80/` |
 | **Category** | News |
-| **Healthcheck** | HTTP `/` |
 
 ## Run it
 
@@ -31,18 +32,14 @@ docker stack deploy -c swarm/docker-stack.yml linkace
 ```
 docker-compose.yml        # single-host deployment
 swarm/docker-stack.yml    # swarm stack (named volumes, replicas, placement)
-config/                   # mounted to /config
-data/                     # mounted to /data
 ```
 
 ## Check it is healthy
 
 ```bash
-docker inspect --format '{{.State.Health.Status}}' linkace
+docker compose ps
 ```
 
 ## Homepage
 
-[gethomepage](https://github.com/gethomepage/homepage) labels are included but
-commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable
-autodiscovery.
+[gethomepage](https://github.com/gethomepage/homepage) labels are included but commented out. Uncomment the `labels:` block in `docker-compose.yml` to enable autodiscovery.

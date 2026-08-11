@@ -1,0 +1,39 @@
+# gitsave - docker compose (single host)
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+# image verified against its registry at generation time
+
+services:
+  application:
+    image: timwitzdam/gitsave:latest
+    container_name: app-gitsave
+    environment:
+    - PUID=1000
+    - PGID=1000
+    - TZ=America/Los_Angeles
+    - JWT_SECRET=${JWT_SECRET:?error}
+    - DISABLE_AUTH=${DISABLE_AUTH:?error}
+    - ENCRYPTION_SECRET=${ENCRYPTION_SECRET:?error}
+    volumes:
+    - ./gitsave-data/gitsave:/app/data
+    - ./gitsave-data/backups:/app/backups
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - gitsave
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    ports:
+    - 20577:3000
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=gitsave"
+    #   - "homepage.description=gitsave self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=gitsave.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:20577"
+    #   - "homepage.server=localhost"

@@ -1,0 +1,59 @@
+# gokapi - docker swarm stack
+# deploy: docker stack deploy -c docker-stack.yml gokapi
+# ported from the upstream ScaleTail definition; tailscale sidecar removed
+
+services:
+  application:
+    image: f0rc3/gokapi:latest
+    environment:
+    - TZ=America/Los_Angeles
+    volumes:
+    - gokapi_gokapi_data_gokapi_data:/app/data
+    - gokapi_gokapi_data_gokapi_config:/app/config
+    healthcheck:
+      test:
+      - CMD
+      - pgrep
+      - -f
+      - gokapi
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    ports:
+    - target: 53842
+      published: 53842
+      protocol: tcp
+      mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+        - node.platform.os == linux
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      update_config:
+        order: start-first
+        failure_action: rollback
+      resources:
+        limits:
+          memory: 2G
+    # labels:
+    #   - "homepage.group=Self Hosted"
+    #   - "homepage.name=gokapi"
+    #   - "homepage.description=gokapi self-hosted service."
+    #   - "homepage.tags=Self Hosting Solutions"
+    #   - "homepage.icon=gokapi.png"
+    #   - "homepage.href=http://${HOST_IP:-localhost}:53842"
+    #   - "homepage.server=localhost"
+volumes:
+  gokapi_gokapi_data_gokapi_data: null
+  gokapi_gokapi_data_gokapi_config: null
+networks:
+  default:
+    name: gokapi_net
+    driver: overlay
+    attachable: true
