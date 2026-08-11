@@ -1,6 +1,6 @@
 # Trek
 
-Self-hosted service: trek.
+Trek is a self-hosted travel and route tracking tool.
 
 | | |
 |---|---|

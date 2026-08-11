@@ -1,6 +1,6 @@
 # Openwork
 
-Self-hosted service: openwork.
+OpenWork is a self-hosted work management and collaboration tool.
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Logseq
 
-Self-hosted service: logseq.
+Logseq is a privacy-first, local-first knowledge base and outline note-taking app.
 
 | | |
 |---|---|

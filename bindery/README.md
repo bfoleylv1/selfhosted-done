@@ -1,6 +1,6 @@
 # Bindery
 
-Self-hosted service: bindery.
+Bindery is a tool for laying out and publishing books in the browser.
 
 | | |
 |---|---|

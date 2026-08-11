@@ -1,6 +1,6 @@
 # Rejourney
 
-Self-hosted service: rejourney.
+ReJourney is a self-hosted AI image generation and gallery tool.
 
 | | |
 |---|---|

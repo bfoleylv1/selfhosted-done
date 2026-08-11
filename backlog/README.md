@@ -1,6 +1,6 @@
 # Backlog
 
-Self-hosted service: backlog.
+Backlog is a self-hosted project and issue tracker with Git/Mercurial/SVN hosting and wikis.
 
 | | |
 |---|---|

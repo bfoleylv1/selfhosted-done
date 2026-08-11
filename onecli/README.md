@@ -1,6 +1,6 @@
 # Onecli
 
-Self-hosted service: onecli.
+OneCLI is a self-hosted command-line tooling and orchestration hub.
 
 | | |
 |---|---|

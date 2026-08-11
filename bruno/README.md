@@ -1,6 +1,6 @@
 # Bruno
 
-Self-hosted service: bruno.
+Bruno is an open-source offline API client / Git-friendly Postman alternative for testing HTTP endpoints.
 
 | | |
 |---|---|

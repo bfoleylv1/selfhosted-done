@@ -1,6 +1,6 @@
 # Channeltube
 
-Self-hosted service: channeltube.
+Channel Tube (Conductor) aggregates and serves YouTube channel content as a self-hosted library.
 
 | | |
 |---|---|

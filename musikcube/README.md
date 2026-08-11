@@ -1,6 +1,6 @@
 # Musikcube
 
-Self-hosted service: musikcube.
+musikcube is a cross-platform, terminal-based music player and streaming server.
 
 | | |
 |---|---|

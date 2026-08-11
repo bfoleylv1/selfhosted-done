@@ -1,6 +1,6 @@
 # Jina
 
-Self-hosted service: jina.
+Jina is a neural search framework for building multimodal AI search applications.
 
 | | |
 |---|---|

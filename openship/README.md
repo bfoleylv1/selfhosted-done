@@ -1,6 +1,6 @@
 # Openship
 
-Self-hosted service: openship.
+OpenShip is a self-hosted multi-channel order and shipping management system.
 
 | | |
 |---|---|

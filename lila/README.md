@@ -1,6 +1,6 @@
 # Lila
 
-Self-hosted service: lila.
+Lila is the web UI and server for the Lichess open-source chess platform.
 
 | | |
 |---|---|

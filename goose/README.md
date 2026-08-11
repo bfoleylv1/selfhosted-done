@@ -1,6 +1,6 @@
 # Goose
 
-Self-hosted service: goose.
+Goose is an open-source AI agent that automates engineering tasks on your machine.
 
 | | |
 |---|---|

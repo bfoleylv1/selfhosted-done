@@ -1,6 +1,6 @@
 # Teleport
 
-Self-hosted service: teleport.
+Teleport is an open-source access plane for SSH, Kubernetes and web apps with audit.
 
 | | |
 |---|---|

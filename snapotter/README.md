@@ -1,6 +1,6 @@
 # Snapotter
 
-Self-hosted service: snapotter.
+Snapotter is a self-hosted screenshot and image capture management tool.
 
 | | |
 |---|---|

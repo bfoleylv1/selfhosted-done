@@ -1,6 +1,6 @@
 # Jitsi Meet
 
-Self-hosted service: jitsi-meet.
+Jitsi Meet is a secure, fully-featured open-source video conferencing platform.
 
 | | |
 |---|---|

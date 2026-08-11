@@ -1,6 +1,6 @@
 # Strava
 
-Self-hosted service: strava.
+Strava self-hosted connector for syncing and visualising fitness data.
 
 | | |
 |---|---|

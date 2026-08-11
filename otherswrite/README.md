@@ -1,6 +1,6 @@
 # Otherswrite
 
-Self-hosted service: otherswrite.
+OthersWrite is a self-hosted collaborative writing and publishing tool.
 
 | | |
 |---|---|

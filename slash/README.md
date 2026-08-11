@@ -1,6 +1,6 @@
 # Slash
 
-Self-hosted service: slash.
+Slash is a self-hosted bookmark and link shortener with a clean UI.
 
 | | |
 |---|---|

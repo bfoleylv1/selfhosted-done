@@ -1,6 +1,6 @@
 # Chatbox
 
-Self-hosted service: chatbox.
+Chatbox is a desktop and self-hosted AI chat client supporting many LLM providers.
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Pastefy
 
-Self-hosted service: pastefy.
+Pastefy is a self-hosted pastebin and code snippet manager.
 
 | | |
 |---|---|

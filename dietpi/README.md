@@ -1,6 +1,6 @@
 # Dietpi
 
-Self-hosted service: dietpi.
+DietPi is a lightweight Debian-based OS for single-board computers and minimal servers.
 
 | | |
 |---|---|

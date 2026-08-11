@@ -1,6 +1,6 @@
 # Recipesage
 
-Self-hosted service: recipesage.
+RecipeSage is a self-hosted recipe manager and meal planner.
 
 | | |
 |---|---|

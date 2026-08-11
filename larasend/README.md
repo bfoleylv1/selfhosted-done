@@ -1,6 +1,6 @@
 # Larasend
 
-Self-hosted service: larasend.
+Larasend is a self-hosted email marketing and transactional mail platform.
 
 | | |
 |---|---|

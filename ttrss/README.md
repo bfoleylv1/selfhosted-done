@@ -1,6 +1,6 @@
 # Ttrss
 
-Self-hosted service: ttrss.
+Tiny Tiny RSS is a free, self-hosted web-based news feed (RSS/Atom) reader.
 
 | | |
 |---|---|

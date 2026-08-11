@@ -1,6 +1,6 @@
 # Picoclaw
 
-Self-hosted service: picoclaw.
+PicoClaw is a self-hosted lightweight AI agent playground.
 
 | | |
 |---|---|

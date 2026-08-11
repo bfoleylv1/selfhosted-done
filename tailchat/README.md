@@ -1,6 +1,6 @@
 # Tailchat
 
-Self-hosted service: tailchat.
+TailChat is a self-hosted, plugin-based, distributed chat and social platform.
 
 | | |
 |---|---|

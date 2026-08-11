@@ -1,6 +1,6 @@
 # Yaade
 
-Self-hosted service: yaade.
+Yaade is a self-hosted, performance-focused API testing and documentation tool.
 
 | | |
 |---|---|

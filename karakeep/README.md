@@ -1,6 +1,6 @@
 # Karakeep
 
-Self-hosted service: karakeep.
+Karakeep (formerly Hoarder) is a self-hosted bookmark, link and asset manager with AI tagging.
 
 | | |
 |---|---|

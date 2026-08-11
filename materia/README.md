@@ -1,6 +1,6 @@
 # Materia
 
-Self-hosted service: materia.
+Materia is a self-hosted learning management and course platform.
 
 | | |
 |---|---|

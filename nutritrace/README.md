@@ -1,6 +1,6 @@
 # Nutritrace
 
-Self-hosted service: nutritrace.
+NutriTrace is a self-hosted nutrition and dietary tracking application.
 
 | | |
 |---|---|

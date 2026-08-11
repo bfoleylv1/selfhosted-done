@@ -1,6 +1,6 @@
 # Homebutler
 
-Self-hosted service: homebutler.
+HomeButler is a self-hosted home automation and assistant hub.
 
 | | |
 |---|---|

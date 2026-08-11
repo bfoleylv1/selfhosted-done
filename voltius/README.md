@@ -1,6 +1,6 @@
 # Voltius
 
-Self-hosted service: voltius.
+Voltius is a self-hosted energy and EV charging management dashboard.
 
 | | |
 |---|---|

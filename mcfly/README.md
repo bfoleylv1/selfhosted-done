@@ -1,6 +1,6 @@
 # Mcfly
 
-Self-hosted service: mcfly.
+McFly is a smarter shell history search tool with a TUI (not a server app).
 
 | | |
 |---|---|

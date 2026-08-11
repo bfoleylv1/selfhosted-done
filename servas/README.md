@@ -1,6 +1,6 @@
 # Servas
 
-Self-hosted service: servas.
+Servas is a self-hosted bookmark manager with tagging and sharing groups.
 
 | | |
 |---|---|

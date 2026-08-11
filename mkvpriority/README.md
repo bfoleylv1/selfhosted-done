@@ -1,6 +1,6 @@
 # Mkvpriority
 
-Self-hosted service: mkvpriority.
+MKVPriority is a tool for setting default audio/subtitle tracks in MKV files.
 
 | | |
 |---|---|

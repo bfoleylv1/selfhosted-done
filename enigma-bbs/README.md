@@ -1,6 +1,6 @@
 # Enigma Bbs
 
-Self-hosted service: enigma-bbs.
+Enigma BBS is a modern, web-aware bulletin board system software.
 
 | | |
 |---|---|

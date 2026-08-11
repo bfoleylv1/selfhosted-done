@@ -1,6 +1,6 @@
 # Grimoire
 
-Self-hosted service: grimoire.
+Grimoire is a self-hosted recipe manager for TTRPG campaigns and homebrew content.
 
 | | |
 |---|---|

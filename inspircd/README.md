@@ -1,6 +1,6 @@
 # Inspircd
 
-Self-hosted service: inspircd.
+InspIRCd is a modular, high-performance Internet Relay Chat (IRC) server.
 
 | | |
 |---|---|

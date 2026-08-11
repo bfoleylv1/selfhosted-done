@@ -1,6 +1,6 @@
 # Simplement
 
-Self-hosted service: simplement.
+Simplex is a self-hosted simple encrypted messaging server (SimpleX-based).
 
 | | |
 |---|---|

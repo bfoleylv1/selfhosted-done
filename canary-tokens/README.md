@@ -1,6 +1,6 @@
 # Canary Tokens
 
-Self-hosted service: canary-tokens.
+Canary Tokens lets you deploy honeytokens (files, links, DNS) to detect intrusions early.
 
 | | |
 |---|---|

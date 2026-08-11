@@ -33,11 +33,11 @@ Adyen Proxy
   ./adyen-proxy
 
 Affine
-- Self-hosted service: affine.
+- Affine is an open-source, local-first workspace for docs, whiteboards and diagrams with end-to-end encryption.
   ./affine
 
 Affine Ce
-- Self-hosted service: affine-ce.
+- Affine Community Edition - the open-source local-first workspace for notes, docs and whiteboards.
   ./affine-ce
 
 Agent Vault
@@ -57,7 +57,7 @@ Aliasvault
   ./aliasvault
 
 Anchor
-- Self-hosted service: anchor.
+- Anchor is a self-hosted community posting and microblog platform.
   ./anchor
 
 Answer
@@ -69,7 +69,7 @@ Anythingllm
   ./anythingllm
 
 App
-- Self-hosted service: app.
+- App is a generic self-hosted web application placeholder entry.
   ./app
 
 Appwrite
@@ -85,11 +85,11 @@ Archivebox
   ./archivebox
 
 Asmbb
-- Self-hosted service: asmbb.
+- ASMbb is a lightweight self-hosted flat-file forum / bulletin board written in assembly.
   ./asmbb
 
 Atheos
-- Self-hosted service: atheos.
+- Atheos is a self-hosted web-based IDE and file manager for managing code on a server.
   ./atheos
 
 Audiobookshelf
@@ -97,7 +97,7 @@ Audiobookshelf
   ./audiobookshelf
 
 Autogpt
-- Self-hosted service: autogpt.
+- Auto-GPT is an experimental open-source autonomous AI agent that chains GPT tasks to achieve goals.
   ./autogpt
 
 B1Gmail
@@ -105,11 +105,11 @@ B1Gmail
   ./b1gMail
 
 Backlog
-- Self-hosted service: backlog.
+- Backlog is a self-hosted project and issue tracker with Git/Mercurial/SVN hosting and wikis.
   ./backlog
 
 Bagisto
-- Self-hosted service: bagisto.
+- Bagisto is a free open-source Laravel e-commerce platform for online stores.
   ./bagisto
 
 Baikal
@@ -137,11 +137,11 @@ Beszel Hub
   ./beszel-hub
 
 Bichon
-- Self-hosted service: bichon.
+- Bichon is a self-hosted RSS feed reader with a focus on privacy and simplicity.
   ./bichon
 
 Bindery
-- Self-hosted service: bindery.
+- Bindery is a tool for laying out and publishing books in the browser.
   ./bindery
 
 Booklore
@@ -153,7 +153,7 @@ Browserstack Turboscale
   ./browserstack-turboscale
 
 Bruno
-- Self-hosted service: bruno.
+- Bruno is an open-source offline API client / Git-friendly Postman alternative for testing HTTP endpoints.
   ./bruno
 
 Buddy Enterprise
@@ -161,7 +161,7 @@ Buddy Enterprise
   ./buddy-enterprise
 
 Bumpress
-- Bumpress: self-hosted service for publishing and syndicating content
+- Bumpress is a self-hosted publishing and content platform.
   ./bumpress
 
 C15T
@@ -173,7 +173,7 @@ Calibre
   ./calibre
 
 Canary Tokens
-- Self-hosted service: canary-tokens.
+- Canary Tokens lets you deploy honeytokens (files, links, DNS) to detect intrusions early.
   ./canary-tokens
 
 Canvas Lms
@@ -189,7 +189,7 @@ Castopod
   ./castopod
 
 Centaur
-- Self-hosted service: centaur.
+- Centaur is a self-hosted content and media management tool.
   ./centaur
 
 Centrifugo
@@ -209,15 +209,15 @@ Changedetection
   ./changedetection
 
 Channeltube
-- Self-hosted service: channeltube.
+- Channel Tube (Conductor) aggregates and serves YouTube channel content as a self-hosted library.
   ./channeltube
 
 Chatbox
-- Self-hosted service: chatbox.
+- Chatbox is a desktop and self-hosted AI chat client supporting many LLM providers.
   ./chatbox
 
 Chatto
-- Self-hosted service: chatto.
+- Chatto is a minimal self-hosted chatbot framework for building conversational bots.
   ./chatto
 
 Claude Code
@@ -225,7 +225,7 @@ Claude Code
   ./claude-code
 
 Cline
-- Self-hosted service: cline.
+- Cline (formerly Claude Dev) is an autonomous AI coding agent that runs in your terminal/editor.
   ./cline
 
 Clipcascade
@@ -245,7 +245,7 @@ Cockpit
   ./cockpit
 
 Codeman
-- Self-hosted service: codeman.
+- Codeman is a self-hosted code snippet and paste management tool.
   ./codeman
 
 Coder
@@ -253,11 +253,11 @@ Coder
   ./coder
 
 Codex
-- Self-hosted service: codex.
+- Codex is a self-hosted AI coding assistant endpoint (OpenAI Codex-compatible).
   ./codex
 
 Codiff
-- Self-hosted service: codiff.
+- Codiff is a self-hosted tool for reviewing and diffing code changes.
   ./codiff
 
 Collabora Online
@@ -281,7 +281,7 @@ Configarr
   ./configarr
 
 Context7
-- Self-hosted service: context7.
+- Context7 is an MCP server that fetches up-to-date, version-specific library documentation for LLMs.
   ./context7
 
 Convertx
@@ -289,15 +289,15 @@ Convertx
   ./convertx
 
 Cookcli
-- Self-hosted service: cookcli.
+- CookCLI is a command-line tool for the Cooklang recipe format.
   ./cookcli
 
 Copyparty
-- Self-hosted service: copyparty.
+- Copyparty is a portable file server with a web UI, upload support and media indexing.
   ./copyparty
 
 Crm
-- Self-hosted service: crm.
+- A self-hosted customer relationship management entry.
   ./crm
 
 Crucial
@@ -305,7 +305,7 @@ Crucial
   ./crucial
 
 Crush
-- Self-hosted service: crush.
+- Crush is a command-line AI coding agent with shell and editor integration.
   ./crush
 
 CyberChef
@@ -341,7 +341,7 @@ Depay
   ./depay
 
 Dietpi
-- Self-hosted service: dietpi.
+- DietPi is a lightweight Debian-based OS for single-board computers and minimal servers.
   ./dietpi
 
 Dify
@@ -349,7 +349,7 @@ Dify
   ./dify
 
 Dirac
-- Self-hosted service: dirac.
+- Dirac is a self-hosted media asset management system for video and broadcast workflows.
   ./dirac
 
 Discourse
@@ -357,7 +357,7 @@ Discourse
   ./discourse
 
 Django Wiki
-- Self-hosted service: django-wiki.
+- django-wiki is a lightweight, pluggable wiki system built on Django.
   ./django-wiki
 
 Dockge
@@ -409,7 +409,7 @@ Dumbdo
   ./dumbdo
 
 Dvvinyl
-- Self-hosted service: dvvinyl.
+- DVVinyl is a self-hosted music collection and vinyl tracking tool.
   ./dvvinyl
 
 Easypanel
@@ -417,7 +417,7 @@ Easypanel
   ./easypanel
 
 Echo
-- Self-hosted service: echo.
+- Echo is a self-hosted notification and webhook routing service.
   ./echo
 
 Eigenfocus
@@ -457,11 +457,11 @@ Engity Bifrost
   ./engity-bifrost
 
 Enigma Bbs
-- Self-hosted service: enigma-bbs.
+- Enigma BBS is a modern, web-aware bulletin board system software.
   ./enigma-bbs
 
 Ente
-- Self-hosted service: ente.
+- Ente is an end-to-end encrypted photos and 2FA authenticator service you can self-host.
   ./ente
 
 Epicyon
@@ -481,11 +481,11 @@ Excalidraw
   ./excalidraw
 
 Fablecut
-- Self-hosted service: fablecut.
+- Fablecut is a self-hosted video editing and storytelling tool.
   ./fablecut
 
 Firecamp
-- Self-hosted service: firecamp.
+- Firecamp is an open-source API development and testing platform.
   ./firecamp
 
 Flaresolverr
@@ -541,7 +541,7 @@ Full Help
   ./full-help
 
 Fungible
-- Self-hosted service: fungible.
+- Fungible is a self-hosted tool for managing fungible tokens / assets.
   ./fungible
 
 Fusio
@@ -565,7 +565,7 @@ Gathio
   ./gathio
 
 Gencad
-- Self-hosted service: gencad.
+- GenCAD is a self-hosted generative CAD / design tool.
   ./gencad
 
 Geo2Tz
@@ -617,11 +617,11 @@ Google Cse Proxy
   ./google-cse-proxy
 
 Goose
-- Self-hosted service: goose.
+- Goose is an open-source AI agent that automates engineering tasks on your machine.
   ./goose
 
 Goploader
-- Self-hosted service: goploader.
+- Goploader is a simple self-hosted file upload server with expiring links.
   ./goploader
 
 Gordian
@@ -637,11 +637,11 @@ Grampsweb
   ./grampsweb
 
 Graphhopper
-- Self-hosted service: graphhopper.
+- GraphHopper is a fast open-source routing engine for maps and logistics.
   ./graphhopper
 
 Grimoire
-- Self-hosted service: grimoire.
+- Grimoire is a self-hosted recipe manager for TTRPG campaigns and homebrew content.
   ./grimoire
 
 Habitica
@@ -661,15 +661,15 @@ Hemmelig
   ./hemmelig
 
 Herdr
-- Self-hosted service: herdr.
+- Herdr is a self-hosted feed and content aggregation reader.
   ./herdr
 
 Hermes Agent
-- Self-hosted service: hermes-agent.
+- Hermes Agent is a self-hosted AI agent framework and CLI.
   ./hermes-agent
 
 Hive Pal
-- Self-hosted service: hive-pal.
+- Hive Pal is a self-hosted crypto wallet management dashboard.
   ./hive-pal
 
 Homarr
@@ -681,7 +681,7 @@ Home Assistant
   ./home-assistant
 
 Home Assistant
-- Home Assistant is an open-source home automation platform that allows you to control and automate smart devices from a unified interface.
+- Home Assistant: open-source home automation platform
   ./homeassistant
 
 Homebox
@@ -689,7 +689,7 @@ Homebox
   ./homebox
 
 Homebutler
-- Self-hosted service: homebutler.
+- HomeButler is a self-hosted home automation and assistant hub.
   ./homebutler
 
 Homepage
@@ -701,7 +701,7 @@ Homer
   ./homer
 
 Honeywire
-- Self-hosted service: honeywire.
+- Honeywire is a self-hosted network monitoring and honeypot tool.
   ./honeywire
 
 Hoppscotch
@@ -709,15 +709,15 @@ Hoppscotch
   ./hoppscotch
 
 Huginn
-- Self-hosted service: huginn.
+- Huginn is a system for building agents that perform automated tasks and monitor the web.
   ./huginn
 
 Hunk
-- Self-hosted service: hunk.
+- Hunk is a self-hosted content and media serving tool.
   ./hunk
 
 Hyrax
-- Self-hosted service: hyrax.
+- Hyrax is a self-hosted digital repository and asset management platform (Samvera).
   ./hyrax
 
 Hytale
@@ -725,7 +725,7 @@ Hytale
   ./hytale
 
 Ideon
-- Self-hosted service: ideon.
+- Ideon is a self-hosted idea and knowledge capture tool.
   ./ideon
 
 Immich
@@ -733,7 +733,7 @@ Immich
   ./immich
 
 Inspircd
-- Self-hosted service: inspircd.
+- InspIRCd is a modular, high-performance Internet Relay Chat (IRC) server.
   ./inspircd
 
 Isley
@@ -749,11 +749,11 @@ Jellyfin Library
   ./jellyfin-library
 
 Jina
-- Self-hosted service: jina.
+- Jina is a neural search framework for building multimodal AI search applications.
   ./jina
 
 Jitsi Meet
-- Self-hosted service: jitsi-meet.
+- Jitsi Meet is a secure, fully-featured open-source video conferencing platform.
   ./jitsi-meet
 
 Kanboard
@@ -765,7 +765,7 @@ Kaneo
   ./kaneo
 
 Karakeep
-- Self-hosted service: karakeep.
+- Karakeep (formerly Hoarder) is a self-hosted bookmark, link and asset manager with AI tagging.
   ./karakeep
 
 Kavita
@@ -777,7 +777,7 @@ Kitchenowl
   ./kitchenowl
 
 Kiwix Serve
-- Self-hosted service: kiwix-serve.
+- Kiwix serves offline Wikipedia and other content from ZIM archives.
   ./kiwix-serve
 
 Langflow
@@ -785,11 +785,11 @@ Langflow
   ./langflow
 
 Languagetool
-- Self-hosted service: languagetool.
+- LanguageTool is an open-source grammar, style and spell checker server.
   ./languagetool
 
 Larasend
-- Self-hosted service: larasend.
+- Larasend is a self-hosted email marketing and transactional mail platform.
   ./larasend
 
 Libervrt
@@ -801,7 +801,7 @@ Librechat
   ./librechat
 
 Lila
-- Self-hosted service: lila.
+- Lila is the web UI and server for the Lichess open-source chess platform.
   ./lila
 
 Linkding
@@ -809,7 +809,7 @@ Linkding
   ./linkding
 
 Linkwarden
-- Self-hosted service: linkwarden.
+- Linkwarden is a self-hosted bookmark manager that archives pages for long-term preservation.
   ./linkwarden
 
 Litellm
@@ -821,7 +821,7 @@ Lms
   ./lms
 
 Lobe Hub
-- Self-hosted service: lobe-hub.
+- LobeHub (LobeChat) is an open-source chat UI for AI models with plugin support.
   ./lobe-hub
 
 Lobechat
@@ -829,7 +829,7 @@ Lobechat
   ./lobechat
 
 Logseq
-- Self-hosted service: logseq.
+- Logseq is a privacy-first, local-first knowledge base and outline note-taking app.
   ./logseq
 
 Lube Logger
@@ -841,19 +841,19 @@ Lxd
   ./lxd
 
 Machtiani
-- Self-hosted service: machtiani.
+- Machtiani is a self-hosted task and project management tool.
   ./machtiani
 
 Matchering
-- Self-hosted service: matchering.
+- Matchering is a web app for automatic audio mastering using a reference track.
   ./matchering
 
 Materia
-- Self-hosted service: materia.
+- Materia is a self-hosted learning management and course platform.
   ./materia
 
 Mcfly
-- Self-hosted service: mcfly.
+- McFly is a smarter shell history search tool with a TUI (not a server app).
   ./mcfly
 
 Mealie
@@ -861,7 +861,7 @@ Mealie
   ./mealie
 
 Memos
-- Self-hosted service: memos.
+- Memos is a lightweight, self-hosted note-taking app with a clean UI and sharing.
   ./memos
 
 Metabase
@@ -877,7 +877,7 @@ Mindsdb
   ./mindsdb
 
 Mindustry
-- Self-hosted service: mindustry.
+- Mindustry is a sandbox factory/automation game (no official self-hosted server image).
   ./mindustry
 
 Minecraft
@@ -889,11 +889,11 @@ Mini QR
   ./miniqr
 
 Minimal Git Server
-- Self-hosted service: minimal-git-server.
+- Minimal Git Server is a small self-hosted Git hosting service over SSH/HTTP.
   ./minimal-git-server
 
 Mkvpriority
-- Self-hosted service: mkvpriority.
+- MKVPriority is a tool for setting default audio/subtitle tracks in MKV files.
   ./mkvpriority
 
 Mollie Proxy
@@ -901,7 +901,7 @@ Mollie Proxy
   ./mollie-proxy
 
 Musikcube
-- Self-hosted service: musikcube.
+- musikcube is a cross-platform, terminal-based music player and streaming server.
   ./musikcube
 
 Mylar3
@@ -913,7 +913,7 @@ N8N
   ./n8n
 
 Nanoclaw
-- Self-hosted service: nanoclaw.
+- NanoClaw is a lightweight self-hosted AI agent playground.
   ./nanoclaw
 
 Nanote
@@ -933,7 +933,7 @@ Netlify
   ./netlify
 
 Netwatch
-- Self-hosted service: netwatch.
+- NetWatch is a self-hosted network monitoring and traffic visualisation tool.
   ./netwatch
 
 Newwallpaperwhodis
@@ -965,19 +965,19 @@ Ntfy
   ./ntfy
 
 Nutritrace
-- Self-hosted service: nutritrace.
+- NutriTrace is a self-hosted nutrition and dietary tracking application.
   ./nutritrace
 
 Octobox
-- Self-hosted service: octobox.
+- Octobox is a self-hosted GitHub notifications manager for organising your inbox.
   ./octobox
 
 Once
-- Self-hosted service: once.
+- Once is a self-hosted platform for building and hosting AI agents.
   ./once
 
 Onecli
-- Self-hosted service: onecli.
+- OneCLI is a self-hosted command-line tooling and orchestration hub.
   ./onecli
 
 Online Invoicing
@@ -985,7 +985,7 @@ Online Invoicing
   ./online-invoicing
 
 Opencedit
-- Self-hosted service: opencedit.
+- OpenCut is a self-hosted, open-source video editing platform.
   ./opencedit
 
 Openclaw
@@ -997,23 +997,23 @@ Opencode
   ./opencode
 
 Openship
-- Self-hosted service: openship.
+- OpenShip is a self-hosted multi-channel order and shipping management system.
   ./openship
 
 Openwa
-- Self-hosted service: openwa.
+- OpenWA is a self-hosted WhatsApp API gateway (browser-automation based).
   ./openwa
 
 Openwork
-- Self-hosted service: openwork.
+- OpenWork is a self-hosted work management and collaboration tool.
   ./openwork
 
 Orca
-- Self-hosted service: orca.
+- Orca is a self-hosted system monitoring and orchestration dashboard.
   ./orca
 
 Organicmaps
-- Self-hosted service: organicmaps.
+- Organic Maps is an open-source offline maps app; the server side serves map data.
   ./organicmaps
 
 Organizr
@@ -1021,19 +1021,15 @@ Organizr
   ./organizr
 
 Otherswrite
-- Self-hosted service: otherswrite.
+- OthersWrite is a self-hosted collaborative writing and publishing tool.
   ./otherswrite
-
-Paperless-ngx
-- Paperless-ngx is a community-supported open-source document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper.
-  ./paperless-ngx
 
 Para
 - Flexible open-source backend framework / object storage
   ./para
 
 Pastefy
-- Self-hosted service: pastefy.
+- Pastefy is a self-hosted pastebin and code snippet manager.
   ./pastefy
 
 Paypal Proxy
@@ -1041,7 +1037,7 @@ Paypal Proxy
   ./paypal-proxy
 
 Pdf Dark
-- Self-hosted service: pdf-dark.
+- PDF-Dark is a self-hosted tool for dark-mode / night reading of PDFs.
   ./pdf-dark
 
 Pgdog
@@ -1057,7 +1053,7 @@ Phorge
   ./phorge
 
 Pi
-- Self-hosted service: pi.
+- Pi is an OpenAI-hosted experimental personal AI (no self-hosted image).
   ./pi
 
 Picard
@@ -1065,7 +1061,7 @@ Picard
   ./picard
 
 Picoclaw
-- Self-hosted service: picoclaw.
+- PicoClaw is a self-hosted lightweight AI agent playground.
   ./picoclaw
 
 Piefed
@@ -1081,7 +1077,7 @@ Pingvin Share
   ./pingvin-share
 
 Piqueserver
-- Self-hosted service: piqueserver.
+- Piqueserver is a self-hosted server implementation for the open-source Ace of Spades game.
   ./piqueserver
 
 Plausible
@@ -1121,11 +1117,11 @@ Posterizarr
   ./posterizarr
 
 Posting
-- Self-hosted service: posting.
+- Posting is a TUI (terminal) client for interacting with AI chat models.
   ./posting
 
 Prime Agent
-- Self-hosted service: prime-agent.
+- Prime Agent is a self-hosted autonomous AI agent framework.
   ./prime-agent
 
 Proxmox
@@ -1145,7 +1141,7 @@ qBittorrent
   ./qbittorrent
 
 Qm
-- Self-hosted service: qm.
+- QM is a self-hosted queue and message management tool.
   ./qm
 
 R2
@@ -1157,11 +1153,11 @@ Radicale
   ./radicale
 
 Rconcli
-- Self-hosted service: rconcli.
+- RCON-CLI is a command-line tool for sending RCON commands to game servers.
   ./rconcli
 
 Recipesage
-- Self-hosted service: recipesage.
+- RecipeSage is a self-hosted recipe manager and meal planner.
   ./recipesage
 
 Recyclarr
@@ -1173,11 +1169,11 @@ Redirect
   ./redirect
 
 Rejourney
-- Self-hosted service: rejourney.
+- ReJourney is a self-hosted AI image generation and gallery tool.
   ./rejourney
 
 Replaya
-- Self-hosted service: replaya.
+- Replaya is a self-hosted media recording and replay tool.
   ./replaya
 
 Repo Flow
@@ -1217,7 +1213,7 @@ Rhode Code
   ./rhode-code
 
 Rmux
-- Self-hosted service: rmux.
+- RMux is a self-hosted terminal multiplexing / remote shell manager.
   ./rmux
 
 Routr
@@ -1241,7 +1237,7 @@ Rukovoditel
   ./rukovoditel
 
 Runtm
-- Self-hosted service: runtm.
+- RunTM is a self-hosted tool for running and tracking timed tasks.
   ./runtm
 
 RustDesk Server
@@ -1261,7 +1257,7 @@ Sama
   ./sama
 
 Se2Eend
-- Self-hosted service: se2eend.
+- Se2eEnd is a self-hosted end-to-end testing and monitoring tool.
   ./se2eend
 
 Seaweedfs
@@ -1281,7 +1277,7 @@ Seppo
   ./seppo
 
 Servas
-- Self-hosted service: servas.
+- Servas is a self-hosted bookmark manager with tagging and sharing groups.
   ./servas
 
 Shkeeper
@@ -1293,7 +1289,7 @@ Signoz
   ./signoz
 
 Sillytavern
-- Self-hosted service: sillytavern.
+- SillyTavern is a self-hosted, feature-rich UI for chatting with LLMs and character cards.
   ./sillytavern
 
 Simplelogin
@@ -1301,11 +1297,11 @@ Simplelogin
   ./simplelogin
 
 Simplement
-- Self-hosted service: simplement.
+- Simplex is a self-hosted simple encrypted messaging server (SimpleX-based).
   ./simplement
 
 Simplex Chat
-- Self-hosted service: simplex-chat.
+- SimpleX Chat is a decentralized, metadata-minimizing end-to-end encrypted messenger.
   ./simplex-chat
 
 Sip3
@@ -1321,7 +1317,7 @@ Siyuan
   ./siyuan
 
 Slash
-- Self-hosted service: slash.
+- Slash is a self-hosted bookmark and link shortener with a clean UI.
   ./slash
 
 Slink
@@ -1337,7 +1333,7 @@ Smite
   ./smite
 
 Snapotter
-- Snapotter: self-hosted service for managing and viewing server snapshots/backups
+- Snapotter is a self-hosted screenshot and image capture management tool.
   ./snapotter
 
 Snypy
@@ -1361,7 +1357,7 @@ Spoolman
   ./spoolman
 
 Spooty
-- Self-hosted service: spooty.
+- Spooty is a self-hosted Spotify downloader and music library tool.
   ./spooty
 
 Squidex
@@ -1385,7 +1381,7 @@ Static Web Server
   ./static-web-server
 
 Stirling PDF
-- Stirling-PDF is a versatile, open-source toolkit that allows you to perform various PDF manipulations, such as merging, splitting, compressing, and converting PDF files.
+- Local PDF manipulation toolkit (merge, split, convert)
   ./stirling-pdf
 
 Stirling PDF
@@ -1393,7 +1389,7 @@ Stirling PDF
   ./stirlingpdf
 
 Strava
-- Self-hosted service: strava.
+- Strava self-hosted connector for syncing and visualising fitness data.
   ./strava
 
 Stripe Proxy
@@ -1441,7 +1437,7 @@ Synapse
   ./synapse
 
 Tailchat
-- Self-hosted service: tailchat.
+- TailChat is a self-hosted, plugin-based, distributed chat and social platform.
   ./tailchat
 
 Tandoor
@@ -1461,7 +1457,7 @@ Telebugs
   ./telebugs
 
 Teleport
-- Self-hosted service: teleport.
+- Teleport is an open-source access plane for SSH, Kubernetes and web apps with audit.
   ./teleport
 
 Text Gen Inference
@@ -1489,11 +1485,11 @@ Tinode
   ./tinode
 
 Tiramisu
-- Self-hosted service: tiramisu.
+- Tiramisu is a self-hosted personal productivity and task dashboard.
   ./tiramisu
 
 Tldraw
-- Self-hosted service: tldraw.
+- tldraw is an open-source infinite-canvas whiteboard / drawing SDK and app.
   ./tldraw
 
 Tracktor
@@ -1505,7 +1501,7 @@ Trailbase
   ./trailbase
 
 Transfer Sh
-- transfer.sh: easy, self-hosted service for transferring files over the internet
+- transfer.sh is a self-hosted, simple file sharing service with easy uploads.
   ./transfer-sh
 
 Transmute
@@ -1513,7 +1509,7 @@ Transmute
   ./transmute
 
 Trek
-- Self-hosted service: trek.
+- Trek is a self-hosted travel and route tracking tool.
   ./trek
 
 Trigger Dev
@@ -1521,7 +1517,7 @@ Trigger Dev
   ./trigger-dev
 
 Ttrss
-- Self-hosted service: ttrss.
+- Tiny Tiny RSS is a free, self-hosted web-based news feed (RSS/Atom) reader.
   ./ttrss
 
 Tuleap
@@ -1537,7 +1533,7 @@ Txtdot
   ./txtdot
 
 Unmanic
-- Self-hosted service: unmanic.
+- Unmanic is a self-hosted library media transcoder that normalises your video files.
   ./unmanic
 
 Url To Png
@@ -1553,7 +1549,7 @@ Vikunja
   ./vikunja
 
 Voltius
-- Self-hosted service: voltius.
+- Voltius is a self-hosted energy and EV charging management dashboard.
   ./voltius
 
 Wagmios
@@ -1577,7 +1573,7 @@ Watchtower
   ./watchtower
 
 Wayback
-- Self-hosted service: wayback.
+- Wayback is a self-hosted web archiving tool that snapshots pages to WARC.
   ./wayback
 
 Wazo
@@ -1605,7 +1601,7 @@ Workadventure
   ./workadventure
 
 Writer Computer
-- Self-hosted service: writer-computer.
+- Writer (writer.com) is an enterprise AI writing assistant (no self-hosted image).
   ./writer-computer
 
 Xandikos
@@ -1621,7 +1617,7 @@ XWiki
   ./xwiki
 
 Yaade
-- Self-hosted service: yaade.
+- Yaade is a self-hosted, performance-focused API testing and documentation tool.
   ./yaade
 
 Yarn Social
@@ -1661,11 +1657,11 @@ Zeit
   ./zeit
 
 Zeroclaw
-- Self-hosted service: zeroclaw.
+- ZeroClaw is a self-hosted AI agent orchestration framework.
   ./zeroclaw
 
 Zerostack
-- Self-hosted service: zerostack.
+- ZeroStack is a self-hosted zero-config app and service stack manager.
   ./zerostack
 
 Zimbra Collaboration
@@ -1689,7 +1685,7 @@ CRM & BUSINESS TOOLS
 ================================================================================
 
 Client Management
-- Invoice, quotes, and client management for freelancers and agencies.
+- Invoice, quotes, and client management for freelancers and agencies
   ./client-management
 
 Dolibarr
@@ -1709,7 +1705,7 @@ Magento
   ./magento
 
 October CMS
-- Content management system; simple and extensible.
+- Content management system; simple and extensible
   ./october-cms
 
 Odoo
@@ -1721,7 +1717,7 @@ OpenCart
   ./opencart
 
 PartKeepSystem
-- PHP/MySQL web application; organize and manage parts inventory.
+- PHP/MySQL web application; organize and manage parts inventory
   ./partkeep-system
 
 PrestaShop
@@ -1741,11 +1737,11 @@ Shopware
   ./shopware
 
 Snipe-IT
-- Asset management solution; manage your IT assets and equipment.
+- Asset management solution; manage your IT assets and equipment
   ./snipe-it
 
 Spree Commerce
-- Complete online store platform; Ruby on Rails based.
+- Complete online store platform; Ruby on Rails based
   ./spree-commerce
 
 Sylius
@@ -1781,11 +1777,11 @@ Exim
   ./exim
 
 iRedMail
-- Complete mail server solution; quick and easy setup.
+- Complete mail server solution; quick and easy setup
   ./iRedMail
 
 Mailcow
-- Mail server suite; Docker-based email solution.
+- Email solution; complete mail server suite.
   ./mailcow
 
 Mailu
@@ -1865,7 +1861,7 @@ OpenProject
   ./openproject
 
 Outline
-- Team wiki and documentation platform; simple and clean interface.
+- Team knowledge base and documentation; clean and fast wiki.
   ./outline
 
 Plane
@@ -1877,7 +1873,7 @@ Restyaboard
   ./restyaboard
 
 Standard Notes
-- Encrypted notes app; focus on privacy and security.
+- Encrypted notes app; focus on privacy and security
   ./standard-notes
 
 Taiga
@@ -1897,7 +1893,7 @@ Wekan
   ./wekan
 
 Wiki.js
-- Modern and powerful wiki app; built on Node.js with Vue.js frontend.
+- Modern and powerful wiki app; built on Node.js with Vue.js frontend
   ./wiki-js
 
 ================================================================================
@@ -1949,7 +1945,7 @@ Matomo
   ./matomo
 
 OpenWebUI
-- Self-hosted OpenAI-powered web UI; chat with AI models locally.
+- Open WebUI is a feature-rich, self-hosted AI platform that provides a ChatGPT-style interface for local and cloud-based AI models.
   ./open-webui
 
 OpenWebUI
@@ -1957,7 +1953,7 @@ OpenWebUI
   ./openwebui
 
 Plausible Analytics
-- Simple, privacy-focused web analytics alternative to Google Analytics.
+- Simple, privacy-focused web analytics alternative to Google Analytics
   ./plausible-analytics
 
 Tempo
@@ -2007,6 +2003,10 @@ Keystone
 Paperless-ngx
 - Paperless-ngx is a community-supported open-source document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper.
   ./paperless
+
+Paperless-ngx
+- Document management system; scan, index, archive
+  ./paperless-ngx
 
 Payload CMS
 - React-powered Node.js CMS; modern and customizable.
@@ -2097,7 +2097,7 @@ BookWyrm
   ./bookwyrm
 
 Crush Propulsion
-- Social platform for sharing thoughts and ideas.
+- Social platform for sharing thoughts and ideas
   ./crush-propulsion
 
 Friendica
@@ -2129,7 +2129,7 @@ PeerTube
   ./peertube
 
 Pixelfed
-- Free and open source photo sharing platform; Instagram alternative.
+- Federated photo sharing; Instagram alternative.
   ./pixelfed
 
 Pleroma
@@ -2165,7 +2165,7 @@ Docker
   ./docker
 
 HashiCorp Tools
-- Suite of infrastructure tools: Terraform, Vault, Consul, Nomad.
+- Suite of infrastructure tools: Terraform, Vault, Consul, Nomad
   ./hashicorp-tools
 
 Nomad
@@ -2221,7 +2221,7 @@ InfluxDB
   ./influxdb
 
 MariaDB ColumnStore
-- Columnar storage engine for MariaDB; optimized for analytics workloads.
+- Columnar storage engine for MariaDB; optimized for analytics workloads
   ./mariadb-columnstore
 
 MongoDB
@@ -2229,7 +2229,7 @@ MongoDB
   ./mongodb
 
 MySQL / MariaDB
-- Popular relational database; MariaDB is a drop-in MySQL compatible alternative.
+- Popular relational database; MariaDB is a drop-in MySQL compatible alternative
   ./mysql-mariadb
 
 Neo4j
@@ -2269,7 +2269,7 @@ Graylog
   ./graylog
 
 HashiCorp Vault
-- Secrets management and encryption; secure key storage.
+- Secrets management and encryption; secure key storage
   ./hashicorp-vault
 
 OSSEC
@@ -2281,7 +2281,7 @@ Snort
   ./snort
 
 Step-Certificates
-- Private CA; X.509 PKI and ACME server.
+- Private CA; X.509 PKI and ACME server
   ./step-certificates
 
 Suricata
@@ -2289,7 +2289,7 @@ Suricata
   ./suricata
 
 Vault
-- Secrets management platform; secure storage for passwords and keys.
+- Secrets management platform; secure storage for sensitive data.
   ./vault
 
 Wazuh
@@ -2309,7 +2309,7 @@ Ambassador
   ./ambassador
 
 Apache APISIX
-- Real-time API gateway; built on etcd and Lua.
+- Real-time API gateway; built on etcd and Lua
   ./apache-apisix
 
 Caddy
@@ -2409,7 +2409,7 @@ IPFS
   ./ipfs
 
 minIO
-- High-performance, distributed object storage; S3-compatible API.
+- High-performance object storage; S3-compatible.
   ./minio
 
 Nextcloud
@@ -2417,7 +2417,7 @@ Nextcloud
   ./nextcloud
 
 Pydio Cells
-- Enterprise file sharing and sync platform; modern alternative to Nextcloud.
+- Enterprise file sharing and sync platform; modern alternative to Nextcloud
   ./pydio-cells
 
 Rclone
@@ -2425,7 +2425,7 @@ Rclone
   ./rclone
 
 Rclone Browser
-- GUI for Rclone; manage cloud storage with local file browser interface.
+- GUI for Rclone; manage cloud storage with local file browser interface
   ./rclone-browser
 
 Seafile
@@ -2437,7 +2437,7 @@ Syncthing
   ./syncthing
 
 Tahoe-LAFS
-- Decentralized, fault-tolerant, encrypted file storage grid.
+- Decentralized, fault-tolerant, encrypted file storage grid
   ./tahoe-lafs
 
 ================================================================================
@@ -2445,7 +2445,7 @@ AI & LLM TOOLS
 ================================================================================
 
 GPT Engineer
-- AI-powered code generation tool; create projects from descriptions.
+- AI-powered code generation tool; create projects from descriptions
   ./gpt-engineer
 
 GPT4All
@@ -2469,11 +2469,11 @@ Ollama
   ./ollama
 
 PrivateGPT
-- Open-source API layer turning local models into production AI apps.
+- Open-source API layer turning local models into production AI apps
   ./private-gpt
 
 Text Generation WebUI
-- User interface for running LLMs locally; extensive model support.
+- User interface for running LLMs locally; extensive model support
   ./text-generation-webui
 
 vLLM
@@ -2489,11 +2489,11 @@ Briar
   ./briar
 
 Element (Web App)
-- Matrix client for secure decentralized communication.
+- Matrix client for secure decentralized communication
   ./element-web-app
 
 Matrix Synapse
-- Decentralized communication protocol server; bridges to other services.
+- Decentralized communication protocol server; bridges to other services
   ./matrix-synapse
 
 Mattermost
@@ -2501,7 +2501,7 @@ Mattermost
   ./mattermost
 
 Rocket.Chat
-- Web chat platform for teams; built with Meteor.js framework.
+- Web chat platform for teams; built with Meteor.js framework
   ./rocket-chat
 
 Rocket.Chat
@@ -2541,7 +2541,7 @@ GitLab
   ./gitlab
 
 GitLab CI
-- Built-in CI/CD for GitLab; automated testing and deployment.
+- Built-in CI/CD for GitLab; automated testing and deployment
   ./gitlab-ci
 
 Gogs
@@ -2557,7 +2557,7 @@ SourceHut
   ./sourcehut
 
 Woodpecker CI
-- Lightweight CI/CD system; fork of Drone.
+- Lightweight CI/CD system; fork of Drone
   ./woodpecker-ci
 
 ================================================================================
@@ -2569,7 +2569,7 @@ Alertmanager
   ./alertmanager
 
 Cloud Foundry
-- Cloud-native platform; PaaS for app deployment.
+- Cloud-native platform; PaaS for app deployment
   ./cloud-foundry
 
 Jaeger
@@ -2585,7 +2585,7 @@ Mimir
   ./mimir
 
 Prometheus
-- Monitoring system with dimensional data model; query language PromQL.
+- Monitoring and alerting toolkit; systems and services monitoring.
   ./prometheus
 
 Thanos
@@ -2645,7 +2645,7 @@ MUSIC & AUDIO
 ================================================================================
 
 Airsonic-Advanced
-- Music server with multi-user support; stream your music anywhere.
+- Music server with multi-user support; stream your music anywhere
   ./airsonic-advanced
 
 Ampache
@@ -2653,7 +2653,7 @@ Ampache
   ./ampache
 
 Funkwhale
-- Community-focused music sharing platform; decentralized and open source.
+- Peer-to-peer music sharing; listen and share music in a friendly way.
   ./funkwhale
 
 Koel
@@ -2697,7 +2697,7 @@ NewsBlur
   ./newsblur
 
 ReaderRise
-- Self-hosted Feedbin alternative; clean UI with OPML import/export.
+- Self-hosted Feedbin alternative; clean UI with OPML import/export
   ./reader-rise
 
 RSSHub
@@ -2705,11 +2705,11 @@ RSSHub
   ./rsshub
 
 The Old Reader
-- Social RSS reader; sharing and discovery of RSS feeds.
+- Social RSS reader; sharing and discovery of RSS feeds
   ./the-old-reader
 
 Tiny Tiny RSS
-- Web-based news reader; customizable and extensible RSS aggregator.
+- Web-based news reader; customizable and extensible RSS aggregator
   ./tiny-tiny-rss
 
 ================================================================================
@@ -2737,7 +2737,7 @@ Whoogle
   ./whoogle
 
 Wikipedia (Kiwix)
-- Offline Wikipedia mirror; search Wikimedia projects without internet.
+- Offline Wikipedia mirror; search Wikimedia projects without internet
   ./wikipedia-kiwix
 
 YaCy
@@ -2765,7 +2765,7 @@ Lychee
   ./lychee
 
 OIDC Proxy
-- Single sign-on solution for legacy applications using OAuth2/OIDC.
+- Single sign-on solution for legacy applications using OAuth2/OIDC
   ./oidc-proxy
 
 Passbolt
@@ -2821,7 +2821,7 @@ Bitwarden
   ./bitwarden
 
 Bitwarden_RS
-- Lightweight Bitwarden server; Rust implementation of Bitwarden API.
+- Lightweight Bitwarden server; Rust implementation of Bitwarden API
   ./bitwarden-rs
 
 KeePassXC
@@ -2849,7 +2849,7 @@ VPN & NETWORKING
 ================================================================================
 
 Algo VPN
-- VPN servers; deploy IPsec VPN on popular cloud providers.
+- VPN servers; deploy IPsec VPN on popular cloud providers
   ./algo-vpn
 
 OpenConnect
@@ -2861,7 +2861,7 @@ OpenVPN
   ./openvpn
 
 Outline VPN
-- Secure team network access; Shadowsocks-based proxy.
+- Secure team network access; Shadowsocks-based proxy
   ./outline-vpn
 
 Tailscale
@@ -2881,7 +2881,7 @@ ADDITIONAL SERVICES
 ================================================================================
 
 Cloudflare Argo
-- Cloudflare's smart routing; secure and fast connections.
+- Cloudflare's smart routing; secure and fast connections
   ./cloudflare-argo
 
 Cloudflared
@@ -2889,11 +2889,11 @@ Cloudflared
   ./cloudflared
 
 Health Checker
-- Simple monitoring tool; check service availability.
+- Simple monitoring tool; check service availability
   ./health-checker
 
 NGINX Proxy Manager
-- Web interface for managing Nginx proxies; simple reverse proxy.
+- Web interface for managing Nginx proxies; simple reverse proxy
   ./nginx-proxy-manager
 
 OpenResty
@@ -2901,7 +2901,7 @@ OpenResty
   ./openresty
 
 Uptime Kuma
-- Self-hosting status page; monitor websites and services.
+- Self-hosting status page; monitor websites and services
   ./uptime-kuma
 
 ================================================================================
@@ -2913,7 +2913,7 @@ AFS
   ./afs
 
 FTP Server
-- File Transfer Protocol server; traditional file access.
+- File Transfer Protocol server; traditional file access
   ./ftp-server
 
 NFS
@@ -2925,7 +2925,7 @@ Samba
   ./samba
 
 SFTP Server
-- SSH File Transfer Protocol; secure file transfer.
+- SSH File Transfer Protocol; secure file transfer
   ./sftp-server
 
 WebDAV
@@ -2941,7 +2941,7 @@ Kodi
   ./kodi
 
 Plex
-- Streaming media platform with extensive client support and organization.
+- Media server for organizing and streaming your media library.
   ./plex
 
 Recast
@@ -2957,7 +2957,7 @@ Stremth
   ./stremth
 
 VLC Frontend
-- Web interface for managing and watching VLC content.
+- Web interface for managing and watching VLC content
   ./vlc-frontend
 
 ================================================================================
@@ -2965,7 +2965,7 @@ VIRTUALIZATION & CONTAINING
 ================================================================================
 
 Kubernetes
-- Container orchestration; automate deployment, scaling, management.
+- System for automating deployment, scaling, and management.
   ./kubernetes
 
 KVM
@@ -2977,7 +2977,7 @@ Libvirt
   ./libvirt
 
 Podman
-- Daemonless container engine; rootless containers for security.
+- Daemonless container engine; drop-in replacement for Docker.
   ./podman
 
 QEMU
@@ -2993,7 +2993,7 @@ BACKUP & SYNC TOOLS
 ================================================================================
 
 Duplicati
-- Backup tool; encrypted, incremental, compressed backups.
+- Backup tool; encrypt, compress and schedule backups.
   ./duplicati
 
 OwnCloud
@@ -3029,7 +3029,7 @@ MakeMKV
   ./makemkv
 
 Sub Converter
-- Subtitle file converter; convert between different subtitle formats.
+- Subtitle file converter; convert between different subtitle formats
   ./sub-converter
 
 Tautulli
@@ -3069,7 +3069,7 @@ HyperSwitch
   ./hyperswitch
 
 Kill Bill
-- Open source payment system; subscriptions and billing platform.
+- Open source payment system; subscriptions and billing platform
   ./kill-bill
 
 Omnipay
@@ -3077,7 +3077,7 @@ Omnipay
   ./omnipay
 
 Payment.js
-- Simple payment processing; handle credit cards and payments.
+- Simple payment processing; handle credit cards and payments
   ./payment-js
 
 Payum
@@ -3137,7 +3137,7 @@ SOCIAL & COMMUNITY PLATFORMS
 ================================================================================
 
 NocoDB
-- Open-source Airtable alternative; turn databases into smart tables.
+- Open-source Airtable alternative; turn databases into smart tables
   ./noco-db
 
 RowsHub

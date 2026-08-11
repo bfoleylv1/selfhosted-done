@@ -1,6 +1,6 @@
 # Pi
 
-Self-hosted service: pi.
+Pi is an OpenAI-hosted experimental personal AI (no self-hosted image).
 
 | | |
 |---|---|

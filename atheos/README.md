@@ -1,6 +1,6 @@
 # Atheos
 
-Self-hosted service: atheos.
+Atheos is a self-hosted web-based IDE and file manager for managing code on a server.
 
 | | |
 |---|---|

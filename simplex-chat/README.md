@@ -1,6 +1,6 @@
 # Simplex Chat
 
-Self-hosted service: simplex-chat.
+SimpleX Chat is a decentralized, metadata-minimizing end-to-end encrypted messenger.
 
 | | |
 |---|---|

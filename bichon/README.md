@@ -1,6 +1,6 @@
 # Bichon
 
-Self-hosted service: bichon.
+Bichon is a self-hosted RSS feed reader with a focus on privacy and simplicity.
 
 | | |
 |---|---|

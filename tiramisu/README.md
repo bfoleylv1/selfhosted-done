@@ -1,6 +1,6 @@
 # Tiramisu
 
-Self-hosted service: tiramisu.
+Tiramisu is a self-hosted personal productivity and task dashboard.
 
 | | |
 |---|---|

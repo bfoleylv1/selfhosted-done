@@ -1,6 +1,6 @@
 # Gencad
 
-Self-hosted service: gencad.
+GenCAD is a self-hosted generative CAD / design tool.
 
 | | |
 |---|---|

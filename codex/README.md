@@ -1,6 +1,6 @@
 # Codex
 
-Self-hosted service: codex.
+Codex is a self-hosted AI coding assistant endpoint (OpenAI Codex-compatible).
 
 | | |
 |---|---|

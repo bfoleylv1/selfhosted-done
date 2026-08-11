@@ -1,6 +1,6 @@
 # Crush
 
-Self-hosted service: crush.
+Crush is a command-line AI coding agent with shell and editor integration.
 
 | | |
 |---|---|

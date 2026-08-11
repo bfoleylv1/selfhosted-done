@@ -1,6 +1,6 @@
 # Openwa
 
-Self-hosted service: openwa.
+OpenWA is a self-hosted WhatsApp API gateway (browser-automation based).
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Nanoclaw
 
-Self-hosted service: nanoclaw.
+NanoClaw is a lightweight self-hosted AI agent playground.
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Piqueserver
 
-Self-hosted service: piqueserver.
+Piqueserver is a self-hosted server implementation for the open-source Ace of Spades game.
 
 | | |
 |---|---|

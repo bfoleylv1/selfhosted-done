@@ -1,6 +1,6 @@
 # Echo
 
-Self-hosted service: echo.
+Echo is a self-hosted notification and webhook routing service.
 
 | | |
 |---|---|

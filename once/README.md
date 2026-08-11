@@ -1,6 +1,6 @@
 # Once
 
-Self-hosted service: once.
+Once is a self-hosted platform for building and hosting AI agents.
 
 | | |
 |---|---|

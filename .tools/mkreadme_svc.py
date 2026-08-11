@@ -13,7 +13,9 @@ import json, os, re, sys, yaml
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CATCACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                         "categories.json")
-DESC_FILES = ["/tmp/scaletail_desc.json", "/tmp/desc_map.json",
+DESC_FILES = [os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                           "descriptions.json"),
+              "/tmp/scaletail_desc.json", "/tmp/desc_map.json",
               os.path.join(os.path.dirname(os.path.abspath(__file__)),
                            "desc_map.json")]
 

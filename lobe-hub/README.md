@@ -1,6 +1,6 @@
 # Lobe Hub
 
-Self-hosted service: lobe-hub.
+LobeHub (LobeChat) is an open-source chat UI for AI models with plugin support.
 
 | | |
 |---|---|

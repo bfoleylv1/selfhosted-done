@@ -1,6 +1,6 @@
 # Autogpt
 
-Self-hosted service: autogpt.
+Auto-GPT is an experimental open-source autonomous AI agent that chains GPT tasks to achieve goals.
 
 | | |
 |---|---|

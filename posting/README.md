@@ -1,6 +1,6 @@
 # Posting
 
-Self-hosted service: posting.
+Posting is a TUI (terminal) client for interacting with AI chat models.
 
 | | |
 |---|---|

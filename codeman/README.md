@@ -1,6 +1,6 @@
 # Codeman
 
-Self-hosted service: codeman.
+Codeman is a self-hosted code snippet and paste management tool.
 
 | | |
 |---|---|

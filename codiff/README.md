@@ -1,6 +1,6 @@
 # Codiff
 
-Self-hosted service: codiff.
+Codiff is a self-hosted tool for reviewing and diffing code changes.
 
 | | |
 |---|---|

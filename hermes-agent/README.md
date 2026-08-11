@@ -1,6 +1,6 @@
 # Hermes Agent
 
-Self-hosted service: hermes-agent.
+Hermes Agent is a self-hosted AI agent framework and CLI.
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Fablecut
 
-Self-hosted service: fablecut.
+Fablecut is a self-hosted video editing and storytelling tool.
 
 | | |
 |---|---|

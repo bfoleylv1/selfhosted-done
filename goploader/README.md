@@ -1,6 +1,6 @@
 # Goploader
 
-Self-hosted service: goploader.
+Goploader is a simple self-hosted file upload server with expiring links.
 
 | | |
 |---|---|

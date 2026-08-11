@@ -1,6 +1,6 @@
 # Runtm
 
-Self-hosted service: runtm.
+RunTM is a self-hosted tool for running and tracking timed tasks.
 
 | | |
 |---|---|

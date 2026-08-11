@@ -1,6 +1,6 @@
 # Pdf Dark
 
-Self-hosted service: pdf-dark.
+PDF-Dark is a self-hosted tool for dark-mode / night reading of PDFs.
 
 | | |
 |---|---|

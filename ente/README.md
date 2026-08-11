@@ -1,6 +1,6 @@
 # Ente
 
-Self-hosted service: ente.
+Ente is an end-to-end encrypted photos and 2FA authenticator service you can self-host.
 
 | | |
 |---|---|

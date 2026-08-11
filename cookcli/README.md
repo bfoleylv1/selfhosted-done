@@ -1,6 +1,6 @@
 # Cookcli
 
-Self-hosted service: cookcli.
+CookCLI is a command-line tool for the Cooklang recipe format.
 
 | | |
 |---|---|

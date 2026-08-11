@@ -1,6 +1,6 @@
 # Affine Ce
 
-Self-hosted service: affine-ce.
+Affine Community Edition - the open-source local-first workspace for notes, docs and whiteboards.
 
 | | |
 |---|---|

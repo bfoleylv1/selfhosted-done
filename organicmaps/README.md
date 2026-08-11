@@ -1,6 +1,6 @@
 # Organicmaps
 
-Self-hosted service: organicmaps.
+Organic Maps is an open-source offline maps app; the server side serves map data.
 
 | | |
 |---|---|

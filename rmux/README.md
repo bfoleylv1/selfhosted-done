@@ -1,6 +1,6 @@
 # Rmux
 
-Self-hosted service: rmux.
+RMux is a self-hosted terminal multiplexing / remote shell manager.
 
 | | |
 |---|---|

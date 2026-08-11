@@ -79,12 +79,12 @@ def main():
     for d in dirs:
         k = norm(d)
         name = old[k][0] if k in old else pretty(d)
-        if k in old and old[k][1]:
-            text = old[k][1]
-            kept += 1
-        elif d in desc and desc[d].get("desc"):
+        if d in desc and desc[d].get("desc"):
             text = desc[d]["desc"]
             added += 1
+        elif k in old and old[k][1]:
+            text = old[k][1]
+            kept += 1
         else:
             # read the service's own README first line of prose
             rp = os.path.join(ROOT, d, "README.md")

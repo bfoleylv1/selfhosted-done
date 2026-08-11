@@ -1,6 +1,6 @@
 # Copyparty
 
-Self-hosted service: copyparty.
+Copyparty is a portable file server with a web UI, upload support and media indexing.
 
 | | |
 |---|---|

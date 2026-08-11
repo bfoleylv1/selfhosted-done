@@ -1,6 +1,6 @@
 # Netwatch
 
-Self-hosted service: netwatch.
+NetWatch is a self-hosted network monitoring and traffic visualisation tool.
 
 | | |
 |---|---|

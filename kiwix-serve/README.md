@@ -1,6 +1,6 @@
 # Kiwix Serve
 
-Self-hosted service: kiwix-serve.
+Kiwix serves offline Wikipedia and other content from ZIM archives.
 
 | | |
 |---|---|

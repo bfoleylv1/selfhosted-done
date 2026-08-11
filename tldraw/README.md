@@ -1,6 +1,6 @@
 # Tldraw
 
-Self-hosted service: tldraw.
+tldraw is an open-source infinite-canvas whiteboard / drawing SDK and app.
 
 | | |
 |---|---|

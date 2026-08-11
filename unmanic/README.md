@@ -1,6 +1,6 @@
 # Unmanic
 
-Self-hosted service: unmanic.
+Unmanic is a self-hosted library media transcoder that normalises your video files.
 
 | | |
 |---|---|

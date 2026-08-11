@@ -1,6 +1,6 @@
 # Bagisto
 
-Self-hosted service: bagisto.
+Bagisto is a free open-source Laravel e-commerce platform for online stores.
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Zeroclaw
 
-Self-hosted service: zeroclaw.
+ZeroClaw is a self-hosted AI agent orchestration framework.
 
 | | |
 |---|---|

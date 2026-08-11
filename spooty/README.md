@@ -1,6 +1,6 @@
 # Spooty
 
-Self-hosted service: spooty.
+Spooty is a self-hosted Spotify downloader and music library tool.
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Hive Pal
 
-Self-hosted service: hive-pal.
+Hive Pal is a self-hosted crypto wallet management dashboard.
 
 | | |
 |---|---|

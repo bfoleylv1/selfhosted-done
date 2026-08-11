@@ -1,6 +1,6 @@
 # Chatto
 
-Self-hosted service: chatto.
+Chatto is a minimal self-hosted chatbot framework for building conversational bots.
 
 | | |
 |---|---|

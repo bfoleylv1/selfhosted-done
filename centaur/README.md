@@ -1,6 +1,6 @@
 # Centaur
 
-Self-hosted service: centaur.
+Centaur is a self-hosted content and media management tool.
 
 | | |
 |---|---|

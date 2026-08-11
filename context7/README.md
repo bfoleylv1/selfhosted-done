@@ -1,6 +1,6 @@
 # Context7
 
-Self-hosted service: context7.
+Context7 is an MCP server that fetches up-to-date, version-specific library documentation for LLMs.
 
 | | |
 |---|---|

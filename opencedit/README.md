@@ -1,6 +1,6 @@
 # Opencedit
 
-Self-hosted service: opencedit.
+OpenCut is a self-hosted, open-source video editing platform.
 
 | | |
 |---|---|

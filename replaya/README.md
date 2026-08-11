@@ -1,6 +1,6 @@
 # Replaya
 
-Self-hosted service: replaya.
+Replaya is a self-hosted media recording and replay tool.
 
 | | |
 |---|---|

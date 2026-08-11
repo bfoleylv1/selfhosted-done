@@ -1,6 +1,6 @@
 # Anchor
 
-Self-hosted service: anchor.
+Anchor is a self-hosted community posting and microblog platform.
 
 | | |
 |---|---|

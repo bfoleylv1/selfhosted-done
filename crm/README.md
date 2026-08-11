@@ -1,6 +1,6 @@
 # Crm
 
-Self-hosted service: crm.
+A self-hosted customer relationship management entry.
 
 | | |
 |---|---|

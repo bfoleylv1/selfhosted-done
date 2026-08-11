@@ -1,6 +1,6 @@
 # Dvvinyl
 
-Self-hosted service: dvvinyl.
+DVVinyl is a self-hosted music collection and vinyl tracking tool.
 
 | | |
 |---|---|

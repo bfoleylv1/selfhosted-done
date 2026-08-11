@@ -1,6 +1,6 @@
 # Firecamp
 
-Self-hosted service: firecamp.
+Firecamp is an open-source API development and testing platform.
 
 | | |
 |---|---|

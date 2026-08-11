@@ -1,6 +1,6 @@
 # Honeywire
 
-Self-hosted service: honeywire.
+Honeywire is a self-hosted network monitoring and honeypot tool.
 
 | | |
 |---|---|

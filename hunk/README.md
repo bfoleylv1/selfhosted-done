@@ -1,6 +1,6 @@
 # Hunk
 
-Self-hosted service: hunk.
+Hunk is a self-hosted content and media serving tool.
 
 | | |
 |---|---|

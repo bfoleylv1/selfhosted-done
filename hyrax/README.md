@@ -1,6 +1,6 @@
 # Hyrax
 
-Self-hosted service: hyrax.
+Hyrax is a self-hosted digital repository and asset management platform (Samvera).
 
 | | |
 |---|---|

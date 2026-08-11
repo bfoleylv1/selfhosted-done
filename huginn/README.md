@@ -1,6 +1,6 @@
 # Huginn
 
-Self-hosted service: huginn.
+Huginn is a system for building agents that perform automated tasks and monitor the web.
 
 | | |
 |---|---|

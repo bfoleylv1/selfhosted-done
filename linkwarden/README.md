@@ -1,6 +1,6 @@
 # Linkwarden
 
-Self-hosted service: linkwarden.
+Linkwarden is a self-hosted bookmark manager that archives pages for long-term preservation.
 
 | | |
 |---|---|

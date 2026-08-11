@@ -38,86 +38,86 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [42Links](./42links) | `node:20-alpine` | `8080` | — | Self-hosted bookmark and link dashboard |
 | [92Five](./92five) | `php:8.2-apache` | `20393` | — | Self-hosted project management and collaboration tool |
 | [Adyen Proxy](./adyen-proxy) | `node:20-alpine` | `20396` | — | Reverse proxy / bridge for the Adyen payment API |
-| [Affine](./affine) | `ghcr.io/toeverything/affine:stable` | `20406` | — | Self-hosted service: affine. |
-| [Affine Ce](./affine-ce) | `ghcr.io/toeverything/affine:stable` | `20407` | — | Self-hosted service: affine-ce. |
+| [Affine](./affine) | `ghcr.io/toeverything/affine:stable` | `20406` | — | Affine is an open-source, local-first workspace for docs, whiteboards and diagrams with end-to-end encryption. |
+| [Affine Ce](./affine-ce) | `ghcr.io/toeverything/affine:stable` | `20407` | — | Affine Community Edition - the open-source local-first workspace for notes, docs and whiteboards. |
 | [Agent Vault](./agent-vault) | `hashicorp/vault:latest` | `20398` | — | Open-source HTTP credential proxy and vault that brokers API credentials for AI agents without exposing the secrets |
 | [Akkoma](./akkoma) | `akkoma/akkoma:latest` | `20400` | — | Lightweight federated microblogging server (ActivityPub, Mastodon-compatible) |
 | [Alfresco](./alfresco) | `alfresco/alfresco-content-repository-community:latest` | `20408` | — | Alfresco Community Edition: open-source enterprise content management (ECM) platform |
 | [Aliasvault](./aliasvault) | `ghcr.io/aliasvault/aliasvault:latest` | `20409` | — | AliasVault: open-source password and alias manager with end-to-end encryption |
-| [Anchor](./anchor) | `solanafoundation/anchor:latest` | `20410` | — | Self-hosted service: anchor. |
+| [Anchor](./anchor) | `solanafoundation/anchor:latest` | `20410` | — | Anchor is a self-hosted community posting and microblog platform. |
 | [Answer](./answer) | `answerdev/answer:latest` | `20411` | — | Answer: open-source knowledge management and Q&A platform (Stack Overflow alternative) |
 | [Anythingllm](./anythingllm) | `mintplexlabs/anythingllm:latest` | `20412` | ✅ | AnythingLLM: all-in-one desktop and self-hosted app for chatting with documents using LLMs |
-| [App](./app) | `istio/app:latest` | `20525` | — | Self-hosted service: app. |
+| [App](./app) | `istio/app:latest` | `20525` | — | App is a generic self-hosted web application placeholder entry. |
 | [Appwrite](./appwrite) | `appwrite/appwrite:1.6.0` | `20003` | — | Open-source backend-as-a-service (BaaS) for web and mobile apps |
 | [Archivebox](./archivebox) | `ghcr.io/archivebox/archivebox:latest` | `20413` | — | ArchiveBox: open-source self-hosted internet archive (saves snapshots of websites) |
-| [Asmbb](./asmbb) | `dhclly/asmbb-v3.0.0-amd64-cn:latest` | `20414` | — | Self-hosted service: asmbb. |
-| [Atheos](./atheos) | `hlsiira/atheos:latest` | `20415` | — | Self-hosted service: atheos. |
-| [Autogpt](./autogpt) | `significantgravitas/auto-gpt:latest` | `20526` | — | Self-hosted service: autogpt. |
+| [Asmbb](./asmbb) | `dhclly/asmbb-v3.0.0-amd64-cn:latest` | `20414` | — | ASMbb is a lightweight self-hosted flat-file forum / bulletin board written in assembly. |
+| [Atheos](./atheos) | `hlsiira/atheos:latest` | `20415` | — | Atheos is a self-hosted web-based IDE and file manager for managing code on a server. |
+| [Autogpt](./autogpt) | `significantgravitas/auto-gpt:latest` | `20526` | — | Auto-GPT is an experimental open-source autonomous AI agent that chains GPT tasks to achieve goals. |
 | [B1Gmail](./b1gMail) | `php:8.2-apache` | `20006` | — | Self-hosted webmail and mail server suite |
-| [Backlog](./backlog) | `backlog/gateway-webapi:latest` | `20416` | — | Self-hosted service: backlog. |
-| [Bagisto](./bagisto) | `webkul/bagisto:latest` | `20417` | — | Self-hosted service: bagisto. |
+| [Backlog](./backlog) | `backlog/gateway-webapi:latest` | `20416` | — | Backlog is a self-hosted project and issue tracker with Git/Mercurial/SVN hosting and wikis. |
+| [Bagisto](./bagisto) | `webkul/bagisto:latest` | `20417` | — | Bagisto is a free open-source Laravel e-commerce platform for online stores. |
 | [Baikal](./baikal) | `ckulka/baikal:nginx` | `20009` | — | Lightweight CalDAV and CardDAV server |
 | [Bamboo](./bamboo) | `atlassian/bamboo:latest` | `8085` | — | Atlassian continuous integration and deployment server (commercial) |
 | [Bar Assistant](./bar-assistant) | `barassistant/server:v5` | `20010` | — | Self-hosted cocktail and drink recipe manager |
-| [Bichon](./bichon) | `rustmailer/bichon:latest` | `20527` | — | Self-hosted service: bichon. |
-| [Bindery](./bindery) | `bindery/speedtest:latest` | `20528` | — | Self-hosted service: bindery. |
+| [Bichon](./bichon) | `rustmailer/bichon:latest` | `20527` | — | Bichon is a self-hosted RSS feed reader with a focus on privacy and simplicity. |
+| [Bindery](./bindery) | `bindery/speedtest:latest` | `20528` | — | Bindery is a tool for laying out and publishing books in the browser. |
 | [Booklore](./booklore) | `ghcr.io/booklore-app/booklore:latest` | `6060` | — | Self-hosted book library and reading tracker |
 | [Browserstack Turboscale](./browserstack-turboscale) | `alpine:3.20` | `20019` | — | BrowserStack TurboScale - self-hosted device testing infrastructure (commercial) |
-| [Bruno](./bruno) | `alpine/bruno:latest` | `20418` | — | Self-hosted service: bruno. |
+| [Bruno](./bruno) | `alpine/bruno:latest` | `20418` | — | Bruno is an open-source offline API client / Git-friendly Postman alternative for testing HTTP endpoints. |
 | [Buddy Enterprise](./buddy-enterprise) | `debian:12-slim` | `20020` | — | Buddy Enterprise - self-hosted CI/CD automation server (commercial) |
 | [Bumpress](./bumpress) | `wordpress:latest` | `20419` | — | Bumpress self-hosted service. |
 | [C15T](./c15t) | `node:20-alpine` | `20021` | — | Open-source consent and privacy management platform |
 | [Calibre](./calibre) | `linuxserver/calibre:latest` | `8083` | — | Calibre: open-source e-book management and conversion server (Calibre-Web companion) |
-| [Canary Tokens](./canary-tokens) | `thinkst/canarytokens:latest` | `20420` | — | Self-hosted service: canary-tokens. |
+| [Canary Tokens](./canary-tokens) | `thinkst/canarytokens:latest` | `20420` | — | Canary Tokens lets you deploy honeytokens (files, links, DNS) to detect intrusions early. |
 | [Canvas Lms](./canvas-lms) | `instructure/canvas-lms:stable` | `3000` | — | Open-source learning management system (LMS) |
 | [Cap](./cap) | `alpine:3.20` | `20023` | — | Open-source screen recording and sharing tool |
 | [Castopod](./castopod) | `castopod/castopod:latest` | `20024` | ✅ | Self-hosted podcast hosting platform with ActivityPub federation |
-| [Centaur](./centaur) | `xbenjii/centaur:latest` | `20421` | — | Self-hosted service: centaur. |
+| [Centaur](./centaur) | `xbenjii/centaur:latest` | `20421` | — | Centaur is a self-hosted content and media management tool. |
 | [Centrifugo](./centrifugo) | `centrifugo/centrifugo:v5` | `20025` | — | Real-time messaging server (WebSocket/SSE) for live updates |
 | [Cerbos](./cerbos) | `ghcr.io/cerbos/cerbos:latest` | `3592` | — | Open-source fine-grained authorization / access-control engine |
 | [Cgit](./cgit) | `alpine:3.20` | `20027` | — | Lightweight web frontend for Git repositories |
 | [Changedetection](./changedetection) | `dgtlmoon/changedetection.io:latest` | `20422` | — | changedetection.io: self-hosted website change monitoring and notification service |
-| [Channeltube](./channeltube) | `thewicklowwolf/channeltube:latest` | `20423` | — | Self-hosted service: channeltube. |
-| [Chatbox](./chatbox) | `chatbox/docker:latest` | `20424` | — | Self-hosted service: chatbox. |
-| [Chatto](./chatto) | `jaimeteb/chatto:latest` | `20529` | — | Self-hosted service: chatto. |
+| [Channeltube](./channeltube) | `thewicklowwolf/channeltube:latest` | `20423` | — | Channel Tube (Conductor) aggregates and serves YouTube channel content as a self-hosted library. |
+| [Chatbox](./chatbox) | `chatbox/docker:latest` | `20424` | — | Chatbox is a desktop and self-hosted AI chat client supporting many LLM providers. |
+| [Chatto](./chatto) | `jaimeteb/chatto:latest` | `20529` | — | Chatto is a minimal self-hosted chatbot framework for building conversational bots. |
 | [Claude Code](./claude-code) | `anthropics/claude-code:latest` | `20530` | — | Claude Code: Anthropic's agentic CLI for coding tasks (self-hosted wrapper) |
-| [Cline](./cline) | `cline/python-helloworld:latest` | `20425` | — | Self-hosted service: cline. |
+| [Cline](./cline) | `cline/python-helloworld:latest` | `20425` | — | Cline (formerly Claude Dev) is an autonomous AI coding agent that runs in your terminal/editor. |
 | [Cloudron](./cloudron) | `ubuntu:24.04` | `20033` | — | Self-hosted PaaS for installing and managing web apps |
 | [Cluster Control](./cluster-control) | `severalnines/clustercontrol:latest` | `20034` | — | Severalnines ClusterControl - database cluster management and monitoring |
 | [Cockpit](./cockpit) | `quay.io/cockpit/ws:latest` | `9090` | — | Web-based Linux server administration dashboard |
-| [Codeman](./codeman) | `daicon001/codeman:latest` | `20426` | — | Self-hosted service: codeman. |
-| [Codex](./codex) | `photoprism/codex:latest` | `20427` | — | Self-hosted service: codex. |
-| [Codiff](./codiff) | `codiff/codiff:latest` | `20428` | — | Self-hosted service: codiff. |
+| [Codeman](./codeman) | `daicon001/codeman:latest` | `20426` | — | Codeman is a self-hosted code snippet and paste management tool. |
+| [Codex](./codex) | `photoprism/codex:latest` | `20427` | — | Codex is a self-hosted AI coding assistant endpoint (OpenAI Codex-compatible). |
+| [Codiff](./codiff) | `codiff/codiff:latest` | `20428` | — | Codiff is a self-hosted tool for reviewing and diffing code changes. |
 | [Collabora Online](./collabora-online) | `collabora/code:latest` | `9980` | — | Self-hosted LibreOffice-based online office suite |
 | [Comfyui](./comfyui) | `ghcr.io/ai-dock/comfyui:latest` | `8188` | ✅ | Node-based graphical UI for Stable Diffusion / generative AI |
 | [Commentario](./commentario) | `registry.gitlab.com/comentario/comentario:latest` | `20036` | — | Self-hosted comment system for static sites |
 | [Conduit](./conduit) | `matrixconduit/matrix-conduit:latest` | `6167` | — | Lightweight Matrix homeserver written in Rust |
-| [Context7](./context7) | `mcp/context7:latest` | `20429` | — | Self-hosted service: context7. |
-| [Cookcli](./cookcli) | `ghcr.io/cooklang/cookcli:latest` | `20430` | — | Self-hosted service: cookcli. |
-| [Copyparty](./copyparty) | `copyparty/ac:latest` | `20431` | — | Self-hosted service: copyparty. |
-| [Crm](./crm) | `fcarneiro/crm:latest` | `20432` | — | Self-hosted service: crm. |
+| [Context7](./context7) | `mcp/context7:latest` | `20429` | — | Context7 is an MCP server that fetches up-to-date, version-specific library documentation for LLMs. |
+| [Cookcli](./cookcli) | `ghcr.io/cooklang/cookcli:latest` | `20430` | — | CookCLI is a command-line tool for the Cooklang recipe format. |
+| [Copyparty](./copyparty) | `copyparty/ac:latest` | `20431` | — | Copyparty is a portable file server with a web UI, upload support and media indexing. |
+| [Crm](./crm) | `fcarneiro/crm:latest` | `20432` | — | A self-hosted customer relationship management entry. |
 | [Crucial](./crucial) | `alpine:3.20` | `20038` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
-| [Crush](./crush) | `crush/gitlab-pipeline-base:latest` | `20433` | — | Self-hosted service: crush. |
+| [Crush](./crush) | `crush/gitlab-pipeline-base:latest` | `20433` | — | Crush is a command-line AI coding agent with shell and editor integration. |
 | [Daisy](./daisy) | `alpine:3.20` | `20040` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
 | [Datasette](./datasette) | `datasetteproject/datasette:latest` | `8001` | — | Explore and publish SQLite databases as JSON APIs and dashboards |
 | [Davical](./davical) | `php:8.2-apache` | `20041` | — | CalDAV server for calendar sharing |
 | [Davis](./davis) | `ghcr.io/tchapi/davis:latest` | `20042` | — | Self-hosted CalDAV/CardDAV server (PHP) |
 | [Debops](./debops) | `debops/debops:latest` | `20434` | — | DebOps: collection of Ansible playbooks for deploying and managing Debian-based infrastructure |
 | [Depay](./depay) | `node:20-alpine` | `20043` | — | Self-hosted crypto payment processor |
-| [Dietpi](./dietpi) | `fraoult/dietpi:latest` | `20435` | — | Self-hosted service: dietpi. |
+| [Dietpi](./dietpi) | `fraoult/dietpi:latest` | `20435` | — | DietPi is a lightweight Debian-based OS for single-board computers and minimal servers. |
 | [Dify](./dify) | `langgenius/dify-api:latest` | `20531` | ✅ | Dify: open-source LLM app development platform (agents, RAG, workflows) |
-| [Dirac](./dirac) | `zeppai/dirac:latest` | `20532` | — | Self-hosted service: dirac. |
+| [Dirac](./dirac) | `zeppai/dirac:latest` | `20532` | — | Dirac is a self-hosted media asset management system for video and broadcast workflows. |
 | [Discourse](./discourse) | `discourse/discourse:latest` | `20436` | — | Discourse: open-source modern forum and community discussion platform |
-| [Django Wiki](./django-wiki) | `python:3.12-slim` | `20437` | — | Self-hosted service: django-wiki. |
+| [Django Wiki](./django-wiki) | `python:3.12-slim` | `20437` | — | django-wiki is a lightweight, pluggable wiki system built on Django. |
 | [Docuddle](./docuddle) | `alpine:3.20` | `20046` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
 | [Documenso](./documenso) | `documenso/documenso:latest` | `20047` | — | Open-source DocuSign alternative for electronic signatures |
 | [Dpaste](./dpaste) | `python:3.11-slim` | `20050` | — | Self-hosted pastebin / code snippet service |
 | [Dreamfactory](./dreamfactory) | `dreamfactorysoftware/df-docker:latest` | `20051` | — | Auto-generated REST API backend for databases |
 | [Druid](./druid) | `apache/druid:31.0.0` | `20053` | — | Real-time analytics database (OLAP) |
 | [Duckduckgo Proxy](./duckduckgo-proxy) | `benbusby/whoogle-search:latest` | `5000` | — | Self-hosted proxy for the DuckDuckGo search API |
-| [Dvvinyl](./dvvinyl) | `dvvinyl/dvvinyl:latest` | `20533` | — | Self-hosted service: dvvinyl. |
+| [Dvvinyl](./dvvinyl) | `dvvinyl/dvvinyl:latest` | `20533` | — | DVVinyl is a self-hosted music collection and vinyl tracking tool. |
 | [Easypanel](./easypanel) | `easypanel/easypanel:latest` | `20056` | — | Modern self-hosted PaaS control panel for Docker apps |
-| [Echo](./echo) | `amir20/echo:latest` | `20534` | — | Self-hosted service: echo. |
+| [Echo](./echo) | `amir20/echo:latest` | `20534` | — | Echo is a self-hosted notification and webhook routing service. |
 | [Ejabberd](./ejabberd) | `ejabberd/ecs:latest` | `5280` | — | Robust XMPP / Jabber messaging server |
 | [Ekso](./ekso) | `alpine:3.20` | `20057` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
 | [Element](./element) | `vectorim/element-web:latest` | `20438` | — | Element: feature-rich web client for the Matrix decentralized chat protocol |
@@ -127,13 +127,13 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Emqx](./emqx) | `emqx/emqx:latest` | `18083` | — | Scalable open-source MQTT broker for IoT |
 | [Enclosed](./enclosed) | `ghcr.io/corentinth/enclosed:latest` | `8787` | — | Self-hosted tool for sharing secrets and files securely |
 | [Engity Bifrost](./engity-bifrost) | `alpine:3.20` | `20061` | — | Engity Bifrost - identity and SSO gateway |
-| [Enigma Bbs](./enigma-bbs) | `davestephens/enigma-bbs:latest` | `20439` | — | Self-hosted service: enigma-bbs. |
-| [Ente](./ente) | `tbindustries/ente:latest` | `20440` | — | Self-hosted service: ente. |
+| [Enigma Bbs](./enigma-bbs) | `davestephens/enigma-bbs:latest` | `20439` | — | Enigma BBS is a modern, web-aware bulletin board system software. |
+| [Ente](./ente) | `tbindustries/ente:latest` | `20440` | — | Ente is an end-to-end encrypted photos and 2FA authenticator service you can self-host. |
 | [Epicyon](./epicyon) | `python:3.11-slim` | `20062` | — | Self-hosted ActivityPub federated social server |
 | [Ergo](./ergo) | `ergochat/ergo:latest` | `20441` | — | Ergo (IRCd): modern, easy-to-run IRC server written in Go |
 | [Excalidraw](./excalidraw) | `excalidraw/excalidraw:latest` | `20064` | — | Virtual whiteboard for hand-drawn diagrams |
-| [Fablecut](./fablecut) | `fablecut/fablecut:latest` | `20442` | — | Self-hosted service: fablecut. |
-| [Firecamp](./firecamp) | `cloudstax/firecamp-kafka:latest` | `20443` | — | Self-hosted service: firecamp. |
+| [Fablecut](./fablecut) | `fablecut/fablecut:latest` | `20442` | — | Fablecut is a self-hosted video editing and storytelling tool. |
+| [Firecamp](./firecamp) | `cloudstax/firecamp-kafka:latest` | `20443` | — | Firecamp is an open-source API development and testing platform. |
 | [Fmd Server](./fmd-server) | `golang:1.23-alpine` | `20071` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
 | [Formio](./formio) | `formio/formio:latest` | `3001` | — | Form and API platform for building data-driven forms and apps |
 | [Forward Email](./forward-email) | `node:20-alpine` | `20074` | — | Open-source email forwarding and alias service |
@@ -143,13 +143,13 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Freeswitch](./freeswitch) | `safarov/freeswitch:latest` | `20078` | — | Open-source telephony platform / softswitch (VoIP) |
 | [Frigate](./frigate) | `ghcr.io/blakeblackshear/frigate:stable` | `20081` | ✅ | AI-powered network video recorder (NVR) for camera streams |
 | [Full Help](./full-help) | `alpine:3.20` | `20083` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
-| [Fungible](./fungible) | `dhananjay12/fungible-user-service:latest` | `20444` | — | Self-hosted service: fungible. |
+| [Fungible](./fungible) | `dhananjay12/fungible-user-service:latest` | `20444` | — | Fungible is a self-hosted tool for managing fungible tokens / assets. |
 | [Fusio](./fusio) | `fusio/fusio:latest` | `20085` | — | Open-source API management platform |
 | [Gamevault](./gamevault) | `phalcode/gamevault-backend:latest` | `20086` | — | Self-hosted video game library manager |
 | [Garagehq](./garagehq) | `dxflrs/garage:v1.0.1` | `3900` | — | Lightweight S3-compatible distributed object storage |
 | [Gaseous Server](./gaseous-server) | `gaseousgames/gaseousserver:latest` | `5198` | — | Self-hosted video game collection / ROM manager |
 | [Gathio](./gathio) | `ghcr.io/lowercasename/gathio:latest` | `20087` | — | Self-hosted event page and RSVP host |
-| [Gencad](./gencad) | `vassaneer/gencad:latest` | `20445` | — | Self-hosted service: gencad. |
+| [Gencad](./gencad) | `vassaneer/gencad:latest` | `20445` | — | GenCAD is a self-hosted generative CAD / design tool. |
 | [Geo2Tz](./geo2tz) | `noandrea/geo2tz:latest` | `20088` | — | Convert geographic coordinates to a timezone |
 | [Ghostery](./ghostery) | `alpine:3.20` | `20089` | — | Privacy / tracker-blocking browser extension (commercial) |
 | [Github Ntfy](./github-ntfy) | `binwiederhier/ntfy:latest` | `20091` | — | ntfy push notifications for GitHub events |
@@ -160,97 +160,97 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Go Feature Flag](./go-feature-flag) | `thomaspoignant/go-feature-flag:latest` | `1031` | — | Feature flag management system (Go) |
 | [Gomodel](./gomodel) | `golang:1.23-alpine` | `20099` | — | GoModel: open-source AI gateway / control plane proxy with an OpenAI- and Anthropic-compatible API (a LiteLLM alternative) |
 | [Google Cse Proxy](./google-cse-proxy) | `node:20-alpine` | `20100` | — | Proxy for the Google Custom Search Engine API |
-| [Goose](./goose) | `ghcr.io/block/goose:latest` | `20446` | — | Self-hosted service: goose. |
-| [Goploader](./goploader) | `ghcr.io/depado/goploader:latest` | `20447` | — | Self-hosted service: goploader. |
+| [Goose](./goose) | `ghcr.io/block/goose:latest` | `20446` | — | Goose is an open-source AI agent that automates engineering tasks on your machine. |
+| [Goploader](./goploader) | `ghcr.io/depado/goploader:latest` | `20447` | — | Goploader is a simple self-hosted file upload server with expiring links. |
 | [Gordian](./gordian) | `alpine:3.20` | `20101` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
 | [Gotify](./gotify) | `gotify/server:latest` | `20448` | — | Gotify: simple self-hosted push notification server (Android/iOS/desktop) |
-| [Graphhopper](./graphhopper) | `israelhikingmap/graphhopper:latest` | `20449` | — | Self-hosted service: graphhopper. |
-| [Grimoire](./grimoire) | `goniszewski/grimoire:latest` | `20450` | — | Self-hosted service: grimoire. |
+| [Graphhopper](./graphhopper) | `israelhikingmap/graphhopper:latest` | `20449` | — | GraphHopper is a fast open-source routing engine for maps and logistics. |
+| [Grimoire](./grimoire) | `goniszewski/grimoire:latest` | `20450` | — | Grimoire is a self-hosted recipe manager for TTRPG campaigns and homebrew content. |
 | [Habitica](./habitica) | `habitica/habitica:latest` | `20451` | — | Habitica: open-source habit tracker and RPG-style productivity app |
 | [Halo](./halo) | `halohub/halo:latest` | `20452` | — | Halo: open-source, extensible publish/CMS wiki platform (Java) |
-| [Herdr](./herdr) | `herdre185/obshee_delo:latest` | `20453` | — | Self-hosted service: herdr. |
-| [Hermes Agent](./hermes-agent) | `nousresearch/hermes-agent:latest` | `20454` | — | Self-hosted service: hermes-agent. |
-| [Hive Pal](./hive-pal) | `archivebox/archivebox:latest` | `20535` | — | Self-hosted service: hive-pal. |
+| [Herdr](./herdr) | `herdre185/obshee_delo:latest` | `20453` | — | Herdr is a self-hosted feed and content aggregation reader. |
+| [Hermes Agent](./hermes-agent) | `nousresearch/hermes-agent:latest` | `20454` | — | Hermes Agent is a self-hosted AI agent framework and CLI. |
+| [Hive Pal](./hive-pal) | `archivebox/archivebox:latest` | `20535` | — | Hive Pal is a self-hosted crypto wallet management dashboard. |
 | [Homarr](./homarr) | `ghcr.io/homarr-labs/homarr:latest` | `7575` | — | Homarr is an open-source, self-hosted dashboard that integrates with all your self-hosted services, providing a centralized location to manage and access your apps, notifications, and more. |
 | [Homeassistant](./homeassistant) | `ghcr.io/home-assistant/home-assistant:stable` | `20455` | — | Home Assistant: open-source home automation platform |
-| [Homebutler](./homebutler) | `homebutler/homebutler:latest` | `20536` | — | Self-hosted service: homebutler. |
+| [Homebutler](./homebutler) | `homebutler/homebutler:latest` | `20536` | — | HomeButler is a self-hosted home automation and assistant hub. |
 | [Homepage](./homepage) | `ghcr.io/gethomepage/homepage:latest` | `20582` | — | Homepage is a modern, customizable, and self-hosted dashboard for organizing and accessing your personal services and information. |
 | [Homer](./homer) | `b4bz/homer:latest` | `20112` | — | Static dashboard / startpage for your homelab |
-| [Honeywire](./honeywire) | `honeywire/honeywire:latest` | `20537` | — | Self-hosted service: honeywire. |
+| [Honeywire](./honeywire) | `honeywire/honeywire:latest` | `20537` | — | Honeywire is a self-hosted network monitoring and honeypot tool. |
 | [Hoppscotch](./hoppscotch) | `hoppscotch/hoppscotch:latest` | `20456` | — | Hoppscotch Community Edition: open-source API development ecosystem (requests, testing, collaboration) |
-| [Huginn](./huginn) | `ghcr.io/huginn/huginn:latest` | `20552` | — | Self-hosted service: huginn. |
-| [Hunk](./hunk) | `hunk/trekbit-asc-server:latest` | `20457` | — | Self-hosted service: hunk. |
-| [Hyrax](./hyrax) | `opendap/hyrax:latest` | `20458` | — | Self-hosted service: hyrax. |
-| [Ideon](./ideon) | `idocker1688/ideon:latest` | `20538` | — | Self-hosted service: ideon. |
+| [Huginn](./huginn) | `ghcr.io/huginn/huginn:latest` | `20552` | — | Huginn is a system for building agents that perform automated tasks and monitor the web. |
+| [Hunk](./hunk) | `hunk/trekbit-asc-server:latest` | `20457` | — | Hunk is a self-hosted content and media serving tool. |
+| [Hyrax](./hyrax) | `opendap/hyrax:latest` | `20458` | — | Hyrax is a self-hosted digital repository and asset management platform (Samvera). |
+| [Ideon](./ideon) | `idocker1688/ideon:latest` | `20538` | — | Ideon is a self-hosted idea and knowledge capture tool. |
 | [Immich](./immich) | `ghcr.io/immich-app/immich-server:release` | `2283` | ✅ | Immich: self-hosted photo and video backup solution with AI search |
-| [Inspircd](./inspircd) | `inspircd/inspircd-docker:latest` | `20459` | — | Self-hosted service: inspircd. |
+| [Inspircd](./inspircd) | `inspircd/inspircd-docker:latest` | `20459` | — | InspIRCd is a modular, high-performance Internet Relay Chat (IRC) server. |
 | [Jellyfin Library](./jellyfin-library) | `jellyfin/jellyfin:latest` | `20118` | — | Tool for managing Jellyfin media libraries |
-| [Jina](./jina) | `jinaai/jina:latest` | `20460` | — | Self-hosted service: jina. |
-| [Jitsi Meet](./jitsi-meet) | `robertoandrade/jitsi-meet:latest` | `8443` | — | Self-hosted service: jitsi-meet. |
+| [Jina](./jina) | `jinaai/jina:latest` | `20460` | — | Jina is a neural search framework for building multimodal AI search applications. |
+| [Jitsi Meet](./jitsi-meet) | `robertoandrade/jitsi-meet:latest` | `8443` | — | Jitsi Meet is a secure, fully-featured open-source video conferencing platform. |
 | [Kanboard](./kanboard) | `kanboard/kanboard:latest` | `20121` | — | Simple kanban board for project management |
-| [Karakeep](./karakeep) | `ghcr.io/karakeep-app/karakeep:release` | `20461` | — | Self-hosted service: karakeep. |
-| [Kiwix Serve](./kiwix-serve) | `ghcr.io/kiwix/kiwix-serve:latest` | `20462` | — | Self-hosted service: kiwix-serve. |
+| [Karakeep](./karakeep) | `ghcr.io/karakeep-app/karakeep:release` | `20461` | — | Karakeep (formerly Hoarder) is a self-hosted bookmark, link and asset manager with AI tagging. |
+| [Kiwix Serve](./kiwix-serve) | `ghcr.io/kiwix/kiwix-serve:latest` | `20462` | — | Kiwix serves offline Wikipedia and other content from ZIM archives. |
 | [Langflow](./langflow) | `langflowai/langflow:latest` | `20463` | ✅ | Langflow: visual builder for LangChain and LLM workflows |
-| [Languagetool](./languagetool) | `erikvl87/languagetool:latest` | `20464` | — | Self-hosted service: languagetool. |
-| [Larasend](./larasend) | `larasend/larasend:latest` | `20488` | — | Self-hosted service: larasend. |
+| [Languagetool](./languagetool) | `erikvl87/languagetool:latest` | `20464` | — | LanguageTool is an open-source grammar, style and spell checker server. |
+| [Larasend](./larasend) | `larasend/larasend:latest` | `20488` | — | Larasend is a self-hosted email marketing and transactional mail platform. |
 | [Libervrt](./libervrt) | `lscr.io/linuxserver/emby:latest` | `20139` | — | Folder name 'libervrt' but compose pins linuxserver/emby (Emby media server). Verify the intended service |
 | [Librechat](./librechat) | `librechat/librechat:latest` | `20465` | — | LibreChat: open-source ChatGPT-compatible frontend with multi-model support and agents |
-| [Lila](./lila) | `ghcr.io/lichess-org/lila-docker:latest` | `20466` | — | Self-hosted service: lila. |
-| [Linkwarden](./linkwarden) | `ghcr.io/linkwarden/linkwarden:latest` | `20467` | — | Self-hosted service: linkwarden. |
+| [Lila](./lila) | `ghcr.io/lichess-org/lila-docker:latest` | `20466` | — | Lila is the web UI and server for the Lichess open-source chess platform. |
+| [Linkwarden](./linkwarden) | `ghcr.io/linkwarden/linkwarden:latest` | `20467` | — | Linkwarden is a self-hosted bookmark manager that archives pages for long-term preservation. |
 | [Litellm](./litellm) | `ghcr.io/berriai/litellm:main-latest` | `4000` | ✅ | Proxy gateway for 100+ LLM providers with load balancing and fallbacks |
 | [Lms](./lms) | `lmscommunity/lyrionmusicserver:latest` | `20142` | — | Frappe LMS: 100% open-source learning management system |
-| [Lobe Hub](./lobe-hub) | `lobehub/lobe-chat:latest` | `20468` | — | Self-hosted service: lobe-hub. |
+| [Lobe Hub](./lobe-hub) | `lobehub/lobe-chat:latest` | `20468` | — | LobeHub (LobeChat) is an open-source chat UI for AI models with plugin support. |
 | [Lobechat](./lobechat) | `lobehub/lobe-chat:latest` | `20469` | — | LobeChat: open-source chatbot platform with multi-model support and plugin ecosystem |
-| [Logseq](./logseq) | `ghcr.io/logseq/logseq-webapp:latest` | `20470` | — | Self-hosted service: logseq. |
+| [Logseq](./logseq) | `ghcr.io/logseq/logseq-webapp:latest` | `20470` | — | Logseq is a privacy-first, local-first knowledge base and outline note-taking app. |
 | [Lxd](./lxd) | `ubuntu:24.04` | `20144` | ✅ | System container and virtual machine manager (LXC) |
-| [Machtiani](./machtiani) | `machtiani/machtiani:latest` | `20471` | — | Self-hosted service: machtiani. |
-| [Matchering](./matchering) | `sergree/matchering-web:latest` | `20472` | — | Self-hosted service: matchering. |
-| [Materia](./materia) | `materialsproject/jupyterhub-singleuser:latest` | `20473` | — | Self-hosted service: materia. |
-| [Mcfly](./mcfly) | `segrettodozuki/mcfly:latest` | `20474` | — | Self-hosted service: mcfly. |
-| [Memos](./memos) | `neosmemo/memos:stable` | `5230` | — | Self-hosted service: memos. |
+| [Machtiani](./machtiani) | `machtiani/machtiani:latest` | `20471` | — | Machtiani is a self-hosted task and project management tool. |
+| [Matchering](./matchering) | `sergree/matchering-web:latest` | `20472` | — | Matchering is a web app for automatic audio mastering using a reference track. |
+| [Materia](./materia) | `materialsproject/jupyterhub-singleuser:latest` | `20473` | — | Materia is a self-hosted learning management and course platform. |
+| [Mcfly](./mcfly) | `segrettodozuki/mcfly:latest` | `20474` | — | McFly is a smarter shell history search tool with a TUI (not a server app). |
+| [Memos](./memos) | `neosmemo/memos:stable` | `5230` | — | Memos is a lightweight, self-hosted note-taking app with a clean UI and sharing. |
 | [Metabase](./metabase) | `metabase/metabase:latest` | `20553` | — | Metabase: open-source business intelligence and analytics dashboard tool |
 | [Metube](./metube) | `alexta69/metube:latest` | `20475` | — | MeTube: self-hosted YouTube-dl / yt-dlp web UI for downloading media |
 | [Mindsdb](./mindsdb) | `mindsdb/mindsdb:latest` | `20476` | — | MindsDB: open-source machine learning platform that brings ML to your database |
-| [Mindustry](./mindustry) | `ich777/mindustry-server:latest` | `20477` | — | Self-hosted service: mindustry. |
-| [Minimal Git Server](./minimal-git-server) | `redhat/ubi8-minimal:latest` | `20478` | — | Self-hosted service: minimal-git-server. |
-| [Mkvpriority](./mkvpriority) | `hacdiaz/mkvprofile:latest` | `20479` | — | Self-hosted service: mkvpriority. |
+| [Mindustry](./mindustry) | `ich777/mindustry-server:latest` | `20477` | — | Mindustry is a sandbox factory/automation game (no official self-hosted server image). |
+| [Minimal Git Server](./minimal-git-server) | `redhat/ubi8-minimal:latest` | `20478` | — | Minimal Git Server is a small self-hosted Git hosting service over SSH/HTTP. |
+| [Mkvpriority](./mkvpriority) | `hacdiaz/mkvprofile:latest` | `20479` | — | MKVPriority is a tool for setting default audio/subtitle tracks in MKV files. |
 | [Mollie Proxy](./mollie-proxy) | `node:20-alpine` | `20160` | — | Proxy for the Mollie payment API |
-| [Musikcube](./musikcube) | `hectormolinero/musikcube:latest` | `20480` | — | Self-hosted service: musikcube. |
+| [Musikcube](./musikcube) | `hectormolinero/musikcube:latest` | `20480` | — | musikcube is a cross-platform, terminal-based music player and streaming server. |
 | [Mylar3](./mylar3) | `linuxserver/mylar3:latest` | `20539` | — | Mylar3: automated Comic Book (CBZ/CBR) downloader and manager |
 | [N8N](./n8n) | `n8nio/n8n:latest` | `5678` | — | n8n: open-source workflow automation tool with 400+ integrations |
-| [Nanoclaw](./nanoclaw) | `bitcryptic/nanoclaw:latest` | `20540` | — | Self-hosted service: nanoclaw. |
+| [Nanoclaw](./nanoclaw) | `bitcryptic/nanoclaw:latest` | `20540` | — | NanoClaw is a lightweight self-hosted AI agent playground. |
 | [Netlify](./netlify) | `node:20-alpine` | `20162` | — | Platform for deploying static / Jamstack sites (open-core) |
-| [Netwatch](./netwatch) | `kaystr/netwatch:latest` | `20481` | — | Self-hosted service: netwatch. |
+| [Netwatch](./netwatch) | `kaystr/netwatch:latest` | `20481` | — | NetWatch is a self-hosted network monitoring and traffic visualisation tool. |
 | [Nextchat](./nextchat) | `yidadaa/chatgpt-next-web:latest` | `20164` | — | Next-generation web UI for ChatGPT and other LLMs |
 | [Nodebb](./nodebb) | `ghcr.io/nodebb/nodebb:latest` | `20482` | — | NodeBB: open-source Node.js based forum software |
 | [Notion Clone](./notion-clone) | `appflowyinc/appflowy_cloud:latest` | `20170` | — | Open-source Notion alternative for note-taking |
 | [Ntfy](./ntfy) | `binwiederhier/ntfy:latest` | `20483` | — | ntfy: simple self-hosted push notification service over HTTP/UnifiedPush |
-| [Nutritrace](./nutritrace) | `traceapps/nutritrace:latest` | `20541` | — | Self-hosted service: nutritrace. |
-| [Octobox](./octobox) | `octobox/octobox:latest` | `20484` | — | Self-hosted service: octobox. |
-| [Once](./once) | `donges/once:latest` | `20485` | — | Self-hosted service: once. |
-| [Onecli](./onecli) | `huyanhvn/onecli:latest` | `20486` | — | Self-hosted service: onecli. |
+| [Nutritrace](./nutritrace) | `traceapps/nutritrace:latest` | `20541` | — | NutriTrace is a self-hosted nutrition and dietary tracking application. |
+| [Octobox](./octobox) | `octobox/octobox:latest` | `20484` | — | Octobox is a self-hosted GitHub notifications manager for organising your inbox. |
+| [Once](./once) | `donges/once:latest` | `20485` | — | Once is a self-hosted platform for building and hosting AI agents. |
+| [Onecli](./onecli) | `huyanhvn/onecli:latest` | `20486` | — | OneCLI is a self-hosted command-line tooling and orchestration hub. |
 | [Online Invoicing](./online-invoicing) | `php:8.2-apache` | `20173` | — | Self-hosted invoicing / billing tool |
-| [Opencedit](./opencedit) | `opencut/opencut:latest` | `20487` | — | Self-hosted service: opencedit. |
+| [Opencedit](./opencedit) | `opencut/opencut:latest` | `20487` | — | OpenCut is a self-hosted, open-source video editing platform. |
 | [Openclaw](./openclaw) | `ghcr.io/openclaw/openclaw:latest` | `20175` | — | OpenClaw: self-hosted personal AI assistant (cross-platform) |
 | [Opencode](./opencode) | `node:20-alpine` | `20176` | — | Open-source AI coding agent / assistant |
-| [Openship](./openship) | `openship/openship:latest` | `20542` | — | Self-hosted service: openship. |
-| [Openwa](./openwa) | `openwa/wa-automate:latest` | `20543` | — | Self-hosted service: openwa. |
-| [Openwork](./openwork) | `sharmarahul0810/openwork:latest` | `20489` | — | Self-hosted service: openwork. |
-| [Orca](./orca) | `orca/os:latest` | `20490` | — | Self-hosted service: orca. |
-| [Organicmaps](./organicmaps) | `alpine:3.20` | `20491` | — | Self-hosted service: organicmaps. |
+| [Openship](./openship) | `openship/openship:latest` | `20542` | — | OpenShip is a self-hosted multi-channel order and shipping management system. |
+| [Openwa](./openwa) | `openwa/wa-automate:latest` | `20543` | — | OpenWA is a self-hosted WhatsApp API gateway (browser-automation based). |
+| [Openwork](./openwork) | `sharmarahul0810/openwork:latest` | `20489` | — | OpenWork is a self-hosted work management and collaboration tool. |
+| [Orca](./orca) | `orca/os:latest` | `20490` | — | Orca is a self-hosted system monitoring and orchestration dashboard. |
+| [Organicmaps](./organicmaps) | `alpine:3.20` | `20491` | — | Organic Maps is an open-source offline maps app; the server side serves map data. |
 | [Organizr](./organizr) | `organizr/organizr:latest` | `20185` | — | Organize your homelab tabs into a single login dashboard |
-| [Otherswrite](./otherswrite) | `otherswrite/otherswrite:latest` | `20554` | — | Self-hosted service: otherswrite. |
+| [Otherswrite](./otherswrite) | `otherswrite/otherswrite:latest` | `20554` | — | OthersWrite is a self-hosted collaborative writing and publishing tool. |
 | [Para](./para) | `eclipse-temurin:17-jre` | `20190` | — | Flexible open-source backend framework / object storage |
-| [Pastefy](./pastefy) | `pastefy/pastefy:latest` | `20492` | — | Self-hosted service: pastefy. |
+| [Pastefy](./pastefy) | `pastefy/pastefy:latest` | `20492` | — | Pastefy is a self-hosted pastebin and code snippet manager. |
 | [Paypal Proxy](./paypal-proxy) | `node:20-alpine` | `20196` | — | Proxy for the PayPal payment API |
-| [Pdf Dark](./pdf-dark) | `pdf-dark/pdf-dark:latest` | `20544` | — | Self-hosted service: pdf-dark. |
+| [Pdf Dark](./pdf-dark) | `pdf-dark/pdf-dark:latest` | `20544` | — | PDF-Dark is a self-hosted tool for dark-mode / night reading of PDFs. |
 | [Pgdog](./pgdog) | `ghcr.io/pgdogdev/pgdog:latest` | `20200` | — | PostgreSQL connection pooler and proxy |
 | [Phice](./phice) | `alpine:3.20` | `20201` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
 | [Phorge](./phorge) | `php:8.2-apache` | `20202` | — | Open-source project management and collaboration platform (Phabricator fork) |
-| [Pi](./pi) | `openai/pi:latest` | `20493` | — | Self-hosted service: pi. |
-| [Picoclaw](./picoclaw) | `picoclaw/picoclaw:latest` | `20494` | — | Self-hosted service: picoclaw. |
+| [Pi](./pi) | `openai/pi:latest` | `20493` | — | Pi is an OpenAI-hosted experimental personal AI (no self-hosted image). |
+| [Picoclaw](./picoclaw) | `picoclaw/picoclaw:latest` | `20494` | — | PicoClaw is a self-hosted lightweight AI agent playground. |
 | [Piefed](./piefed) | `python:3.11-slim` | `20204` | — | Federated feed aggregator (ActivityPub) |
-| [Piqueserver](./piqueserver) | `ghcr.io/piqueserver/piqueserver:latest` | `20495` | — | Self-hosted service: piqueserver. |
+| [Piqueserver](./piqueserver) | `ghcr.io/piqueserver/piqueserver:latest` | `20495` | — | Piqueserver is a self-hosted server implementation for the open-source Ace of Spades game. |
 | [Plausible](./plausible) | `ghcr.io/plausible/community-edition:v2.1.4` | `20208` | — | Privacy-friendly, open-source web analytics |
 | [Plunker](./plunker) | `node:20-alpine` | `20211` | — | Online code editor / playground for web development |
 | [Pocket Id](./pocket-id) | `ghcr.io/pocket-id/pocket-id:latest` | `1411` | — | Simple SSO identity provider with passkey support |
@@ -258,19 +258,19 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Portainer](./portainer) | `portainer/portainer-ce:latest` | `9443` | — | Lightweight web UI for managing Docker, Swarm and Kubernetes |
 | [Postal](./postal) | `ghcr.io/postalserver/postal:latest` | `20214` | — | Full-featured open-source mail server |
 | [Poste Io](./poste-io) | `analogic/poste.io:latest` | `20215` | — | Self-hosted mail server suite (SMTP/IMAP/POP) |
-| [Posting](./posting) | `posting-app/posting:latest` | `20496` | — | Self-hosted service: posting. |
-| [Prime Agent](./prime-agent) | `prime-agent/prime-agent:latest` | `20523` | — | Self-hosted service: prime-agent. |
+| [Posting](./posting) | `posting-app/posting:latest` | `20496` | — | Posting is a TUI (terminal) client for interacting with AI chat models. |
+| [Prime Agent](./prime-agent) | `prime-agent/prime-agent:latest` | `20523` | — | Prime Agent is a self-hosted autonomous AI agent framework. |
 | [Proxmox](./proxmox) | `ubuntu:24.04` | `20222` | ✅ | Open-source server virtualization platform (Proxmox VE) |
 | [Pushbits](./pushbits) | `ghcr.io/pushbits/server:latest` | `20225` | — | Self-hosted push notification relay for Android/iOS |
 | [Pyload](./pyload) | `linuxserver/pyload:latest` | `20497` | — | pyLoad: lightweight, open-source download manager with a web interface (supports many one-click hosters) |
-| [Qm](./qm) | `qm/qm:latest` | `20498` | — | Self-hosted service: qm. |
+| [Qm](./qm) | `qm/qm:latest` | `20498` | — | QM is a self-hosted queue and message management tool. |
 | [R2](./r2) | `minio/minio:latest` | `20229` | — | Self-hosted proxy for Cloudflare R2 object storage |
 | [Radicale](./radicale) | `tomsquest/docker-radicale:latest` | `5232` | — | Simple CalDAV and CardDAV server |
-| [Rconcli](./rconcli) | `rconcli/rconcli:latest` | `20499` | — | Self-hosted service: rconcli. |
-| [Recipesage](./recipesage) | `recipesage/recipesage:latest` | `20500` | — | Self-hosted service: recipesage. |
+| [Rconcli](./rconcli) | `rconcli/rconcli:latest` | `20499` | — | RCON-CLI is a command-line tool for sending RCON commands to game servers. |
+| [Recipesage](./recipesage) | `recipesage/recipesage:latest` | `20500` | — | RecipeSage is a self-hosted recipe manager and meal planner. |
 | [Redirect](./redirect) | `alpine:3.20` | `20238` | — | Simple HTTP redirect / URL-forwarding service |
-| [Rejourney](./rejourney) | `rejourney/rejourney:latest` | `20545` | — | Self-hosted service: rejourney. |
-| [Replaya](./replaya) | `replaya/replaya:latest` | `20501` | — | Self-hosted service: replaya. |
+| [Rejourney](./rejourney) | `rejourney/rejourney:latest` | `20545` | — | ReJourney is a self-hosted AI image generation and gallery tool. |
+| [Replaya](./replaya) | `replaya/replaya:latest` | `20501` | — | Replaya is a self-hosted media recording and replay tool. |
 | [Repo Flow](./repo-flow) | `alpine:3.20` | `20240` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
 | [Reservo](./reservo) | `reservo/reservo:latest` | `20241` | — | Self-hosted image hosting and sharing script |
 | [Resourcespace](./resourcespace) | `php:8.2-apache` | `20242` | — | Open-source digital asset management (DAM) |
@@ -279,32 +279,32 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Revert](./revert) | `node:20-alpine` | `20247` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
 | [Rgit](./rgit) | `alpine:3.20` | `20248` | — | Self-hosted Git repository manager / viewer |
 | [Rhode Code](./rhode-code) | `python:3.11-slim` | `20249` | — | Source code management platform (Git/Mercurial/SVN) |
-| [Rmux](./rmux) | `rmux/rmux:latest` | `20502` | — | Self-hosted service: rmux. |
+| [Rmux](./rmux) | `rmux/rmux:latest` | `20502` | — | RMux is a self-hosted terminal multiplexing / remote shell manager. |
 | [Rocketchat](./rocketchat) | `rocket.chat:latest` | `20503` | — | Web chat platform for teams; built with Meteor.js framework. |
 | [Routr](./routr) | `fonoster/routr:latest` | `20252` | — | SIP server for VoIP and telephony routing |
 | [Rs Short](./rs-short) | `alpine:3.20` | `20254` | — | Self-hosted URL shortener |
 | [Rss Bridge](./rss-bridge) | `rssbridge/rss-bridge:latest` | `20256` | — | Generate RSS feeds for websites that don't provide them |
 | [Rudderstack](./rudderstack) | `rudderlabs/rudder-server:latest` | `20258` | — | Open-source customer data platform (CDP) |
 | [Rukovoditel](./rukovoditel) | `php:8.2-apache` | `20259` | — | Free web-based project management and CRM |
-| [Runtm](./runtm) | `runtm/runtm:latest` | `20546` | — | Self-hosted service: runtm. |
+| [Runtm](./runtm) | `runtm/runtm:latest` | `20546` | — | RunTM is a self-hosted tool for running and tracking timed tasks. |
 | [Sabre Dav](./sabre-dav) | `php:8.2-apache` | `20260` | — | WebDAV, CalDAV and CardDAV server library/framework |
 | [Salut A Toi](./salut-a-toi) | `alpine:3.20` | `20263` | — | Multipurpose XMPP/Jabber client and ecosystem |
 | [Sama](./sama) | `alpine:3.20` | `20264` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
-| [Se2Eend](./se2eend) | `se2eend/se2eend:latest` | `20547` | — | Self-hosted service: se2eend. |
+| [Se2Eend](./se2eend) | `se2eend/se2eend:latest` | `20547` | — | Se2eEnd is a self-hosted end-to-end testing and monitoring tool. |
 | [Seaweedfs](./seaweedfs) | `chrislusf/seaweedfs:latest` | `9333` | — | Distributed object, block and file storage system |
 | [Sendy](./sendy) | `php:8.2-apache` | `20271` | — | Self-hosted email marketing platform (Amazon SES based) |
 | [Seppo](./seppo) | `alpine:3.20` | `20273` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
-| [Servas](./servas) | `beromir/servas:latest` | `20504` | — | Self-hosted service: servas. |
+| [Servas](./servas) | `beromir/servas:latest` | `20504` | — | Servas is a self-hosted bookmark manager with tagging and sharing groups. |
 | [Shkeeper](./shkeeper) | `python:3.11-slim` | `20277` | — | Self-hosted crypto payment gateway |
 | [Signoz](./signoz) | `signoz/query-service:latest` | `20281` | — | Open-source observability platform (traces, metrics, logs) |
-| [Sillytavern](./sillytavern) | `ghcr.io/sillytavern/sillytavern:latest` | `20555` | — | Self-hosted service: sillytavern. |
+| [Sillytavern](./sillytavern) | `ghcr.io/sillytavern/sillytavern:latest` | `20555` | — | SillyTavern is a self-hosted, feature-rich UI for chatting with LLMs and character cards. |
 | [Simplelogin](./simplelogin) | `simplelogin/app:latest` | `20505` | — | SimpleLogin: open-source email alias/forwarding service for protecting your real email address |
-| [Simplement](./simplement) | `simplement/go-simplext:dev` | `20506` | — | Self-hosted service: simplement. |
-| [Simplex Chat](./simplex-chat) | `simplexchat/simplex-chat:latest` | `20507` | — | Self-hosted service: simplex-chat. |
+| [Simplement](./simplement) | `simplement/go-simplext:dev` | `20506` | — | Simplex is a self-hosted simple encrypted messaging server (SimpleX-based). |
+| [Simplex Chat](./simplex-chat) | `simplexchat/simplex-chat:latest` | `20507` | — | SimpleX Chat is a decentralized, metadata-minimizing end-to-end encrypted messenger. |
 | [Sip3](./sip3) | `alpine:3.20` | `20282` | — | VoIP / SIP monitoring and analysis |
 | [Sish](./sish) | `antoniomika/sish:latest` | `20508` | — | sish: open-source tunneled reverse proxy server (self-hosted ngrok/serveo alternative) |
 | [Siyuan](./siyuan) | `b3log/siyuan:latest` | `20509` | — | SiYuan: open-source, privacy-first personal knowledge management and note-taking app |
-| [Slash](./slash) | `slash/slash:latest` | `20510` | — | Self-hosted service: slash. |
+| [Slash](./slash) | `slash/slash:latest` | `20510` | — | Slash is a self-hosted bookmark and link shortener with a clean UI. |
 | [Smederee](./smederee) | `alpine:3.20` | `20284` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
 | [Smite](./smite) | `alpine:3.20` | `20285` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
 | [Snapotter](./snapotter) | `snapotter/snapotter:latest` | `20548` | — | Snapotter self-hosted service. |
@@ -312,14 +312,14 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Socks5 Proxy Server](./socks5-proxy-server) | `serjs/go-socks5-proxy:latest` | `1080` | — | Self-hosted SOCKS5 proxy server |
 | [Speed Test](./speed-test) | `openspeedtest/latest:latest` | `20291` | — | Self-hosted network speed-test server |
 | [Spoolman](./spoolman) | `ghcr.io/donkie/spoolman:latest` | `20293` | — | Filament and spool inventory manager for 3D printing |
-| [Spooty](./spooty) | `alexboe/spooty:latest` | `20511` | — | Self-hosted service: spooty. |
+| [Spooty](./spooty) | `alexboe/spooty:latest` | `20511` | — | Spooty is a self-hosted Spotify downloader and music library tool. |
 | [Squidex](./squidex) | `squidex/squidex:latest` | `20296` | — | Open-source headless CMS |
 | [Srs](./srs) | `ossrs/srs:5` | `1985` | ✅ | Simple, high-performance RTMP/WebRTC streaming server |
 | [Stack Auth](./stack-auth) | `node:20-alpine` | `20298` | — | Open-source authentication and user management |
 | [Stalwart Mail](./stalwart-mail) | `stalwartlabs/stalwart:latest` | `20299` | — | All-in-one mail server (SMTP/IMAP/JMAP) written in Rust |
 | [Static Web Server](./static-web-server) | `joseluisq/static-web-server:latest` | `20512` | — | static-web-server: tiny, fast, secure static file web server written in Rust |
 | [Stirling Pdf](./stirling-pdf) | `ghcr.io/stirling-tools/stirling-pdf:latest` | `20302` | — | Local PDF manipulation toolkit (merge, split, convert) |
-| [Strava](./strava) | `dreeve/strava:latest` | `20513` | — | Self-hosted service: strava. |
+| [Strava](./strava) | `dreeve/strava:latest` | `20513` | — | Strava self-hosted connector for syncing and visualising fitness data. |
 | [Stripe Proxy](./stripe-proxy) | `node:20-alpine` | `20307` | — | Proxy for the Stripe payment API |
 | [Stripe Self Hosted](./stripe-self-hosted) | `node:20-alpine` | `20308` | — | Self-hosted Stripe integration / API proxy |
 | [Subtitle Converter](./subtitle-converter) | `lscr.io/linuxserver/ffmpeg:latest` | `20309` | — | Convert and translate subtitle file formats |
@@ -329,34 +329,34 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Surge](./surge) | `node:20-alpine` | `20314` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
 | [Svix](./svix) | `svix/svix-server:latest` | `8071` | — | Open-source webhook service and infrastructure |
 | [Synapse](./synapse) | `matrixdotorg/synapse:latest` | `20318` | — | Reference Matrix homeserver for federated chat |
-| [Tailchat](./tailchat) | `tailhook/tailchat:latest` | `20514` | — | Self-hosted service: tailchat. |
+| [Tailchat](./tailchat) | `tailhook/tailchat:latest` | `20514` | — | TailChat is a self-hosted, plugin-based, distributed chat and social platform. |
 | [Teikei](./teikei) | `node:20-alpine` | `20320` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
 | [Telebugs](./telebugs) | `ruby:3.3-alpine` | `20321` | — | Self-hosted bug and error tracking service |
-| [Teleport](./teleport) | `public.ecr.aws/gravitational/teleport-distroless:16` | `20515` | — | Self-hosted service: teleport. |
+| [Teleport](./teleport) | `public.ecr.aws/gravitational/teleport-distroless:16` | `20515` | — | Teleport is an open-source access plane for SSH, Kubernetes and web apps with audit. |
 | [Text Gen Inference](./text-gen-inference) | `ghcr.io/huggingface/text-generation-inference:latest` | `20323` | — | Text generation inference server for LLMs (HuggingFace TGI) |
 | [Thelia](./thelia) | `php:8.2-apache` | `20325` | — | Open-source e-commerce platform (PHP) |
 | [Thumbor](./thumbor) | `ghcr.io/thumbor/thumbor:latest` | `20326` | — | On-the-fly image thumbnail and resize service |
 | [Tigase](./tigase) | `tigase/tigase-xmpp-server:latest` | `20327` | — | High-performance XMPP / Jabber server |
 | [Tileserver Gl](./tileserver-gl) | `maptiler/tileserver-gl:latest` | `20328` | — | Serve vector and raster map tiles (Mapbox GL) |
 | [Tinode](./tinode) | `tinode/tinode:latest` | `20330` | — | Instant messaging server with REST and websocket APIs |
-| [Tiramisu](./tiramisu) | `tira/tira:latest` | `20549` | — | Self-hosted service: tiramisu. |
-| [Tldraw](./tldraw) | `tldraw/tldraw:latest` | `20556` | — | Self-hosted service: tldraw. |
+| [Tiramisu](./tiramisu) | `tira/tira:latest` | `20549` | — | Tiramisu is a self-hosted personal productivity and task dashboard. |
+| [Tldraw](./tldraw) | `tldraw/tldraw:latest` | `20556` | — | tldraw is an open-source infinite-canvas whiteboard / drawing SDK and app. |
 | [Trailbase](./trailbase) | `trailbase/trailbase:latest` | `20333` | — | Open-source backend (auth + DB + API) written in Rust |
 | [Transfer Sh](./transfer-sh) | `dutchcoders/transfer.sh:latest` | `20516` | — | Transfer Sh self-hosted service. |
-| [Trek](./trek) | `trek/trek:latest` | `20550` | — | Self-hosted service: trek. |
+| [Trek](./trek) | `trek/trek:latest` | `20550` | — | Trek is a self-hosted travel and route tracking tool. |
 | [Trigger Dev](./trigger-dev) | `ghcr.io/triggerdotdev/trigger.dev:v3` | `20334` | — | Open-source background jobs and workflow engine |
-| [Ttrss](./ttrss) | `ttrss/ttrss:latest` | `20517` | — | Self-hosted service: ttrss. |
+| [Ttrss](./ttrss) | `ttrss/ttrss:latest` | `20517` | — | Tiny Tiny RSS is a free, self-hosted web-based news feed (RSS/Atom) reader. |
 | [Tuleap](./tuleap) | `tuleap/tuleap-community-edition:latest` | `20336` | — | Open-source ALM and project management (Agile + DevOps) |
 | [Tuwunel](./tuwunel) | `ghcr.io/matrix-construct/tuwunel:latest` | `20338` | — | Matrix homeserver written in Rust |
 | [Txtdot](./txtdot) | `node:20-alpine` | `20339` | — | txtdot: HTTP proxy that strips pages down to text, links and images to save bandwidth and block ads/scripts |
 | [Url To Png](./url-to-png) | `ghcr.io/browserless/chromium:latest` | `20345` | — | Render URLs to PNG screenshots |
 | [Vercel](./vercel) | `node:20-alpine` | `20348` | — | Platform for frontend deployment (open-core) |
-| [Voltius](./voltius) | `voltius/voltius:latest` | `20551` | — | Self-hosted service: voltius. |
+| [Voltius](./voltius) | `voltius/voltius:latest` | `20551` | — | Voltius is a self-hosted energy and EV charging management dashboard. |
 | [Wagmios](./wagmios) | `alpine:3.20` | `20352` | — | Wagmios: give your AI agent a homelab (self-hosted agent tooling) |
 | [Wakapi](./wakapi) | `ghcr.io/muety/wakapi:latest` | `20353` | — | Self-hosted coding time and activity tracker (WakaTime compatible) |
 | [Watchcode](./watchcode) | `alpine:3.20` | `20355` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
 | [Watchtower](./watchtower) | `containrrr/watchtower:latest` | `20356` | — | Automatically update Docker containers to the latest images |
-| [Wayback](./wayback) | `ghcr.io/wabarc/wayback:latest` | `20518` | — | Self-hosted service: wayback. |
+| [Wayback](./wayback) | `ghcr.io/wabarc/wayback:latest` | `20518` | — | Wayback is a self-hosted web archiving tool that snapshots pages to WARC. |
 | [Wazo](./wazo) | `debian:12-slim` | `20357` | — | Open-source IP-PBX telephony platform |
 | [Webiny](./webiny) | `node:20-alpine` | `20360` | — | Open-source serverless CMS and application framework |
 | [Weechat](./weechat) | `weechat/weechat:latest` | `20519` | — | WeeChat: fast, light, extensible terminal IRC client (with relay for web/mobile clients) |
@@ -364,10 +364,10 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Wildduck](./wildduck) | `nodemailer/wildduck:latest` | `20365` | — | IMAP/POP3 mail server written in Node.js |
 | [Wireguard Vpn](./wireguard-vpn) | `lscr.io/linuxserver/wireguard:latest` | `20366` | — | Fast modern VPN using the WireGuard protocol |
 | [Workadventure](./workadventure) | `thecodingmachine/workadventure-play:master` | `20370` | — | Collaborative virtual office / worlds (MMORPG-style) |
-| [Writer Computer](./writer-computer) | `writer-computer/writer:latest` | `20524` | — | Self-hosted service: writer-computer. |
+| [Writer Computer](./writer-computer) | `writer-computer/writer:latest` | `20524` | — | Writer (writer.com) is an enterprise AI writing assistant (no self-hosted image). |
 | [Xandikos](./xandikos) | `ghcr.io/jelmer/xandikos:latest` | `20372` | — | CalDAV server written in Python |
 | [Xcpg](./xcpg) | `ubuntu:24.04` | `20373` | ✅ | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
-| [Yaade](./yaade) | `yaade/yaade:latest` | `20520` | — | Self-hosted service: yaade. |
+| [Yaade](./yaade) | `yaade/yaade:latest` | `20520` | — | Yaade is a self-hosted, performance-focused API testing and documentation tool. |
 | [Yarn Social](./yarn-social) | `prologic/yarnd:latest` | `20375` | — | Self-hosted microblog (Yarn.social, Gemtext-based) |
 | [Ydl Api Ng](./ydl-api-ng) | `python:3.11-slim` | `20376` | — | REST API wrapper for youtube-dl / yt-dlp downloads |
 | [Yeti Switch](./yeti-switch) | `alpine:3.20` | `20377` | — | Yeti Switch - softswitch / SBC for VoIP |
@@ -377,8 +377,8 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Yt Dlp Web Ui](./yt-dlp-web-ui) | `marcobaobao/yt-dlp-webui:latest` | `3033` | — | Web UI for yt-dlp video downloads |
 | [Zed](./zed) | `alpine:3.20` | `20381` | — | High-performance multiplayer code editor (server component) |
 | [Zeit](./zeit) | `node:20-alpine` | `20383` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
-| [Zeroclaw](./zeroclaw) | `zeroclaw/zeroclaw:latest` | `20521` | — | Self-hosted service: zeroclaw. |
-| [Zerostack](./zerostack) | `zerostack/zerostack:latest` | `20522` | — | Self-hosted service: zerostack. |
+| [Zeroclaw](./zeroclaw) | `zeroclaw/zeroclaw:latest` | `20521` | — | ZeroClaw is a self-hosted AI agent orchestration framework. |
+| [Zerostack](./zerostack) | `zerostack/zerostack:latest` | `20522` | — | ZeroStack is a self-hosted zero-config app and service stack manager. |
 | [Zimbra Collaboration](./zimbra-collaboration) | `ubuntu:24.04` | `20387` | — | Open-source email and collaboration suite |
 | [Zincsearch](./zincsearch) | `public.ecr.aws/zinclabs/zincsearch:latest` | `4080` | — | Lightweight search engine (Elasticsearch alternative) |
 | [Zk Cloudserver](./zk-cloudserver) | `alpine:3.20` | `20388` | — | Placeholder entry — no real upstream image configured (generic base image only); not yet implemented |
@@ -411,7 +411,7 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Plane](./plane) | `makeplane/plane-backend:latest` | `20207` | — | Open source alternative to Notion and Linear; team project management. |
 | [Restyaboard](./restyaboard) | `php:8.2-apache` | `20245` | — | Open source Trello alternative; project management and task board. |
 | [Standard Notes](./standard-notes) | `standardnotes/server:latest` | `20300` | — | Encrypted notes app; focus on privacy and security |
-| [Stirlingpdf](./stirlingpdf) | `frooodle/s-pdf:latest` | `20609` | — | Stirling-PDF is a versatile, open-source toolkit that allows you to perform various PDF manipulations, such as merging, splitting, compressing, and converting PDF files. |
+| [Stirlingpdf](./stirlingpdf) | `frooodle/s-pdf:latest` | `20609` | — | Local PDF manipulation toolkit (merge, split, convert) |
 | [Taiga](./taiga) | `taigaio/taiga-back:latest` | `20319` | — | Project management tool for Agile development; issue tracking and kanban. |
 | [Taskcafe](./taskcafe) | `taskcafe/taskcafe:latest` | `3333` | — | Self-hosted task management; simple and easy to use. |
 | [Turtl](./turtl) | `alpine:3.20` | `20337` | — | Open source Evernote alternative; encrypted note-sync platform. |
@@ -837,7 +837,7 @@ docker stack deploy -c <service>/swarm/docker-stack.yml <service>
 | [Posterizarr](./posterizarr) | `ghcr.io/fscorrupt/posterizarr:latest` | `20602` | — | Posterizarr is a companion tool for Radarr and Sonarr that automatically manages posters, backgrounds, and other artwork based on predefined rules. |
 | [Sub Converter](./sub-converter) | `python:3.11-slim` | `25500` | — | Subtitle file converter; convert between different subtitle formats |
 | [Tautulli](./tautulli) | `lscr.io/linuxserver/tautulli:latest` | `8181` | ✅ | Plex media server monitoring; track usage and analytics. |
-| [Unmanic](./unmanic) | `josh5/unmanic:latest` | `20613` | — | Self-hosted service: unmanic. |
+| [Unmanic](./unmanic) | `josh5/unmanic:latest` | `20613` | — | Unmanic is a self-hosted library media transcoder that normalises your video files. |
 
 ### Music (9)
 

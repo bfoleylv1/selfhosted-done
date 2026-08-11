@@ -1,6 +1,6 @@
 # Rconcli
 
-Self-hosted service: rconcli.
+RCON-CLI is a command-line tool for sending RCON commands to game servers.
 
 | | |
 |---|---|

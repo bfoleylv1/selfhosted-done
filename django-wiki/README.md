@@ -1,6 +1,6 @@
 # Django Wiki
 
-Self-hosted service: django-wiki.
+django-wiki is a lightweight, pluggable wiki system built on Django.
 
 | | |
 |---|---|

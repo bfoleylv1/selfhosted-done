@@ -1,6 +1,6 @@
 # Transfer Sh
 
-Self-hosted service: transfer-sh.
+transfer.sh is a self-hosted, simple file sharing service with easy uploads.
 
 | | |
 |---|---|

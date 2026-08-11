@@ -1,6 +1,6 @@
 # Orca
 
-Self-hosted service: orca.
+Orca is a self-hosted system monitoring and orchestration dashboard.
 
 | | |
 |---|---|

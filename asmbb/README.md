@@ -1,6 +1,6 @@
 # Asmbb
 
-Self-hosted service: asmbb.
+ASMbb is a lightweight self-hosted flat-file forum / bulletin board written in assembly.
 
 | | |
 |---|---|

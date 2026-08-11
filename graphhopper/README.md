@@ -1,6 +1,6 @@
 # Graphhopper
 
-Self-hosted service: graphhopper.
+GraphHopper is a fast open-source routing engine for maps and logistics.
 
 | | |
 |---|---|

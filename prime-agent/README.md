@@ -1,6 +1,6 @@
 # Prime Agent
 
-Self-hosted service: prime-agent.
+Prime Agent is a self-hosted autonomous AI agent framework.
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # App
 
-Self-hosted service: app.
+App is a generic self-hosted web application placeholder entry.
 
 | | |
 |---|---|

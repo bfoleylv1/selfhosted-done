@@ -1,6 +1,6 @@
 # Fungible
 
-Self-hosted service: fungible.
+Fungible is a self-hosted tool for managing fungible tokens / assets.
 
 | | |
 |---|---|

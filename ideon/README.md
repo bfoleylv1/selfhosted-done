@@ -1,6 +1,6 @@
 # Ideon
 
-Self-hosted service: ideon.
+Ideon is a self-hosted idea and knowledge capture tool.
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Machtiani
 
-Self-hosted service: machtiani.
+Machtiani is a self-hosted task and project management tool.
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Se2Eend
 
-Self-hosted service: se2eend.
+Se2eEnd is a self-hosted end-to-end testing and monitoring tool.
 
 | | |
 |---|---|

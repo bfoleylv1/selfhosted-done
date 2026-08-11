@@ -1,6 +1,6 @@
 # Octobox
 
-Self-hosted service: octobox.
+Octobox is a self-hosted GitHub notifications manager for organising your inbox.
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Mindustry
 
-Self-hosted service: mindustry.
+Mindustry is a sandbox factory/automation game (no official self-hosted server image).
 
 | | |
 |---|---|

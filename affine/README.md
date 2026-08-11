@@ -1,6 +1,6 @@
 # Affine
 
-Self-hosted service: affine.
+Affine is an open-source, local-first workspace for docs, whiteboards and diagrams with end-to-end encryption.
 
 | | |
 |---|---|

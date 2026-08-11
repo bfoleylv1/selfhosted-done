@@ -1,6 +1,6 @@
 # Writer Computer
 
-Self-hosted service: writer-computer.
+Writer (writer.com) is an enterprise AI writing assistant (no self-hosted image).
 
 | | |
 |---|---|

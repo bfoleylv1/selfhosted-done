@@ -1,6 +1,6 @@
 # Bumpress
 
-Self-hosted service: bumpress.
+Bumpress is a self-hosted publishing and content platform.
 
 | | |
 |---|---|

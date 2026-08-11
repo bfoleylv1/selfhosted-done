@@ -1,6 +1,6 @@
 # Memos
 
-Self-hosted service: memos.
+Memos is a lightweight, self-hosted note-taking app with a clean UI and sharing.
 
 | | |
 |---|---|

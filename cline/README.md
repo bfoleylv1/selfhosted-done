@@ -1,6 +1,6 @@
 # Cline
 
-Self-hosted service: cline.
+Cline (formerly Claude Dev) is an autonomous AI coding agent that runs in your terminal/editor.
 
 | | |
 |---|---|

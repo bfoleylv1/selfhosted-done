@@ -1,6 +1,6 @@
 # Wayback
 
-Self-hosted service: wayback.
+Wayback is a self-hosted web archiving tool that snapshots pages to WARC.
 
 | | |
 |---|---|

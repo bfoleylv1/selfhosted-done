@@ -1,6 +1,6 @@
 # Minimal Git Server
 
-Self-hosted service: minimal-git-server.
+Minimal Git Server is a small self-hosted Git hosting service over SSH/HTTP.
 
 | | |
 |---|---|

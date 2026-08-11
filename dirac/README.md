@@ -1,6 +1,6 @@
 # Dirac
 
-Self-hosted service: dirac.
+Dirac is a self-hosted media asset management system for video and broadcast workflows.
 
 | | |
 |---|---|

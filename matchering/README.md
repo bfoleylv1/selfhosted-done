@@ -1,6 +1,6 @@
 # Matchering
 
-Self-hosted service: matchering.
+Matchering is a web app for automatic audio mastering using a reference track.
 
 | | |
 |---|---|

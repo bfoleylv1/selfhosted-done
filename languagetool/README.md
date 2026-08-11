@@ -1,6 +1,6 @@
 # Languagetool
 
-Self-hosted service: languagetool.
+LanguageTool is an open-source grammar, style and spell checker server.
 
 | | |
 |---|---|

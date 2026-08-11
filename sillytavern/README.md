@@ -1,6 +1,6 @@
 # Sillytavern
 
-Self-hosted service: sillytavern.
+SillyTavern is a self-hosted, feature-rich UI for chatting with LLMs and character cards.
 
 | | |
 |---|---|

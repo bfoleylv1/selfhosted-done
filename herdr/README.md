@@ -1,6 +1,6 @@
 # Herdr
 
-Self-hosted service: herdr.
+Herdr is a self-hosted feed and content aggregation reader.
 
 | | |
 |---|---|

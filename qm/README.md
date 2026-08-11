@@ -1,6 +1,6 @@
 # Qm
 
-Self-hosted service: qm.
+QM is a self-hosted queue and message management tool.
 
 | | |
 |---|---|

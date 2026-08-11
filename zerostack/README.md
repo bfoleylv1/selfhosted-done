@@ -1,6 +1,6 @@
 # Zerostack
 
-Self-hosted service: zerostack.
+ZeroStack is a self-hosted zero-config app and service stack manager.
 
 | | |
 |---|---|
